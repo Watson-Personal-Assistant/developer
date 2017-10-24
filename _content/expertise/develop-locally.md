@@ -30,7 +30,7 @@ Use the Assistant Builder service **/expertise** API to add your locally running
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "name": "hello-world",
-  "url": "https://XXXXXXXX.ngrok.io"
+  "url": "https://paste-your-ngrok-key-here.ngrok.io"
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise?api_key=paste-your-api-key-here'`
 
 ### Step 4: Add the expertise to the expertise collection
