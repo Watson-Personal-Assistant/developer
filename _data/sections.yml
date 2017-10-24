@@ -1,0 +1,32 @@
+default:
+  title: Watson Assistant Builder
+  icon: book
+  hidden: true
+
+get-started:
+  title: Getting Started
+  icon: book
+  
+design:
+  title: Design
+  icon: pencil
+  
+understand-service:
+  title: Functional Architecture
+  icon: graduation-cap 
+
+expertise:
+  title: Expertise (Skills)
+  icon: pencil
+
+knowledge:
+  title: Knowledge and Reasoning
+  icon: code
+
+get-help:
+  title: Help
+  icon: life-ring
+
+legal:
+  title: Legal
+  icon: book

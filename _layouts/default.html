@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{ site.baseurl }}/assets/img/favicon/manifest.json">
+    <link rel="mask-icon" href="{{ site.baseurl }}/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon/favicon.ico"> -->
+    <link rel="SHORTCUT ICON" href="http://www.ibm.com/favicon.ico">
+    <meta name="msapplication-config" content="{{ site.baseurl }}/assets/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"></link>
+  </head>
+  <body>
+    <div class="app-chrome">
+      <header class="app-chrome__header">
+        <p>IBM <span>Watson</span> Assistant</p>
+        <nav class="header__nav">
+          <a class="content__nav-link u-icon u-icon--before u-icon--question"
+             href="{{ site.baseurl }}/get-help/learn">
+            Get Support
+          </a>
+          <a class="content__nav-link u-icon u-icon--before u-icon--pencil"
+             href="{{ site.github_repo }}/edit/{{ site.github_branch | default: 'gh-pages' }}/{{ page.path }}">
+            Edit This Page
+          </a>
+        </nav>
+      </header>
+      <main class="content app-chrome__main-content">
+        {{ content }}
+      </main>
+      {% include partials/sidebar.html %}
+    </div>
+    <script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
+    {% if jekyll.environment != 'production' %}
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    {% endif %}
+  </body>
+</html>
