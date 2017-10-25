@@ -5,7 +5,7 @@ weight: 20
 
 ## Overview
 
-The Watson Assistant Core's purpose is to route your users requests to the proper expertise.  A single request is only ever handled by a single Expertise, but depending on which Converse API the request is sent through can scope the request down to a single expertise or a group, called an Expertise Collection.  When a request is sent to multiple expertise, a confidence score, along with information on the current context, is used to determine which expertise handles the request.
+The Conversation component of the Watson Assistant main purpose is to route your users requests to the proper expertise.  A single request is only ever handled by a single Expertise, but depending on which Converse REST API the request is sent through can scope the request down to a single expertise or a group, called an Expertise Collection.  When a request is sent to multiple expertise, a confidence score, along with information on the current context, is used to determine which expertise handles the request.
 
 The APIs dealing with sending requests to expertise or expertise collections and verifying the health and connections between expertise and expertise collection are broken into the following categories:
 
