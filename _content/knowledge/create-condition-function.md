@@ -139,22 +139,22 @@ Add this final piece of code that will allow you to test locally and run in Clou
 ```javascript
 // to support testing locally and running in Cloud Functions
 if (require.main === module) {
-  console.log("running locally")
-  // parse the input from the command line $ node index.js 123
-  doorID = process.argv[2]
-  console.log(process.argv)
-  main({ results: [{ id: doorID, type: 'Door' }] })
-    .then((result) => {
-      console.log("action is done running success");
-      console.log(JSON.stringify(result));
-    })
-    .catch((err) => {
-      console.log("action is done running error");
-      console.log(JSON.stringify(err));
-    });
+    console.log("running locally")
+    // parse the input from the command line $ node index.js 123
+    doorID = process.argv[2]
+    console.log(process.argv)
+    main({ results: [{ id: doorID, type: 'Door' }] })
+        .then((result) => {
+            console.log("action is done running success");
+            console.log(JSON.stringify(result));
+        })
+        .catch((err) => {
+            console.log("action is done running error");
+            console.log(JSON.stringify(err));
+        });
 } else {
-  console.log("running in openwhisk")
-  exports.main = main;
+    console.log("running in openwhisk")
+    exports.main = main;
 }
 ```
 
@@ -174,17 +174,25 @@ action is done running success
 {"headers":{"Content-Type":"text/plain"},"statusCode":200,"body":"false"}
 ```
 
-### Step 7: Create the Cloud Function
+### Step 7: Edit package.json to indicate javascript file with main function
+
+**Important** You will need to edit the `package.json` file and change the `main` property to have value `condition.js`.  Cloud Functions require this unless the name of your file is index.js.
+
+### Step 8: Create the Cloud Function
 
 To run `condition.js` and the javascript code it includes, you must create a zip file containing everything that is required. Do this using the following command:
 
 `zip -r condition.zip condition.js package.json node_modules/ .env sdk/`
 
-Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  You will need to login to IBM Bluemix before invoking this command by using `bx login -sso` which will provide a URL to paste into your browser to go through login. Once you have logged in, do the following command to create the Cloud Function:
+Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  You will need to login to IBM Bluemix before invoking this command by using `bx login -sso` which will provide a URL to paste into your browser to go through login. Once you have logged in, you'll have to set the `org` and `space` using the command: 
+
+`bx target -o paste-your-IBMid-here -s dev`
+
+Once the org and space are set, do the following command to create the Cloud Function:
 
 `bx wsk action create condition condition.zip --web true --kind nodejs:6`
 
-### Step 8: Test the Cloud Function
+### Step 9: Test the Cloud Function
 
 In a new terminal window or tab, execute this command that will poll the logs for the Cloud Function just created.
 

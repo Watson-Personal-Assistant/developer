@@ -16,10 +16,11 @@ You have completed the first and second phase of the tutorial.
 
 ### Step 1: Create NodeJS file and add includes
 
-Create a file named `action.js` and include the dotenv and object module.
+Create a file named `action.js` and include the dotenv, request, and object modules.
 
 ```javascript
-require('dotenv').config({path: __dirname + '/.env'});
+require('dotenv').config({ path: __dirname + '/.env' });
+var request = require('request');
 var KnowledgeObject = require('./sdk/object');
 ```
 
@@ -70,22 +71,22 @@ Add the same final piece of code that will allow you to test locally and run in 
 ```javascript
 // to support testing locally and running in Cloud Functions
 if (require.main === module) {
-  console.log("running locally")
-  // parse the input from the command line $ node index.js 123
-  doorID = process.argv[2]
-  console.log(process.argv)
-  main({ results: [{ id: doorID, type: 'Door' }] })
-    .then((result) => {
-      console.log("action is done running success");
-      console.log(JSON.stringify(result));
-    })
-    .catch((err) => {
-      console.log("action is done running error");
-      console.log(JSON.stringify(err));
-    });
+    console.log("running locally")
+    // parse the input from the command line $ node index.js 123
+    doorID = process.argv[2]
+    console.log(process.argv)
+    main({ results: [{ id: doorID, type: 'Door' }] })
+        .then((result) => {
+            console.log("action is done running success");
+            console.log(JSON.stringify(result));
+        })
+        .catch((err) => {
+            console.log("action is done running error");
+            console.log(JSON.stringify(err));
+        });
 } else {
-  console.log("running in openwhisk")
-  exports.main = main;
+    console.log("running in openwhisk")
+    exports.main = main;
 }
 ```
 
@@ -106,9 +107,12 @@ Door name {"type":"Door","attributes":{"name":"Front door"},"id":"4144"}
 action is done running success
 ""
 ```
-### Step 4: Create the Cloud Function
 
-**Important** You will need to edit the `package.json` file and change the value for `main`.  Cloud Functions requires this unless the name of your file is index.js.
+### Step 4: Edit package.json to indicate javascript file with main function
+
+**Important** You will need to edit the `package.json` file and change the `main` property to have value `action.js`.  Cloud Functions require this unless the name of your file is index.js.
+
+### Step 5: Create the Cloud Function
 
 To run `action.js` and the javascript code it includes, you must create a zip file containing everything that is required. Do this using the following command:
 
@@ -118,7 +122,7 @@ Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  
 
 `bx wsk action create action action.zip --web true --kind nodejs:6`
 
-### Step 5: Test the Cloud Function
+### Step 6: Test the Cloud Function
 
 In a new terminal window or tab, execute this command that will poll the logs for the Cloud Function just created.
 
