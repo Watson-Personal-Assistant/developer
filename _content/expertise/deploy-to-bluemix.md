@@ -73,18 +73,12 @@ Use the Assistant Builder service **/expertise/UpdateExpertise** API to update y
 Use the Assistant Builder service **/converse/expertiseCollection** API to say "Hello" using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "id": "id-dc6",
-  "version": "1.0",
+  "text": "hello",
   "language": "en-US",
-  "text": "Hello",
-  "context": {
-    "user": {
-      "id": "user-f4c"
-    },
-    "application": {
-      "id": "application-14c",
-      "attributes": {}
-    }
+  "userID": "application-14c",
+  "deviceType": "phone",
+  "additionalInformation": {
+    "context": {}
   }
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/example?api_key=paste-your-api-key-here'`
 
