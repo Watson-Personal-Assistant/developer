@@ -15,16 +15,14 @@ In this phase you will use your own IBM Bluemix account.  Make sure you have com
 If your HelloWorldExpertise is still running, then control-c the process.  If you ran the "npm run start" command in the background, then find the node process and kill it.  You can use "lsof -i:10011" to easily find it. Also, if your ngrok process is still running, then control-c the process.
 
 ### Step 2: Edit manifest.yml file
-In the directory for your HelloWorldExpertise, edit the `manifest.yml` file and change the `name` field to be something like "yourname-hello-world-expertise".
+In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "yourname-hello-world-expertise" (without the quotes) and do the same for the `host` field.
 
 ### Step 3: Push expertise to Bluemix
-Push to Bluemix using Cloud Foundry command
+Push to Bluemix using Bluemix CLI.
 
-`cf api https://api.stage1.ng.bluemix.net`
+`bx cf login --sso`
 
-`cf login`
-
-`cf push`
+`bx cf push`
 
 ### Step 4: Make sure the expertise is running and reachable on Bluemix
 Use the following curl command to hit the **/healthcheck** API on the expertise running on Bluemix.
@@ -73,7 +71,7 @@ Use the Assistant Builder service **/expertise/UpdateExpertise** API to update y
 Use the Assistant Builder service **/converse/expertiseCollection** API to say "Hello" using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "text": "hello",
+  "text": "Hello",
   "language": "en-US",
   "userID": "application-14c",
   "deviceType": "phone",

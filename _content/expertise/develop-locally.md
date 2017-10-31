@@ -11,27 +11,27 @@ This page will walk you through phase 2 of building your first expertise.
 ### Pre-requisite
 In the steps below you are required to have a Assistant API Key. See [Get Access]({{site.baseurl}}/get-started/get-api-key/) for how to get your key.  Then in the steps below replace **paste-your-api-key-here** with your API key you receive.
 
-### Step 1: Create an expertise collection in the Assistant
-Use the Assistant Builder service **/expertiseCollection** API to create a expertise collection that your expertise will be added to using your API Key and Assistant Builder service Bluemix hosted URL.
-
-`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "name": "example"
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollection?api_key=paste-your-api-key-here'`
-
-### Step 2: Setup NGROK
-The NGROK application securely tunnels to localhost which is needed to connect the Assistant Builder service running on Bluemix to the expertise running locally on your system. Download and install [NGROK Client](https://ngrok.com) to allow connection to your locally running HelloWorld expertise.  Once you've done that, enter the following command to start a tunnel to your expertise.
+### Step 1: Setup NGROK
+The NGROK application securely tunnels to localhost which is needed to connect the Assistant Builder service to the expertise running locally on your system. Download and install [NGROK Client](https://ngrok.com) to allow connection to your locally running HelloWorld expertise.  Once you've done that, enter the following command to start a tunnel to your expertise.
 
 `/Applications/ngrok http 10011`
 
 Note the "https://XXXXXXXX.ngrok.io" path that will be displayed; it will be used in the next step.
 
-### Step 3: Add the expertise to the Assistant
+### Step 2: Add the expertise to the Assistant
 Use the Assistant Builder service **/expertise** API to add your locally running expertise to the  using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "name": "hello-world",
   "url": "https://paste-your-ngrok-key-here.ngrok.io"
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise?api_key=paste-your-api-key-here'`
+
+### Step 3: Create an expertise collection in the Assistant
+Utterances are processed by a collection of expertise so that you can provide a variety of functionality from one interface, a speaker or mobile app.  Use the Assistant Builder service **/expertiseCollection** API to create a expertise collection that your expertise will be added to using your API Key and Assistant Builder service Bluemix hosted URL.
+
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+  "name": "example"
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollection?api_key=paste-your-api-key-here'`
 
 ### Step 4: Add the expertise to the expertise collection
 Use the Assistant Builder service **/expertiseCollection/AttachExpertise** API to link the registered expertise with the collection created earlier using your API Key and Assistant Builder service Bluemix hosted URL.
@@ -47,7 +47,7 @@ Use the Assistant Builder service **/expertiseCollection/AttachExpertise** API t
 Use the Assistant Builder service **/converse/expertiseCollection** API to say hello world using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "text": "hello",
+  "text": "Hello",
   "language": "en-US",
   "userID": "application-14c",
   "deviceType": "phone",

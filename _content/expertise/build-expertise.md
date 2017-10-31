@@ -31,10 +31,8 @@ Make sure you have already [setup your local development environment]({{site.bas
 
     `npm install`
     
-### Step 4: Add a key to the expertise
-When the Converse component of Watson Assistant talks to your expertise, a key is passed between them for authentication so that your expertise doesn't bother with unauthorized requests.  To provide a key to your copy of the boilerplate expertise:
-1. Edit the file `res/assets/keys.txt`.
-2. Add `1` on the first line.
+### Step 4: Copy the env.sample file 
+Copy the `.env.sample` file to `.env`.
 
 ### Step 5: Run the expertise
 1. Start the expertise using command
@@ -43,7 +41,7 @@ When the Converse component of Watson Assistant talks to your expertise, a key i
 
 ### Step 6: Test the "HelloWorld" expertise by having a conversation
 The Assistant Builder service Converse API allows you to have a conversation with your expertise.   You can test the expertise using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the expertise.  
-1. Click link [http://localhost:10011/docs/?api_key=1#/](http://localhost:10011/docs/?api_key=1#/) to open browser to Swagger API reference.
+1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
 3. Click on **/converse**.
 4. Click the **Try it out!** button.
@@ -76,7 +74,7 @@ The Assistant Builder service Converse API allows you to have a conversation wit
 ### Step 7: Use Swagger page to see which intents exist
 In the last step, the JSON used to send "Hello" to the expertise also sent along the "intent".  This is required here because you are sending the utterance directly to an expertise, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the expertise.  The Assistant Builder service gets the intents from the expertise using the **/intents** API. To see this for yourself, do the following
 
-1. Click link [http://localhost:10011/docs/?api_key=1#/](http://localhost:10011/docs/?api_key=1#/) to open browser to Swagger API reference.
+1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Resources**.
 3. Click on **/intents**.
 4. Click the **Try it out!** button.
