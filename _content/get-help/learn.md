@@ -1,5 +1,6 @@
 ---
 title: Get help
+weight: 10
 ---
   There are a variety of ways you can get help for the Watson Assistant developer community.
 
