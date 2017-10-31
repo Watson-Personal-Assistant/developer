@@ -22,7 +22,7 @@ Note the "https://XXXXXXXX.ngrok.io" path that will be displayed; it will be use
 Use the Assistant Builder service **/expertise** API to add your locally running expertise to the  using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "name": "hello-world",
+  "name": "myHelloWorld",
   "url": "https://paste-your-ngrok-key-here.ngrok.io"
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise?api_key=paste-your-api-key-here'`
 
@@ -30,7 +30,7 @@ Use the Assistant Builder service **/expertise** API to add your locally running
 Utterances are processed by a collection of expertise so that you can provide a variety of functionality from one interface, a speaker or mobile app.  Use the Assistant Builder service **/expertiseCollection** API to create a expertise collection that your expertise will be added to using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "name": "example"
+  "name": "myCollection"
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollection?api_key=paste-your-api-key-here'`
 
 ### Step 4: Add the expertise to the expertise collection
@@ -39,9 +39,9 @@ Use the Assistant Builder service **/expertiseCollection/AttachExpertise** API t
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "fallback": false,
   "expertiseNames" : [
-    "hello-world"
+    "myHelloWorld"
   ]
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollection/attachExpertise/example?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollection/attachExpertise/myCollection?api_key=paste-your-api-key-here'`
 
 ### Step 5: Say hello to the Assistant
 Use the Assistant Builder service **/converse/expertiseCollection** API to say hello world using your API Key and Assistant Builder service Bluemix hosted URL.
@@ -54,7 +54,7 @@ Use the Assistant Builder service **/converse/expertiseCollection** API to say h
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/example?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/myCollection?api_key=paste-your-api-key-here'`
 
 The JSON returned should include the following:
 

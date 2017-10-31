@@ -63,11 +63,11 @@ Use the Assistant Builder service **/expertise/UpdateExpertise** API to update y
 **Make sure you change the `hostname` and paste your API key in the command below.**
 
 `curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
-  "name": "hello-world",
+  "name": "myHelloWorld",
   "url": "https://yourname-hello-world-expertise.mybluemix.net"
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise/updateExpertise/hello-world?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise/updateExpertise/myHelloWorld?api_key=paste-your-api-key-here'`
 
-### Step 6: Say hello to your hello-world expertise hosted on Bluemix using the Assistant Builder service
+### Step 6: Say hello to your myHelloWorld expertise hosted on Bluemix using the Assistant Builder service
 Use the Assistant Builder service **/converse/expertiseCollection** API to say "Hello" using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
@@ -78,7 +78,7 @@ Use the Assistant Builder service **/converse/expertiseCollection** API to say "
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/example?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/myCollection?api_key=paste-your-api-key-here'`
 
 The JSON returned should include the following:
 
