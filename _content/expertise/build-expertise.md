@@ -34,10 +34,12 @@ Make sure you have already [setup your local development environment]({{site.bas
 ### Step 4: Copy the env.sample file 
 Copy the `.env.sample` file to `.env`.
 
-### Step 5: Run the expertise
-1. Start the expertise using command
+`cp .env.sample .env`
 
-    `npm run start`
+### Step 5: Run the expertise
+Start the expertise using command
+
+`npm run start`
 
 ### Step 6: Test the "HelloWorld" expertise by having a conversation
 The Assistant Builder service Converse API allows you to have a conversation with your expertise.   You can test the expertise using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the expertise.  
