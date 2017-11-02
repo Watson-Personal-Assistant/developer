@@ -31,17 +31,12 @@ Make sure you have already [setup your local development environment]({{site.bas
 
     `npm install`
     
-### Step 4: Copy the env.sample file 
-Copy the `.env.sample` file to `.env`.
-
-`cp .env.sample .env`
-
-### Step 5: Run the expertise
+### Step 4: Run the expertise
 Start the expertise using command
 
 `npm run start`
 
-### Step 6: Test the "HelloWorld" expertise by having a conversation
+### Step 5: Test the "HelloWorld" expertise by having a conversation
 The Assistant Builder service Converse API allows you to have a conversation with your expertise.   You can test the expertise using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the expertise.  
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
@@ -73,7 +68,7 @@ The Assistant Builder service Converse API allows you to have a conversation wit
 }
 ```
 
-### Step 7: Use Swagger page to see which intents exist
+### Step 6: Use Swagger page to see which intents exist
 In the last step, the JSON used to send "Hello" to the expertise also sent along the "intent".  This is required here because you are sending the utterance directly to an expertise, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the expertise.  The Assistant Builder service gets the intents from the expertise using the **/intents** API. To see this for yourself, do the following
 
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
