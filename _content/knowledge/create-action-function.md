@@ -136,7 +136,7 @@ The following curl command will invoke the Cloud Function, just make sure you pr
 
 `curl -X POST -H "Content-Type:application/json" -d '{"results":[{"type":"Door","id":"paste-your-Door-ID"}]}' paste-the-Web-URL`
 
-In the terminal running the poll for log output, you should see something similar to what you saw in Step 3.
+In the terminal running the poll for log output, you should see something similar to what you saw in Step 3.  You might also see an error of "Result must be of type object but has type string", which is safe to ignore.
 
 ### Finish
 

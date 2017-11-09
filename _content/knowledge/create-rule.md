@@ -52,6 +52,8 @@ Then in the field where you can **Type a request or command** enter in the follo
 
 Use the following curl command to call the **/knowledge/object** REST API of the Knowledge component to change the `isStatus` value of the Door:
 
+**Note** make sure you replace `paste-your-door-ID-here` in the command below with the ID of your Door object.
+
 `curl -X PUT --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ "attributes": { "isOpen": true } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/knowledge/object/paste-your-door-ID-here?api_key=paste-your-api-key-here'`
 
 If everything worked correctly, then you should see an `Alert!` message in the browser running the chat bot. This might take a few seconds, but shouldn't take more than a minute.  If it doesn't happen, then you can go to the Cloud Functions monitor UI at URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard) and see if your functions have been invoked more than once each.
