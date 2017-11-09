@@ -68,19 +68,19 @@ curl: (6) Could not resolve host: Accept
 * Check to make sure you application is running by opening a browser and trying to navigate to the Expertise Swagger doc. An example URL: https://carloshelloexpertise.mybluemix.net/docs/
 
 ### Step 5: Update the hostname for the expertise, running on Bluemix, to the Assistant's collection
-Use the Assistant Builder service **/expertise/UpdateExpertise** API to update your expertise running on Bluemix to the public registry using your API Key and Assistant Builder service Bluemix hosted URL.
+Use the Assistant Builder service **/expertise** API to update your expertise running on Bluemix to the public registry using your API Key and Assistant Builder service Bluemix hosted URL.
 
 **Make sure you change the `yourname-hello-world-expertise` with your `hostname` and paste your API key in the command below.**
 
 `curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "name": "myHelloWorld",
   "url": "https://yourname-hello-world-expertise.mybluemix.net"
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise/updateExpertise/myHelloWorld?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertise/myHelloWorld?api_key=paste-your-api-key-here'`
 
 If successful, this command should return a message similar to `expertise updated successfully`.
 
 ### Step 6: Say hello to your myHelloWorld expertise hosted on Bluemix using the Assistant Builder service
-Use the Assistant Builder service **/converse/expertiseCollection** API to say "Hello" using your API Key and Assistant Builder service Bluemix hosted URL.
+Use the Assistant Builder service **/converse/expertiseCollections** API to say "Hello" using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "text": "Hello",
@@ -90,7 +90,7 @@ Use the Assistant Builder service **/converse/expertiseCollection** API to say "
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollection/myCollection?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollections/myCollection?api_key=paste-your-api-key-here'`
 
 The JSON returned should include the following:
 
