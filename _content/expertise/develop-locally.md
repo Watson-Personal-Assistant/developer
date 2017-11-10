@@ -50,7 +50,7 @@ Use the Assistant Builder service **/expertiseCollections** API to link the regi
 A message similar to `link between myCollection and myHelloWorld added` should be returned.
 
 ### Step 5: Say hello to the Assistant
-Use the Assistant Builder service **/converse/expertiseCollections** API to say hello world using your API Key and Assistant Builder service Bluemix hosted URL.
+Use the Assistant Builder service **/expertiseCollections/{expertiseCollectionName}/converse** API to say hello world using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "text": "Hello",
@@ -60,7 +60,7 @@ Use the Assistant Builder service **/converse/expertiseCollections** API to say 
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/converse/expertiseCollections/myCollection?api_key=paste-your-api-key-here'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/expertiseCollections/myCollection/converse?api_key=paste-your-api-key-here'`
 
 The JSON returned should include the following:
 
