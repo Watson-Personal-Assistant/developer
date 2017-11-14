@@ -55,9 +55,11 @@ function main(event) {
             request(options, function (err, response, body) {
                 if (err || response.statusCode !== 200) {
                     console.log('Error (status code ' + response.statusCode + ': ' + err + ' ' + body);
-                    rej(body);
+                    rejData = { code: response.statusCode, body: body };
+                    rej(rejData);
                 } else {
-                    res(body);
+                    resData = { body: body };
+                    res(resData);
                 }
             });
         });
