@@ -25,4 +25,4 @@ There are REST APIs that allow you query the Knowledge component for objects of 
 
 There is an REST API to get the status of the Knowledge component.
 
->**What next?**  Learn about [Reasoning component APIs and SDK]({{site.baseurl}}/understand-service/agent-subscription)
+>**What next?**  Learn about [Rules component APIs and SDK]({{site.baseurl}}/understand-service/agent-subscription)

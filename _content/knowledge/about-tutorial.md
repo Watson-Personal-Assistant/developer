@@ -1,9 +1,9 @@
 ---
-title: The Knowledge and Reasoning tutorial
+title: The Knowledge and Rules tutorial
 weight: 10
 ---
 
-In the following tutorial, you will go through the creation of a simple home security scenario using the Knowledge and Reasoning components.
+In the following tutorial, you will go through the creation of a simple home security scenario using the Knowledge and Rules components.
 
 In this scenario, the user would like to be notified if their house's entrance door is opened while he/she is away.
 

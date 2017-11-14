@@ -9,7 +9,7 @@ In this phase of the tutorial, you will create the code that will make up the co
 1. [Create objects and relations in the Knowledge component]({{site.baseurl}}/knowledge/create-objects)
 2. **Create and test a Cloud Function to be the condition part of the Rule**
 3. Create and test a Cloud Function to be the action part of the Rule
-4. Create a Rule in the Reasoning component and get it to fire
+4. Create a Rule in the Rules component and get it to fire
 
 ### Pre-requisite
 You have completed the first phase of the tutorial.
@@ -84,9 +84,9 @@ function checkType(event, type) {
 }
 ```
 
-### Step 4: Create a NodeJS function that returns true or false as text as required by the Reasoning component 
+### Step 4: Create a NodeJS function that returns true or false as text as required by the Rules component 
 
-Add the following function that is needed for a couple reasons: 1) The Reasoning component requires that the condition return a string 'true' or 'false', but Cloud Functions require actions return JSON objects.  This function is needed to satisfy both requirements.
+Add the following function that is needed for a couple reasons: 1) The Rules component requires that the condition return a string 'true' or 'false', but Cloud Functions require actions return JSON objects.  This function is needed to satisfy both requirements.
 
 ```javascript
 function returnContent(value) {

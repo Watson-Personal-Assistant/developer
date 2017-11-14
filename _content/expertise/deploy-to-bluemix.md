@@ -102,4 +102,4 @@ The JSON returned should include the following:
 
 Now that you have successfully created your first Hello World expertise you should try creating your own Expertise. 
 
-> **What next?** Learn how to use the [Knowledge and Reasoning components]({{site.baseurl}}/knowledge/what-is-kr)
+> **What next?** Learn how to use the [Knowledge and Rules components]({{site.baseurl}}/knowledge/what-is-kr)

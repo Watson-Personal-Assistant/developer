@@ -9,7 +9,7 @@ In this phase of the tutorial, you will create the code that makes up the action
 1. [Create objects and relations in the Knowledge component]({{site.baseurl}}/knowledge/create-objects)
 2. [Create and test a Cloud Function to be the condition part of the Rule]({{site.baseurl}}/knowledge/create-condition-function)
 3. **Create and test a Cloud Function to be the action part of the Rule**
-4. Create a Rule in the Reasoning component and get it to fire
+4. Create a Rule in the Rules component and get it to fire
 
 ### Pre-requisite
 You have completed the first and second phase of the tutorial.
