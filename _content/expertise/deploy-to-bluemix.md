@@ -20,9 +20,9 @@ In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` fi
 ### Step 3: Push expertise to Bluemix
 If you haven't logged into IBM Bluemix before, then go to [https://bluemix.net](https://bluemix.net) and create an IBMid.  Then use the Bluemix CLI to push the code using your ID.
 
-`bx cf login --sso -a paste-your-IBMid-here -s dev`
+`bx login --sso -a api.ng.bluemix.net -o paste-your-IBMid-here -s dev`
 
-`bx cf push`
+`bx app push`
 
 The push command should take around a minute to complete and, if successful, you should see messages similar to the following near the end of the output: 
 
