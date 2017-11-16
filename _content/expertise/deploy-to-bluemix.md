@@ -18,7 +18,7 @@ If your HelloWorldExpertise and ngrok processes are still running, then control-
 In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "yourname-hello-world-expertise" (without the quotes) and do the same for the `host` field.
 
 ### Step 3: Push expertise to Bluemix
-If you haven't logged into IBM Bluemix before, then go to (https://bluemix.net)[https://bluemix.net] and create an IBMid.  Then use the Bluemix CLI to push the code using your ID.
+If you haven't logged into IBM Bluemix before, then go to [https://bluemix.net](https://bluemix.net) and create an IBMid.  Then use the Bluemix CLI to push the code using your ID.
 
 `bx cf login --sso -a paste-your-IBMid-here -s dev`
 
