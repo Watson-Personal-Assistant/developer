@@ -23,6 +23,10 @@ knowledge:
   title: Knowledge and Rules
   icon: code
 
+Integrations:
+  title: Integrations
+  icon: pencil
+  
 get-help:
   title: Help
   icon: life-ring
