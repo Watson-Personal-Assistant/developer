@@ -10,8 +10,6 @@ Refer to github project [Watson Assistant Slackbot Integration](https://github.c
 ### Description
 A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant
 
-[![License](https://img.shields.io/badge/license-APACHE2-blue.svg)]() [![Python](https://img.shields.io/badge/Python-3.6.2-yellow.svg)]()
-
 ---
 
 ### Requirements:
