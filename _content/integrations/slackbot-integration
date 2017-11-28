@@ -3,9 +3,9 @@ title: Slackbot Integration
 weight: 10
 ---
 
-## Slackbot powered by your Watson Assistant
+## Slackbot powered by your Watson Assistant 
+Refer to github project [Watson Assistant Slackbot Integration](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot) 
 
-Reference to github project [WA_Slackbot](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot)
 
 ### Description
 A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant
