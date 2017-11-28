@@ -123,7 +123,7 @@ python3 -m unittest test.test_env_file
 
 ---
 
-$## General Logs
+### General Logs
 
 All chat logs are stored in the /slackbot.log file, mostly consisting of user utterances, responses, and slack logging.
 
