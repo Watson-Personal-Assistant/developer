@@ -3,12 +3,9 @@ title: How to integrate Watson Assistant into Slack
 weight: 10
 ---
 
-### Git Project: [WA_Slackbot](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot)
+## Slackbot powered by your Watson Assistant
 
-A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant
-
-# WA Simple Slackbot
-
+Reference to github project [WA_Slackbot](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot)
 
 ### Description
 A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant
@@ -109,7 +106,7 @@ Once your app is finished staging you should be good to go. You can message your
 ---
 
 
-# Running Tests
+### Running Tests
 
 The following line will run all the unit tests.
 
@@ -125,13 +122,13 @@ python3 -m unittest test.test_env_file
 
 ---
 
-# Logging
+### Logging
 
-## General Logs
+#### General Logs
 
 All chat logs are stored in the /slackbot.log file, mostly consisting of user utterances, responses, and slack logging.
 
-## Unrecognized intent logging
+#### Unrecognized intent logging
 
 Any response from WA that comes back with a fallback response (Defined in environment variables) or with no response will be written to the /fallback_responses.csv file
 
