@@ -1,12 +1,12 @@
 ---
-title: Build your first expertise
+title: Build your first skill
 weight: 30
 ---
-This page will walk you through the first phase of building your first expertise. You will create your expertise programmatically using the Watson Assistant Builder REST APIs that are accessible in Swagger API reference.
+This page will walk you through the first phase of building your first skill. You will create your skill programmatically using the Watson Assistant Builder REST APIs that are accessible in Swagger API reference.
 
-1. **How to run and use the "HelloWorld" boilerplate expertise hosted locally.**
-2. How to register and use the local running "HelloWorld" expertise with Assistant Builder service.
-3. How to host your "HelloWorld" expertise on Bluemix for others to use.
+1. **How to run and use the "HelloWorld" boilerplate skill hosted locally.**
+2. How to register and use the local running "HelloWorld" skill with Assistant Builder service.
+3. How to host your "HelloWorld" skill on Bluemix for others to use.
 
 ### Pre-requisite
 Make sure you have already [setup your local development environment]({{site.baseurl}}/expertise/setup-local-dev-env/)
@@ -31,13 +31,13 @@ Make sure you have already [setup your local development environment]({{site.bas
 
     `npm install`
     
-### Step 4: Run the expertise
-Start the expertise using command
+### Step 4: Run the skill
+Start the skill using command
 
 `npm run start`
 
-### Step 5: Test the "HelloWorld" expertise by having a conversation
-The Assistant Builder service Converse API allows you to have a conversation with your expertise.   You can test the expertise using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the expertise.  
+### Step 5: Test the "HelloWorld" skill by having a conversation
+The Assistant Builder service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.  
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
 3. Click on **/converse**.
@@ -69,7 +69,7 @@ The Assistant Builder service Converse API allows you to have a conversation wit
 ```
 
 ### Step 6: Use Swagger page to see which intents exist
-In the last step, the JSON used to send "Hello" to the expertise also sent along the "intent".  This is required here because you are sending the utterance directly to an expertise, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the expertise.  The Assistant Builder service gets the intents from the expertise using the **/intents** API. To see this for yourself, do the following
+In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to an skill, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Watson Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant Builder service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
 
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Resources**.
@@ -89,6 +89,6 @@ Response:
 ```
 
 ### Finish
-Now you have a working expertise and next you will have to register this expertise to Assistant Builder Assistant Builder service.  Text utterances requests are then sent to the Assistant Builder service to get a response from the registered hello world expertise.
+Now you have a working skill and next you will have to register this skill to Assistant Builder Assistant Builder service.  Text utterances requests are then sent to the Assistant Builder service to get a response from the registered hello world skill.
 
- > **What next?** Learn how to [register and test a local expertise]({{site.baseurl}}/expertise/develop-locally/) using a Bluemix hosted Assistant Builder service   
+ > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/expertise/develop-locally/) using a Bluemix hosted Assistant Builder service   

@@ -131,7 +131,7 @@ All chat logs are stored in the /slackbot.log file, mostly consisting of user ut
 
 Any response from WA that comes back with a fallback response (Defined in environment variables) or with no response will be written to the /fallback_responses.csv file
 
-To enable this feature please ensure that in your .env variables (local) or in your VCAP environment variables (bluemix) you add comma separated responses that come from your fallback expertise.
+To enable this feature please ensure that in your .env variables (local) or in your VCAP environment variables (bluemix) you add comma separated responses that come from your fallback skill.
 
 You can find it in the .env.sample file
 

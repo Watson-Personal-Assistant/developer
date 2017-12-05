@@ -25,7 +25,7 @@ github_branch: "master"
 email: carlos.ferreira@us.ibm.com
 description: > # this means to ignore newlines until "baseurl:"
   A collection of best practices and guidelines for designing and implementing
-  applications and expertise using the Watson Assistant.
+  applications and skills using the Watson Assistant.
 baseurl: "/developer" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 

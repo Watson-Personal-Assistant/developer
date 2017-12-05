@@ -17,4 +17,4 @@ In the tutorials that follow, you will deploy code to both IBM Cloud and IBM Clo
 3. For the Knowledge and Rules tutorial, you will need to install [the Cloud Functions plugin](https://console.bluemix.net/openwhisk/learn/cli)
 
 
-> **What next?** Learn how to [build your first expertise]({{site.baseurl}}/expertise/build-expertise/)
+> **What next?** Learn how to [build your first skill]({{site.baseurl}}/expertise/build-expertise/)
