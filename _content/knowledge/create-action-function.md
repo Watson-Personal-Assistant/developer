@@ -122,7 +122,7 @@ To run `action.js` and the javascript code it includes, you must create a zip fi
 
 Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  You will need to login to IBM Bluemix before invoking this command by using `bx login -sso` which will provide a URL to paste into your browser to go through login. Once you have logged in, do the following command to create the Cloud Function:
 
-`bx wsk action create action action.zip --web true --kind nodejs:6`
+`bx wsk action create action action.zip --web true --kind nodejs:8`
 
 ### Step 6: Test the Cloud Function
 

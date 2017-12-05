@@ -190,7 +190,7 @@ Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  
 
 Once the org and space are set, do the following command to create the Cloud Function:
 
-`bx wsk action create condition condition.zip --web true --kind nodejs:6`
+`bx wsk action create condition condition.zip --web true --kind nodejs:8`
 
 ### Step 9: Test the Cloud Function
 

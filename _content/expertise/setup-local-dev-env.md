@@ -5,7 +5,7 @@ weight: 20
 This section explains how to set up your local development environment so that you can test your code locally and then deploy it to IBM Bluemix Cloud Foundry or IBM Cloud Functions. A Bluemix account will allow you to use many of the Bluemix services to power your assistant.
 
 ## Set up your NodeJS dev environment
-1. Install [NodeJS version 6.7.0](https://nodejs.org/download/release/v6.7.0/) (The Knowledge and Rules tutorial requires NodeJS 6.)
+1. Install [NodeJS version 8](https://nodejs.org/dist/v8.9.1/) (The Knowledge and Rules tutorial requires NodeJS 8.)
 2. If you don't have git, install [Git](https://git-scm.com/downloads)
 3. If you don't have a favorite IDE, install [Visual Studio Code](https://code.visualstudio.com/download) (*it's integrated terminal is really nice*)
 
