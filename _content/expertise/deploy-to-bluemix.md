@@ -15,7 +15,7 @@ In this phase you will use your own IBM Bluemix account.  Make sure you have com
 If your HelloWorld skill and ngrok processes are still running, then control-c them.  If the node process doesn't stop for some reason, then find the process and kill it.  You can use "lsof -i:10011" to find it.
 
 ### Step 2: Edit manifest.yml file
-In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "yourname-hello-world-skill" (without the quotes) and do the same for the `host` field.
+In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "your-name-hello-world-skill" (without the quotes) and do the same for the `host` field.
 
 ### Step 3: Push skill to Bluemix
 If you haven't logged into IBM Bluemix before, then go to [https://bluemix.net](https://bluemix.net) and create an IBMid.  Then use the Bluemix CLI to push the code using your ID.
@@ -37,7 +37,7 @@ App started
 ### Step 4: Make sure the skill is running and reachable on Bluemix
 Use the following curl command to hit the **/healthcheck** API on the skill running on Bluemix.
 
-`curl -X GET --verbose --header 'Accept: application/json' https://yourname-hello-world-skill.mybluemix.net/v1/api/healthcheck`
+`curl -X GET --verbose --header 'Accept: application/json' https://your-name-hello-world-skill.mybluemix.net/v1/api/healthcheck`
 
 You should get a `200 OK` response if everything is working fine like the one below
 ```
@@ -70,11 +70,11 @@ curl: (6) Could not resolve host: Accept
 ### Step 5: Update the hostname for the skill, running on Bluemix, to the Assistant's skill set
 Use the Assistant Builder service **/skills** API to update your skill running on Bluemix to the public registry using your API Key and Assistant Builder service Bluemix hosted URL.
 
-**Make sure you change the `yourname-hello-world-skill` with your `hostname` and paste your API key in the command below.**
+**Make sure you change the `your-name-hello-world-skill` with your `hostname` and paste your API key in the command below.**
 
 `curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "name": "myHelloWorld",
-  "url": "https://yourname-hello-world-skill.mybluemix.net"
+  "url": "https://your-name-hello-world-skill.mybluemix.net"
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld?api_key=paste-your-api-key-here'`
 
 If successful, this command should return a message similar to `skill updated successfully`.
