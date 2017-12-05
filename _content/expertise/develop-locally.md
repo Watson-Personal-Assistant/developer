@@ -28,7 +28,7 @@ Use the Assistant Builder service **/skills** API to add your locally running sk
 
 You'll know if this is successful or not by what the Watson Assistant Builder returns.  A message similar to `skill added successfully` should be returned.
 
-### Step 3: Create an skill set in the Assistant
+### Step 3: Create a skill set in the Assistant
 Utterances are processed by a set of skills so that you can provide a variety of functionality from one interface, a speaker or mobile app.  Use the Assistant Builder service **/skillSets** API to create a skill set that your skill will be added to using your API Key and Assistant Builder service Bluemix hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{

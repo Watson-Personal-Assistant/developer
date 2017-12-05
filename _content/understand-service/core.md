@@ -18,7 +18,7 @@ The APIs dealing with sending requests to skills or skill sets and verifying the
 
 ## Common Use APIs
 
-This category lists the three most commonly used APIs which allow you to register an Skill with the Conversation component, associate the skill to a Skill Set and then send a request to that Skill Set. These APIs are also listed in their respective categories for completeness.
+This category lists the three most commonly used APIs which allow you to register a Skill with the Conversation component, associate the skill to a Skill Set and then send a request to that Skill Set. These APIs are also listed in their respective categories for completeness.
 
 ## Converse
 

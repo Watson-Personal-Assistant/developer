@@ -12,7 +12,7 @@ This page will walk you through the next phase of building your first skill.
 In this phase you will use your own IBM Bluemix account.  Make sure you have completed all the Bluemix pre-requisites documented in the [setup your local development environment]({{site.baseurl}}/expertise/setup-local-dev-env/) page.
 
 ### Step 1: Stop the running skill and ngrok processes
-If your HelloWorldExpertise and ngrok processes are still running, then control-c them.  If the node process doesn't stop for some reason, then find the process and kill it.  You can use "lsof -i:10011" to find it.
+If your HelloWorld skill and ngrok processes are still running, then control-c them.  If the node process doesn't stop for some reason, then find the process and kill it.  You can use "lsof -i:10011" to find it.
 
 ### Step 2: Edit manifest.yml file
 In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "yourname-hello-world-skill" (without the quotes) and do the same for the `host` field.

@@ -69,7 +69,7 @@ The Assistant Builder service Converse API allows you to have a conversation wit
 ```
 
 ### Step 6: Use Swagger page to see which intents exist
-In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to an skill, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Watson Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant Builder service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
+In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to a skill, which isn't done in a Assistant application.  The Assistant Builder service of the IBM Watson Assistant will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant Builder service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
 
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Resources**.
