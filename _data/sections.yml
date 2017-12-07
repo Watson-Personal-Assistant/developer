@@ -13,11 +13,11 @@ design:
   
 understand-service:
   title: Functional Architecture
-  icon: graduation-cap 
-
-expertise:
-  title: Expertise (Skills)
   icon: pencil
+
+skill:
+  title: Skills
+  icon: graduation-cap 
 
 knowledge:
   title: Knowledge and Rules

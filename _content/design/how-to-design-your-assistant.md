@@ -36,7 +36,7 @@ Consider the “personality” of the assistant - When speaking to a virtual ass
 ### What 
 Are you trying to resolve an existing problem or irritation, streamline a cumbersome process, save them money or time? What will your app do that no other app currently does?
 
-Consider the capabilities of the assistant and how they should be invoked – Expertise, or skills, can range from a simple Q&A chatbot to a complex proactive “Entertainment Assistant” that suggests TV programs based on your unique schedule and preferences. Your developers can write custom skills for your application, or they can connect to shared skills. 
+Consider the capabilities of the assistant and how they should be invoked – Skills can range from a simple Q&A chatbot to a complex proactive “Entertainment Assistant” that suggests TV programs based on your unique schedule and preferences. Your developers can write custom skills for your application, or they can connect to shared skills. 
 
 A single Watson Assistant might have multiple skills and the right one will be invoked depending on the context or the utterance. For example, when a user requests, “make it warmer please”, while in the car it should invoke the “car comfort settings” skill. If they ask the same question while at home a skill for their smart thermostat should be invoked.
 
@@ -48,10 +48,10 @@ The WOW is up to you to design. Your users will be delighted by an impactful exp
 
 The rest of the documentation will explain the concepts and provide instruction on how to develop your assistant but here are a few more considerations.
 
-**Expertise (Skills)** - Capabilities are a key aspect of the experience. You can design expertise for a variety of functions. They can answer questions, alert you when certain conditions are met, provide recommendations based on knowledge they acquire over time, respond to contextual input from users or devices, place orders online or communicate with popular services on the web.
+**Skills** - Capabilities are a key aspect of the experience. You can design skills for a variety of functions. They can answer questions, alert you when certain conditions are met, provide recommendations based on knowledge they acquire over time, respond to contextual input from users or devices, place orders online or communicate with popular services on the web.
 
 **Input / Output** - Connected devices can send input and output to the assistant from end users. Although if you want to add voice or visual capabilities today, you would need to obtain them separately from Watson APIs on IBM Bluemix or other providers. 
 
-**Crawl, Walk, Run** - You’ve already considered what you are trying to help your users do and you can create expertise or skills that support those scenarios. We suggest that you think about your scenarios in terms of crawl, walk, and run. That is what do you need to create and support first, second, and what is the big picture experience that you are working towards. With the crawl, walk, and run scenarios in mind, consider the expertise (or skills) that you need to support those scenarios.
+**Crawl, Walk, Run** - You’ve already considered what you are trying to help your users do and you can create skills that support those scenarios. We suggest that you think about your scenarios in terms of crawl, walk, and run. That is what do you need to create and support first, second, and what is the big picture experience that you are working towards. With the crawl, walk, and run scenarios in mind, consider the skills that you need to support those scenarios.
 
 > **What next?** See what makes up the [Watson Assistant]({{site.baseurl}}/understand-service/overview)

@@ -7,11 +7,11 @@ weight: 10
 
 ## Conversation 
 
-In the beginning, you'll interact with the Conversation component the most.  The primary responsibility of the Conversation component is to route your users' utterance (in text form) to the "correct" Expertise that should handle it.  Expertise are the main pieces of software you will develop in order to produce a cognitive application.  Expertise use natural language processing tools, like Watson Conversation Service, to determine the intent of your users' utterance and handle the request appropriately.  The Conversation component routes the utterance based on a confidence score returned by each expertise and information on the context.  The next page will give you an overview of the Conversation component APIs you'll use to register your expertise and you'll learn what it takes to create Expertise in a later section.
+In the beginning, you'll interact with the Conversation component the most.  The primary responsibility of the Conversation component is to route your users' utterance (in text form) to the "correct" Skill that should handle it.  Skills are the main pieces of software you will develop in order to produce a cognitive application.  Skills use natural language processing tools, like Watson Conversation Service, to determine the intent of your users' utterance and handle the request appropriately.  The Conversation component routes the utterance based on a confidence score returned by each skill and information on the context.  The next page will give you an overview of the Conversation component APIs you'll use to register your skills and you'll learn what it takes to create skills in a later section.
 
 ## Knowledge 
 
-The Knowledge component is used to store world objects and information about those objects.  The Expertise you develop will create and modify objects in the Knowledge component using the REST API or a NodeJS SDK.  The Conversation component will also create and modify information in the Knowledge component based on the context passed to the Conversation component from your application/solution.  A later page will give you an overview of the Knowledge component REST APIs and you'll get a hands-on tutorial using the NodeJS SDK in a later section. 
+The Knowledge component is used to store world objects and information about those objects.  The Skills you develop will create and modify objects in the Knowledge component using the REST API or a NodeJS SDK.  The Conversation component will also create and modify information in the Knowledge component based on the context passed to the Conversation component from your application/solution.  A later page will give you an overview of the Knowledge component REST APIs and you'll get a hands-on tutorial using the NodeJS SDK in a later section. 
 
 ## Rules 
 
@@ -23,6 +23,6 @@ Whatever type of application you are building, be it a mobile application, web a
 
 ## Summary
 
-You'll create, or reuse, Expertise to make your application intelligent.  You'll create Agents to act on changes in the Knowledge component to proactively prompt or do things for your users.  You'll create Rules to limit when particular Agents act.  Expertise, Agents and Rules, together with information collected and maintained in the Knowledge component, will give you a powerful and proactive assistant for your cognitive application. 
+You'll create, or reuse, Skills to make your application intelligent.  You'll create Agents to act on changes in the Knowledge component to proactively prompt or do things for your users.  You'll create Rules to limit when particular Agents act.  Skills, Agents and Rules, together with information collected and maintained in the Knowledge component, will give you a powerful and proactive assistant for your cognitive application. 
 
 >**What next?**  Learn more about the [Conversation component]({{site.baseurl}}/understand-service/core) 
