@@ -18,4 +18,4 @@ When the event specified in the rule happens in the Knowledge component, the Rul
 
 If the condition URL returns "True", then the Rules component will make a GET REST API call to the action URL handled by your code.  Typically, the action URL handled by your code will prompt your user or do something proactively for your user by invoking a Skill through the Conversation component similar to how a user would invoke your Skill.
 
->**What next?**  Start learning about [skills]({{site.baseurl}}/expertise/what-are-they)
+>**What next?**  Start learning about [skills]({{site.baseurl}}/skill/what-are-they)

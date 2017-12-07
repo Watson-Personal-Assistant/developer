@@ -12,7 +12,7 @@ In this phase of the tutorial, you will create objects and relations programmati
 4. Create a Rule in the Rules component and get it to fire
 
 ### Pre-requisite
-Make sure you have already [setup your NodeJS development environment]({{site.baseurl}}/expertise/setup-local-dev-env/)
+Make sure you have already [setup your NodeJS development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
 
 ### Step 1: Fork the Knowledge and Rules SDK
 1. Go to  [https://github.com/Watson-Personal-Assistant/kr-node-sdk](https://github.com/Watson-Personal-Assistant/kr-node-sdk).

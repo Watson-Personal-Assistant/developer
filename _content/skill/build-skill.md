@@ -9,7 +9,7 @@ This page will walk you through the first phase of building your first skill. Yo
 3. How to host your "HelloWorld" skill on Bluemix for others to use.
 
 ### Pre-requisite
-Make sure you have already [setup your local development environment]({{site.baseurl}}/expertise/setup-local-dev-env/)
+Make sure you have already [setup your local development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
 
 ### Step 1: Fork the boilerplate
 1. Go to  [https://github.com/Watson-Personal-Assistant/ExpertiseBoilerPlateRemote](https://github.com/Watson-Personal-Assistant/ExpertiseBoilerPlateRemote).
@@ -91,4 +91,4 @@ Response:
 ### Finish
 Now you have a working skill and next you will have to register this skill to Assistant Builder Assistant Builder service.  Text utterances requests are then sent to the Assistant Builder service to get a response from the registered hello world skill.
 
- > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/expertise/develop-locally/) using a Bluemix hosted Assistant Builder service   
+ > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/skill/develop-locally/) using a Bluemix hosted Assistant Builder service   

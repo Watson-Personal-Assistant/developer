@@ -4,12 +4,12 @@ weight: 50
 ---
 This page will walk you through the next phase of building your first skill.
 
-1. [How to run and use the "HelloWorld" boilerplate skill hosted locally.]({{site.baseurl}}/expertise/build-expertise)
-2. [How to register and use the local running "HelloWorld" skill with Assistant Builder service.]({{site.baseurl}}/expertise/develop-locally)
+1. [How to run and use the "HelloWorld" boilerplate skill hosted locally.]({{site.baseurl}}/skill/build-skill)
+2. [How to register and use the local running "HelloWorld" skill with Assistant Builder service.]({{site.baseurl}}/skill/develop-locally)
 3. **How to host your "HelloWorld" skill on Bluemix for others to use.**
 
 ### Pre-requisite
-In this phase you will use your own IBM Bluemix account.  Make sure you have completed all the Bluemix pre-requisites documented in the [setup your local development environment]({{site.baseurl}}/expertise/setup-local-dev-env/) page.
+In this phase you will use your own IBM Bluemix account.  Make sure you have completed all the Bluemix pre-requisites documented in the [setup your local development environment]({{site.baseurl}}/skill/setup-local-dev-env/) page.
 
 ### Step 1: Stop the running skill and ngrok processes
 If your HelloWorld skill and ngrok processes are still running, then control-c them.  If the node process doesn't stop for some reason, then find the process and kill it.  You can use "lsof -i:10011" to find it.

@@ -4,7 +4,7 @@ weight: 40
 ---
 This page will walk you through phase 2 of building your first skill.
 
-1. [How to run and use the "HelloWorld" boilerplate skill hosted locally.]({{site.baseurl}}/expertise/build-expertise)
+1. [How to run and use the "HelloWorld" boilerplate skill hosted locally.]({{site.baseurl}}/skill/build-skill)
 2. **How to register your skill with the Assistant Builder service and use the local running "HelloWorld" skill**
 3. How to host your "HelloWorld" skill on Bluemix for others to use.
 
@@ -70,4 +70,4 @@ The JSON returned should include the following:
 },
 ```
 
-> **What next?** Learn how to [deploy your skill to Bluemix]({{site.baseurl}}/expertise/deploy-to-bluemix/)
+> **What next?** Learn how to [deploy your skill to Bluemix]({{site.baseurl}}/skill/deploy-to-bluemix/)

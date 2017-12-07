@@ -12,4 +12,4 @@ The Watson Assistant Builder uses the same natural language concepts as the Wats
 *  [Entities](https://console.bluemix.net/docs/services/conversation/entities.html#defining-entities)
 *  [Dialogs](https://console.bluemix.net/docs/services/conversation/dialog-build.html#dialog-build) 
 
-> **What next?** Learn [what is needed to begin developing]({{site.baseurl}}/expertise/setup-local-dev-env) your first skill
+> **What next?** Learn [what is needed to begin developing]({{site.baseurl}}/skill/setup-local-dev-env) your first skill
