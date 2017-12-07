@@ -12,7 +12,7 @@ This page will walk you through the first phase of building your first skill. Yo
 Make sure you have already [setup your local development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
 
 ### Step 1: Fork the boilerplate
-1. Go to  [https://github.com/Watson-Personal-Assistant/ExpertiseBoilerPlateRemote](https://github.com/Watson-Personal-Assistant/ExpertiseBoilerPlateRemote).
+1. Go to  [https://github.com/Watson-Personal-Assistant/SkillBoilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate).
 2. Click the gray **Fork** button in the top right corner.
 
 ### Step 2: Clone your fork of the boilerplate
@@ -23,9 +23,9 @@ Make sure you have already [setup your local development environment]({{site.bas
     `git clone your-github-url`
 
 ### Step 3: Install the node dependencies
-1. Change directory into your ExpertiseBoilerPlateRemote project directory
+1. Change directory into your SkillBoilerplate project directory
 
-    `cd ExpertiseBoilerPlateRemote`
+    `cd SkillBoilerplate`
 
 2. Install dependencies using command
 

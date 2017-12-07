@@ -15,7 +15,7 @@ In this phase you will use your own IBM Bluemix account.  Make sure you have com
 If your HelloWorld skill and ngrok processes are still running, then control-c them.  If the node process doesn't stop for some reason, then find the process and kill it.  You can use "lsof -i:10011" to find it.
 
 ### Step 2: Edit manifest.yml file
-In the directory for your ExpertiseBoilerPlateRemote, edit the `manifest.yml` file and change the `name` field to be something like "your-name-hello-world-skill" (without the quotes) and do the same for the `host` field.
+In the directory for your SkillBoilerplate, edit the `manifest.yml` file and change the `name` field to be something like "your-name-hello-world-skill" (without the quotes) and do the same for the `host` field.
 
 ### Step 3: Push skill to Bluemix
 If you haven't logged into IBM Bluemix before, then go to [https://bluemix.net](https://bluemix.net) and create an IBMid.  Then use the Bluemix CLI to push the code using your ID.
