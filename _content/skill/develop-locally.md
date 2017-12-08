@@ -11,6 +11,8 @@ This page will walk you through phase 2 of building your first skill.
 ### Pre-requisite
 In the steps below you are required to have a Assistant API Key. See [Get Access]({{site.baseurl}}/get-started/get-api-key/) for how to get your key.  Then in the steps below replace **paste-your-api-key-here** with your API key you receive.
 
+**Tip: To make it easier to replace strings in the curl commands below see this [tip on using a browser plugin]({{site.baseurl}}/get-help/troubleshooting/#tip-use-regex-browser-plugin-to-add-your-api-key-to-docs).**
+
 ### Step 1: Setup NGROK
 The NGROK application securely tunnels to localhost which is needed to connect the Assistant Builder service to the skill running locally on your system. Download and install [NGROK Client](https://ngrok.com) to allow connection to your locally running HelloWorld skill.  Once you've done that, enter the following command to start a tunnel to your skill.
 
