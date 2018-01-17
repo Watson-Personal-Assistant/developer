@@ -31,9 +31,9 @@ The last command should return a JSON blob containing **access_token**, **refres
 
 `curl -X POST https://iam.ng.bluemix.net/oidc/introspect -H 'content-type: application/x-www-form-urlencoded' -d token=your-IAM-access-token`
 
-## Step 4: Copy and send your IAM id to Watson Assistant team
+## Step 4: Copy and send your IAM id and IBMid to Watson Assistant team
 
-The last command should return a JSON blob containing many properties of your IBM id and IAM.  Please send the value of `iam_id` to `someone@il.ibm.com`.  The **iam_id** value should look like **IBMid-270105ABC7**.
+The last command should return a JSON blob containing many properties.  Please send the value of `iam_id` and `sub` to your Watson Assistant support representative.  The **iam_id** value should look like **IBMid-270105ABC7** and **sub** should look like your email address.
 
 ## Log in using IBM id
 
