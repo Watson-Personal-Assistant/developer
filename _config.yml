@@ -55,3 +55,4 @@ exclude:
   - bower.json
   - package.json
   - design
+  - vendor
