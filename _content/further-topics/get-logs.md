@@ -31,13 +31,13 @@ Log into IBM using the following command and follow the prompts.
 
 Depending which Cloud Foundry org and space you want to use for all your development, you will want to provide that info in the following command.
 
-`bx target -o put-your-org-name-here -s put-your-space-name-here`
+`bx target -o paste-your-org-name-here -s paste-your-space-name-here`
 
 ## Step 4: Get the tenant ID of the org and space
 
 Use the following command to get the tenant ID of the org and space you are using.
 
-`bx logging token-get`
+`bx cf space paste-your-space-name-here --guid`
 
 ## Step 5: Send the tenant ID to Watson Assistant team 
 
