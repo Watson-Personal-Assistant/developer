@@ -31,6 +31,8 @@ The last command should return a JSON blob containing **access_token**, **refres
 
 `curl -X POST https://iam.ng.bluemix.net/oidc/introspect -H 'content-type: application/x-www-form-urlencoded' -d token=your-IAM-access-token`
 
+Note: if you get an return of **{"active":false}** from the curl command above, then you likely have pasted then entire JSON blob from the curl in step 2. There are many tokens returned in the JSON blob from the curl comand in step 2.
+
 ## Step 4: Send IDs and key to Watson Assistant team
 
 The last command should return a JSON blob containing many properties.  Please use the value for `iam_id` from that JSON blob and your `IBMid` to send the following in an email to your Watson Assistant support representative.
