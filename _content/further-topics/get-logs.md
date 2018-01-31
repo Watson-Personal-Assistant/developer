@@ -31,6 +31,8 @@ Log into IBM using the following command and follow the prompts.
 
 Depending which Cloud Foundry org and space you want to use for all your development, you will want to provide that info in the following command.
 
+Note: This must be a US-South org.
+
 `bx target -o paste-your-org-name-here -s paste-your-space-name-here`
 
 ## Step 4: Get the tenant ID of the org and space

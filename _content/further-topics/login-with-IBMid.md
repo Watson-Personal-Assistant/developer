@@ -23,7 +23,7 @@ Note, these next two steps are done just to get your IAM id which is needed for 
 
 Replace **your-platform-API-key** with your Platform API key in the curl command below and execute it to get an access token.
 
-`curl -X POST https://iam.ng.bluemix.net:443/oidc/token -H 'accept: application/json' -H 'content-type: application/x-www-form-urlencoded' -d 'apikey=your-platform-API-key&grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey'`
+`curl -X POST https://iam.ng.bluemix.net:443/oidc/token -H 'accept: application/json' -H 'content-type: application/x-www-form-urlencoded' -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=your-platform-API-key'`
 
 ## Step 3: Get your IAM id
 
@@ -31,14 +31,16 @@ The last command should return a JSON blob containing **access_token**, **refres
 
 `curl -X POST https://iam.ng.bluemix.net/oidc/introspect -H 'content-type: application/x-www-form-urlencoded' -d token=your-IAM-access-token`
 
+Note: if you get an return of **{"active":false}** from the curl command above, then you likely have pasted then entire JSON blob from the curl in step 2. There are many tokens returned in the JSON blob from the curl comand in step 2.
+
 ## Step 4: Send IDs and key to Watson Assistant team
 
-The last command should return a JSON blob containing many properties.  Please use the value for `iam_id` and `sub` to send the following in an email to your Watson Assistant support representative.
+The last command should return a JSON blob containing many properties.  Please use the value for `iam_id` from that JSON blob and your `IBMid` to send the following in an email to your Watson Assistant support representative.
 
 ```
 Please associate my IBMid to my WA instance.
 
-IBMid = <value of `sub`>
+IBMid = <value of `IBMid`>
 IAM id = <value of `iam_id`, should look like IBMid-270105ABC7>
 API key = <your WA API key>
 
