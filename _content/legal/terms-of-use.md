@@ -63,7 +63,7 @@ Each copy or any portion of these sample programs or any derivative work must in
 
   > © (your company name) (year).  
   > Portions of this code are derived from IBM Corp. Sample Programs.  
-  > © Copyright IBM Corp. 2017.  
+  > © Copyright IBM Corp. 2018.  
 
 ## Trademarks
 

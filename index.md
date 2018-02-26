@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Developer Docs for the Watson Assistant Builder
+title: Developer Docs for Watson Assistant 
 ---
-## What is the Watson Assistant?
-Watson Assistant is a technology that was designed to create  personalized and engaging experiences with digital assistants for consumers. It is designed to be easily customizable and integrated into devices such as mobile apps, cars, rooms, and other connected objects. It understands context from history and real world sources to enable a delightful conversation and truly helpful recommendations.
+## What is Watson Assistant?
+Watson Assistant is a technology that was designed to create personalized and engaging experiences with digital assistants for consumers. It is designed to be easily customizable and integrated into devices such as mobile apps, cars, rooms, and other connected objects. It understands context from history and real world sources to enable a delightful conversation and truly helpful recommendations.
 
 ## Who is this Beta for?
 The beta program allows early adopters to get hands on as they provide feedback on unreleased features of Watson Assistant. This is an opportunity to help us shape this new technology to suit your needs.
