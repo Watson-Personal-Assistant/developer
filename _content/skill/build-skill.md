@@ -30,13 +30,16 @@ Make sure you have already [setup your local development environment]({{site.bas
 2. Install dependencies using command
 
     `npm install`
+
+### Step 4: Remove "wcs" from manifest.json
+The example `manifest.json` located in `res/assets` directory has all currently supported NLU engines listed.  For this tutorial, we won't be using WCS (Watson Conversation Service), so edit the file, remove **"wcs"** from the line so it reads `"regexp", "skill"`, and save it.
     
-### Step 4: Run the skill
+### Step 5: Run the skill
 Start the skill using command
 
 `npm run start`
 
-### Step 5: Test the "HelloWorld" skill by having a conversation
+### Step 6: Test the "HelloWorld" skill by having a conversation
 The Watson Assistant service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.  
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
@@ -68,7 +71,7 @@ The Watson Assistant service Converse API allows you to have a conversation with
 }
 ```
 
-### Step 6: Use Swagger page to see which intents exist
+### Step 7: Use Swagger page to see which intents exist
 In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to a skill, which isn't done in a Assistant application.  The Watson Assistant service will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
 
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
