@@ -46,7 +46,7 @@ In order to see the proactive notification, open a web browser tab/window to [ht
 
 Then in the field where you can **Type a request or command** enter in the following command with your Watson Assistant API key:
 
-`/wpa paste-your-api-key-here`
+`/wa paste-your-api-key-here`
 
 ### Step 3: Change the value of the door and see message in chat bot
 

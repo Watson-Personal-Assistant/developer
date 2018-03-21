@@ -7,7 +7,7 @@ In the [build your first skill]({{site.baseurl}}/skill/build-skill) tutorial, yo
 
 ## Pre-requisite
 
-Have completed the [build your first skill tutorial]({{site.baseurl}}/skill/build-skill).
+You must have completed the [build your first skill tutorial]({{site.baseurl}}/skill/build-skill).
 
 **Tip: To make it easier to replace strings in the curl commands below see this [tip on using a browser plugin]({{site.baseurl}}/get-help/troubleshooting/#tip-use-regex-browser-plugin-to-add-your-api-key-to-docs).**
 
@@ -40,7 +40,7 @@ The Watson Assistant needs access to this workspace you just created in order to
 
 Look for the file named `setup-wizard.js` and exectute the script using the following command:
 
-`node setup-wizard.js` 
+`node setup-wizard.js`
 
 ## Step 4: Modify the action.js file to handle the intents defined in WCS
 
@@ -92,7 +92,7 @@ In the `createActionsHandler` code, add the following to handle the chuck-norris
     },
 ```
 
-The last modification you need to make to `actions.js` is to set the catch-all intent handler to send the request to WCS.  To do this, change the `unhandled` code to be: 
+The last modification you need to make to `actions.js` is to set the catch-all intent handler to send the request to WCS.  To do this, change the `unhandled` code to be:
 
 ```javascript
     'unhandled': (request, response) => {
@@ -103,7 +103,7 @@ The last modification you need to make to `actions.js` is to set the catch-all i
 
 ## Step 5: Push changes to IBM Cloud
 
-Test that your skill runs properly to make sure you didn't make any javascript syntax errors by using command: 
+Test that your skill runs properly to make sure you didn't make any javascript syntax errors by using command:
 
 `node index.js`
 
