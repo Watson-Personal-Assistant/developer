@@ -37,7 +37,8 @@ The detailed steps in this tutorial are as follows:
 3. Specify regexp as the NLU engine to use in the skill. The skill is configured to use two NLU engines; wcs (Watson Conversation Service) and regex.  Remove wcs for this tutorial.
   1. Go to the res/assets directory of your local skill.
   2. Find
-    ``"nlu": [
+  
+    ```"nlu": [
     "regexp", "wcs","skill]"```
   3. Remove "wcs".
   4. Save the file.
@@ -52,10 +53,10 @@ http://localhost:10011
 5. Click Execute.
 The converse REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
 The JSON data that is returned includes the following text:<br>
-```"speech": {
- "text": "Hello world"
-}```
-<br>**Note**:  In this tutorial, you sent both the intent and the input directly to a single skill.  In reality, the Watson Assistant performs some additional steps.  It determines which skills can process an intent and it determines which skill is best placed to handle the intent.
+```"speech": {```
+ ```"text": "Hello world"```
+```}``` <br>
+**Note**:  In this tutorial, you sent both the intent and the input directly to a single skill.  In reality, the Watson Assistant performs some additional steps.  It determines which skills can process an intent and it determines which skill is best placed to handle the intent.
 
 ### Step 3:  Register your skill with your Watson Assistant.
 1. Start a secure NGROK tunnel between your skill and your Watson Assistant service on IBM Cloud. Go to the directory where you installed NGROK and enter: ```ngrok http 10011```
@@ -101,7 +102,9 @@ If your skill is running and accessible, a ```200 OK``` response is returned.  F
   < Content-Type: application/json
   < Date: Tue, 27 Jun 2017 01:05:06 GMT
   < X-Powered-By: Express
-  < X-Global-Transaction-ID: 1919343303```<br>
+  < X-Global-Transaction-ID: 1919343303
+  ```
+  <br>
 
 If the skilll is not accessible, complete these steps:
 - Check that the URL you specificed matches the host name of the skill on IBM Cloud.
