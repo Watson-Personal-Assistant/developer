@@ -3,7 +3,7 @@ title: Service Usage
 weight: 10
 ---
 
-When you sign up for the Watson Assistant service, you purchase a plan. As part of your plan, you are entitled to use a specific number of entities or digital interactions, or both per month. For example, your plan might include 3000 entities and 30000k digital interactions per month.
+When you sign up for Watson Assistant Solutions, you purchase a plan. As part of your plan, you are entitled to use a specific number of entities or digital interactions, or both per month. For example, your plan might include 3000 entities and 30000k digital interactions per month.
 
 Entities and digital interactions are defined as follows:
 - Entity: A logical grouping of clients (that is, physical or virtual devices) that can access your Watson Assistance instance. For example, you might have an entity named ‘hotel room’ with three clients; a television, camera, and audio speaker.

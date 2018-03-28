@@ -1,11 +1,11 @@
 ---
-title: Knowledge 
+title: Knowledge
 weight: 30
 ---
 
 ## Overview
 
-The Knowledge component of the Watson Assistant has a set of APIs that work with a database that is shared by all components of the Assistant. Data in this database is represented as objects and relations.  To use a metaphor from object-oriented programming, objects contain fields.  These fields can be literal values (attributes in a JSON document) or references (relations to other objects). Use the Knowledge component APIs to retrieve, create, update and delete objects, as well as, create and delete relations between those objects.  
+The Knowledge component of Watson Assistant Solutions has a set of APIs that work with a database that is shared by all components of the assistant. Data in this database is represented as objects and relations.  To use a metaphor from object-oriented programming, objects contain fields.  These fields can be literal values (attributes in a JSON document) or references (relations to other objects). Use the Knowledge component APIs to retrieve, create, update and delete objects, as well as, create and delete relations between those objects.
 
 While the REST APIs can be used directly, a NodeJS SDK is also available.
 

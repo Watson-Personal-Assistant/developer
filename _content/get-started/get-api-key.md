@@ -1,5 +1,5 @@
 ---
-title: Accessing the Watson Assistant service
+title: Accessing Watson Assistant Solutions
 weight: 20
 ---
 
@@ -16,6 +16,6 @@ Watson Assistant Service: [https://watson-personal-assistant-toolkit.mybluemix.n
 
 
 ### Other service API keys
-Watson Assistant applications may leverage other IBM Cloud or Watson services, each with their own API keys. Similarly, Watson Assistant skills may call on other services from IBM or 3rd parties. As the application developer, you would need to provision and manage those keys separately.
+Watson Assistant Solutions applications may leverage other IBM Cloud or Watson services, each with their own API keys. Similarly, Watson Assistant skills may call on other services from IBM or 3rd parties. As the application developer, you would need to provision and manage those keys separately.
 
 >**What next?**  Learn how to [design your assistant]({{site.baseurl}}/design/how-to-design-your-assistant)

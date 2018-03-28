@@ -1,10 +1,10 @@
 ---
-title: Get help
+title: Getting help
 weight: 10
 ---
-  There are a variety of ways you can get help for the Watson Assistant developer community.
+If you have problems or questions when you are using Watson Assistant Solutions, you can get help by
+searching the product documentation.
 
-  * Get help from the dev team and other beta users by [submitting an issue in the beta support repo](https://github.com/Watson-Personal-Assistant/Beta-Support/issues).
-  * For questions or issues with the developer documentation, [submit an issue against the docs](https://github.com/Watson-Personal-Assistant/developer/issues).
+If you cannot resolve your issue,you can open a support ticket by using your IBMid. Information about support levels and ticket severities is outlined in your Welcome Letter. For instructions on how to open an IBM support ticket, see [IBM Support]({{site.baseurl}}/legal/terms-of-use).
 
-> **What next?** Read our [legal notices]({{site.baseurl}}/legal/terms-of-use) 
+> **What next?** Read our [legal notices](https://www.ibm.com/mysupport)

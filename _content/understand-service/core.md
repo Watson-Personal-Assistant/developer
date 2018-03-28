@@ -1,11 +1,11 @@
 ---
-title: Conversation 
+title: Conversation
 weight: 20
 ---
 
 ## Overview
 
-The Conversation component of the Watson Assistant main purpose is to route your users requests to the proper skill.  A single request is only ever handled by a single skill, but depending on which Converse REST API the request is sent through can scope the request down to a single skill or a group, called a Skill Set.  When a request is sent to multiple skills, a confidence score, along with information on the current context, is used to determine which skill handles the request.
+The Conversation component of Watson Assistant Solutions main purpose is to route your users requests to the proper skill.  A single request is only ever handled by a single skill, but depending on which Converse REST API the request is sent through can scope the request down to a single skill or a group, called a Skill Set.  When a request is sent to multiple skills, a confidence score, along with information on the current context, is used to determine which skill handles the request.
 
 The APIs dealing with sending requests to skills or skill sets and verifying the health and connections between skills and skill sets are broken into the following categories:
 
@@ -22,7 +22,7 @@ This category lists the three most commonly used APIs which allow you to registe
 
 ## Converse
 
-The Watson Assistant provides you with three ways to have your user's requests handled.  You can let the Core send the request to all skills, a single skill or a single skill set.  Typically, you'll want a certain set of skills to handle all your requests, but in a proactive situation, you might want a single skill to handle the user's response to a prompt from the assistant.
+Watson Assistant Solutions provides you with three ways to have your user's requests handled.  You can let the Core send the request to all skills, a single skill or a single skill set.  Typically, you'll want a certain set of skills to handle all your requests, but in a proactive situation, you might want a single skill to handle the user's response to a prompt from the assistant.
 
 ## Skills
 

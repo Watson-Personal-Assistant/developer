@@ -5,7 +5,7 @@ weight: 30
 This page will walk you through the first phase of building your first skill. You will create your skill programmatically using the Watson Assistant service REST APIs that are accessible in Swagger API reference.
 
 1. **How to run and use the "HelloWorld" boilerplate skill hosted locally.**
-2. How to register and use the locally running "HelloWorld" skill with the Assistant service.
+2. How to register and use the locally running "HelloWorld" skill with the Watson Assistant service.
 3. How to host your "HelloWorld" skill on Bluemix for others to use.
 
 ### Pre-requisite
@@ -33,14 +33,14 @@ Make sure you have already [setup your local development environment]({{site.bas
 
 ### Step 4: Remove "wcs" from manifest.json
 The example `manifest.json` located in `res/assets` directory has all currently supported NLU engines listed.  For this tutorial, we won't be using WCS (Watson Conversation Service), so edit the file, remove **"wcs"** from the line so it reads `"regexp", "skill"`, and save it.
-    
+
 ### Step 5: Run the skill
 Start the skill using command
 
 `npm run start`
 
 ### Step 6: Test the "HelloWorld" skill by having a conversation
-The Watson Assistant service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.  
+The Watson Assistant service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
 3. Click on **/converse**.
@@ -92,6 +92,6 @@ Response:
 ```
 
 ### Finish
-Now you have a working skill and next you will have to register this skill to your Watson Assistant.  Text utterances requests are then sent to the Assistant service to get a response from the registered hello world skill.
+Now you have a working skill and next you will have to register this skill to your Watson Assistant instance.  Text utterances requests are then sent to the Watson Assistant service to get a response from the registered hello world skill.
 
- > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/skill/develop-locally/) using a Bluemix hosted Assistant service   
+ > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/skill/develop-locally/) using a Bluemix hosted Assistant service
