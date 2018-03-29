@@ -2,9 +2,9 @@
 title: Linking your IBMid with your Watson Assistant instance
 weight: 40
 ---
-You can use your IBMid to log in to the Watson Assistant console. An IBMid is a free, single ID and password that you can use across the ibm.com domain, including IBM Cloud.
+You can use your IBMid to log in to the Watson Assistant Solutions console. An IBMid is a free, single ID and password that you can use across the ibm.com domain, including IBM Cloud.
 
-Before you can use your IBMid to log in, you must create an entry for your IBMid in the IBM Cloud Identity and Access Management (IAM) system.  When you receive your IAM ID, submit a request to the Watson Assistant Solutions support team to link you IBMid with your Watson Assistant instance.
+Before you can use your IBMid to log in, you must create an entry for your IBMid in the IBM Cloud Identity and Access Management (IAM) system.  When you receive your IAM ID, submit a request to the Watson Assistant Solutions support team to link you IBMid with your Watson Assistant Solutions instance.
 
 
 Complete these steps:
@@ -16,6 +16,6 @@ Complete these steps:
 5.  Send an email to the Watson Assistant Solutions support team to link your Watson Assistance instance with your IBMid. Include the following information:<br>
   - IBMid
   - IAM ID (starts with *IBMid-*)
-  - Watson Assistant instance name
+  - Watson Assistant Solutions instance name
 See your Welcome Letter for contact details.
-6. After the linking is confirmed, verify that you can log in to the Watson Assistant console using your IBMid. For login instructions, see [Accessing the Watson Assistant service]({{site.baseurl}}/get-started/get-api-key/).</p>
+6. After the linking is confirmed, verify that you can log in to the Watson Assistant Solutions console using your IBMid. For login instructions, see [Accessing the Watson Assistant Solutions service]({{site.baseurl}}/get-started/get-api-key/).</p>

@@ -130,7 +130,7 @@ Watson Assistant Solutions needs to access the WCS workspace in order to gather 
 
 ## Step 7: Tell Watson Assistant Solutions to refresh
 
-Just to make sure the Watson Assistant service updates it's cache of information for your skill, use the **/skills/{skillName}/refresh** API to make it gather the WCS info immediately.  You can do this with the following command:
+Just to make sure the Watson Assistant Solutions service updates it's cache of information for your skill, use the **/skills/{skillName}/refresh** API to make it gather the WCS info immediately.  You can do this with the following command:
 
 `curl -X PUT 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/refresh?api_key=paste-your-api-key-here'`
 

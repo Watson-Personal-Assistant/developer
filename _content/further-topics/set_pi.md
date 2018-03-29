@@ -3,12 +3,12 @@ title: Managing the logging of personal information
 weight: 60
 ---
 ### About this task#
-In compliance with GDPR requirements, you can turn off the logging of personal information (PI) for your Watson Assistant instance.  When disabled, any statements that are logged for your Watson Assistant instance do not contain personal information. The logging of PI data is enabled by default.
+In compliance with GDPR requirements, you can turn off the logging of personal information (PI) for your Watson Assistant Solutions instance.  When disabled, any statements that are logged for your Watson Assistant Solutions instance do not contain personal information. The logging of PI data is enabled by default.
 
 You can manage the logging of PI data using the Logging REST API. Before you can use the logging API, you must request an IAM access token.  You include the access token in your API calls to the logging REST API.
 
 ### Before you begin#
-Make sure that your IBM Cloud tenant ID is linked to your Watson Assistant instance.  For instructions on linking them, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
+Make sure that your IBM Cloud tenant ID is linked to your Watson Assistant Solutions instance.  For instructions on linking them, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
 
 ### Procedure#
 Complete these steps:
@@ -20,4 +20,4 @@ Complete these steps:
 3. To view if PI data is being logged, enter: <br>```curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi" -H "accept: application/json" -H 'authorization: Bearer your-IAM-access-token'"```<br>
 4. To enable the logging of PI data, enter: <br>```curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" -H 'authorization: Bearer your-IAM-access-token'"```<br>
 
-For more information about accessing logs for your Watson Assistant instance, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
+For more information about accessing logs for your Watson Assistant Solutions instance, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
