@@ -84,13 +84,14 @@ Create a Platform API key and use that key to create an authorization token to b
 1. Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
 2. Copy the key away for future use.
 3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will be used in the following curl commands to call the IAM service to create a time-sensitive authorization token.
+4. Test that the `printToken.js` NodeJS script can generate a token by executing `node printToken.js paste-your-Platform-API-key-here`
 
 ### Step 5: Add the skill to your Watson Assistant Solutions instance
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:<br>```curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "name": "myHelloWorld", "url": "https://your-name-hello-world-skill.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'```
 
 A `skill updated successfully` message is displayed.
 
-### Step 6:  Test your externally-deployed skill through Watson Assistant.
+### Step 6: Test your externally-deployed skill through Watson Assistant.
 Use the conversation REST API to converse with your skill.  Enter:<br>```curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'```
 
 The JSON data that is returned includes the following text:
