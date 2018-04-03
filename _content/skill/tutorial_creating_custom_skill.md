@@ -55,7 +55,6 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 4. Push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
 An App started message is returned.
 5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:  <br>`curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck` <br>
-<br>
 If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
 ``` 
 Connected to carloshelloskill.mybluemix.net (158.85.156.19) port 80 (#0)
@@ -84,9 +83,8 @@ If the skilll is not accessible, complete these steps:
 Create a Platform API key and use that key to create an authorization token to be used when sending commands to your Watson Assistant Solutions instance.
 1. Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
 2. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will call the IAM service to create an time-sensitive authorization token.
-3. Set the token as an environment variable. To do this in bash shell, enter ```
-export TOKEN=`node printToken.js paste-your-Platform-API-key-here`
-```
+3. Set the token as an environment variable. To do this in bash shell, enter 
+  ```export TOKEN=`node printToken.js paste-your-Platform-API-key-here` ```
 
 Note: This token will expire after an hour, so you will need execute the command above again after an hour if you receive the error `Access token expired`.
 
@@ -96,9 +94,9 @@ Use the skills endpoint of the Conversation REST API to add the skill that is ru
 A `skill updated successfully` message is displayed.
 
 ### Step 6:  Test your externally-deployed skill from your Watson Assistant.
-Use the conversation REST API to converse with your skill.  Enter:<br>`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer ${TOKEN}" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'`<br>
-<br>
-The JSON data that is returned includes the following text:<br>
+Use the conversation REST API to converse with your skill.  Enter:<br>`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer ${TOKEN}" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'`
+
+The JSON data that is returned includes the following text:
 ```
 "speech": {
   "text": "Hello world"
