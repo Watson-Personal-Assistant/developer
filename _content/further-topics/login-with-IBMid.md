@@ -18,4 +18,4 @@ Complete these steps:
   - IAM ID (starts with *IBMid-*)
   - Watson Assistant Solutions instance name
 See your Welcome Letter for contact details.
-6. After the linking is confirmed, verify that you can log in to the Watson Assistant Solutions console using your IBMid. For login instructions, see [Accessing the Watson Assistant Solutions service]({{site.baseurl}}/get-started/get-api-key/).</p>
+6. After the linking is confirmed, verify that you can log in to the Watson Assistant Solutions console using your IBMid. For login instructions, see [Accessing the Watson Assistant Solutions service]({{site.baseurl}}/get-started/get-api-key/).
