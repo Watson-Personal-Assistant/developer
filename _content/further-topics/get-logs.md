@@ -4,12 +4,12 @@ weight: 50
 ---
 
 ### About this task#
-Watson Assistant Solutions uses [IBM Cloud Logging](https://logging.ng.bluemix.net/app/) to log data.   To learn about IBM Cloud Logging, see the [IBM Cloud Logging documentation](https://console.bluemix.net/docs/services/CloudLogAnalysis/index.html#getting-started-with-cla). You can access your logs data from the Watson Assistant Solutions  console or directly from IBM Cloud.
+Watson Assistant Solutions uses [IBM Cloud Logging](https://logging.ng.bluemix.net/app/) to log data.   To learn about IBM Cloud Logging, see the [IBM Cloud Logging documentation](https://console.bluemix.net/docs/services/CloudLogAnalysis/index.html#getting-started-with-cla). You can access your logs data from the Watson Assistant Solutions console or directly from IBM Cloud.
 
 Kibana, an open source analytics and visualization tool, is used to present log data. To learn more about Kibana, see the [Kibana 5.1 Getting Started documentation](https://www.elastic.co/guide/en/kibana/5.1/getting-started.html).
 
 ### Before you begin#
-Locate the GUID of your IBM Cloud Foundry space. The Watson Assistant Solutions ervice uses the GUID to save your log data to your space. Complete these steps:
+Locate the GUID of your IBM Cloud Foundry space. The Watson Assistant Solutions service uses the GUID to save your log data to your space. Complete these steps:
 1. If you do not have an IBMid, create one. For instructions, see *Create a free account* on  [IBM Cloud](https://bluemix.net).
 3. Install the IBM Cloud Log Analysis cli plugin.  Enter:<br>```bx plugin install logging-cli -r Bluemix```<br>
 4. Log in to your region of IBM Cloud.  For example, enter:<br>```bx login -a https://api.ng.bluemix.net --sso ```<br>and follow the onscreen prompts. <br>**Note**: The --sso flag is IBM internal use only.

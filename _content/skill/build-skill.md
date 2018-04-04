@@ -2,11 +2,11 @@
 title: Build your first skill
 weight: 30
 ---
-This page will walk you through the first phase of building your first skill. You will create your skill programmatically using the Watson Assistant service REST APIs that are accessible in Swagger API reference.
+This page will walk you through the first phase of building your first skill. You will create your skill programmatically using the Watson Assistant Solutions service REST APIs that are accessible in Swagger API reference.
 
 1. **How to run and use the "HelloWorld" boilerplate skill hosted locally.**
-2. How to register and use the locally running "HelloWorld" skill with the Watson Assistant service.
-3. How to host your "HelloWorld" skill on Bluemix for others to use.
+2. How to register and use the locally running "HelloWorld" skill with the Watson Assistant Solutions service.
+3. How to host your "HelloWorld" skill on IBM Cloud for others to use.
 
 ### Pre-requisite
 Make sure you have already [setup your local development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
@@ -40,7 +40,7 @@ Start the skill using command
 `npm run start`
 
 ### Step 6: Test the "HelloWorld" skill by having a conversation
-The Watson Assistant service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.
+The Watson Assistant Solutions service Converse API allows you to have a conversation with your skill.   You can test the skill using a browser and the Swagger API reference page.  Send the "Hello" utterances in a request to the skill.
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Converse**.
 3. Click on **/converse**.
@@ -72,7 +72,7 @@ The Watson Assistant service Converse API allows you to have a conversation with
 ```
 
 ### Step 7: Use Swagger page to see which intents exist
-In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to a skill, which isn't done in a Assistant application.  The Watson Assistant service will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
+In the last step, the JSON used to send "Hello" to the skill also sent along the "intent".  This is required here because you are sending the utterance directly to a skill, which isn't done in a Assistant application.  The Watson Assistant Solutions service will take the utterance, determine the intent, and then send the intent and utterance on to the skill.  The Assistant service gets the intents from the skill using the **/intents** API. To see this for yourself, do the following
 
 1. Click link [http://localhost:10011](http://localhost:10011) to open browser to Swagger API reference.
 2. Click on **Resources**.
@@ -92,6 +92,6 @@ Response:
 ```
 
 ### Finish
-Now you have a working skill and next you will have to register this skill to your Watson Assistant instance.  Text utterances requests are then sent to the Watson Assistant service to get a response from the registered hello world skill.
+Now you have a working skill and next you will have to register this skill to your Watson Assistant Solutions instance.  Text utterances requests are then sent to the Watson Assistant Solutions service to get a response from the registered hello world skill.
 
- > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/skill/develop-locally/) using a Bluemix hosted Assistant service
+ > **What next?** Learn how to [register and test a local skill]({{site.baseurl}}/skill/develop-locally/) using an IBM Cloud-hosted Assistant service

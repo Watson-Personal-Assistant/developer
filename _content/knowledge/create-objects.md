@@ -114,7 +114,7 @@ Promise.all(
 
 ### Step 7: Create .env file, add the Watson Assistant Solutions API key and execute
 
-Before the code above can be ran, you need to create a .env file that includes the URL to Watson Assistant service and the API key.
+Before the code above can be ran, you need to create a .env file that includes the URL to Watson Assistant Solutions service and the API key.
 
 To do this copy the `.env.sample` file to `.env` and edit the `.env` file to have the following:
 
@@ -125,7 +125,7 @@ AGENT_PORT=
 AGENT_HOST=[this will need to be publicly visible; perhaps you should try ngrok]
 ```
 
-After providing the Watson Assistant service `URL` and `API key`, install the necessary node packages to run the code by using command:
+After providing the Watson Assistant Solutions service `URL` and `API key`, install the necessary node packages to run the code by using command:
 
 `npm install`
 

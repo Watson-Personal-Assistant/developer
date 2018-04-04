@@ -5,7 +5,7 @@ weight: 50
 This page will walk you through the next phase of building your first skill.
 
 1. [How to run and use the "HelloWorld" boilerplate skill hosted locally.]({{site.baseurl}}/skill/build-skill)
-2. [How to register and use the locally running "HelloWorld" skill with the Watson Assistant service.]({{site.baseurl}}/skill/develop-locally)
+2. [How to register and use the locally running "HelloWorld" skill with the Watson Assistant Solutions service.]({{site.baseurl}}/skill/develop-locally)
 3. **How to host your "HelloWorld" skill on IBM Cloud for others to use.**
 
 ### Pre-requisite
@@ -68,7 +68,7 @@ curl: (6) Could not resolve host: Accept
 * Check to make sure your application is running by opening a browser and trying to navigate to the Skill Swagger doc. An example URL: https://carloshelloskill.mybluemix.net/docs/
 
 ### Step 5: Update the hostname for the skill, running on IBM Cloud, to the Assistant's skill set
-Use the Watson Assistant service **/skills** API to update your skill running on IBM Cloud to the public registry using your API Key and Watson Assistant service IBM Cloud-hosted URL.
+Use the Watson Assistant Solutions service **/skills** API to update your skill running on IBM Cloud to the public registry using your API Key and Watson Assistant Solutions service IBM Cloud-hosted URL.
 
 **Make sure you change the `your-name-hello-world-skill` with your `hostname` and paste your API key in the command below.**
 
@@ -79,8 +79,8 @@ Use the Watson Assistant service **/skills** API to update your skill running on
 
 If successful, this command should return a message similar to `skill updated successfully`.
 
-### Step 6: Say hello to your myHelloWorld skill hosted on IBM Cloud using the Watson Assistant service
-Use the Watson Assistant service **/skillSets/{skillSetName}/converse** API to say "Hello" using your API Key and Assistant service IBM Cloud-hosted URL.
+### Step 6: Say hello to your myHelloWorld skill hosted on IBM Cloud using the Watson Assistant Solutions service
+Use the Watson Assistant Solutions service **/skillSets/{skillSetName}/converse** API to say "Hello" using your API Key and Assistant service IBM Cloud-hosted URL.
 
 `curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "text": "Hello",

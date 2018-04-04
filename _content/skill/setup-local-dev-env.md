@@ -1,5 +1,5 @@
 ---
-title: Set up local development environment
+title: Set up your local environment
 weight: 20
 ---
 This section explains how to set up your local development environment so that you can test your code locally and then deploy it to IBM Cloud Foundry or IBM Cloud Functions. An IBM Cloud account will allow you to use many of the IBM Cloud services to power your assistant.

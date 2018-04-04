@@ -1,5 +1,5 @@
 ---
-title: Accessing Watson Assistant Solutions
+title: Accessing your instance
 weight: 20
 ---
 

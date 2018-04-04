@@ -1,8 +1,8 @@
 ---
-title: Getting started with IBM Watson Assistant Solutions
+title: Getting started
 weight: 10
 ---
-Use these steps to quickly start powering your applications with an intelligent and proactive assistant:
+Use these steps to use Watson Assistant Solutions to start powering your applications with an intelligent and proactive assistant :
 
 * Learn about the capabilities of [IBM Watson Assistant Solutions](https://www.ibm.com/watson/ai-assistant/).
 * Contact your sales representative for information about signing up for the service.

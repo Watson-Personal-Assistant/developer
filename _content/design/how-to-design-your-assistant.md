@@ -1,10 +1,10 @@
 ---
-title: How to design your assistant
+title: Designing your assistant
 weight: 10
 ---
 
 ## The power of Watson Assistant Solutions
-Assistants built with Watson Assistant Solutions are most impactful when they are designed to be personal, proactive, and portable.
+Assistants that are built with Watson Assistant Solutions are most impactful when they are designed to be personal, proactive, and portable.
 
 An assistant can understand the context around users from IoT inputs and data sources to continuously learn from a user's behavior.
 >*For example, in a car, it may know the speed of the car, the traffic conditions ahead, and that you like to listen to the 6pm news on 99.1 FM.*
