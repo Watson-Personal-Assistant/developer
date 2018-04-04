@@ -7,7 +7,7 @@ When you sign up for an instance of Watson Assistant Solutions, you purchase a p
 
 Entities and digital interactions are defined as follows:
 - Entity: A logical grouping of clients (that is, physical or virtual devices) that can access your Watson Assistance instance. For example, you might have an entity named ‘hotel room’ with three clients; a television, camera, and audio speaker.
-- Digital interaction: The number of 5-minute intervals per month in which at least one user utterance accesses your Watson Assistant Solutions instance. Multiple utterances in the same 5-minute interval are defined as a single digital interaction. Two utterances that span two different 5-minute intervals are defined as two digital interactions.
+- Digital interaction: The number of 5-minute intervals per month in which at least one user utterance accesses your Watson Assistant Solutions instance. A day is divided into static 5-minute intervals. For example, 09:00:00-09:04:59 is one interval. Multiple utterances from a single user in the same 5-minute interval are defined as a single digital interaction. Utterances from a single user that span two different 5-minute intervals are defined as two digital interactions.
 
 Usage is calculated as follows:
 - If a user utterance instance includes a client ID (for example, speaker-1) and if that client ID is mapped to an entity (hotel room), usage is calculated as using that entity.
