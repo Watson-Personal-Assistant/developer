@@ -8,7 +8,7 @@ In compliance with GDPR requirements, you can turn off the logging of personal i
 You can manage the logging of PI data using the Logging REST API. Before you can use the logging API, you must request an IAM access token.  You include the access token in your API calls to the logging REST API.
 
 ### Before you begin#
-Make sure that your IBM Cloud Tenant ID is linked to your Watson Assistant Solutions instance.  For instructions on linking them, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
+Make sure that your IBM Cloud Tenant ID is linked to your Watson Assistant Solutions instance.  For instructions on linking them, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/login-with-IBMid/).
 
 ### Procedure#
 Complete these steps:
