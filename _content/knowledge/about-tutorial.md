@@ -1,9 +1,9 @@
 ---
-title: The Knowledge and Reasoning tutorial
+title: The Knowledge and Reasoning (alpha) tutorial
 weight: 10
 ---
 
-In the following tutorial, you will go through the creation of a simple home security scenario using the Knowledge and Reasoning components.
+In the following tutorial, you will go through the creation of a simple home security scenario using the Knowledge and Reasoning (alpha) components.
 
 In this scenario, the user would like to be notified if their house's entrance door is opened while he/she is away.
 
@@ -14,4 +14,4 @@ This scenario is implemented using the following NodeJS code:
 
 First, you will build the code to create the objects and relations.
 
-> **What next?** Learn how to [create objects in Knowledge component]({{site.baseurl}}/knowledge/create-objects).
+> **What next?** Learn how to [create objects in Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects).

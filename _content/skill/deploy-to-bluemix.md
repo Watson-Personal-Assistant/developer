@@ -102,4 +102,4 @@ The JSON returned should include the following:
 
 Now that you have successfully created your first Hello World skill you should try creating your own skill.
 
-> **What next?** Learn how to use the [Knowledge and Rules components]({{site.baseurl}}/knowledge/what-is-kr) or [add WCS]({{site.baseurl}}/further-topics/using-wcs) as the NLU for this skill
+> **What next?** Learn how to use the [Knowledge and Reasoning (alpha) components]({{site.baseurl}}/knowledge/what-is-kr) or [add WCS]({{site.baseurl}}/further-topics/using-wcs) as the NLU for this skill

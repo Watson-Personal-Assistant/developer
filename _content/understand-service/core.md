@@ -41,4 +41,4 @@ These APIs are used to help you associate and validate the associations between 
 The Health APIs allow you to quickly tell if a single or a set of skills are available.
 
 
->**What next?**  Learn about the [Knowledge component APIs and SDK]({{site.baseurl}}/understand-service/knowledge-store)
+>**What next?**  Learn about the [Knowledge (alpha) component APIs and SDK]({{site.baseurl}}/understand-service/knowledge-store)

@@ -2,11 +2,11 @@
 title: Create condition function for the rule
 weight: 30
 ---
-This page will walk you through the second phase of learning how to make your assistant proactive. 
+This page will walk you through the second phase of learning how to make your assistant proactive.
 
 In this phase of the tutorial, you will create the code that will make up the condition part of the Rule and host it on IBM Cloud Functions.
 
-1. [Create objects and relations in the Knowledge component]({{site.baseurl}}/knowledge/create-objects)
+1. [Create objects and relations in the Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects)
 2. **Create and test a Cloud Function to be the condition part of the Rule**
 3. Create and test a Cloud Function to be the action part of the Rule
 4. Create a Rule in the Rules component and get it to fire
@@ -26,7 +26,7 @@ You can't create the Rule until you have the services, in our case Cloud Functio
 
 ### Step 2: Create a NodeJS function that given a door, returns the house and the owner
 
-The Cloud Function for our condition part of the rule will get invoked when any object is updated in the Knowledge component. But you only want the action part of the Rule to be invoked when the update is on a door and the owner is away from the house.  So, you need to get the house and owner from the door object first.
+The Cloud Function for our condition part of the rule will get invoked when any object is updated in the Knowledge (alpha) component. But you only want the action part of the Rule to be invoked when the update is on a door and the owner is away from the house.  So, you need to get the house and owner from the door object first.
 
 Create a file named `condition.js` and include the object, relation and dotenv module.
 
@@ -84,16 +84,16 @@ function checkType(event, type) {
 }
 ```
 
-### Step 4: Create a NodeJS function that returns true or false as text as required by the Rules component 
+### Step 4: Create a NodeJS function that returns true or false as text as required by the Rules component
 
 Add the following function that is needed for a couple reasons: 1) The Rules component requires that the condition return a string 'true' or 'false', but Cloud Functions require actions return JSON objects.  This function is needed to satisfy both requirements.
 
 ```javascript
 function returnContent(value) {
-  return { 
-    headers: { 
+  return {
+    headers: {
       'Content-Type': 'text/plain'
-    }, 
+    },
     statusCode: 200,
     body: `${value}`
   };
@@ -115,7 +115,7 @@ function main(event) {
       var house = objects[1];
       var owner = objects[2];
       // if door is open and owner isn't at home
-      if (door.attributes.isOpen && 
+      if (door.attributes.isOpen &&
         (owner.attributes['longitude'] != house.attributes['longitude'] ||
           owner.attributes['latitude'] != house.attributes['latitude'])) {
         console.log("door is open and owner isn't home - return True");
@@ -128,7 +128,7 @@ function main(event) {
   } else {
     console.log("update wasn't on a door - return False");
     return returnContent(false);
-  }  
+  }
 }
 ```
 
@@ -158,7 +158,7 @@ if (require.main === module) {
 }
 ```
 
-Execute the code by passing in the Door ID you noted at the end of the last lesson using command: 
+Execute the code by passing in the Door ID you noted at the end of the last lesson using command:
 
 `node condition.js 4144`
 
@@ -184,7 +184,7 @@ To run `condition.js` and the javascript code it includes, you must create a zip
 
 `zip -r condition.zip condition.js package.json node_modules/ .env sdk/`
 
-Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  You will need to login to IBM Bluemix before invoking this command by using `bx login -sso` which will provide a URL to paste into your browser to go through login. Once you have logged in, you'll have to set the `org` and `space` using the command: 
+Now you will use the `bx wsk` command to push the zip file to Cloud Functions.  You will need to login to IBM Bluemix before invoking this command by using `bx login -sso` which will provide a URL to paste into your browser to go through login. Once you have logged in, you'll have to set the `org` and `space` using the command:
 
 `bx target -o paste-your-IBMid-here -s dev`
 
@@ -198,11 +198,11 @@ In a new terminal window or tab, execute this command that will poll the logs fo
 
 `bx wsk activation poll condition`
 
-Now you will invoke the function, but first you need to get the Web URL of the Cloud Function by executing the command: 
+Now you will invoke the function, but first you need to get the Web URL of the Cloud Function by executing the command:
 
 `bx wsk action get condition --url`
 
-The following curl command will invoke the Cloud Function, just make sure you provide your Door ID and the Web URL from above: 
+The following curl command will invoke the Cloud Function, just make sure you provide your Door ID and the Web URL from above:
 
 `curl -X POST -H "Content-Type:application/json" -d '{"results":[{"type":"Door","id":"paste-your-Door-ID"}]}' paste-the-Web-URL`
 

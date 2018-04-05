@@ -4,9 +4,9 @@ weight: 50
 ---
 This page will walk you through the fourth, and final, phase of learning how to make your assistant proactive.
 
-In this phase of the tutorial, you will create the Rule, using the Rules component's REST API, and then update the door's status, using the Knowledge components REST API, to make the rule fire.
+In this phase of the tutorial, you will create the Rule, using the Rules component's REST API, and then update the door's status, using the Knowledge  (alpha) components REST API, to make the rule fire.
 
-1. [Create objects and relations in the Knowledge component]({{site.baseurl}}/knowledge/create-objects)
+1. [Create objects and relations in the Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects)
 2. [Create and test a Cloud Function to be the condition part of the Rule]({{site.baseurl}}/knowledge/create-condition-function)
 3. [Create and test a Cloud Function to be the action part of the Rule]({{site.baseurl}}/knowledge/create-action-function)
 4. **Create a Rule in the Rules component and get it to fire**

@@ -4,9 +4,9 @@ weight: 20
 ---
 This page will walk you through first phase of learning how to make your assistant proactive.
 
-In this phase of the tutorial, you will create objects and relations programmatically using the Watson Assistant Solutions Knowledge and Rules components NodeJS SDK.
+In this phase of the tutorial, you will create objects and relations programmatically using the Watson Assistant Solutions Knowledge and Reasoning (alpha) components NodeJS SDK.
 
-1. **Create objects and relations in the Knowledge component**
+1. **Create objects and relations in the Knowledge (alpha) component**
 2. Create and test a Cloud Function to be the condition part of the Rule
 3. Create and test a Cloud Function to be the action part of the Rule
 4. Create a Rule in the Rules component and get it to fire
@@ -14,7 +14,7 @@ In this phase of the tutorial, you will create objects and relations programmati
 ### Pre-requisite
 Make sure you have already [setup your NodeJS development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
 
-### Step 1: Fork the Knowledge and Rules SDK
+### Step 1: Fork the Knowledge and Reasoning (alpha) SDK
 1. Go to  [https://github.com/Watson-Personal-Assistant/kr-node-sdk](https://github.com/Watson-Personal-Assistant/kr-node-sdk).
 2. Click the gray **Fork** button in the top right corner.
 
