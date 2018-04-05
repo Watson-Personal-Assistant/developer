@@ -11,11 +11,11 @@ In the beginning, you'll interact with the Conversation component the most.  The
 
 ## Knowledge
 
-The Knowledge component is used to store world objects and information about those objects.  The Skills you develop will create and modify objects in the Knowledge component using the REST API or a NodeJS SDK.  The Conversation component will also create and modify information in the Knowledge component based on the context passed to the Conversation component from your application/solution.  A later page will give you an overview of the Knowledge component REST APIs and you'll get a hands-on tutorial using the NodeJS SDK in a later section.
+The Knowledge (alpha) component is used to store world objects and information about those objects.  The Skills you develop will create and modify objects in the Knowledge (alpha) component using the REST API or a NodeJS SDK.  The Conversation component will also create and modify information in the Knowledge component based on the context passed to the Conversation component from your application/solution.  A later page will give you an overview of the Knowledge (alpha) component REST APIs and you'll get a hands-on tutorial using the NodeJS SDK in a later section.
 
 ## Rules
 
-The Rules component handles subscriptions to changes in the objects and relations in the Knowledge component and publishes notification events to Agents.  Agents are the primary pieces of software you will develop to give your cognitive application proactivity.  You'll also create Rules, using the Rules NodeJS SDK or REST API, to limit and focus the change event notifications to your Agents.  Agents can also create and modify objects in the Knowledge component.  A later page will give you an overview of the Rules APIs and you'll learn how to create Rules and Agents using the NodeJS SDK in a tutorial.
+The Rules (alpha) component handles subscriptions to changes in the objects and relations in the Knowledge (alpha) component and publishes notification events to Agents.  Agents are the primary pieces of software you will develop to give your cognitive application proactivity.  You'll also create Rules, using the Rules NodeJS SDK or REST API, to limit and focus the change event notifications to your Agents.  Agents can also create and modify objects in the Knowledge component.  A later page will give you an overview of the Rules APIs and you'll learn how to create Rules and Agents using the NodeJS SDK in a tutorial.
 
 ## Your Application
 
