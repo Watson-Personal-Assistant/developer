@@ -19,7 +19,7 @@ The Rules (alpha) component handles subscriptions to changes in the objects and 
 
 ## Your Application
 
-Whatever type of application you are building, be it a mobile application, web application or an integrated hardware and software solution, requests from your users need to be converted into text and sent to the Conversation component using the `converse` REST API.  Currently, inclusion of Speech-to-Text conversion services is in beta mode. If you are not part of this beta, this ability must be provided by your application services.  After sending the users' utterance to Conversation component, your application will receive a JSON reply that includes, along with JSON context data, the textual reply for you to then show, or speak to your user.
+Whatever type of application you are building, be it a mobile application, web application or an integrated hardware and software solution, requests from your users need to be converted into text and sent to the Conversation component using the `converse` REST API.  Currently, inclusion of Speech-to-Text conversion services is in alpha mode. If this feature is not enabled for your instance, this ability must be provided by your application services.  After sending the users' utterance to Conversation component, your application will receive a JSON reply that includes, along with JSON context data, the textual reply for you to then show, or speak to your user.
 
 ## Summary
 
