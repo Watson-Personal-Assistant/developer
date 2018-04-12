@@ -2,11 +2,11 @@
 title: Create action function for the rule
 weight: 40
 ---
-This page will walk you through the third phase of learning how to make your assistant proactive. 
+This page will walk you through the third phase of learning how to make your assistant proactive.
 
 In this phase of the tutorial, you will create the code that makes up the action part of the Rule and host it on IBM Cloud Functions.
 
-1. [Create objects and relations in the Knowledge component]({{site.baseurl}}/knowledge/create-objects)
+1. [Create objects and relations in the Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects)
 2. [Create and test a Cloud Function to be the condition part of the Rule]({{site.baseurl}}/knowledge/create-condition-function)
 3. **Create and test a Cloud Function to be the action part of the Rule**
 4. Create a Rule in the Rules component and get it to fire
@@ -26,7 +26,7 @@ var KnowledgeObject = require('./sdk/object');
 
 ### Step 2:  Create the main function to send notification to chat bot
 
-Add the main function that will get the name of the Door that is open and notify the owner.  Here we will simulate the notification through a chat bot UI that you can use to talk to your assistant using your Watson Assistant API key.
+Add the main function that will get the name of the Door that is open and notify the owner.  Here we will simulate the notification through a chat bot UI that you can use to talk to your assistant using your Watson Assistant Solutions API key.
 
 ```javascript
 function main(event) {
@@ -92,7 +92,7 @@ if (require.main === module) {
 }
 ```
 
-Execute the code by passing in the Door ID you noted at the end of the last lesson using command: 
+Execute the code by passing in the Door ID you noted at the end of the last lesson using command:
 
 `node action.js 4144`
 
@@ -130,11 +130,11 @@ In a new terminal window or tab, execute this command that will poll the logs fo
 
 `bx wsk activation poll action`
 
-Now you will invoke the function, but first you need to get the Web URL of the Cloud Function by executing the command: 
+Now you will invoke the function, but first you need to get the Web URL of the Cloud Function by executing the command:
 
 `bx wsk action get action --url`
 
-The following curl command will invoke the Cloud Function, just make sure you provide your Door ID and the Web URL from above: 
+The following curl command will invoke the Cloud Function, just make sure you provide your Door ID and the Web URL from above:
 
 `curl -X POST -H "Content-Type:application/json" -d '{"results":[{"type":"Door","id":"paste-your-Door-ID"}]}' paste-the-Web-URL`
 

@@ -1,15 +1,15 @@
 ---
 title: Slackbot Integration
-weight: 20
+weight: 30
 ---
 
-## How to build a slack-bot powered by Watson Assistant
+## How to build a slack-bot powered by Watson Assistant Solutions
 
-Refer to github project [Watson Assistant Slackbot Integration](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot) 
+Refer to the github project [Watson Assistant Solutions Slackbot Integration](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot)
 
 
 ### Description
-A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant
+A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant Solutions
 
 [![License](https://img.shields.io/badge/license-APACHE2-blue.svg)]() [![Python](https://img.shields.io/badge/Python-3.6.2-yellow.svg)]()
 
@@ -77,9 +77,9 @@ Once your app is running you should be good to go. You can message your bot dire
 
 ---
 
-### To Run on Bluemix
+### To Run on IBM Cloud
 
-Get the [IBM Bluemix CLI](https://console.bluemix.net/docs/cli/index.html#cli).
+Get the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#cli).
 
 Then login, using the command:
 

@@ -1,19 +1,16 @@
 ---
 layout: home
-title: Developer Docs for Watson Assistant 
+title: Documentation for Watson Assistant Solutions
 ---
-## What is Watson Assistant?
-Watson Assistant is a technology that was designed to create personalized and engaging experiences with digital assistants for consumers. It is designed to be easily customizable and integrated into devices such as mobile apps, cars, rooms, and other connected objects. It understands context from history and real world sources to enable a delightful conversation and truly helpful recommendations.
+## What does the offering provide?
+The Watson Assistant Solutions offering provides a technology for creating personalized and engaging experiences with digital assistants for consumers. The assistants that you build with the offering are easily customizable and can be integrated with various device types such as mobile apps, cars, rooms, and other connected objects.  The assistants understand context from history and from real world sources to enable a delightful conversation and to provide truly helpful recommendations.
 
-## Who is this Beta for?
-The beta program allows early adopters to get hands on as they provide feedback on unreleased features of Watson Assistant. This is an opportunity to help us shape this new technology to suit your needs.
+### Who is the target audience?
+The Watson Assistant Solutions offering is aimed at the following types of developers:
+- **Skills developers**: Developers who create new capabilities (that is, skills) for their assistant. Once deployed, skills can be referenced by multiple assistants. A skill can answer domain-specific questions, such as travel questions. A skill can also be proactive and make recommendations based on (a)the context information such as the location of the user and (b) notifications from agents that are connected to external sources.  
 
-### This Beta is aimed at the following developers:
+- **App developers**: Developers who create assistants and embed them into applications or into their user experiences.
 
-- **Skills developers** who create new capabilities for their assistant called Skills. Once deployed, Skills can be referenced in multiple assistants. A skill can answer domain-specific questions, such as on travel. A skill can also be proactive and make recommendations based on the context, for example the location, and agents that are connected to external sources, for example flight deals.
+- **Hardware developers**: Developers who integrate IoT devices with their assistants. The devices can provide input or output for the users.  The devices can process environmental data from sensors to create contextual knowledge for the assistants.
 
-- **App developers** who create assistants and embed them into applications or user experiences.
-
-- **Hardware developers** who integrate IoT devices into the assistant. Devices can provide input or output for the end users and process environmental data received from sensors to create contextual knowledge for the assistant.
-
-Lets [**Get Started**]({{site.baseurl}}/get-started/get-started/) 
+[**Get Started with Watson Assistant Solutions**]({{site.baseurl}}/get-started/get-started/) 
