@@ -1,8 +1,8 @@
 ---
-title: Creating a simple custom skill
-weight: 20
+title: Tutorial - creating a custom skill with a regex NLU
+weight: 50
 ---
-The Watson Assistant provides a boilerplate in Node.js for creating a simple hello world skill. Using this skill, when you say hello to your assistant, your assistant responds with hello world.
+Watson Assistant Solutions provides a boilerplate in Node.js for creating a simple hello world skill. Using this skill, when you say hello to your assistant, your assistant responds with hello world.
 
 The high-level steps in this tutorial are as follows:
 1. Create a skill using the 'HelloWorld' skill boilerplate.
@@ -13,14 +13,14 @@ The high-level steps in this tutorial are as follows:
 ### Before you begin
 1. Get access to your Watson Assistant instance on IBM Cloud.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
-3. Install [NodeJS version 8](https://nodejs.org/dist/v8.9.1/) (The Knowledge and Rules tutorial requires NodeJS 8.)
+3. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
 5. Install the [IBM Cloud cli tool](https://console.bluemix.net/docs/cli/index.html#cli).
 6. (Optional) Add the regex browser plugin to your web browser.
 
 ---
-### The detailed steps in this tutorial are as follows:
-### Step 1: Clone the hello world skill
+### Procedure
+#### Step 1: Clone the hello world skill
 1.  Copy the hello world skill boilerplate to your local system.
     1. Click Fork to take a copy of the repository.
     2. Click Clone or download. Copy the git url.
@@ -30,7 +30,7 @@ The high-level steps in this tutorial are as follows:
     2. Enter `npm install`.
 4.  Start the skill. From the command line, enter<br>`npm run start`
 
-### Step 2: Test your skill from your local system.
+#### Step 2: Test your skill from your local system.
 1. Start a web browser and open the conversation REST API in the Swagger UI.  Enter:
 http://localhost:10011
 2. Go to Converse.
@@ -47,7 +47,7 @@ The JSON data that is returned includes the following text:<br>
 <br>
 **Note**:  In this tutorial, you sent both the intent and the input directly to a single skill.  In reality, the Watson Assistant performs some additional steps.  It determines which skills can process an intent and it determines which skill is best placed to handle the intent.
 
-### Step 3: Deploy your skill to IBM Cloud.
+#### Step 3: Deploy your skill to IBM Cloud.
 Deploy your skill to IBM Cloud to make your skill available for you and others to use.
 1. Stop your locally running skill.  Enter `Ctrl C` to stop the skill.
 2. Update the host name and skill name in the manifest.yml file of your skill.
@@ -56,8 +56,8 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 An App started message is returned.
 5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:  <br>`curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck` <br>
 If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
-``` 
-Connected to carloshelloskill.mybluemix.net (158.85.156.19) port 80 (#0)
+```
+Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
   > GET /v1/api/healthcheck HTTP/1.1
   > Host: simpleskill.mybluemix.net
   > User-Agent: curl/7.51.0

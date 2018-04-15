@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: Using a regex browser plugin
 weight: 20
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Slackbot Integration
-weight: 30
+weight: 50
 ---
 
 ## How to build a slack-bot powered by Watson Assistant Solutions

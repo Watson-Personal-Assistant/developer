@@ -1,6 +1,6 @@
 ---
 title: Logging personal information
-weight: 60
+weight: 40
 ---
 ### About this task#
 In compliance with GDPR requirements, you can turn off the logging of personal information (PI) for your Watson Assistant Solutions instance.  When disabled, any statements that are logged for your Watson Assistant Solutions instance do not contain personal information. The logging of PI data is enabled by default.

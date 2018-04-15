@@ -1,6 +1,6 @@
 ---
-title: Service Usage
-weight: 10
+title: tracking your service usage
+weight: 20
 ---
 
 When you sign up for an instance of Watson Assistant Solutions, you purchase a plan. As part of your plan, you are entitled to use a specific number of entities or digital interactions, or both per month. For example, your plan might include 3000 entities and 30000k digital interactions per month.

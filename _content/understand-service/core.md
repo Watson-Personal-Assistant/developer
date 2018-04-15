@@ -1,44 +1,33 @@
 ---
-title: Conversation
-weight: 20
+title: Conversation routing
+weight: 30
 ---
+The detailed steps involved in routing a text-based conversation are as follows:
 
-## Overview
+#### A device sends a converse request
+Figure 1 - A converse request is sent
+![Send utterance]({{site.baseurl}}/images/send_utterance.png)
+1. A device sends an utterance to the Watson Assistant Solutions core.
+2. The Watson Assistant Solutions core identifies the language of the utterance.
 
-The Conversation component of Watson Assistant Solutions main purpose is to route your users requests to the proper skill.  A single request is only ever handled by a single skill, but depending on which Converse REST API the request is sent through can scope the request down to a single skill or a group, called a Skill Set.  When a request is sent to multiple skills, a confidence score, along with information on the current context, is used to determine which skill handles the request.
+#### An evaluation request is sent
+Figure 2 - An evaluation request is sent
+![Evaluation request]({{site.baseurl}}/images/evaluation_request.png)
+1. The Watson Assistant Solutions service routes the utterance to all registered skills that support the language of the utterance.
+2. Each skill evaluates the request.  Based on the utterance, the skill calculates a confidence score for each of its intents. It sends the confidence score, and its intents and entities, to the routing core.
 
-The APIs dealing with sending requests to skills or skill sets and verifying the health and connections between skills and skill sets are broken into the following categories:
+#### A skill is chosen to respond
+Figure 3 - A skill is chosen
+![A skill is chosen]({{site.baseurl}}/images/select_skill.png)
+Based on the responses, the Watson Assistant Solutions core selects a skill to route to by completing the following steps:
+1. The routing core checks for mandatory entities and excludes from consideration any intents that did not includes those entities in their response.
+2. The routing core checks the threshold value defined the manifest file of each skill and excludes from consideration any _intents_ that did not return a confidence level about the threshold value for the skill.
+3. The routing core identifies the skill with highest confidence score.  If the highest confidence score was returned by more than one skill, the Watson Assistant Solutions core chooses the skill that processed the previous request. If none of these skills processed the previous request, the Watson Assistant Solutions core makes an arbitrary decision on which skill to choose.
+4. The routing score identifies which skill to route the utterance to.<br>
+**Note**: If no skill is found with an intent that has with a probability score above the threshold value, and if a fallback skill is defined, the routing core routes the utterance to the fallback skill for processing.  However, if no fallback skill is defined or if the fallback skill does not know how to process the utterance, an "I'm not trained for this" type response is returned to the device.
 
-* Common Use
-* Converse
-* Skills
-* SkillSets
-* SkillSets-Skills Links
-* Health
-
-## Common Use APIs
-
-This category lists the three most commonly used APIs which allow you to register a Skill with the Conversation component, associate the skill to a Skill Set and then send a request to that Skill Set. These APIs are also listed in their respective categories for completeness.
-
-## Converse
-
-Watson Assistant Solutions provides you with three ways to have your user's requests handled.  You can let the Core send the request to all skills, a single skill or a single skill set.  Typically, you'll want a certain set of skills to handle all your requests, but in a proactive situation, you might want a single skill to handle the user's response to a prompt from the assistant.
-
-## Skills
-
-The APIs dealing with Skills are primarily available to create, update and delete skills, but you can also get information on each skill.
-
-## SkillSets
-
-The APIs dealing with Skill Sets allow you to create, modify, and delete sets as well as get information on one or all sets.
-
-## SkillSets-Skills Links
-
-These APIs are used to help you associate and validate the associations between skills and skill sets.
-
-## Health
-
-The Health APIs allow you to quickly tell if a single or a set of skills are available.
-
-
->**What next?**  Learn about the [Knowledge (alpha) component APIs and SDK]({{site.baseurl}}/understand-service/knowledge-store)
+#### A converse response is sent to the device
+Figure 4 - A converse response is sent
+![A converse response is sent]({{site.baseurl}}/images/send_response.PNG)
+1. The skill sends the converse response to the Watson Assistant Solutions core.
+2. The Watson Assistant Solutions core routes the response to the device.

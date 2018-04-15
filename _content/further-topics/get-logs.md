@@ -1,6 +1,6 @@
 ---
 title: Accessing your log data
-weight: 50
+weight: 30
 ---
 
 ### About this task#
