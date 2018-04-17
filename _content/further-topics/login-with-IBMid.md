@@ -18,7 +18,7 @@ Create an IBM Cloud authorization token.  You will use the authorization token l
 
 ### Procedure
 To link your IBMid with your Watson Assistant Solutions instance, complete these steps:
-3. Create an IAM token. Copy the [wa-get-iam-updated.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-updated.sh) script to your file system and run the script.  When prompted, either:
+3. Create an IAM token. Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your file system and run the script.  When prompted, either:
   - paste your platform API key
   - enter the location where you saved your platform autorization token.
 The IAM system returns your IAM ID and your IBMid.

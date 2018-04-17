@@ -1,5 +1,5 @@
 ---
-title: tracking your service usage
+title: Tracking your service usage
 weight: 20
 ---
 

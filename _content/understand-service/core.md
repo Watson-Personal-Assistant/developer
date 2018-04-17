@@ -1,6 +1,6 @@
 ---
 title: Conversation routing
-weight: 30
+weight: 15
 ---
 The detailed steps involved in routing a text-based conversation are as follows:
 
