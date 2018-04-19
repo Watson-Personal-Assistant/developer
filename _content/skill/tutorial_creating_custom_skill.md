@@ -1,6 +1,6 @@
 ---
-title: Tutorial - creating a custom skill with a regex NLU
-weight: 50
+title: Tutorial - creating a custom skill with a regexp NLU
+weight: 60
 ---
 Watson Assistant Solutions provides a boilerplate in Node.js for creating a simple hello world skill. Using this skill, when you say hello to your assistant, your assistant responds with hello world.
 
@@ -13,13 +13,15 @@ The high-level steps in this tutorial are as follows:
 ### Before you begin
 1. Get access to your Watson Assistant instance on IBM Cloud.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
-3. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
+3. Install [NodeJS](https://nodejs.org/dist/).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
 5. Install the [IBM Cloud cli tool](https://console.bluemix.net/docs/cli/index.html#cli).
-6. (Optional) Add the regex browser plugin to your web browser.
+6. (Optional) Add the regexp browser plugin to your web browser.
 
 ---
 ### Procedure
+Complete these steps:
+
 #### Step 1: Clone the hello world skill
 1.  Copy the hello world skill boilerplate to your local system.
     1. Click Fork to take a copy of the repository.
@@ -32,20 +34,20 @@ The high-level steps in this tutorial are as follows:
 
 #### Step 2: Test your skill from your local system.
 1. Start a web browser and open the conversation REST API in the Swagger UI.  Enter:
-http://localhost:10011
+`http://localhost:10011`
 2. Go to Converse.
 3. Click /converse.
 4. Click Try it out.
 5. Click Execute.
 The converse REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
 The JSON data that is returned includes the following text:<br>
-```
+```javascript
 "speech": {
  "text": "Hello world"
 }
 ```
 <br>
-**Note**:  In this tutorial, you sent both the intent and the input directly to a single skill.  In reality, the Watson Assistant performs some additional steps.  It determines which skills can process an intent and it determines which skill is best placed to handle the intent.
+**Note**:  In this step, you sent both the intent and the input directly to a single skill.  When you send a request to the Watson Assistant Solutions core, additional steps are performed. The Watson Assistant Solutions core determines  which skill is best placed to handle the request.
 
 #### Step 3: Deploy your skill to IBM Cloud.
 Deploy your skill to IBM Cloud to make your skill available for you and others to use.
@@ -53,10 +55,13 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 2. Update the host name and skill name in the manifest.yml file of your skill.
 3. Log in to IBM Cloud. <br>`bx login`<br>
 4. Push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
-An App started message is returned.
-5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:  <br>`curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck` <br>
-If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
+An `App started` message is returned.
+5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
+```javascript
+curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck
 ```
+If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
+```javascript
 Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
   > GET /v1/api/healthcheck HTTP/1.1
   > Host: simpleskill.mybluemix.net
@@ -77,29 +82,37 @@ Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
 If the skilll is not accessible, complete these steps:
 - Check that the URL you specificed matches the host name of the skill on IBM Cloud.
 - Use the skill URL to access the skill to verify that it is running.
-- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL https://paste_skill_name_here.mybluxmix.net/docs.
+- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluxmix.net/docs`.
 
 ### Step 4: Create a token from Platform API key
 Create a Platform API key and use that key to create an authorization token to be used when sending commands to your Watson Assistant Solutions instance.
-1. Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
-2. Copy the key away for future use.
-3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will be used in the following curl commands to call the IAM service to create a time-sensitive authorization token.
-4. Test that the `printToken.js` NodeJS script can generate a token by executing `node printToken.js paste-your-Platform-API-key-here`
+1. Follow the _Creating an API key_ instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
+2. Copy the key for future use.
+3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script is used in curl commands to call the IAM service to create a time-sensitive authorization token.
+4. Test that the `printToken.js` NodeJS script can generate a token. Enter:
+```javascript
+node printToken.js paste-your-Platform-API-key-here
+```
 
 ### Step 5: Add the skill to your Watson Assistant Solutions instance
-Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:<br>```curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "name": "myHelloWorld", "url": "https://your-name-hello-world-skill.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'```
-
+Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
+```Javascript
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
+```
 A `skill updated successfully` message is displayed.
 
-### Step 6: Test your externally-deployed skill through Watson Assistant.
-Use the conversation REST API to converse with your skill.  Enter:<br>```curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'```
-
-The JSON data that is returned includes the following text:
+### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
+Use the conversation REST API to converse with your skill.  Enter:
+```javascript
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'
 ```
+The JSON data that is returned includes the following text:
+```javascript
 "speech": {
   "text": "Hello world"
 }
 ```
 You have completed the tutorial for creating a simple skill.
 
-> **What next?** Learn how to use the [Knowledge and Rules components]({{site.baseurl}}/knowledge/what-is-kr) or [add Watson Conversation Service]({{site.baseurl}}/further-topics/using-wcs) as the NLU for this skill
+> **What to do next?**<br/>
+Complete the [tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/skill/using-wcs).

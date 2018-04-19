@@ -14,7 +14,10 @@ Create an IBM Cloud authorization token.  You will use the authorization token l
 2.  Create an IBM Cloud platform API key.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
 3. Take note of your platform API key for future use.
 4. Create an platform authorization token. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) NodeJS script to your file system and run the script.
-5. Verify that the printToken.js script creates a token.  Enter:  ```node printToken.js paste-your-Platform-API-key-here```
+5. Verify that the printToken.js script creates a token.  Enter:
+```
+node printToken.js paste-your-Platform-API-key-here
+```
 
 ### Procedure
 To link your IBMid with your Watson Assistant Solutions instance, complete these steps:
@@ -27,4 +30,7 @@ The IAM system returns your IAM ID and your IBMid.
   - IBMid
   - Watson Assistant instance name
 See your Welcome Letter for contact details.
-6. After the linking is confirmed, verify that you can log in to the Watson Assistant console using your IBMid. For login instructions, see [Accessing the Watson Assistant Service]({{site.baseurl}}/get-started/get-api-key/).</p>
+6. After the linking is confirmed, verify that you can log in to the Watson Assistant console using your IBMid. For login instructions, see [Accessing the Watson Assistant Service]({{site.baseurl}}/get-started/get-api-key/).
+
+> **What to do next?**<br/>
+Learn how to [track your service usage]({{site.baseurl}}/further-topics/service_usage/).

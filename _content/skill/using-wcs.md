@@ -1,6 +1,6 @@
 ---
-title: Tutorial - creating a custom skill using WCS
-weight: 60
+title: Tutorial - creating a custom skill using a WCS nlu
+weight: 70
 ---
 
 In this tutorial, you will create a custom skill that uses a Watson Assistant (WCS) nlu.  You will create the skill from the skill boilerplate.  You will connect your skill to a predefined Watson Assistant (formerly Watson Conversation) workspace and use this workspace to handle your intents.
@@ -11,7 +11,7 @@ The high-level steps in this tutorial are as follows:
 2. Register the skill with your Watson Assistant Solutions instance.
 
 ### Before you begin
-1.  Complete the [Creating a custom skill with regex]({{site.baseurl}}/skill/build-skill) tutorial.
+1.  Complete the [Creating a custom skill with regexp nlu]({{site.baseurl}}/skill/build-skill) tutorial.
 
 ### About this task
 The sample jokes workspace has 2 predeinfed intents; a dad-joke intent and a chuck-norris-joke intent. The workspace is trained to handle the following utterances:
@@ -36,7 +36,7 @@ Download the [WCS-workspace-jokes.json]({{site.baseurl}}/further-topics/WCS-work
 2. Follow the on-screen prompts.  Specify the space and organization where you added your Watson Assistant service.  To find the credentials of your Watson Assistant Workspace, on the Watson Assistant user interface, click **Service credentials** and then click **View credentials**. Specify the user name, password ID and name of your Watson Assistant workspace.  In this tutorial, the workspace name is 'jokes'.  Select WCS as your NLU engine.
 
 #### Step 4: Modify the action.js file to handle the intents defined in WCS
-1. Define handlers for the intents, chuck-norris-joke and dad-joke,  that are defined in your Watons Assistant workspace in the `actions.js` file.  To handle these intents, add the`request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
+1. Define handlers for the intents, chuck-norris-joke and dad-joke, that are defined in your Watons Assistant workspace in the `actions.js` file.  To handle these intents, add the `request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
 Add this line to the top of the `actions.js` file:
 ```javascript
 const request = require('request');
@@ -87,14 +87,26 @@ let getJoke = function(url, callback) {
         //response.say(handler.t('TRY_AGAIN')).send();
     }
 ```
-5.  Verify that there are no javascript syntax errors.  Enter: `node index.js` and verify that the command does not return an error.
+5.  Verify that there are no javascript syntax errors.  Enter:
+```
+node index.js
+```
 
 #### Step 5: Deploy your skill to IBM Cloud.
 Deploy your skill to IBM Cloud to make your skill available for you and others to use.
-1. Log in to IBM Cloud. <br>`bx login`<br>
-4. Push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
+1. Log in to IBM Cloud. Enter:
+```
+bx login
+```
+2. Push your skill to IBM Cloud.  Enter:
+```
+bx app push
+```
 An `App started message` is returned.
-5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:  <br>`curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck` <br>
+3.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
+```javascript
+curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck
+```
 If your skill is running and accessible, a `200 OK` response is returned.
 
 #### Step 6: Create a token from Platform API key
@@ -102,28 +114,31 @@ Create a Platform API key and use that key to create an authorization token to b
 1. Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
 2. Copy the key for future use.
 3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will be used in the following curl commands to call the IAM service to create a time-sensitive authorization token.
-4. Test that the `printToken.js` NodeJS script can generate a token by executing `node printToken.js paste-your-Platform-API-key-here`
+4. Test that the `printToken.js` NodeJS script can generate a token.  Enter:
+```javascript
+node printToken.js paste-your-Platform-API-key-here
+```
 
 #### Step 7: Refresh the Watson Assistant Solutions skill cache
 Use the **/skills/{skillName}/refresh** API end point to refresh the information.  Enter:
-`curl -X PUT --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"  'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/refresh'`
+```javascript
+curl -X PUT --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"  'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/refresh'
+```
 
 #### Step 8: Converse with the joke skill
 Converse with the jokes skill using the  **/skillSets/{skillSetName}/converse** API endpoint of the Watson Assistant Solutions service.
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
-```
-  curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
-  "text": "tell me a joke",
-  "language": "en-US",
-  "userID": "application-14c",
-  "deviceType": "phone",
-  "additionalInformation": {
-    "context": {}
-  }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'```
 
-`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
+```javascript
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": {
+  "context": {}
+}
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
+```
+
+```javascript
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
   "text": "how about a chuck norris joke",
   "language": "en-US",
   "userID": "application-14c",
@@ -131,9 +146,11 @@ Replace the text attribute in the following curl commands with some of those utt
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
+```
 
-`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
+```javascript
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
   "text": "how about a dad joke",
   "language": "en-US",
   "userID": "application-14c",
@@ -141,4 +158,7 @@ Replace the text attribute in the following curl commands with some of those utt
   "additionalInformation": {
     "context": {}
   }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'`
+}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
+```
+> **What to do next?**<br/>
+Complete the [knoweldge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).

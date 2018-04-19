@@ -19,3 +19,6 @@ After your Watson Assistant Solutions instance is provisioned, you can use eithe
 - Delete existing clients.
 
 You can view a summary of your plan entitlements on the Watson Assistant Solutions console home page. Here, you see the number of entities and digital interactions you  purchased and used for the current month. Click **Manage Usage** to see your overage, or excess, for the current month.
+
+> **What to do next?**<br/>
+Learn how to [access your log data]({{site.baseurl}}/further-topics/get-logs/).
