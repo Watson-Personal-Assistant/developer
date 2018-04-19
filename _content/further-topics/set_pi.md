@@ -26,15 +26,15 @@ You can disable the logging of PI data using the Logging REST API.
 #### Procedure
 Complete these steps:
 1. To disable the logging of PI data, open a command-line and enter:
-```javascript
+```shell
 curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/off" -H "accept: application/json" -H "Content-Type: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
 ```
 3. To view if PI data is being logged, enter:
-```javascript
+```shell
 curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi" -H "accept: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
 ```
 4. To enable the logging of PI data, enter:
-```javascript
+```shell
 curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
 ```
 

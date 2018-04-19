@@ -12,13 +12,16 @@ Kibana, an open source analytics and visualization tool, is used to present log 
 Locate the GUID of your IBM Cloud Foundry space. The Watson Assistant Solutions service uses the GUID to save your log data to your space. Complete these steps:
 1. If you do not have an IBMid, create one. For instructions, see *Create a free account* on  [IBM Cloud](https://bluemix.net).
 3. Install the IBM Cloud Log Analysis cli plugin.  Enter:
-```javascript
+```
 bx plugin install logging-cli -r Bluemix
 ```
-4. Log in to your region of IBM Cloud.  For example, enter:```
+4. Log in to your region of IBM Cloud.  For example, enter:
+```
 bx login -a https://api.ng.bluemix.net --sso
-``` and follow the onscreen prompts. <br>**Note**: The --sso flag is for IBM internal use only.
-5. Set the target org and space of your application and services. Enter:```
+``` 
+and follow the onscreen prompts. <br>**Note**: The --sso flag is for IBM internal use only.
+5. Set the target org and space of your application and services. Enter:
+```
 bx target -o paste-your-org-name-here -s paste-your-space-name-here
 ```
 6. Find your GUID.  Enter:

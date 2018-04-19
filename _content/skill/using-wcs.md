@@ -47,45 +47,50 @@ let getJoke = function(url, callback) {
     request.get({
         url: url,
         headers: { 'Accept': 'application/json' }
-    }, (err, response, body) => {
-        if (err) {
-            callback(err);
-        } else {
-            let result = JSON.parse(body);
-            callback(null, result);
+        }, (err, response, body) => {
+            if (err) {
+                callback(err);
+            } else {
+                let result = JSON.parse(body);
+                callback(null, result);
+            }
         }
-    });
+    );
 }
 ```
 3. In the `createActionsHandler` code of the `actions.js`, add the following code to handle the chuck-norris-joke and dad-joke intents defined in the WCS workspace.
 ```javascript
-    'dad-joke': (request, response) => {
-        getJoke("https://icanhazdadjoke.com", (err, result) => {
+'dad-joke': (request, response) => {
+    getJoke(
+        "https://icanhazdadjoke.com",
+        (err, result) => {
             if (err) {
                 response.say("I'm sorry, I'm having trouble remembering a joke, give me second and ask again.").send();
             } else {
                 response.say(result.joke).send();
             }
-        });
-    },
-
-    'chuck-norris-joke': (request, response) => {
-        getJoke("https://api.chucknorris.io/jokes/random", (err, result) => {
+        }
+    );
+},
+'chuck-norris-joke': (request, response) => {
+    getJoke(
+        "https://api.chucknorris.io/jokes/random", 
+        (err, result) => {
             if (err) {
                 response.say("I'm sorry, I'm having trouble remembering a joke, give me second and ask again.").send();
             } else {
                 response.say(result.value).send();
             }
-        });
-    },
+        }
+    );
+},
 ```
 4. Update the catch-all intent handler to send the request to WCS.  Update the `unhandled` code to include:
-
 ```javascript
-    'unhandled': (request, response) => {
-        handler.converse(request, response, converseCallback);
-        //response.say(handler.t('TRY_AGAIN')).send();
-    }
+'unhandled': (request, response) => {
+    handler.converse(request, response, converseCallback);
+    //response.say(handler.t('TRY_AGAIN')).send();
+}
 ```
 5.  Verify that there are no javascript syntax errors.  Enter:
 ```
@@ -104,7 +109,7 @@ bx app push
 ```
 An `App started message` is returned.
 3.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
-```javascript
+```shell
 curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
@@ -115,13 +120,13 @@ Create a Platform API key and use that key to create an authorization token to b
 2. Copy the key for future use.
 3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will be used in the following curl commands to call the IAM service to create a time-sensitive authorization token.
 4. Test that the `printToken.js` NodeJS script can generate a token.  Enter:
-```javascript
+```shell
 node printToken.js paste-your-Platform-API-key-here
 ```
 
 #### Step 7: Refresh the Watson Assistant Solutions skill cache
 Use the **/skills/{skillName}/refresh** API end point to refresh the information.  Enter:
-```javascript
+```shell
 curl -X PUT --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"  'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/refresh'
 ```
 
@@ -130,14 +135,14 @@ Converse with the jokes skill using the  **/skillSets/{skillSetName}/converse** 
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
 
-```javascript
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": {
   "context": {}
 }
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
 ```
 
-```javascript
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
   "text": "how about a chuck norris joke",
   "language": "en-US",
@@ -149,7 +154,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
 ```
 
-```javascript
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
   "text": "how about a dad joke",
   "language": "en-US",

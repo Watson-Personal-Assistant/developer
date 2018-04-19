@@ -29,14 +29,14 @@ To access your instance  using REST APIs, include your IBM Cloud Platform access
 2. Copy the key for future use.
 3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) NodeJS script to your file system.
 4. Verify that the `printToken.js` script generates a token by executing `node printToken.js paste-your-Platform-API-key-here`
-5. Use the access token in your API calls. In the following example, the access token is generated in the header:
-```javascript
+5. Use the access token in your API calls. In the following example, the access token is generated in the header: 
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillsets/built-in/converse'
 ```
 6. In your environment, if you have access to multiple Watson Assistant Solutions instances, use a tenant ID in REST API calls to target a specific instance.  To use the tenant ID, pass the ID in the tenantId field of the REST API header. For example:
-```javascript
-curl -X GET 'http://watson-persoanl-assistant-toolkit.mybluemix.net/v2/api/skills'
-  -H  'Accept: application/json' -H "authorization: Bearer 'node printToken.js paste-your-Platform-API-key-here'" -H 'tenantid: paste-your-tenant-ID-here'
+```shell
+curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
+  -H  'Accept: application/json' -H "authorization: Bearer 'node printToken.js paste-your-Platform-API-key-here'" -H 'tenantId: paste-your-tenant-ID-here'
 ```
 
 **Note**: Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
