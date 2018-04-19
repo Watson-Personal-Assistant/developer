@@ -68,11 +68,12 @@ pre {
   background: var(--blue-90);
   padding: 1rem;
   color: var(--gray-1);
-  overflow-x: auto;
+  word-wrap: break-word;
 }
 
 code {
   font-family: monospace;
+  white-space: pre-wrap;
 
   * {
     font-family: inherit;
