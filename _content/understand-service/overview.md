@@ -11,7 +11,7 @@ The components are shown in figure 1:
   - set of built-in skills
   - the conversation component for routing requests to skills and skillsets.
   - the knowledge component for storing objects and objects relations
-  - the rules component for subscribing to changes in objects and their rleations and sending notificaiton events to your proactive agents.
+  - the rules component for subscribing to changes in objects and their rleations and sending notification events to your proactive agents.
   For more information, see the [Core architecture]({{site.baseurl}}/understand-service/core_content) topic.
 - **Watson Assistant Solutions console**: A web console for managing your skills, skill sets, client and entities, for viewing your service usage, conversing with your skills, accessing your logs, and accessing the Swagger specifications for your Watson Assistant REST APIs.
 - **Custom skills**:  Your externally-hosted skills that you register with the Watson Assistant Solutions service.
