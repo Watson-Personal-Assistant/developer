@@ -1,6 +1,6 @@
 ---
 title: Core architecture
-weight: 15
+weight: 10
 ---
 ### The conversation component
 Watson Assistant Solutions uses the conversation component to route requests, in text form, to the skill that is best placed to handle each request.

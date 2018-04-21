@@ -1,6 +1,6 @@
 ---
 title: How it works
-weight: 10
+weight: 15
 ---
 You can configure skills to react to user utterances.
 
