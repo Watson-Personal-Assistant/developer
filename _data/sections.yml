@@ -4,7 +4,7 @@ default:
   hidden: true
 
 get-started:
-  title: Getting Started
+  title: Getting started
   icon: book
   
 design:
@@ -12,7 +12,7 @@ design:
   icon: pencil
   
 understand-service:
-  title: Functional Architecture
+  title: Architecture
   icon: pencil
 
 skill:
@@ -20,11 +20,11 @@ skill:
   icon: graduation-cap 
 
 knowledge:
-  title: Knowledge and Rules
+  title: Knowledge and reasoning
   icon: code
 
 further-topics:
-  title: Further Topics
+  title: Further topics
   icon: pencil
   
 get-help:
@@ -32,5 +32,5 @@ get-help:
   icon: life-ring
 
 legal:
-  title: Legal
+  title: Legal notices
   icon: book

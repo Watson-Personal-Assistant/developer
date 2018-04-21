@@ -100,6 +100,10 @@
       line-height: 35px;
     }
 
+    li {
+      font-family: var(--font-family-plex-light);
+    }
+
     h3 {
       font-family: var(--font-family-plex-bold);
     }
