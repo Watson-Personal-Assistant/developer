@@ -7,7 +7,12 @@ Multiple components are used to build a digital assistant using the Watson Assis
 The components are shown in figure 1:
 ![]({{site.baseurl}}/images/components_diagram.png)
 - **IOT devices**:  The edge device, such as a smart speaker, that listens for utterances.
-- **Watson Assistant Solutions service**:  Includes a set of built-in skills and a core routing component that routes converse requests and responses between your IOT devices and your skills.
+- **Watson Assistant Solutions service**:  The service includes the following components:
+  - set of built-in skills
+  - the conversation component for routing requests to skills and skillsets.
+  - the knowledge component for storing objects and objects relations
+  - the rules component for subscribing to changes in objects and their rleations and sending notificaiton events to your proactive agents.
+  For more information, see the [Core architecture]({{site.baseurl}}/understand-service/core_content) topic.
 - **Watson Assistant Solutions console**: A web console for managing your skills, skill sets, client and entities, for viewing your service usage, conversing with your skills, accessing your logs, and accessing the Swagger specifications for your Watson Assistant REST APIs.
 - **Custom skills**:  Your externally-hosted skills that you register with the Watson Assistant Solutions service.
 - **Watson and IBM Cloud services**: Other services that are external to Watson Assistant Solutions service that you use to enhance your assistant.
