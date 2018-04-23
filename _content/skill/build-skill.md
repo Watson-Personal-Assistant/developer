@@ -24,9 +24,10 @@ Complete these steps:
 
 #### Step 1: Clone the hello world skill
 1.  Copy the hello world skill boilerplate to your local system.
-    1. Click Fork to take a copy of the repository.
-    2. Click Clone or download. Copy the git url.
-    3. Open a command-line terminal and enter<br>`git clone git_url`
+    1. Go to  [https://github.com/Watson-Personal-Assistant/SkillBoilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate).
+    2. Click Fork to take a copy of the repository.
+    3. Click Clone or download. Copy the git url.
+    4. Open a command-line terminal and enter<br>`git clone git_url`
 2. Install the node dependencies for the skill.
     1. Enter `cd SkillBoilerplate`.
     2. Enter `npm install`.
@@ -37,7 +38,7 @@ Complete these steps:
 `http://localhost:10011`
 2. Go to Converse.
 3. Click /converse.
-4. Click Try it out.
+4. Click Try it out.  
 5. Click Execute.
 The converse REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
 The JSON data that is returned includes the following text:<br>
