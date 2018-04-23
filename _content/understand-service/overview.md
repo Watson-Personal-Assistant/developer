@@ -19,4 +19,4 @@ The components are shown in figure 1:
 **Note**:  If you want to use IBM Cloud or Watson services, you must request access to those services separately.
 
 > **What to do next?**<br/>
-Understand [how it works]({{site.baseurl}}/understand-service/how_it_works).
+Understand [how the conversation component works]({{site.baseurl}}/understand-service/core).
