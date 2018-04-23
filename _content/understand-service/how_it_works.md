@@ -1,6 +1,6 @@
 ---
-title: How it works
-weight: 15
+title: How routing works
+weight: 25
 ---
 You can configure skills to react to user utterances.
 
