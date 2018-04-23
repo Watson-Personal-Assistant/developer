@@ -69,6 +69,7 @@ pre {
   padding: 1rem;
   color: var(--gray-1);
   word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 code {
