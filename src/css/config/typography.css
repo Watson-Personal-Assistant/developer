@@ -68,9 +68,8 @@ pre {
   background: var(--blue-90);
   padding: 1rem;
   color: var(--gray-1);
-  white-space: pre-wrap !important;
-  overflow-wrap: break-word !important;
-  display: block !important;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 code {
