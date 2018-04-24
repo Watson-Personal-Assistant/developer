@@ -1,5 +1,5 @@
 ---
-title: Using a regex browser plugin
+title: Using the regex browser plugin to help with pasting commands
 weight: 20
 ---
 

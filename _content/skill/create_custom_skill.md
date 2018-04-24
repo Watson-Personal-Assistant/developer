@@ -13,14 +13,14 @@ The high-level steps for deploying a custom skill are as follows:
 ---
 ### Before you begin
 1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}design/how-to-design-your-assistant/).
-1. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
-2. Install [GIT](https://git-scm.com/downloads).
-3. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
-4. Clone the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate), rename the folder to your skill name, and install node dependencies using the ```npm install``` command.
-4. If you plan to host your skill on IBM Cloud, register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
-5. If you plan to host your skill on IBM Cloud, install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
-6. If you plan to use Watson Assistant (formerly Watson Conversation) as your NLU, create and start a workspace on IBM Cloud. For more information, see [About Watson Assistant](https://console.bluemix.net/docs/services/conversation/).
-6. (Optional) Add the regex browser plugin to your web browser. For instructions, see [Using the regex browser plugin]({{site.baseurl}}/get-help/troubleshooting/).
+2. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+3. Install [GIT](https://git-scm.com/downloads).
+4. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
+5. Clone the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate), rename the folder to your skill name, and install node dependencies using the ```npm install``` command.
+6. If you plan to host your skill on IBM Cloud, register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
+7. If you plan to host your skill on IBM Cloud, install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
+8. If you plan to use Watson Assistant (formerly Watson Conversation) as your NLU, create and start a workspace on IBM Cloud. For more information, see [About Watson Assistant](https://console.bluemix.net/docs/services/conversation/).
+9. (Optional) [Add the regex browser plugin]({{site.baseurl}}/get-help/troubleshooting/) to your web browser to help with pasting long commands.
 
 ---
 ### Procedure

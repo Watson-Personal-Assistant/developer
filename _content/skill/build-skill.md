@@ -16,7 +16,7 @@ The high-level steps in this tutorial are as follows:
 3. Install [NodeJS](https://nodejs.org/dist/).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
 5. Install the [IBM Cloud cli tool](https://console.bluemix.net/docs/cli/index.html#cli).
-6. (Optional) Add the regexp browser plugin to your web browser.
+6. (Optional) [Add the regex browser plugin]({{site.baseurl}}/get-help/troubleshooting/) to your web browser to help with pasting long commands.
 
 ---
 ### Procedure
