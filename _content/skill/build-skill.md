@@ -116,4 +116,4 @@ The JSON data that is returned includes the following text:
 You have completed the tutorial for creating a simple skill.
 
 > **What to do next?**<br/>
-Complete the [tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/skill/using-wcs).
+Complete the [tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).
