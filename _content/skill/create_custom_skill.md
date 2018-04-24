@@ -65,7 +65,6 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 - ```Converse```: Converse with your skill or skill set.
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
----
 > **What next?**
-- Complete the *Creating a custom skill* tutorials.
-- Read more about Watson Assistant Solutions routing and personalization features that you can use to enhance your skills.
+* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+* Read more about Watson Assistant Solutions routing and personalization features that you can use to enhance your skills.
