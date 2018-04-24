@@ -43,7 +43,7 @@ Complete these steps to create, deploy, and register a custom skill.
 For more information about using the skill boilerplate to create your skill, see the ```readme.md``` file in the top-level directory of the boilerplate.
 8.  Test your local skill.
   1. Start your skill from your skill top-level directory.  Enter: ```npm run start```
-  2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:11011.
+  2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:10011.
   3. Converse with your skill. Use the Converse endpoint to ask a question and view a response in JSON format.
 
 #### Step 2: Deploy your skill.
