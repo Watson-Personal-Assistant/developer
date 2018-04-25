@@ -12,7 +12,7 @@ The high-level steps for deploying a custom skill are as follows:
 
 ---
 ### Before you begin
-1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}design/how-to-design-your-assistant/).
+1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}/design/how-to-design-your-assistant/).
 2. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
 3. Install [GIT](https://git-scm.com/downloads).
 4. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
