@@ -28,7 +28,7 @@ The IAM system returns your IAM ID and your IBMid.
 5.  Send an email to the Watson Assistant Solutions support team to link your Watson Assistance Soluations instance with your IBMid. Include the following information:<br>
   - IAM ID (starts with *IBMid-*)
   - IBMid
-  - Watson Assistant instance name
+  - Watson Assistant instance name or API key. <br>
 See your Welcome Letter for contact details.
 6. After the linking is confirmed, verify that you can log in to the Watson Assistant console using your IBMid. For login instructions, see [Accessing the Watson Assistant Service]({{site.baseurl}}/get-started/get-api-key/).
 
