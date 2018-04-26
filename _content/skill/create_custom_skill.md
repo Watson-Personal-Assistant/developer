@@ -66,5 +66,5 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
 > **What next?**
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/build-skill).
 * Read more about Watson Assistant Solutions routing and personalization features that you can use to enhance your skills.
