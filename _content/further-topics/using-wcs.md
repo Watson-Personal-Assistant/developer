@@ -114,36 +114,20 @@ curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hel
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
 
-#### Step 6: Create a token from Platform API key
-Create a Platform API key and use that key to create an authorization token to be used when sending commands to your Watson Assistant Solutions instance.
-1. Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
-2. Copy the key for future use.
-3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) script to your file system.  This script will be used in the following curl commands to call the IAM service to create a time-sensitive authorization token.
-4. Test that the `printToken.js` NodeJS script can generate a token.  Enter:
-```shell
-node printToken.js paste-your-Platform-API-key-here
-```
-
-#### Step 7: Refresh the Watson Assistant Solutions skill cache
-Use the **/skills/{skillName}/refresh** API end point to refresh the information.  Enter:
-```shell
-curl -X PUT --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"  'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/refresh'
-```
-
-#### Step 8: Converse with the joke skill
+#### Step 6: Converse with the joke skill
 Converse with the jokes skill using the  **/skillSets/{skillSetName}/converse** API endpoint of the Watson Assistant Solutions service.
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
 
 ```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": {
+curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": {
   "context": {}
 }
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
 ```
 
 ```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
+curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{
   "text": "how about a chuck norris joke",
   "language": "en-US",
   "userID": "application-14c",
@@ -155,7 +139,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 ```
 
 ```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{
+curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{
   "text": "how about a dad joke",
   "language": "en-US",
   "userID": "application-14c",
