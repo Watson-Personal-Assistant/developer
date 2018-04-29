@@ -1,6 +1,6 @@
 ---
 title: The conversation component
-weight: 10
+weight: 20
 ---
 Watson Assistant Solutions uses the conversation component to route requests, in text form, to the skill that is best placed to handle each request.
 
@@ -16,4 +16,4 @@ The conversation REST API provides the following end points:
 - Health: check the availability status of a skill or skillset.
 
 > **What to do next?**<br/>
-Understand [how the knowledge component works]({{site.baseurl}}/skill/knowledge-store).
+Understand [how the knowledge component works]({{site.baseurl}}/understand-service/knowledge-store).

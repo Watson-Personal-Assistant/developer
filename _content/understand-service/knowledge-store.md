@@ -1,6 +1,6 @@
 ---
 title: The knowledge component (alpha)
-weight: 15
+weight: 30
 ---
 The knowledge component stores object models and information about objects in a database. Using the REST API or a NodeJS SDK, your skills create and modify objects in the knowledge database.
 

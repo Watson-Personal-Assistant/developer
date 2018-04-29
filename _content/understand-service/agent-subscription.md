@@ -1,6 +1,6 @@
 ---
 title: The rules component (alpha)
-weight: 15
+weight: 40
 ---
 The rules component handles subscriptions to state change events that are generated when objects and relations between objects in the knowledge component change.  The rules component notifies your proactive agents of the changes through notification events.
 
@@ -17,4 +17,4 @@ Rules are made up of an event type, a condition URL, and an action URL.
 - Action URL: If the condition URL returns `True`, then the rules component makes a GET REST API call to the action URL handled by your code. The action URL in your code might prompt the user to do something.  Alternatively, it might do something proactively for the user by inovking a skill through the conversation component.
 
 > **What to do next?**<br/>
-Understand [what are skills]({{site.baseurl}}/skill/what-are-they).
+Understand [how routing works]({{site.baseurl}}/understand-service/how-it-works).

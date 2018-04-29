@@ -1,6 +1,6 @@
 ---
 title: Product components
-weight: 5
+weight: 10
 ---
 Multiple components are used to build a digital assistant using the Watson Assistant Solutions offering.
 
