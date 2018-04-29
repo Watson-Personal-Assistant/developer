@@ -16,4 +16,4 @@ The conversation REST API provides the following end points:
 - Health: check the availability status of a skill or skillset.
 
 > **What to do next?**<br/>
-Understand [how the knowledge component works]({{site.baseurl}}/skill/knoweldge-store).
+Understand [how the knowledge component works]({{site.baseurl}}/skill/knowledge-store).
