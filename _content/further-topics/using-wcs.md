@@ -92,8 +92,9 @@ let getJoke = function(url, callback) {
     //response.say(handler.t('TRY_AGAIN')).send();
 }
 ```
-5.  Verify that there are no javascript syntax errors.  Enter:
+5.  Add request to package.json and verify that there are no javascript syntax errors.  Enter:
 ```
+npm install -s request
 node index.js
 ```
 
