@@ -10,31 +10,30 @@ Log in to the Watson Assistant Solutions console to access your instance.  From 
 - Manage your clients.
 - Converse with your skills using a chat interface.
 - View your logs.
-- Access the Swagger spefications for your Watson Assistant Solutions REST APIs.<br>
+- Access the Swagger specifications for your Watson Assistant Solutions REST APIs.<br>
 
-Before you log in, you must create an IBMid and an IAM ID and link both.  For instructions, see [Linking your IBMid with your IAM ID]({{site.baseurl}}/further-topics/login-with-IBMid/).
+#### About this task
+You can log in to the console with the Watson Assistant Solutions API key that is provided in your welcome letter or you can log in using your IBMid.
+
+Before you log in using your IBMid, you must create an IAM ID and link your IBMid with your IBMid.  For instructions, see [Setting up IAM authentication]({{site.baseurl}}/further-topics/login-with-IBMid/).
 
 #### Procedure
 To log in to the Watson Assistant Solutions console, complete these steps:
 1. Open a web browser and enter the following URL:<br/>[https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net)
-2. Log in to the console using your IBMid.<br/>
+2. Log in to the console using your IBMid or your Watson Assistant Solutions API key.<br/>
 
 The Watson Assistant Solutions console is displayed.
 
 ### Using REST API calls
-To access your instance  using REST APIs, include your IBM Cloud Platform access token in your API calls. To get an access token, create a IBM Cloud platform API key and use the `printToken.js` script to generate an access token on demand as part of your API calls. Access tokens are time sensitive.
+To access your instance  using REST APIs, you can append your Watson Assistant Solutions API key to API calls to your services.  Alternatively, to use IAM authentication, append an IAM access token (also known as a platform or cloud API key) to your API calls.
 
-#### Procedure
-1. Create a Platform API key.  Follow the **Creating an API key** instructions and read more about this key on the [Managing identity and access](https://console.bluemix.net/docs/iam/userid_keys.html#creating-an-api-key) IBM Cloud Docs page.
-2. Copy the key for future use.
-3. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) NodeJS script to your file system.
-4. Verify that the `printToken.js` script generates a token by executing `node printToken.js paste-your-Platform-API-key-here`
-5. Use the access token in your API calls. In the following example, the access token is generated in the header: 
-```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillsets/built-in/converse'
-```
-6. In your environment, if you have access to multiple Watson Assistant Solutions instances, use a tenant ID in REST API calls to target a specific instance.  To use the tenant ID, pass the ID in the tenantId field of the REST API header. For example: <br>
-`curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills' -H  'Accept: application/json' -H "authorization: Bearer 'node printToken.js paste-your-Platform-API-key-here'" -H 'tenantId: paste-your-tenant-ID-here'`
+For example:
+`curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer <paste-your-IAM-token-here" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/ /skillsets/built-in/converse'`
+
+For IAM authentication, you must create an IAM API key (that is, a platform/cloud API key), and use it to create a temporary IAM access token.  For instructions, see [Setting up IAM authentication]({{site.baseurl}}/further-topics/login-with-IBMid/).
+
+When you have an IAM API key, use the following command to convert it to an IAM token:
+`curl -s “https://iam.bluemix.net/oidc/token?grant_type=urn:ibm:params:oauth:grant- type:apikey&response_type=cloud_iam&apikey=<paste-your-iam-api-key-here> -H’Content-Type:x-www-form-urlencoded’ -XPOST`
 
 **Note**: Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
 

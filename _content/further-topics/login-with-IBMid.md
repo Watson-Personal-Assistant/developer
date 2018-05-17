@@ -1,36 +1,29 @@
 ---
-title: Linking your IBMid with your instance
+title: Setting up IAM Authentication
 weight: 10
 ---
-
-You can use your IBMid to log in to the Watson Assistant Solutions console. An IBMid is a free, single ID and password that you can use across the ibm.com domain, including IBM Cloud.
+Watson Assistant Solutions supports IAM authentication for accessing the Watson Assistant Solutions console and its REST APIs.  Before you use IAM authentication, you must create an IBMid and an IAM ID and send both to Watson Assistant Solutions support. The support team will link your IBMid and your IAM ID with your instances.
 
 ### About this task
-Before you can use your IBMid to log in, you must create an entry for your IBMid in the IBM Cloud Identity and Access Management (IAM) system.  When you get your IAM ID, submit a request to the Watson Assistant Solutions support team to link you IBMid with your Watson Assistant Solutions instance.
+A script, [wa-get-iam.sh](https://watson-personal-assistant.github.io/developer/assets/scripts/wa-get-iam-id.sh), is available for download to help you create your IAM ID.
 
-### Before you begin
-Create an IBM Cloud authorization token.  You will use the authorization token later to request an IAM ID.  Complete these steps:
-1.  If you do not have an IBMid, create one. For instructions, see *Create a free account* on  [IBM Cloud](https://bluemix.net).
-2.  Create an IBM Cloud platform API key.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
-3. Take note of your platform API key for future use.
-4. Create an platform authorization token. Copy the [printToken.js]({{site.baseurl}}/assets/scripts/printToken.js) NodeJS script to your file system and run the script.
-5. Verify that the printToken.js script creates a token.  Enter:
-```
-node printToken.js paste-your-Platform-API-key-here
-```
+**Tip**: To create an IAM ID, you must first create an IAM API key. This key is sometimes referred to as a Platform API key or an IBM Cloud API key.
 
 ### Procedure
-To link your IBMid with your Watson Assistant Solutions instance, complete these steps:
-3. Create an IAM token. Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your file system and run the script.  When prompted, either:
-  - paste your platform API key
-  - enter the location where you saved your platform autorization token.
-The IAM system returns your IAM ID and your IBMid.
-5.  Send an email to the Watson Assistant Solutions support team to link your Watson Assistance Soluations instance with your IBMid. Include the following information:<br>
-  - IAM ID (starts with *IBMid-*)
-  - IBMid
-  - Watson Assistant instance name
-See your Welcome Letter for contact details.
-6. After the linking is confirmed, verify that you can log in to the Watson Assistant console using your IBMid. For login instructions, see [Accessing the Watson Assistant Service]({{site.baseurl}}/get-started/get-api-key/).
+Complete these steps to configure IAM authentication for your instances:
+1.	Create an IBMid.  For instructions, see *Create a free account* on  [IBM Cloud](https://bluemix.net).
+2.	Create an IAM ID.
+  a.	Create an IAM API key and save it for future use.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
+  b.Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your local system.
+  c.	Start the script from the command line.  Enter `./wa-get-iam.sh` and follow the on-screen prompts.
+  d.	When prompted, provide your IAM API key (step 2a).  The script provides you with an IAM ID.
+3.	Send an email to the Watson Assistant Solutions support team to request that your IAM ID and IBMid be associated with your instances. See your welcome letter for contact details.   Include the following information:<br/>
+  -	IAM ID
+  -	IBMid
+  -	Watson Assistant Solutions instances names or your existing Watson Assistant Solutions API keys.
+
+### What to do next
+Access your Watson Assistant Solutions instance.  For instructions, see [Accessing the service]({{site.baseurl}}/get-started/get-api-key/).
 
 > **What to do next?**<br/>
 Learn how to [track your service usage]({{site.baseurl}}/further-topics/service_usage/).

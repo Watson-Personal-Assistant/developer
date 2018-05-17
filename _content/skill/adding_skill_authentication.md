@@ -8,7 +8,7 @@ You can authenticate that requests that are sent to the conversation REST API of
 You can either create your own skill key to use for authentication or use the skill key that the Watson Assistant Solutions service generates for you when you register a skill with the service.
 
 After you enable authentication and register the skill key with Watson Assistant solutions, the key is included in the header of any converse requests that are sent to the conversation REST API of the skill.  For example:
-`--header "expertisekey: 1535666c-1777-4ac6-84cc-cf466ae896fb"`
+`--header "skillKey: 1535666c-1777-4ac6-84cc-cf466ae896fb"`
 
 If you have multiple Watson Assistant Solutions instances in your environment, and these instances share the same skill, you can provide a key for each instance.
 

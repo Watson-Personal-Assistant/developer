@@ -38,7 +38,17 @@ Complete these steps:
 `http://localhost:10011`
 2. Go to Converse.
 3. Click /converse.
-4. Click Try it out.  
+4. Click Try it out. The text "Hello" is included in the input:
+  ```
+{
+  "id": "001",
+  "version": "1.0",
+  "language": "en-US",
+  "text": "Hello",
+  "retext": "Hello",
+  "attributes": {
+    "intent": "hello-world"
+  },
 5. Click Execute.
 The converse REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
 The JSON data that is returned includes the following text:<br>
@@ -53,9 +63,9 @@ The JSON data that is returned includes the following text:<br>
 #### Step 3: Deploy your skill to IBM Cloud.
 Deploy your skill to IBM Cloud to make your skill available for you and others to use.
 1. Stop your locally running skill.  Enter `Ctrl C` to stop the skill.
-2. Update the host name and skill name in the manifest.yml file of your skill.
+2. Update the skill name and host name in the `manifest.yml` file of your skill.
 3. Log in to IBM Cloud. <br>`bx login`<br>
-4. Push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
+4. From the SkillBoilerplate directory, push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
 An `App started` message is returned.
 5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
 ```shell
@@ -80,10 +90,10 @@ Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
   < X-Global-Transaction-ID: 1919343303
 ```
 <br>
-If the skilll is not accessible, complete these steps:
+If the skill is not accessible, complete these steps:
 - Check that the URL you specificed matches the host name of the skill on IBM Cloud.
 - Use the skill URL to access the skill to verify that it is running.
-- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluxmix.net/docs`.
+- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluexmix.net/docs`.
 
 ### Step 4: Create a token from Platform API key
 Create a Platform API key and use that key to create an authorization token to be used when sending commands to your Watson Assistant Solutions instance.
@@ -98,14 +108,14 @@ node printToken.js paste-your-Platform-API-key-here
 ### Step 5: Add the skill to your Watson Assistant Solutions instance
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
 ```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "name": "paste_your_skill_name_here", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
 ```
 A `skill updated successfully` message is displayed.
 
 ### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
 Use the conversation REST API to converse with your skill.  Enter:
 ```shell
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste_your_skill_name_here/converse'
 ```
 The JSON data that is returned includes the following text:
 ```JSON
