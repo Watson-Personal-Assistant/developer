@@ -1,27 +1,15 @@
 ---
 title: Authenticating audio devices
-weight: 25
+weight: 15
 ---
-Audio clients must request an IAM API key.
+Before an audio client can connect to the audio gateway, you must provision the audio client with an IAM API key.  This key is sometimes referred to as a platform API key or an IBM Cloud API key. For more information, see the [Setting up IAM Authentication]({{site.baseurl}}/further_topics/login-with-IBMid/). For better security, audio clients should use separate API keys.
 
-**Tip**:
-- This key is also known as a Plaform API Key and a IBM Cloud API key.
-- For better security, clients should use a separate API key.
+The audio client passes an IAM token to authenticate when it first connects to audio gateway. To convert your IAM ID to an IAM token, you can use the following command:
+`curl -s 'https://iam.bluemix.net/oidc/token?grant_type=urn:ibm:params:oauth:grant- type:apikey&response_type=cloud_iam&apikey=<apikey>' -H'Content-Type:x-www-form-urlencoded' -XPOST`
+For more information about creating an IAM token from an IAM API key, see the _Cloud IAM Authentication and Authorization_ topic in the [IBM Cloud Docs](https://console.bluemix.net/docs/services/IoT/reference/security/cloud_iam.html#cloud_iam).
 
-You must set up IAM authentication for each audio client.  To create an IAM ID, see the `Setting up IAM authentication` topic.
-
-To convert your IAM ID to an IAM token, use the following command:
-  `curl -s 'https://iam.bluemix.net/oidc/token?grant_type=urn:ibm:params:oauth:grant- type:apikey&response_type=cloud_iam&apikey=<apikey>' -H'Content-Type:x-www-form-urlencoded' -XPOST`
-For more information about creating an IAM token, see the _Cloud IAM Authentication and Authorization_ topic in the [IBM Cloud Docs](https://console.bluemix.net/docs/services/IoT/reference/security/cloud_iam.html#cloud_iam).
-
-You append the IAM token in the authorization header of your websocket messages.  For example, "Authorization": "Bearer <IAM Access token>"
-Note:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
-
-Your websocket connection format is as follows:
-`wss://<AudioGatewayHost>:<Optional AudioGatewayPort>?skillset=<skillset to be used with this client - required parameter>&userID=<userId or clientID value used for audio gateway logs - Optional>&language=<Client language preference - Optional>;`
-
-For example: `wss://audiogatewayserver.com?skillset=built-in&userID=someUserID&language=en-US`
-
+When you connect your audio device to the audio gateway, pass the IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
+**Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
 
 > **What to do next?**<br/>
-Understand [what are skills]({{site.baseurl}}/skill/what-are-they).
+Review [Audio streaming interface specification]({{site.baseurl}}/audio/interface).

@@ -22,7 +22,15 @@ skill:
 knowledge:
   title: Knowledge and reasoning
   icon: code
-
+  
+Audio:
+  title: Audio
+  icon: code
+  
+Audio-hospitality:
+  title: Audio (hospitality)
+  icon: code
+  
 further-topics:
   title: Further topics
   icon: pencil

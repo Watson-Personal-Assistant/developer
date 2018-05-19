@@ -1,7 +1,8 @@
 ---
- Audio streaming interface specification for a multi-tenant audio gatewawy
+title: Audio streaming interface specification
+weight: 20
 ---
-Audio streaming between the multi-tenant audio gateway and the audio client uses a web socket interface.
+Audio streaming between a multi-tenant audio gateway and an audio client uses a web socket interface.
 
 ### Communication Messages
 Messages are used on the web socket interface to communicate between the audio client and the audio gateway.  All messages are in JSON format.  Each message includes a transaction ID that is used by the audio gateway to track the transaction.  To ensure that each ID is unique, consider using a globally unique identifier (GUID) for the transaction ID.
@@ -20,7 +21,7 @@ Example:
 }`
 
 #### Audio data
-Audio data messages are sent between the audio client and the audio gateway. The message is used to send audio data in binary format.  Use the data parameter to specify the content of the binary data in a string format.  Use the encoding parameter to specify the type of encoding to use, for example, base64. The message is always preceded by an audio start message.
+Audio data messages are sent between the audio client and the audio gateway. The message is used to send audio data in binary format.  Use the data parameter to specify the content of the binary data in string format.  Use the encoding parameter to specify the type of encoding to use, for example, base64. The message is always preceded by an audio start message.
 
 Example:
 `{
@@ -66,7 +67,7 @@ Example:
   }
 }`
 
-Note:  You can override which speech-to-text option to use in the audio start message.
+**Note**:  You can override which speech-to-text option to use in the audio start message.
 
 #### Text-to-speech options
 Text-to-speech options messages are sent from the audio client to the audio gateway.  The message specifies which text to speech engine to use for the current transaction.
@@ -119,7 +120,7 @@ Example:
 }`
 
 #### Speech-to-text transcript
-The speech-to-text transcript message is sent from the audio gateway to the client.  The message provides a transcript of the audio response in text format.  The  ID parameter matches the transaction ID in the audio start message.  The transactionID parameter is used for reporting errors in the transcript.
+Speech-to-text transcript messages are sent from the audio gateway to the client.  The message provides a transcript of the audio response in text format.  The  ID parameter matches the transaction ID in the audio start message.  The transactionID parameter is used for reporting errors in the transcript.
 
 Example:
 `{
@@ -131,7 +132,7 @@ Example:
 }`
 
 #### Error
-Error messages are sent from the audio gatewawy to the audio client  when an error occurs.  The ID paramemter matches the transaction ID of the transaction which caused the error.
+Error messages are sent from the audio gatewawy to the audio client when an error occurs.  The ID paramemter matches the transaction ID of the transaction which caused the error.
 
 Example:
 `{
@@ -139,3 +140,5 @@ Example:
   "action": "error",
   "error": {}
 }`
+> **What to do next?**<br/>
+Learn how to [authenticate audio devices]({{site.baseurl}}/further_topics/login-with-IBMid/).
