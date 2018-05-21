@@ -31,6 +31,10 @@ Audio-hospitality:
   title: Audio (hospitality)
   icon: code
   
+IFTTT:
+  title: IFTTT integration
+  icon: code
+  
 further-topics:
   title: Further topics
   icon: pencil
