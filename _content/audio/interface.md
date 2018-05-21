@@ -95,7 +95,7 @@ Example:
 }`
 
 #### Location
-Location message are sent from the audio client to the audio gateway.  The messages can be used to provide the current location of the audio device.
+Location messages are sent from the audio client to the audio gateway.  The messages can be used to provide the current location of the audio device.
 
 Example:
 `{
@@ -110,7 +110,7 @@ Example:
 Alternatively, you might use a configuration parameter to determine the location of the audio device. If a configuration parameter is used, the location message can be ignored.
 
 #### Response
-A response message is sent from the audio gateway to the audio client.  The data parameters includes the response  from the skill that processed the request.
+A response message is sent from the audio gateway to the audio client.  The data parameter includes the response  from the skill that processed the request.
 
 Example:
 `{
@@ -132,7 +132,7 @@ Example:
 }`
 
 #### Error
-Error messages are sent from the audio gatewawy to the audio client when an error occurs.  The ID paramemter matches the transaction ID of the transaction which caused the error.
+Error messages are sent from the audio gatewawy to the audio client when an error occurs.  The ID parameter matches the transaction ID of the transaction which caused the error.
 
 Example:
 `{
@@ -141,4 +141,4 @@ Example:
   "error": {}
 }`
 > **What to do next?**<br/>
-Learn how to [authenticate audio devices]({{site.baseurl}}/further_topics/login-with-IBMid/).
+Learn how to [authenticate audio devices]({{site.baseurl}}/audio/audio_authentication/).

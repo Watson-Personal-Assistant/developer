@@ -2,10 +2,16 @@
 title: Creating an IFTTT applet
 weight: 25
 ---
-You can create an applet on IFTTT to link two independent services.  You can use a converse request to the Watson Assistant Solutions service as the trigger.  You can use another service as the action.  The applet that you create is enabled for the user who creates it.
+You can create an applet on IFTTT to link two independent services.
+
+**Important**:  In alpha mode, you can use a converse request to the Watson Assistant Solutions service as a trigger only.  You can use another service as the action.
+
+The applet that you create is enabled only for the user who creates it.
 
 ### Before you begin
-1. If you configured the WA-IFTTT service to use IBMID authentication, register for an IBMid.
+1. Deploy an WA-IFTTT service in your environment.
+2. Deploy an IFTTT skill in your environment.
+3. If you configured the WA-IFTTT service to use IBMID authentication, register for an IBMid.
 2. Register for an account on IFTTT.
 
 ### Procedure

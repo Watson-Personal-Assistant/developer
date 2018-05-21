@@ -1,8 +1,8 @@
 ---
 title: Authenticating audio devices
-weight: 25
+weight: 15
 ---
-The audio client authentes its associated device with the audio gateway.  The audio client requests an auth token from the gateway using the tokens endpoint:
+The audio client authenticates its associated device with the audio gateway.  The audio client requests an auth token from the gateway using the tokens endpoint:
 `POST /v1/api/tokens`
 The client ID and secret is included in the header.
 
@@ -17,6 +17,7 @@ Example:
   "expires": 1489678591879,
   "type": "auth_token"
 }`
+Use the token before the time that is specified the `expires` field.
 
 > **What to do next?**<br/>
-Understand [what are skills]({{site.baseurl}}/skill/what-are-they).
+Review the [Audio streaming interface specification]({{site.baseurl}}/audio/interface).

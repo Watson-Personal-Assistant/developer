@@ -2,7 +2,7 @@
 title: How audio is processed by a multi-tenant audio gateway
 weight: 10
 ---
-The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authenticaton for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio+authentication/) topic.
+The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio+authentication/) topic.
 
 For a multi-tenant audio gateway, the flow for processing audio input in Watson Assistant Solutions is shown in figure 1.
 Figure 1 - audio flow
@@ -18,8 +18,8 @@ The steps in this flow are as follows:
 7. The audio client sends an `audio end` message to the gateway and turns off its microphone.
 9. The audio gateway forwards the text input to the routing core.
 10. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how_it_works/).
-11. If an audio response is being sent, the audio gateway coverts the response from the routing core to audio using a text-to-speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
-12. If a text response is being sent, the audio gateway forwards the text reply to the device.
+11. If some or all of the response will be delivered to the user as audio, the audio gateway coverts the response from the routing core to audio using a text-to-speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
+12. If some or all of the response will be delivered as text, the audio gateway sends the text reply to the device.
 13. The audio gateway sends an `audio end` message.
 14. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 3.  Otherwise the audio client waits for a new wake-up command.
 

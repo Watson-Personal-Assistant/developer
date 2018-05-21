@@ -1,9 +1,10 @@
 ---
-IoT control interface specification
+title: IoT control interface specification
+weight: 25
 ---
-IoT control is processed by a single-tenant audio gateway.  Endpoints are provided for sending IoT commands to your assistant, for administering client devices and for administering client controllers.
+IoT control is processed by a single-tenant audio gateway.  Endpoints are provided for sending IoT commands to your assistant, for administering client devices, and for administering client controllers.
 
-Important:  Use only if you have IBM Watson Assistant for Hospitality.
+**Important**:  Use only if you have IBM Watson Assistant for Hospitality.
 
 ### Converse
 Send an utterance or a command to Watson Assistant Solutions for processing.
@@ -35,7 +36,7 @@ To create client devices, use the clients endpoint:
 To delete a client device, use the clients endpoint and pass the client ID:
 `{host}/iot/clients/{id} [DELETE]`
 
-To list the details of a client device use the clients endpoint and pass the client ID:
+To list the details of a client device, use the clients endpoint and pass the client ID:
 `{host}/iot/clients/{id} [GET]`
 
 To update a client device, use the clients endpoint and pass the client ID:
@@ -51,7 +52,7 @@ countdevices endpoint:
 To list device controllers, use the devices endpoint:
 `{host}/iot/devices [GET]`
 
-To create a device contoller, use the devices endpoint:
+To create a device controller, use the devices endpoint:
 `{host}/iot/devices [POST]`
 Example:
 `{

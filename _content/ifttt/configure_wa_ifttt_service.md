@@ -11,7 +11,7 @@ Complete these steps:
 1. Create a developer account [IFTTT plaform](https://platform.ifttt.com/platform_sign_up).
 2. Go the Platform page.
 3. Create an organisation.
-4. Create a new WA-IFTTT service.
+4. Create a new WA-IFTTT service and provide a name for this service.
 5. Click the **API** tab.
 6. Copy the service key that is provided for your service and save it for later use.
 
