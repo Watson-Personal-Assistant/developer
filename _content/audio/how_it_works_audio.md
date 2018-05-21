@@ -2,11 +2,11 @@
 title: How audio is processed by a multi-tenant audio gateway
 weight: 10
 ---
-The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio+authentication/) topic.
+The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio_authentication/) topic.
 
 For a multi-tenant audio gateway, the flow for processing audio input in Watson Assistant Solutions is shown in figure 1.
 Figure 1 - audio flow
-![audio flow](flow.PNG)<br/>
+![audio flow]({{site.baseurl}}/audio/flow.PNG)<br/>
 The steps in this flow are as follows:
 1. When it turns on, the audio client sends an IAM token to the audio gateway and the gateway authenticates the client.
 1. The audio client processes a wake-up command.

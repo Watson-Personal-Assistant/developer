@@ -132,7 +132,7 @@ Example:
 }`
 
 #### Error
-Error messages are sent from the audio gatewawy to the audio client when an error occurs.  The ID parameter matches the transaction ID of the transaction which caused the error.
+Error messages are sent from the audio gateway to the audio client when an error occurs.  The ID parameter matches the transaction ID of the transaction which caused the error.
 
 Example:
 `{

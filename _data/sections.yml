@@ -23,15 +23,15 @@ knowledge:
   title: Knowledge and reasoning
   icon: code
   
-Audio:
+audio:
   title: Audio
   icon: code
   
-Audio-hospitality:
+audio_single:
   title: Audio (hospitality)
   icon: code
   
-IFTTT:
+ifttt:
   title: IFTTT integration
   icon: code
   

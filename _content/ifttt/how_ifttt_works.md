@@ -8,7 +8,7 @@ When an utterance that matches the trigger is received by Watson Assistant Solut
 
 ### Evaluation request
 Figure 1 shows how an evaluation request is handled for an IFTTT trigger.
-![Evaluation request](evaluation_flow.png)
+![Evaluation request]({{site.baseurl}}/ifttt/evaluation_flow.png)
 1.  A converse request that matches a trigger in an IFTTT applet is sent to the Watson Assistant Solutions core routing component.
 2. The core routing component sends the utterance to all skills for evaluation.
 3. The IFTTT skill requests the list of triggers for the user specified in the utterance from the WA-IFTTT service.
@@ -17,7 +17,7 @@ Figure 1 shows how an evaluation request is handled for an IFTTT trigger.
 
 ### Converse request
 Figure 2 shows how converse request is handled for an IFTTT trigger.
-![Converse request](converse_flow.png)
+![Converse request]({{site.baseurl}}/ifttt/converse_flow.png)
 1.  The routing core component of Watson Assistant Solutions routes the utterance to the IFTTT skill for processing.
 2. The skill executes the following `fire-trigger` action that is defined in the `action.js` file.  It passess the trigger ID that was passed in the evaluation response.
   ```Javascript
