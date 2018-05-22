@@ -7,10 +7,6 @@ In compliance with GDPR requirements, you can turn off the logging of personal i
 
 You can manage the logging of PI data through the console or using the Logging REST API. Before you can use the logging API, you must request an IAM access token.  You include the access token in your API calls to the logging REST API.
 
-### Before you begin
-1. Make sure that your IBMid is linked to your Watson Assistant Solutions instance.  For instructions on linking them, see [Linking your IBMid with your instance]({{site.baseurl}}/further-topics/login-with-IBMid/).
-2. If you using the logging REST API interface, create an IBM Cloud Platform access token.  For instructions, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-api-key/)
-
 ### Using the console
 You can disable the logging of PI data from the Watson Assistant Solutions console.
 
@@ -27,15 +23,15 @@ You can disable the logging of PI data using the Logging REST API.
 Complete these steps:
 1. To disable the logging of PI data, open a command-line and enter:
 ```shell
-curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/off" -H "accept: application/json" -H "Content-Type: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
+curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/off" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 3. To view if PI data is being logged, enter:
 ```shell
-curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi" -H "accept: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
+curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi" -H "accept: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 4. To enable the logging of PI data, enter:
 ```shell
-curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" --header "authorization: Bearer `node printToken.js paste-your-Platform-API-key-here`"
+curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 
 For more information about accessing logs for your Watson Assistant Solutions instance, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).

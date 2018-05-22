@@ -15,5 +15,5 @@ With Watson Assistant Solutions, you can create digital assistants that converse
 
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/tutorial_creating_custom_skill).
-* [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/skill/using-wcs).
+* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+* [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).

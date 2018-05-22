@@ -12,15 +12,15 @@ The high-level steps for deploying a custom skill are as follows:
 
 ---
 ### Before you begin
-1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}design/how-to-design-your-assistant/).
-1. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
-2. Install [GIT](https://git-scm.com/downloads).
-3. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
-4. Clone the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate), rename the folder to your skill name, and install node dependencies using the ```npm install``` command.
-4. If you plan to host your skill on IBM Cloud, register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
-5. If you plan to host your skill on IBM Cloud, install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
-6. If you plan to use Watson Assistant (formerly Watson Conversation) as your NLU, create and start a workspace on IBM Cloud. For more information, see [About Watson Assistant](https://console.bluemix.net/docs/services/conversation/).
-6. (Optional) Add the regex browser plugin to your web browser. For instructions, see [Using the regex browser plugin]({{site.baseurl}}/get-help/troubleshooting/).
+1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}/design/how-to-design-your-assistant/).
+2. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+3. Install [GIT](https://git-scm.com/downloads).
+4. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
+5. Clone the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate), rename the folder to your skill name, and install node dependencies using the ```npm install``` command.
+6. If you plan to host your skill on IBM Cloud, register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
+7. If you plan to host your skill on IBM Cloud, install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
+8. If you plan to use Watson Assistant (formerly Watson Conversation) as your NLU, create and start a workspace on IBM Cloud. For more information, see [About Watson Assistant](https://console.bluemix.net/docs/services/conversation/).
+9. (Optional) [Add the regex browser plugin]({{site.baseurl}}/get-help/troubleshooting/) to your web browser to help with pasting long commands.
 
 ---
 ### Procedure
@@ -43,7 +43,7 @@ Complete these steps to create, deploy, and register a custom skill.
 For more information about using the skill boilerplate to create your skill, see the ```readme.md``` file in the top-level directory of the boilerplate.
 8.  Test your local skill.
   1. Start your skill from your skill top-level directory.  Enter: ```npm run start```
-  2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:11011.
+  2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:10011.
   3. Converse with your skill. Use the Converse endpoint to ask a question and view a response in JSON format.
 
 #### Step 2: Deploy your skill.
@@ -65,7 +65,6 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 - ```Converse```: Converse with your skill or skill set.
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
----
 > **What next?**
-- Complete the *Creating a custom skill* tutorials.
-- Read more about Watson Assistant Solutions routing and personalization features that you can use to enhance your skills.
+* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/build-skill).
+* Read more about Watson Assistant Solutions routing and personalization features that you can use to enhance your skills.
