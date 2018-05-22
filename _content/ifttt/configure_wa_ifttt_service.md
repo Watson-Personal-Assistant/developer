@@ -84,6 +84,5 @@ Verify that IFTTT can communicate with your IFTTT service endpoint. Click **Endp
 #### Step 7: Test the OAuth flow
 Verify that the OAuth flow is set up correctly between your IFTTT service endpoint and the IFTTT platform.  Click **Connection tests** and verify that the message `Success!  Connection tests successful.`
 
----
-> **What next?**
+> **What to do next?**<br/>
 [Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/ifttt/create_ifttt_skill).

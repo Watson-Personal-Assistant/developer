@@ -52,6 +52,5 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 - ```SkillSets```: Create a skill set and add skills to a skill set.
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
----
-> **What next?**
+> **What to do next?**<br/>
 [Create an an IFTTT applet]({{site.baseurl}}/ifttt/create_an_applet/).
