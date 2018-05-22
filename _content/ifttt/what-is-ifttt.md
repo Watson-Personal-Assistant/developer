@@ -6,7 +6,7 @@ IFTTT (If This, Then That) is a software platform that you can use to automate t
 
 Figure 1 – Connecting the Watson Assistant Solutions service with a Philips Hue Service
 ![Scenario]({{site.baseurl}}/ifttt/scenario.PNG)
-The trigger is an utterance made to your Watson Assistant Solutions assistant to “turn on the lights”.  The action is to turn on the lights using the Philips Hue service.<br/>
+The trigger is an utterance made to your Watson Assistant Solutions assistant to “turn on the lights”.  The action is to turn on the lights using the Philips Hue service.
 
 The integration of Watson Assistant Solutions with the IFTTT platform is in alpha mode.  Initially, you can use Watson Assistant Solutions as the trigger and an external service on IFTTT as the action.  For more information about using IFTTT, see [IFTTT platform documentation](https://platform.ifttt.com/docs).
 
