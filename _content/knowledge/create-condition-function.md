@@ -212,4 +212,5 @@ In the terminal running the poll for log output, you should see something simila
 
 Your condition part of the rule is complete. Next, you will create the action part of the rule.
 
-> **What next?** Learn how to [create an action for a rule]({{site.baseurl}}/knowledge/create-action-function).
+> **What to do next?**<br/>
+Learn how to [create an action for a rule]({{site.baseurl}}/knowledge/create-action-function).

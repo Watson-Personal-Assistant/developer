@@ -74,7 +74,7 @@ let getJoke = function(url, callback) {
 },
 'chuck-norris-joke': (request, response) => {
     getJoke(
-        "https://api.chucknorris.io/jokes/random", 
+        "https://api.chucknorris.io/jokes/random",
         (err, result) => {
             if (err) {
                 response.say("I'm sorry, I'm having trouble remembering a joke, give me second and ask again.").send();
@@ -104,14 +104,14 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 ```
 bx login
 ```
-2. Push your skill to IBM Cloud.  Enter:
+2. From the top-level directory of your skill, push your skill to IBM Cloud.  Enter:
 ```
 bx app push
 ```
 An `App started message` is returned.
 3.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
 ```shell
-curl -X GET --verbose --header 'Accept: application/json' https://paste_your-hello-world-skill_name_here.mybluemix.net/v1/api/healthcheck
+curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
 

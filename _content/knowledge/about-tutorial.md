@@ -14,4 +14,5 @@ This scenario is implemented using the following NodeJS code:
 
 First, you will build the code to create the objects and relations.
 
-> **What next?** Learn how to [create objects in Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects).
+> **What to do next?**<br/>
+Learn how to [create objects in Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects).

@@ -155,4 +155,5 @@ If the code fails to run, you might try attaching the chrome devtools using comm
 
 Hopefully, all goes well and you have created 3 objects and 2 relations in your Watson Assistant Solutions Knowledge component.
 
-> **What next?** Learn how to [create rules in the Rules component]({{site.baseurl}}/knowledge/create-condition-function).
+> **What to do next?**<br/>
+Learn how to [create rules in the Rules component]({{site.baseurl}}/knowledge/create-condition-function).

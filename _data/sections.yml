@@ -22,7 +22,19 @@ skill:
 knowledge:
   title: Knowledge and reasoning
   icon: code
-
+  
+audio:
+  title: Audio
+  icon: code
+  
+audio_single:
+  title: Audio (hospitality)
+  icon: code
+  
+ifttt:
+  title: IFTTT integration
+  icon: code
+  
 further-topics:
   title: Further topics
   icon: pencil

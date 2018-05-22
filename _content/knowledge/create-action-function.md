@@ -144,4 +144,5 @@ In the terminal running the poll for log output, you should see something simila
 
 Your action part of the rule is complete. Next, you will create the rule and see it in action when the `isStatus` property of the door is modified.
 
-> **What next?** Learn how to [create a rule]({{site.baseurl}}/knowledge/create-rule).
+> **What to do next?**<br/>
+Learn how to [create a rule]({{site.baseurl}}/knowledge/create-rule).

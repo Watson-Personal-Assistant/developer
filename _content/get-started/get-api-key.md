@@ -10,14 +10,17 @@ Log in to the Watson Assistant Solutions console to access your instance.  From 
 - Manage your clients.
 - Converse with your skills using a chat interface.
 - View your logs.
-- Access the Swagger spefications for your Watson Assistant Solutions REST APIs.<br>
+- Access the Swagger specifications for your Watson Assistant Solutions REST APIs.<br>
 
-Before you log in, you must create an IBMid and an IAM ID and link both.  For instructions, see [Linking your IBMid with your IAM ID]({{site.baseurl}}/further-topics/login-with-IBMid/).
+#### About this task
+You can log in to the console with the Watson Assistant Solutions API key that is provided in your welcome letter or you can log in using your IBMid.
+
+Before you log in using your IBMid, you must create an IAM ID and link your IBMid with your IBMid.  For instructions, see [Setting up IAM authentication]({{site.baseurl}}/further-topics/login-with-IBMid/).
 
 #### Procedure
 To log in to the Watson Assistant Solutions console, complete these steps:
 1. Open a web browser and enter the following URL:<br/>[https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net)
-2. Log in to the console using your IBMid.<br/>
+2. Log in to the console using your IBMid or your Watson Assistant Solutions API key.<br/>
 
 The Watson Assistant Solutions console is displayed.
 
