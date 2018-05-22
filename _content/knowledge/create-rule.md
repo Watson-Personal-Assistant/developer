@@ -62,4 +62,6 @@ If everything worked correctly, then you should see an `Alert!` message in the b
 
 Hopefully that gives you better understanding on how to make the assistant personal and proactive.  If that didn't fill the need, then please contact us.
 
-> **What next?** Learn how to [get help or ask questions]({{site.baseurl}}/get-help/learn).
+> **What to do next?**<br/>
+Learn about [the multi-tenant Audio Gateway service]({{site.baseurl}}/audio/audio_support).<br/>
+Learn about [the single-tenant Audio Gateway service for Hospitality]({{site.baseurl}}/audio_single/audio_support).

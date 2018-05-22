@@ -7,4 +7,5 @@ The Knowledge and Reasoning (alpha) components of Watson Assistant Solutions pow
 
 In the pages that follow, you'll go through a simulated tutorial to better understand how to create and change information in the Knowledge (alpha) component as well as create a rule to engage your user.
 
-> **What next?** Go through a [Knowledge and Rules (alpha) tutorial]({{site.baseurl}}/knowledge/about-tutorial).
+> **What to do next?**<br/>
+Go through a [Knowledge and Rules (alpha) tutorial]({{site.baseurl}}/knowledge/about-tutorial).

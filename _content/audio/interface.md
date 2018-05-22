@@ -141,4 +141,4 @@ Example:
   "error": {}
 }`
 > **What to do next?**<br/>
-Learn how to [authenticate audio devices]({{site.baseurl}}/audio/audio_authentication/).
+Learn about [the IFTTT integration]({{site.baseurl}}/ifttt/what-is-ifttt/).
