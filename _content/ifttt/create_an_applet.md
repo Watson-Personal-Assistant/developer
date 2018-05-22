@@ -38,4 +38,4 @@ To create an IFTTT applet that uses the Watson Assistant Solution service in its
 5. Give your applet a name and save it. The applet is enabled by default.
 
 > **What to do next?**<br/>
-[Complete the IFTTT tutorial.]({{site.baseurl}}/ifttt/ifttt_integ_tutorial/).
+[Complete the IFTTT tutorial]({{site.baseurl}}/ifttt/ifttt_integ_tutorial/).
