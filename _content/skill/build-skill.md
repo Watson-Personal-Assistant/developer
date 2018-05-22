@@ -30,7 +30,7 @@ Complete these steps:
 2. Install the node dependencies for the skill.
     1. Enter `cd SkillBoilerplate`.
     2. Enter `npm install`.
-4.  Start the skill. From the command line, enter<br>`npm run start`
+3.  Start the skill. From the command line, enter<br>`npm run start`
 
 #### Step 2: Test your skill from your local system.
 1. Start a web browser and open the conversation REST API in the Swagger UI.  Enter:
@@ -95,14 +95,14 @@ If the skilll is not accessible, complete these steps:
 - Use the skill URL to access the skill to verify that it is running.
 - From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluxmix.net/docs`.
 
-### Step 5: Add the skill to your Watson Assistant Solutions instance
+#### Step 5: Add the skill to your Watson Assistant Solutions instance
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
 ```shell
 curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
 ```
 A `skill updated successfully` message is displayed.
 
-### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
+#### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
 Use the conversation REST API to converse with your skill.  Enter:
 ```shell
 curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'
