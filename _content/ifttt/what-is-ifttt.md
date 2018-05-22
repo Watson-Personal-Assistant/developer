@@ -1,5 +1,5 @@
 ---
-title: Integrating your assistant with IFTTT
+title: Integrating with IFTTT
 weight: 5
 ---
 IFTTT (If This, Then That) is a software platform that you can use to automate the connection between your Watson Assistant Solutions service and the services from other providers.  To set up automated connections, a registered end-user creates an applet on the IFTTT platform.  The applet  connects a trigger (if this) with an action (then that).  For example, you can create an IFTTT applet that connects a Watson Assistant Solutions service with a Philips Hue service (see figure 1).<br/>
