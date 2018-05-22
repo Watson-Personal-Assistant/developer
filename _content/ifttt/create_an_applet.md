@@ -39,4 +39,4 @@ To create an IFTTT applet that uses the Watson Assistant Solution service in its
 
 ---
 > **What next?**
-[Complete the IFTTT tutorial.]({{site.baseurl}}/how_ifttt_works/ifttt_integ_tutorial/).
+[Complete the IFTTT tutorial.]({{site.baseurl}}/ifttt/ifttt_integ_tutorial/).

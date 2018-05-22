@@ -37,4 +37,4 @@ End-users can create applets on IFTTT that use the Watson Assistant Solutions in
 **Note**: The sample IFTTT service configuration uses IBMid authentication, which is based on the OAuth 2.0 protocol, by default. You can use any other authentication mechanism that is based on OAuth 2.0.
 
 > **What to do next?**<br/>
-[Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/skill/tutorial_creating_custom_skill).
+[Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/ifttt/configure_wa_ifttt_service).

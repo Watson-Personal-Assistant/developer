@@ -86,4 +86,4 @@ Verify that the OAuth flow is set up correctly between your IFTTT service endpoi
 
 ---
 > **What next?**
-[Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/skill/tutorial_creating_custom_skill).
+[Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/ifttt/create_ifttt_skill).
