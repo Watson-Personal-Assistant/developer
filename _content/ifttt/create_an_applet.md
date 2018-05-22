@@ -9,9 +9,9 @@ You can create an applet on IFTTT to link two independent services.
 The applet that you create is enabled only for the user who creates it.
 
 ### Before you begin
-1. Deploy an WA-IFTTT service in your environment.
+1. Deploy an IFTTT service in your environment.
 2. Deploy an IFTTT skill in your environment.
-3. If you configured the WA-IFTTT service to use IBMID authentication, register for an IBMid.
+3. If you configured your IFTTT service to use IBMID authentication, register for an IBMid.
 2. Register for an account on IFTTT.
 
 ### Procedure
@@ -20,13 +20,13 @@ To create an IFTTT applet that uses the Watson Assistant Solution service in its
 2. Under your user name, click New Applet.
 3. Configure the trigger which will start your applet.
   1. Click the plus sign in **IF This**.
-  2. In the search field, enter Watson Assistant.
-  3. Click the Watson Assistant button.
+  2. In the search field, enter your IFTTT service name.
+  3. Click on your service.
   4. Click Connect.
-  5. When prompted, enter your IBMid and password.
+  5. When prompted, enter your log in details (for example, IBMid and password).
   6. Click Voice Command.
   7. Specify at least one utterance to be matched. For example, "turn off the lights".
-  8. Specify an answer.  The answer is included in the response from Watson Assistant Solutions to the user when the action is ivoked.
+  8. Specify an answer.  For example, "the lights are turning off".  The answer is included in the response from Watson Assistant Solutions to the user when the action is invoked.
   9. Click **Create trigger**.
 4. Configure the action that your applet with perform when the trigger fires.
   1. Click the plus sign before THAT.
