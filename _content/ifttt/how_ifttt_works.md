@@ -8,7 +8,7 @@ When an utterance that matches the trigger is received by Watson Assistant Solut
 
 ### Evaluation request
 Figure 1 shows how an evaluation request is handled for an IFTTT trigger.
-![]({{site.baseurl}}/images/evaluation_flow.PNG)
+![Evaluation]({{site.baseurl}}/ifttt/valuation_flow.PNG)
 1.  A converse request that matches a trigger in an IFTTT applet is sent to the Watson Assistant Solutions core routing component.
 2. The core routing component sends the utterance to all skills for evaluation.
 3. The IFTTT skill requests the list of triggers for the user specified in the utterance from the IFTTT service.
@@ -20,9 +20,7 @@ Figure 2 shows how converse request is handled for an IFTTT trigger.
 ![Converse request]({{site.baseurl}}/ifttt/converse_flow.png)
 1.  The routing core component of Watson Assistant Solutions routes the utterance to the IFTTT skill for processing.
 2. The skill executes the following `fire-trigger` action that is defined in the `action.js` file.  It passess the trigger ID that was passed in the evaluation response.
-  ```javascript
-  'fire-trigger': (request, response, context) => { axios.post(iftttServiceEndpoint + "/invoke_wa_trigger", {trigger_id:request.evaluationResponse.response.triggerId}, {headers:{'ifttt-skill-key':manifest['ifttt-skill-key']}}).then((response) => { }).catch((err)=>{ console.error("invoke_wa_trigger " + err.message); }); response.say(handler.t(request.evaluationResponse.response.triggerFields.answer)).send(); }
-  ```
+`'fire-trigger': (request, response, context) => { axios.post(iftttServiceEndpoint + "/invoke_wa_trigger", {trigger_id:request.evaluationResponse.response.triggerId}, {headers:{'ifttt-skill-key':manifest['ifttt-skill-key']}}).then((response) => { }).catch((err)=>{ console.error("invoke_wa_trigger " + err.message); }); response.say(handler.t(request.evaluationResponse.response.triggerFields.answer)).send(); }`
 3. The fire-trigger action sends a request to the IFTTT service to trigger the action part of the rule.
 4. The IFTTT service triggers the IFTTT platform to execute the action part of the rule.
 
