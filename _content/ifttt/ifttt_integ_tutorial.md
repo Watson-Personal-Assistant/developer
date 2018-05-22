@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Using Watson Assistant Solutions in an IFTTT applet
+title: Tutorial - creating an IFTTT applet
 weight: 30
 ---
 IFTTT (If This, Then That) is a software platform that you can use to automate the connection between your Watson Assistant Solutions service and the services from other providers.  The tutorial provides you with an example of integrating IFTTT in your environment and creating an applet that uses Watson Assistant Solutions in its trigger.
@@ -28,12 +28,12 @@ Complete these steps:
 3. Click Sign up.
 4. Verify your email address.
 5. Specify a service name that describes your Watson Assistant Solutions service.
-6. Select an organisation.
-7. Create a new service ID. The service ID is a  short, unique name to be used as your service's identifier and in its IFTTT URLs.
+6. Select an organization.
+7. Create a new service ID. The service ID is a short, unique name to be used as your service's identifier and in its IFTTT URLs.
 8. Click Create.
-5. Click the **API** tab.
-6. Copy the service key that is provided for your service and save it for later use.
-7. Register your new IFTTT service as an application that uses IBMid at https://w3.innovate.ibm.com/tools/sso/home.html.
+9. Click the **API** tab.
+10. Copy the service key that is provided for your service and save it for later use.
+11. Register your new IFTTT service as an application that uses IBMid at [https://w3.innovate.ibm.com/tools/sso/home.html](https://w3.innovate.ibm.com/tools/sso/home.html).
 
 #### Step 2: Configure and deploy a service on IBM Cloud
 1. Clone the WA-IFTTT service boilerplate.  Contact the Watson Assistant Solutions team for access to the service boilerplate.
@@ -44,20 +44,14 @@ Complete these steps:
    - wa_api_key: Your Watson Assistant Solutions instance API key.
    - oauth: Add values for `client_id`, `client_secret`, `authorization_url`,` token_url`, and `introspect_url` based on the values provided when you register the service for an IBMid.
    - ifttt-skill-key: A GUID your create for your skill. Save it for later use in your IFTTT skill configuration.
-4. Register your IFTTT service as an  application that uses IBMid at https://w3.innovate.ibm.com/tools/sso/home.html.
-5. Push the service to IBM Cloud.
-Important:  You  must associate your service with a Cloudant database.   Take note of the external URL of this service.
+4. Push the service to IBM Cloud.
+Important:  You  must associate your service with a Cloudant database.  Take note of the external URL of this service.
 
-#### Step 3: Update the WA-IFTTT service configuration on IFTTT
+#### Step 3: Update the IFTTT service configuration on IFTTT
 1. Click the **API** tab.
 2. Paste the WA-IFTTT service URL into the IFTTT API URL field.
 
-#### Step 3: Update your  IFTTT service configuration
-Update your service configuration on the IFTTT platform.
-1. Click the **API** tab.
-2. Paste your IFTTT service URL into the IFTTT API URL field.
-
-### Step 4: Configure OAuth2 authentication for your IFTTT service
+#### Step 4: Configure OAuth2 authentication for your IFTTT service
 In this tutorial, we use IBMids to authenticate users.
 1. Click the API tab.
 2. Click **Authentication**.
@@ -70,55 +64,33 @@ In this tutorial, we use IBMids to authenticate users.
   - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channels/{{service_id}}/authorize`
   <br/>where `{{service_id}}` is the service_id you set in the service configuration.
 
-  #### Step 5: Create a new trigger
-  Complete these steps:
-  1. Click the **API** tab.
-  2. Click **Triggers**.
-  3. Enter descriptions for the following trigger parameters:
-    - name: The name of the trigger.
-    - Description: `This trigger fires whenever you say one of the utterances.`
-    - Endpoint: Enter `wa_commands`.
-    4.   Add trigger fields.  For utterance1, enter:
-    - label1: Enter `Utterance1`
-    - Optional helper text: Enter `An utterance that the trigger will fire on (otherwise known as a targer keyword)`.
-    - Key name: Enter `utterance1`
-    - Input type: Select `Text input`
-    - Input validation: Select `Validation required`
-    - Validation rule: Select `Text must not be blank`
-    For utterance2, enter:
-    - label1: Enter `Utterance2`
-    - Optional helper text: Enter `A second utterance that the trigger will fire on`.
-    - Key name: Enter `utterance2`
-    - Input type: Select `Text input`
-    - Input validation: Select `No validation required`
-    For the answer, enter:
-
-#### Step 4: Describe your Watson Assistant Solution triggers
+#### Step 5: Create a new trigger
+Complete these steps:
 1. Click the **API** tab.
 2. Click **Triggers**.
-3. Enter the following parameters to configure trigger support:
-  - name: Enter `Voice Command`
-  - Description: Enter `This trigger fires whenever you say one of the utterances.`
-  - Endpoint: Enter `wa_commands`.
-4.  Complete the trigger details for utterance 1 and click Save:
-  - label1: Enter `Utterance 1`
-  - Optional helper text: Enter `First possible utterance (what was named Target Keyword before)`
-  - Key name: Enter `utterance1`
-  - Input type: Select `Text input`
-  - Input validation: Select `Validation required`
-  - Validation rule: Select `Text must not be blank`
-5.  Complete the trigger details for utterance 2 and click Save.
-  - label1: Enter `Utterance 2`
-  - Optional helper text: Enter `(optional)`
-  - Key name: Enter `utterance2`
-  - Input type: Select `Text input`
-  - Input validation: Select `No validation required`
-6.  Complete the trigger details for answer and click Save.
-  - Label: Enter `answer`.
-  - Optional helper text: Enter `The answer that Watson Assistant Solutions gives when a trigger is fired.`
-  - Key name: Enter `answer`
-  - Input type: Select `Text input`
-  - Input validation: Select `No validation required`
+3. Enter descriptions for the following trigger parameters:
+- name: The name of the trigger.
+- Description: `This trigger fires whenever you say one of the utterances.`
+- Endpoint: Enter `wa_commands`.
+4.  Add trigger fields.  For utterance1, enter:
+- label1: Enter `Utterance1`
+- Optional helper text: Enter `An utterance that the trigger will fire on (otherwise known as a targer keyword)`.
+- Key name: Enter `utterance1`
+- Input type: Select `Text input`
+- Input validation: Select `Validation required`
+- Validation rule: Select `Text must not be blank`
+5. For utterance2, enter:
+- label1: Enter `Utterance2`
+- Optional helper text: Enter `A second utterance that the trigger will fire on`.
+- Key name: Enter `utterance2`
+- Input type: Select `Text input`
+- Input validation: Select `No validation required`
+6. For the answer, enter:
+- Label: Enter `answer`.
+- Optional helper text: Enter `The answer that Watson Assistant Solutions gives when a trigger is fired.`
+- Key name: Enter `answer`
+- Input type: Select `Text input`
+- Input validation: Select `No validation required`
 7. Specify the verbiage.  Enter:
 `you say fields.utterance1 or fields.utterance2`
 8. Configure an ingredient for the trigger. Enter:
@@ -126,19 +98,19 @@ In this tutorial, we use IBMids to authenticate users.
   - Slug: Enter `createdat`
   - Note:Enter `Date and time event was created`
   - Type: Select `Date and time (ISO8601)`
-7. Verify that IFTTT can communicate with your IFTTT servcie endpoint. Click **Endpoint tests** and verify that the message `Success!  All endpoint tests passed.`
-8. Verify that the OAuth flow is set up correctly between your IFTTT service endpoint and the IFTTT platform.  Click **Connection tests** and verify that the message `Success!  Connection tests successful.`
+9. Verify that IFTTT can communicate with your IFTTT servcie endpoint. Click **Endpoint tests** and verify that the message `Success!  All endpoint tests passed.`
+10. Verify that the OAuth flow is set up correctly between your IFTTT service endpoint and the IFTTT platform.  Click **Connection tests** and verify that the message `Success!  Connection tests successful.`
 
-#### Step 5: Clone, register, and deploy the  IFTTT skill
+#### Step 6: Clone, register, and deploy the  IFTTT skill
 1. Clone the IFTTT skill boilerplate.  Contact the Watson Assistant Solutions team for access to the service boilerplate.
 2. In the skilll manifest file,  `./res/assets/manifest.json`, specify the following parameters:
   - `iftttServiceEndpoint`: The URL of your IFTTT service endpoint.
   - `ifttt-skill-key`: The skill key you specified when you created an IFTTT service on the IFTTT platform.
-4. Push the skill to IBM Cloud.  Use the ```bx app push``` command.
-5. Register the skill with your Watson Assistant Solutions instance.
+3. Push the skill to IBM Cloud.  Use the ```bx app push``` command.
+4. Register the skill with your Watson Assistant Solutions instance.
 For more information about deploying the IFTTT skill, see [Deplying the IFTTT skill ]({{site.baseurl}}/ifttt/create_ifttt_skill).
 
-#### Step 5: Create an applet on IFTTT
+#### Step 7: Create an applet on IFTTT
 1. Log in to the [IFTTT website](https://ifttt.com/login).
 2. Under your user name, click New Applet.
 3. Configure the trigger which will start your applet.
@@ -169,4 +141,4 @@ For more information about deploying the IFTTT skill, see [Deplying the IFTTT sk
 
 
 > **What to do next?**<br/>
-Read how to [Link your IBMid with your instance ]({{site.baseurl}}/further-topics/login-with-IBMid).
+Read how to [link your IBMid with your instance]({{site.baseurl}}/further-topics/login-with-IBMid).
