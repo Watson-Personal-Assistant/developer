@@ -16,9 +16,9 @@ Complete these steps:
 6. Select an organization.
 7. Create a new service ID. The service ID is a  short, unique name to be used as your service's identifier and in its IFTTT URLs.
 8. Click Create.
-5. Click the **API** tab.
-6. Copy the service key that is provided for your service and save it for later use.
-7. Register your service with your Oauth2 provided.  For example, to register your new IFTTT service as an application that uses IBMid, go to https://w3.innovate.ibm.com/tools/sso/home.html.
+9. Click the **API** tab.
+10. Copy the service key that is provided for your service and save it for later use.
+11. Register your service with your Oauth2 provided.  For example, to register your new IFTTT service as an application that uses IBMid, go to [https://w3.innovate.ibm.com/tools/sso/home.html](https://w3.innovate.ibm.com/tools/sso/home.html).
 
 #### Step 2: Configure and deploy an IFTTT service on IBM Cloud
 1. Clone the WA-IFTTT service boilerplate.  Contact the Watson Assistant Solutions team for access to the service boilerplate.
@@ -29,8 +29,7 @@ Complete these steps:
    - wa_api_key: Your Watson Assistant Solutions instance API key.
    - oauth: Add values for `client_id`, `client_secret`, `authorization_url`,` token_url`, and `introspect_url` based on the values provided by your Oauth2 provider.
    - ifttt-skill-key: A GUID you create for your skill. Save it for later use in your IFTTT skill configuration.
-4.
-5. Push the service to IBM Cloud. Use the ```bx app push``` command.
+4. Push the service to IBM Cloud. Use the ```bx app push``` command.
   **Important**:  You  must associate your service with a Cloudant database.  If you want to use another database at the data layer, see .`/dal/cloudDAL.js` in your local repository for an example of how to configure the database.  Take note of the external URL of this service.
 
 #### Step 3: Update your  IFTTT service configuration
@@ -38,7 +37,7 @@ Update your service configuration on the IFTTT platform.
 1. Click the **API** tab.
 2. Paste your IFTTT service URL into the IFTTT API URL field.
 
-### Step 4: Configure OAuth2 authentication for your IFTTT service
+#### Step 4: Configure OAuth2 authentication for your IFTTT service
 1. Click the API tab.
 2. Click **Authentication**.
 3. Select the option `My API has users with expiring OAuth2 access tokens and uses refresh tokens`.
@@ -85,4 +84,4 @@ Verify that IFTTT can communicate with your IFTTT service endpoint. Click **Endp
 Verify that the OAuth flow is set up correctly between your IFTTT service endpoint and the IFTTT platform.  Click **Connection tests** and verify that the message `Success!  Connection tests successful.`
 
 > **What to do next?**<br/>
-[Deploy an IFTTT skill and register it with Watson Assistant Solutions.]({{site.baseurl}}/ifttt/create_ifttt_skill).
+[Deploy an IFTTT skill]({{site.baseurl}}/ifttt/create_ifttt_skill).
