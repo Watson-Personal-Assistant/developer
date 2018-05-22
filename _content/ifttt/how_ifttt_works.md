@@ -1,5 +1,5 @@
 ---
-title: How an IFTTT rule works with your assistant
+title: How IFTTT rule works 
 weight: 10
 ---
 When your end-user creates an applet on the IFTTT platform and uses your Watson Assistant Solutions service in the trigger, the IFTTT platform calls an IFTTT service to store a trigger for the user associated with the applet.
@@ -8,7 +8,7 @@ When an utterance that matches the trigger is received by Watson Assistant Solut
 
 ### Evaluation request
 Figure 1 shows how an evaluation request is handled for an IFTTT trigger.
-![Evaluation request]({{site.baseurl}}/ifttt/evaluation_flow.png)
+![]({{site.baseurl}}/images/evaluation_flow.PNG)
 1.  A converse request that matches a trigger in an IFTTT applet is sent to the Watson Assistant Solutions core routing component.
 2. The core routing component sends the utterance to all skills for evaluation.
 3. The IFTTT skill requests the list of triggers for the user specified in the utterance from the IFTTT service.
