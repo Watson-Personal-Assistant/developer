@@ -61,8 +61,7 @@ In this tutorial, we use IBMids to authenticate users.
   - Client secret: Client secret provided by your OAuth2 provider.
   - Authorization URL: URL provided by your OAuth2 provider. A user is redirected to this URL to authenticate.
   - Token URL:  URL provided by your OAuth2 provider. A user authorization code is exchanged for an access token at this URL.
-  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channels/{{service_id}}/authorize`
-  <br/>where `{{service_id}}` is the service_id you set in the service configuration.
+  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/{{service_id}}/authorize` were `service_id` is the service_id you set in the service configuration.
 
 #### Step 5: Create a new trigger
 Complete these steps:
@@ -134,7 +133,7 @@ For more information about deploying the IFTTT skill, see [Deplying the IFTTT sk
 
 #### Step 6: Test the rule using Watson Assistant Solutions
 1. Log in to the Watson Assistant Solutions console with your IBMid.
-2. On the chat iinterface, select the IFTTT skill.
+2. On the chat interface, select the IFTTT skill.
 3. Enter: `Remind me to pick up the shopping`.
 4. Go to the email account associated with your IFTTT account.
 5. Verify that you receive a email with `Reminder: shopping` in the subject line and `Do some shopping after work` in the body.
