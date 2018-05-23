@@ -46,8 +46,8 @@ Update your service configuration on the IFTTT platform.
   - Client secret: Client secret provided by your OAuth2 provider.
   - Authorization URL: URL provided by your OAuth2 provider. A user is redirected to this URL to authenticate.
   - Token URL:  URL provided by your OAuth2 provider. A user authorization code is exchanged for an access token at this URL.
-  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channels/{{service_id}}/authorize`
-  <br/>where `{{service_id}}` is the service_id you set in the service configuration.
+  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/{{service_id}}/authorize`
+where `service_id` is the service_id you set in the service configuration.
 For more information, see the authenticaiton flow topic in the `IFTTT platform documentation`.
 
 #### Step 5: Create a new trigger
@@ -69,7 +69,7 @@ Complete these steps on the IFTTT platform.
   Repeat these steps for utterance 2 and specify `utterance2` as the key name.
   Repeat these steps for the answer your assistant provides in addition to invoking the action.   Specify `answer` as the key name.
 5. Specify the verbiage (text) that is displayed for the trigger when you select your Watson Assistant Solutions IFTTT service in the trigger.  For example,
-`When you say fields.utterance1 or fields.utterance2`
+`When you say fields.utterance1 or fields.utterance2`.
 In this example, if utterance1 is "hello" and utterance2 is "hi", the applet describes the trigger as "When you say hello or hi".
 6. Add an ingredient. Ingredients are passed to the action.  Enter the following values:
   - Name: `CreatedAt`
