@@ -82,10 +82,13 @@ Example:
 ```
 
 To delete a device controller, use the devices endpoint and pass the device controller ID:
+
 `{host}/iot/devices/{id} [DELETE]`
 
 To update a device controller, use the devices endpoint and pass the device controller ID:
-`{host}/iot/devices/{id} [PUT`
+
+`{host}/iot/devices/{id} [PUT]`
+
 Example:
 ```
 {
