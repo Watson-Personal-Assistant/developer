@@ -17,15 +17,15 @@ The steps in this flow are as follows:
 8. The audio gateway sends `speech-to-text transcript` messages to the audio client.
 9. The audio client sends an `audio end` message to the gateway and turns off its microphone.
 10. The audio gateway forwards the text input to the routing core.
-11. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how_it_works/). <br/>If the request is processed by a command and control skill, the skill might respond with the text response alone or it might respond with a card that includes an IoT command alone or it might respond with a text response and a card.
+11. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how_it_works/). If the request is processed by a command and control skill, the skill might respond with the text response alone or it might respond with a card that includes an IoT command alone or it might respond with a text response and a card.
 12. If an IoT command is returned:
-    a. The IoT control component of the audio gateway sends an MQTT message with the command to the Watson IoT platform.
-    b. The Watson IoT platform routes the command through a smartthings gateway to an IoT controller that performs the action.
+    - A. The IoT control component of the audio gateway sends an MQTT message with the command to the Watson IoT platform.
+    - B. The Watson IoT platform routes the command through a smartthings gateway to an IoT controller that performs the action.
 13. If a text response is returned:
-    a. If an audio will be delivered to the user, the audio gateway converts the response from the routing core to audio using a text-to-           speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
-    b. If text will be delivered to the user, the audio gateway sends the text reply to the device.
-    c. The audio gateway sends an `audio end` message.
-    d. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 5.  Otherwise the audio client waits for a new wake-up command.
+    - A. If an audio will be delivered to the user, the audio gateway converts the response from the routing core to audio using a text-to-           speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
+    - B. If text will be delivered to the user, the audio gateway sends the text reply to the device.
+    - C. The audio gateway sends an `audio end` message.
+    - D. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 5.  Otherwise the audio client waits for a new wake-up command.
 
 **Note**: If the action takes some time, the IoT controller might send additional responses to the audio gateway. For example, if the IoT controller is instructed to open the blinds, it might send a 'the blinds are now open' response to the gateway.  If the audio device is still connected to the gateway, the audio gateway streams the 'blinds are now open' response to the device.
 
