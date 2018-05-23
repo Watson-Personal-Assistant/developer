@@ -1,8 +1,10 @@
 ---
-title: Using a single-tenant audio gateway 
+title: Using a single-tenant audio gateway
 weight: 5
 ---
 You can send audio input to Watson Assistant Solutions.  The flow for processing audio input is different from text input.  Audio input is sent from an audio device to an audio gateway component of Watson Assistant Solutions.  The audio gateway uses speech-to-text and text-to-speech services to convert audio input to text and to convert responses to audio.
+
+A sample audio client (alpha) is available for you to clone and deploy to your devices.  Contact Watson Assistant Solutions support if you would like access to the sample code and instructions.
 
 The single-tenant audio gateway is also involved in processing IOT control requests.  If the command and control skill includes an IoT command in its response, the audio gateway fowards that command externally to the Watson IoT platform for processing.
 
