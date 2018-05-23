@@ -25,7 +25,7 @@ The steps in this flow are as follows:
     - A. If an audio will be delivered to the user, the audio gateway converts the response from the routing core to audio using a text-to-           speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
     - B. If text will be delivered to the user, the audio gateway sends the text reply to the device.
     - C. The audio gateway sends an `audio end` message.
-    - D. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 5.  Otherwise the audio client waits for a new wake-up command.
+    - D. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 4.  Otherwise the audio client waits for a new wake-up command.
 
 **Note**: If the action takes some time, the IoT controller might send additional responses to the audio gateway. For example, if the IoT controller is instructed to open the blinds, it might send a 'the blinds are now open' response to the gateway.  If the audio device is still connected to the gateway, the audio gateway streams the 'blinds are now open' response to the device.
 
