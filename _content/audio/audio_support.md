@@ -9,4 +9,4 @@ If you have either the IBM Watson Assistant for Automotive or IBM Watson Assista
 If you have IBM Watson Assistant for Hospitality, you have access to a single-tenant audio gateway in alpha mode. The process flow for a single-tenant gateway and a multi-tenant gateway is different. If you have Watson Assistant for Hospitality, start with the [Using a single-tenant audio gateway]({{site.baseurl}}/audio_single/audio_support/) topic.
 
 > **What to do next?**<br/>
-Learn how [audio is processed by a multi-tenant audio gateway]({{site.baseurl}}/audio/how_it_works_audio).
+Learn how [audio is processed]({{site.baseurl}}/audio/how_it_works_audio).
