@@ -9,6 +9,7 @@ The IFTTT skill boilerplate uses a dedicated IFTTT nlu.  You must not change the
 
 The high-level steps for deploying an IFTTT skill are as follows:
 1. Clone the IFTTT skill boilerplate.
+1. Configure the Skill.
 2. Host your IFTTT skill externally, for example, on IBM Cloud.
 3. Register the IFTTT skill with your Watson Assistant Solutions instance.
 
