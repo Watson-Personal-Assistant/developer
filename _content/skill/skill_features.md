@@ -70,7 +70,7 @@ Variables that are set in the session context are available to all skills.
 _Figure 5 - routing by session context_
 ![Routing by session context]({{site.baseurl}}/images/skill_session_context_ex.PNG)
 
-In figure 5, at step 2, the traffic skill saves the region of interest, city center, to a `$region` variable in the session context. Later in the conversation at step 7, the user asks "Are there any outdoor concerts on there today".  The utterance is routed to a different skill this time.  The events skill returns the highest confidence score. The events skill uses the `$region` variable to determine what response to provide to the utterance.  The events skill returns a response based on the city center region.
+In figure 5, at step 2, the traffic skill saves the region of interest, Central Park, to a `$region` variable in the session context. Later in the conversation at step 7, the user asks "Are there any outdoor concerts on there today".  The utterance is routed to a different skill this time.  The events skill returns the highest confidence score. The events skill uses the `$region` variable to determine what response to provide to the utterance.  The events skill returns a response based on the Central Park region.
 
 #### Routing by utterance context and rejecting utterances
 A skill can use the utterance context when it evaluates a request and when it determines a response. For example, an utterance might include a `$location` variable that is either set to `car` or `atHome`.
