@@ -1,5 +1,5 @@
 ---
-title: Enhancing the conversation with a skill
+title: Enhancing the conversation
 weight: 40
 ---
 Watson Assistant Solutions provides several features you can use to enhance the coversation between your end-users and your skill and to personalize the conversation.
@@ -14,7 +14,7 @@ During a conversation, a skill may prompt for more information from the end-user
 For example:
 
 _Figure 1 - setting the in conversation flag_
-![in conversation]({{site.baseurl}}/inconversation.png)
+![in conversation]({{site.baseurl}}/images/inconversation.png)
 In figure 1, the traffic skill asks the user which region the user wants the traffic news for.  The traffic skill sets an in conversation flag to notify the Watson Assistant Solutions routing core that it is in a conversation and that it is expecting a response. Otherwise, another skill, such the events skill, might return a higher confidence score and process the utterance.
 
 ##### Sample code
