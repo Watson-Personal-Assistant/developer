@@ -40,7 +40,7 @@ You can also route the conversation using entities.  For example:
 - You might route on an entity if only an entity is provided in the utterance.
 
 _Figure 3 - routing by entities_
-![Routing by entitiest]({{site.baseurl}}/images/routing_by_entities2.PNG)
+![Routing by entities]({{site.baseurl}}/images/routing_by_entities2.png)
 
 In figure 3, the routing core routes based on a @trafficarea entity.  A different response is provided depending on whether the value is city center or suburbs.
 
@@ -68,7 +68,7 @@ The skill context is saved by Watson Assistant Solutions and can be passed to a 
 Variables that are set in the session context are available to all skills.
 
 _Figure 5 - routing by session context_
-![Routing by session context]({{site.baseurl}}/images/skill_session_context_ex.png)
+![Routing by session context]({{site.baseurl}}/images/skill_session_context_ex.PNG)
 
 In figure 5, at step 2, the traffic skill saves the region of interest, city center, to a `$region` variable in the session context. Later in the conversation at step 7, the user asks "Are there any outdoor concerts on there today".  The utterance is routed to a different skill this time.  The events skill returns the highest confidence score. The events skill uses the `$region` variable to determine what response to provide to the utterance.  The events skill returns a response based on the city center region.
 
