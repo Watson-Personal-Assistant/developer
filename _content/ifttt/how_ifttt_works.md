@@ -27,7 +27,7 @@ Figure 2 shows how a converse request is handled for an IFTTT trigger.
 ###  Adding IFTTT capability to your environment
 To use the IFTTT capability in your environment, complete the following setup tasks:
 1. Create a developer account on the IFTTT platform.
-2. Configure and deploy an IFTTT service and its associated cloudant database to IBM Cloud. The service is an interface between Watson Assistant SolutioSns and the IFTTT platform.  It is used to trigger user authenticaton, stores triggers for your Watson Assistant Solutions instance, and calls the IFTTT platform to trigger actions. Register the details of the IFTTT service with the IFTTT platform.
+2. Configure and deploy an IFTTT service and its associated cloudant database to IBM Cloud. The service is an interface between Watson Assistant Solutions and the IFTTT platform.  It is used to trigger user authenticaton, stores triggers for your Watson Assistant Solutions instance, and calls the IFTTT platform to trigger actions. Register the details of the IFTTT service with the IFTTT platform.
 3. Configure and deploy an IFTTT skill in your environment, and register it with Waston Assistant Solutions. In the skill configuration, specify the URL of the IFTTT service on IBM Cloud and specify the same skill key that is used by the IFTTT service.
 
 End-users can create applets on IFTTT that use the Watson Assistant Solutions in the trigger and another service in the action.  You might also want to create pre-defined applets for your end-users to use.
