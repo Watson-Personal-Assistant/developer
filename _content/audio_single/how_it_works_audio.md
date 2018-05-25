@@ -5,7 +5,9 @@ weight: 10
 The audio client passes an auth token when it first connects to audio gateway to authenticate. For more information about client authentication, see the [Authenticating audio devices]({{site.baseurl}}/audio_single/audio_authentication/) topic.
 
 For a single-tenant audio gateway, the flow for processing audio and IoT control in Watson Assistant Solutions is shown in figure 1.
+
 ![audio flow]({{site.baseurl}}/audio_single/flow_single.PNG)
+
 The steps in this flow are as follows:
 1. The audio client sends user credentials to the audio gateway and the gateway authenticates the client.
 2. The audio client establishes a web socket connection to the audio gateway using the auth token.

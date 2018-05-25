@@ -5,7 +5,9 @@ weight: 10
 Multiple components are used to build a digital assistant using the Watson Assistant Solutions offering.
 
 The components are shown in figure 1:
+
 ![]({{site.baseurl}}/images/components_diagram.png)
+
 - **IOT devices**:  The edge device, such as a smart speaker, that listens for utterances.
 - **Watson Assistant Solutions service**:  The service includes the following components:
   - set of built-in skills
