@@ -29,7 +29,7 @@ Figure 2 shows how a converse request is handled for an IFTTT trigger.
     axios.post(
         iftttServiceEndpoint + "/invoke_wa_trigger",
         { trigger_id: request.evaluationResponse.response.triggerId },
-        { headers: {'ifttt-skill-key':manifest['ifttt-skill-key']}}
+        { headers: { 'ifttt-skill-key': manifest['ifttt-skill-key'] } }
     ).then((response) => { 
 
     }).catch((err) => { 
