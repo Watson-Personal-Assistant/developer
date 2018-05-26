@@ -92,11 +92,11 @@
 }
 @font-face {
   font-family: 'IBMPlexMono-Light';
-  src: url('../fonts/medium/IBMPlexMono-Light-V01.eot?') format('eot'),
-       url('../fonts/medium/IBMPlexMono-Light-V01.woff2') format('woff2'),
-       url('../fonts/medium/IBMPlexMono-Light-V01.woff') format('woff'),
-       url('../fonts/medium/IBMPlexMono-Light-V01.ttf') format('truetype'),
-       url('../fonts/medium/IBMPlexMono-Light-V01.otf') format('opentype');
+  src: url('../fonts/light/IBMPlexMono-Light-V01.eot?') format('eot'),
+       url('../fonts/light/IBMPlexMono-Light-V01.woff2') format('woff2'),
+       url('../fonts/light/IBMPlexMono-Light-V01.woff') format('woff'),
+       url('../fonts/light/IBMPlexMono-Light-V01.ttf') format('truetype'),
+       url('../fonts/light/IBMPlexMono-Light-V01.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
 }
