@@ -15,10 +15,9 @@ h3 {
 
 h4 {
   margin-top: 2rem;
-  color: var(--navy-gray-6);
   font-size: 1.125rem;
+  font-family: var(--font-family-plex-bold);
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
 }
 
 h5 {
@@ -31,9 +30,8 @@ h6 {
   margin-top: 2rem;
   color: var(--navy-gray-6);
   font-size: 0.875rem;
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-plex-bold);
   letter-spacing: 0.1rem;
-  text-transform: uppercase;
 }
 
 blockquote {
@@ -54,7 +52,7 @@ p {
 }
 
 strong, b {
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-plex-bold);
 }
 
 /* We only use <i> elements for icons, so override the font-style. */
@@ -71,10 +69,6 @@ pre {
 }
 
 code {
-  font-family: monospace;
+  font-family: var(--font-family-plex-mono);
   white-space: pre-wrap;
-}
-
-* {
-  font-family: inherit;
 }

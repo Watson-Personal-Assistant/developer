@@ -4,8 +4,8 @@
  */
 @import 'config/fonts';
 @import 'config/variables';
-@import 'config/reset';
 @import 'config/typography';
+@import 'config/reset';
 
 /*
  * # Utility Classes

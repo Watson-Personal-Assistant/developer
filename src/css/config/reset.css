@@ -2,7 +2,6 @@ html,
 body,
 * {
   box-sizing: border-box;
-  font-family: var(--font-family-default);
   font-weight: var(--font-weight-normal);
   line-height: 1.5rem;
   -webkit-font-smoothing: antialiased;

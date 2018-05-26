@@ -38,7 +38,7 @@ Complete these steps:
 2. Go to Converse.
 3. Click /converse.
 4. Click Try it out.  The text "Hello" is included in the input:
-  ```
+```JSON
 {
   "id": "001",
   "version": "1.0",
@@ -47,17 +47,16 @@ Complete these steps:
   "retext": "Hello",
   "attributes": {
     "intent": "hello-world"
-  },
+},
 ```
 5. Click Execute.
 The conversation REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
-The JSON data that is returned includes the following text:<br>
+The JSON data that is returned includes the following text:
 ```JSON
 "speech": {
   "text": "Hello world"
 }
 ```
-<br>
 **Note**:  In this step, you sent both the intent and the input directly to a single skill.  When you send a request to the Watson Assistant Solutions core, additional steps are performed. The Watson Assistant Solutions core determines  which skill is best placed to handle the request.
 
 #### Step 3: Deploy your skill to IBM Cloud.
@@ -67,10 +66,8 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 3. Log in to IBM Cloud. <br>`bx login`<br>
 4. Push your skill to IBM Cloud.  Enter:<br>`bx app push`<br>
 An `App started` message is returned.
-5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
-```shell
-curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck
-```
+5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:<br>
+`curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck`<br>
 If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
 ```shell
 Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
@@ -97,16 +94,16 @@ If the skilll is not accessible, complete these steps:
 
 #### Step 5: Add the skill to your Watson Assistant Solutions instance
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
-```shell
-curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'
-```
+
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
+
 A `skill updated successfully` message is displayed.
 
 #### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
 Use the conversation REST API to converse with your skill.  Enter:
-```shell
-curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'
-```
+
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'`
+
 The JSON data that is returned includes the following text:
 ```JSON
 "speech": {
