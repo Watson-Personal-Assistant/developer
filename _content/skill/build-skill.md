@@ -23,7 +23,7 @@ The high-level steps in this tutorial are as follows:
 Complete these steps:
 
 #### Step 1: Clone the hello world skill
-1.  Copy the hello world skill boilerplate to your local system.
+1.  Copy the hello world [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.
     1. Click Fork to take a copy of the repository.
     2. Click Clone or download. Copy the git url.
     3. Open a command-line terminal and enter<br>`git clone git_url`
