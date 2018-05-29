@@ -10,14 +10,14 @@ Complete these steps:
 #### Step 1: Create an IFTTT service for your trigger on the IFTTT platform
 1. Create a developer account on the [IFTTT plaform](https://platform.ifttt.com/platform_sign_up).
 2. Go the Platform page and sign in.
-3. On the top of the page, Create an organisation (New Org) and Create a new service under it (Add Service)
+3. On the top of the page, create an organisation (New Org), and create a new service under it (Add Service).
 4. Specify a service name that describes your Watson Assistant Solutions service.
 5. Select an organization.
 6. Specify a Service ID. The service ID is a  short, unique name to be used as your service's identifier and in its IFTTT URLs.
 8. Click Create.
 9. Click the **API** tab.
 10. Copy the service key that is provided for your service and save it for later use.
-11. Register your service with your OAuth2 provider.  For example, to register your IFTTT service as an application that uses IBMid, go to [https://w3.innovate.ibm.com/tools/sso/home.html](https://w3.innovate.ibm.com/tools/sso/home.html). (the following redirect_uri = https://ifttt.com/channels/{{service_id}}/authorize should be authorized, {{service_id}} should be substituted with the id from step 6)
+11. Register your service with your OAuth2 provider.  For example, to register your IFTTT service as an application that uses IBMid, go to [https://w3.innovate.ibm.com/tools/sso/home.html](https://w3.innovate.ibm.com/tools/sso/home.html). Note: The following redirect_uri = https://ifttt.com/channels/paste-your-service-id-here/authorize should be authorized. Substitute `paste-your-service-id-here` with the service ID from step 6.
 
 #### Step 2: Configure and deploy an IFTTT service on IBM Cloud
 1. Clone the WA-IFTTT-Service boilerplate.  Contact the Watson Assistant Solutions team for access to the service boilerplate.
@@ -43,10 +43,10 @@ Update your service configuration on the IFTTT platform.
 4. Enter values for the following parameters to configure authentication:
   - Client ID:  Client ID provided by your OAuth2 provider.
   - Client secret: Client secret provided by your OAuth2 provider.
-  - Authorization URL: `{{WA-IFTTT-Service url}}/oauth2/authorize?scope={{scope}}`. A user is redirected to this URL to authenticate (the service redirects this call to your OAuth2 provider).
-  - Token URL:  `{{WA-IFTTT-Service url}}/oauth2/token`. A user authorization code is exchanged for an access token at this URL (the service redirects this call to your OAuth2 provider).
-  - Redirect URL: That is the URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/{{service_id}}/authorize`
-where `service_id` is the service_id you set in the service configuration.
+  - Authorization URL: `paste-your-WA-IFTTT-Service-URL-here/oauth2/authorize?scope=paste-score-here`. A user is redirected to this URL to authenticate (the service redirects this call to your OAuth2 provider).
+  - Token URL:  `paste-your-WA-IFTTT-Service-URL-here/oauth2/token`. A user authorization code is exchanged for an access token at this URL (the service redirects this call to your OAuth2 provider).
+  - Redirect URL: The URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/paste-your-service-id-here/authorize`
+where `service ID` is the service ID you set in the service configuration.
 Make sure that this url is authorized as a redirect uri in the settings of your OAuth2 provider.
 For more information, see the authenticaiton flow topic in the `IFTTT platform documentation`.
 

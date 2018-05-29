@@ -61,7 +61,7 @@ In this tutorial, we use IBMids to authenticate users.
   - Client secret: Client secret provided by your OAuth2 provider.
   - Authorization URL: URL provided by your OAuth2 provider. A user is redirected to this URL to authenticate.
   - Token URL:  URL provided by your OAuth2 provider. A user authorization code is exchanged for an access token at this URL.
-  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/{{service_id}}/authorize` were `service_id` is the service_id you set in the service configuration.
+  - Redirect URL: URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/paste-your-service-id-here/authorize` were `service ID` is the service_id you set in the service configuration.
 
 #### Step 5: Create a new trigger
 Complete these steps:
