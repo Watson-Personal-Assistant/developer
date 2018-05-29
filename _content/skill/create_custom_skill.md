@@ -66,4 +66,4 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
 > **What next?**
-* Read about [configuring skill authentication]({{site.baseurl}}/skill/create_custom_skill).
+* Read about [configuring skill authentication]({{site.baseurl}}/skill/adding_skill_authentication).

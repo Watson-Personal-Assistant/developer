@@ -127,5 +127,5 @@ To configure a fallback skill, complete these steps:
 A fallback skill is created.
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/build-skill).
 * [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).
