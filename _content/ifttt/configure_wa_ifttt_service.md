@@ -43,7 +43,7 @@ Update your service configuration on the IFTTT platform.
 4. Enter values for the following parameters to configure authentication:
   - Client ID:  Client ID provided by your OAuth2 provider.
   - Client secret: Client secret provided by your OAuth2 provider.
-  - Authorization URL: `paste-your-WA-IFTTT-Service-URL-here/oauth2/authorize?scope=paste-score-here`. A user is redirected to this URL to authenticate (the service redirects this call to your OAuth2 provider).
+  - Authorization URL: `paste-your-WA-IFTTT-Service-URL-here/oauth2/authorize?scope=paste-scope-here`. A user is redirected to this URL to authenticate (the service redirects this call to your OAuth2 provider).
   - Token URL:  `paste-your-WA-IFTTT-Service-URL-here/oauth2/token`. A user authorization code is exchanged for an access token at this URL (the service redirects this call to your OAuth2 provider).
   - Redirect URL: The URL that the user is redirected back to after the request is authorized.  Enter: `https://ifttt.com/channel/paste-your-service-id-here/authorize`
 where `service ID` is the service ID you set in the service configuration.
