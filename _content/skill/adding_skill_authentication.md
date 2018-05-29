@@ -27,6 +27,4 @@ To enable authentication for your skill, complete these steps:
 **Important**:  If you update a skill that is already deployed, the next converse request sent to the skill will include the key.  You do not need to redeploy the skill or register it again.
 
 > **What next?**
--Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
-* [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).
+- Read about using skill features to [enhance the conversation]({{site.baseurl}}/skill/skill_features).

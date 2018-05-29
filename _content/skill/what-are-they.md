@@ -14,6 +14,4 @@ Skills use natural language understanding (NLU) engines to understand user utter
 With Watson Assistant Solutions, you can create digital assistants that converse with _multiple skills_. As a skill developer, you can use several features that enhance the conversation flow with a single skill and the conversation flow between multiple skills.
 
 > **What to do next?**<br/>
-Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
-* [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).
+Read [how to add a custom skill]({{site.baseurl}}/skill/create_custom_skill).
