@@ -13,10 +13,10 @@ A script, [wa-get-iam.sh](https://watson-personal-assistant.github.io/developer/
 Complete these steps to configure IAM authentication for your instances:
 1.	Create an IBMid.  For instructions, see *Create a free account* on  [IBM Cloud](https://bluemix.net).
 2.	Create an IAM ID.
-  a.	Create an IAM API key and save it for future use.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
-  b.Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your local system.
-  c.	Start the script from the command line.  Enter `./wa-get-iam.sh` and follow the on-screen prompts.
-  d.	When prompted, provide your IAM API key (step 2a).  The script provides you with an IAM ID.
+    1. Create an IAM API key and save it for future use.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
+    2. Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your local system.
+    3. Start the script from the command line.  Enter `./wa-get-iam.sh` and follow the on-screen prompts.
+    4. When prompted, provide your IAM API key (step 2a).  The script provides you with an IAM ID.
 3.	Send an email to the Watson Assistant Solutions support team to request that your IAM ID and IBMid be associated with your instances. See your welcome letter for contact details.   Include the following information:<br/>
   -	IAM ID
   -	IBMid
