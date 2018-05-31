@@ -4,7 +4,7 @@ weight: 10
 ---
 The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio_authentication/) topic.
 
-For a multi-tenant audio gateway, the flow for processing audio input in Watson Assistant Solutions is shown in figure 1.
+The flow for processing audio input in Watson Assistant Solutions is shown in figure 1.
 
 Figure 1 - audio flow
 

@@ -2,7 +2,7 @@
 title: Audio streaming interface
 weight: 20
 ---
-Audio streaming between a multi-tenant audio gateway and an audio client uses a web socket interface.
+Audio streaming between an audio gateway and an audio client uses a web socket interface.
 
 ### Communication Messages
 Messages are used on the web socket interface to communicate between the audio client and the audio gateway.  All messages are in JSON format.  Each message includes a transaction ID that is used by the audio gateway to track the transaction.  To ensure that each ID is unique, consider using a globally unique identifier (GUID) for the transaction ID.

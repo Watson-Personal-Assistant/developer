@@ -2,7 +2,7 @@
 title: IoT control interface specification
 weight: 25
 ---
-IoT control is processed by a single-tenant audio gateway.  Endpoints are provided for sending IoT commands to your assistant, for administering client devices, and for administering client controllers.
+IoT control is processed by the audio gateway for hospitality.  Endpoints are provided for sending IoT commands to your assistant, for administering client devices, and for administering client controllers.
 
 **Important**:  Use only if you have IBM Watson Assistant for Hospitality.
 
