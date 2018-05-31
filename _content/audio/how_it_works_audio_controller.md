@@ -1,5 +1,5 @@
 ---
-Title: How audio is processed with a controller
+title: How audio is processed with a controller
 weight: 15
 ---
 Typically, you use the local speaker and microphone of the audio device to process audio. However, you might have a smart speaker in your environment that you would like to use to perform external processing or you might have additional device controls, for example, for volume or display. Watson Assistant Solutions provides you with the option to use your own smart speaker and microphone with the audio client. The smart speaker acts as a device controller for the audio client. You use a command socket interface to send commands between the device controller and the audio client and an audio socket interface to send audio.
