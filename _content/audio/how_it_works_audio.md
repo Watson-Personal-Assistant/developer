@@ -27,4 +27,4 @@ The steps in this flow are as follows:
 14. The audio client plays the audio response or displays the text response, or both. The audio client checks if the audio gateway set the prompt parameter to true in the audio end message. If true, the skill expects a response from the audio client, and the steps are repeated from step 3.  Otherwise the audio client waits for a new wake-up command.
 
 > **What to do next?**<br/>
-Learn how to [authenticate audio devices]({{site.baseurl}}/audio/audio_authentication/).
+Learn how [audio is processed with an audio controller]({{site.baseurl}}/audio/how_it_works_audio_controller).

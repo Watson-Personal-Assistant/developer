@@ -1,6 +1,6 @@
 ---
 title: Audio streaming interface
-weight: 20
+weight: 25
 ---
 Audio streaming between an audio gateway and an audio client uses a web socket interface.
 

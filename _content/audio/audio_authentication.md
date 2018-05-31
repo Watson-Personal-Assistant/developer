@@ -1,6 +1,6 @@
 ---
 title: Authenticating audio devices
-weight: 15
+weight: 20
 ---
 Before an audio client can connect to the audio gateway, you must provision the audio client with an IAM API key.  This key is sometimes referred to as a platform API key or an IBM Cloud API key. For more information, see the [Setting up IAM Authentication]({{site.baseurl}}/further-topics/login-with-IBMid/). For better security, audio clients should use separate API keys.
 
