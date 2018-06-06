@@ -24,7 +24,7 @@ In figure 1, the traffic skill asks the user which region the user wants the tra
 //The 'in conversation' flag is set to True
 'get-traffic': (request, response, context) => {
     response.setInConversation(true);
-    response.deleteSkillSession(false).say('In the city center or suburbs')send();
+    response.deleteSkillSession(false).say('In the city center or suburbs').send();
 },
 ```
 
