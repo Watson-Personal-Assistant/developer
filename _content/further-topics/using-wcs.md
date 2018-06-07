@@ -11,10 +11,16 @@ The high-level steps in this tutorial are as follows:
 2. Register the skill with your Watson Assistant Solutions instance.
 
 ### Before you begin
-1.  Complete the [Creating a custom skill with regexp nlu]({{site.baseurl}}/skill/build-skill) tutorial.
+1.  Copy the hello world [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.
+    1. Click Fork to take a copy of the repository.
+    2. Click Clone or download. Copy the git url.
+    3. Open a command-line terminal and enter<br>`git clone git_url`
+2. Install the node dependencies for the skill.
+    1. Enter `cd SkillBoilerplate`.
+    2. Enter `npm install`.
 
 ### About this task
-The sample jokes workspace has 2 predeinfed intents; a dad-joke intent and a chuck-norris-joke intent. The workspace is trained to handle the following utterances:
+The sample jokes workspace has 2 predefined intents; a dad-joke intent and a chuck-norris-joke intent. The workspace is trained to handle the following utterances:
 * "tell me a joke"
 * "tell me a chuck norris joke"
 * "how about a chuck norris joke"
@@ -24,7 +30,7 @@ The sample jokes workspace has 2 predeinfed intents; a dad-joke intent and a chu
 ### Procedure
 Complete these steps to create a skill that uses the Watson Assistant NLU engine.
 #### Step 1: Add the Watson Assistant service to your IBM Cloud resource group
-To add Watson Assistant as a Cloud Foundry service, folow the instructions in the **Before you begin** and **Launch the tool** sections of the  [Getting Started with Watson Assistant  tutorial](https://console.bluemix.net/docs/services/conversation/getting-started.html).
+To add Watson Assistant as a Cloud Foundry service, follow the instructions in the **Before you begin** and **Launch the tool** sections of the  [Getting Started with Watson Assistant  tutorial](https://console.bluemix.net/docs/services/conversation/getting-started.html).
 
 #### Step 2: Import the sample jokes Watson Assistant workspace
 Import the sample Watson Assistant workspace into your Watson Assistant service on IBM Cloud.  The workspace contains predefined intents, example utterances, and a dialog flow for you to use.  The sample workspace is defined for a Jokes skill.
@@ -36,7 +42,7 @@ Download the [WCS-workspace-jokes.json]({{site.baseurl}}/further-topics/WCS-work
 2. Follow the on-screen prompts.  Specify the space and organization where you added your Watson Assistant service.  To find the credentials of your Watson Assistant Workspace, on the Watson Assistant user interface, click **Service credentials** and then click **View credentials**. Specify the user name, password ID and name of your Watson Assistant workspace.  In this tutorial, the workspace name is 'jokes'.  Select WCS as your NLU engine.
 
 #### Step 4: Modify the action.js file to handle the intents defined in WCS
-1. Define handlers for the intents, chuck-norris-joke and dad-joke, that are defined in your Watons Assistant workspace in the `actions.js` file.  To handle these intents, add the `request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
+1. Define handlers for the intents, chuck-norris-joke and dad-joke, that are defined in your Watson Assistant workspace in the `actions.js` file.  To handle these intents, add the `request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
 Add this line to the top of the `actions.js` file:
 ```javascript
 const request = require('request');
@@ -60,7 +66,7 @@ let getJoke = function(url, callback) {
 ```
 3. In the `createActionsHandler` code of the `actions.js`, add the following code to handle the chuck-norris-joke and dad-joke intents defined in the WCS workspace.
 ```javascript
-'dad-joke': (request, response) => {
+'dad-joke': (request, response, context) => {
     getJoke(
         "https://icanhazdadjoke.com",
         (err, result) => {
@@ -72,7 +78,7 @@ let getJoke = function(url, callback) {
         }
     );
 },
-'chuck-norris-joke': (request, response) => {
+'chuck-norris-joke': (request, response, context) => {
     getJoke(
         "https://api.chucknorris.io/jokes/random",
         (err, result) => {
@@ -87,8 +93,8 @@ let getJoke = function(url, callback) {
 ```
 4. Update the catch-all intent handler to send the request to WCS.  Update the `unhandled` code to include:
 ```javascript
-'unhandled': (request, response) => {
-    handler.converse(request, response, converseCallback);
+'unhandled': (request, response, context) => {
+    handler.converse(request, response, context, converseCallback);
     //response.say(handler.t('TRY_AGAIN')).send();
 }
 ```
@@ -109,7 +115,7 @@ bx login
 bx app push
 ```
 An `App started message` is returned.
-3.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:
+3.  Verify that your skill is running and reachable on IBM Cloud using the `/healthcheck` API endpoint.  Enter:
 ```shell
 curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck
 ```
@@ -151,4 +157,4 @@ curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -
 }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
 ```
 > **What to do next?**<br/>
-Complete the [knoweldge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).
+Complete the [knowledge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).
