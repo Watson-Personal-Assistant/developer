@@ -11,10 +11,7 @@ The high-level steps in this tutorial are as follows:
 2. Register the skill with your Watson Assistant Solutions instance.
 
 ### Before you begin
-1.  Copy the hello world [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.
-    1. Click Fork to take a copy of the repository.
-    2. Click Clone or download. Copy the git url.
-    3. Open a command-line terminal and enter<br>`git clone git_url`
+1.  Clone, fork or download the zip from [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.
 2. Install the node dependencies for the skill.
     1. Enter `cd SkillBoilerplate`.
     2. Enter `npm install`.
