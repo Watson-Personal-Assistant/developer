@@ -2,7 +2,9 @@
 title: Using the regexp nlu
 weight: 60
 ---
-A _regexp_ natural langauge understanding (nlu) engine is provided by Watson Assistant Solutions to detect and extract intents and entities from user utterances.
+A _regexp_ natural langauge understanding (nlu) engine is provided by Watson Assistant Solutions to detect and extract intents and entities from user utterances.  
+
+Regular expressions (that is, regex or regexp) are used to create strings of text to search for patterns that match intents and entities.  For more information about using regular expressions, see the _Regular Expression operations topic_ in the [Python Standard Library](https://docs.python.org/3/library/re.html#regular-expression-syntax/).
 
 #### Key concepts
 The key concepts to be familiar with when defining a regexp nlu for your skill are as follows:
@@ -33,9 +35,15 @@ Define the regexp nlu for your skill in the  `../res/nlu/regexp.json` file of th
   ]
 }
 ```
+
+To define a regexp nlu, you set the NLU parameter in the `../res/assets/manifest.json` to include th eregexp NLU. If you use the `setup-wizard.js`, select an option that includes regexp when the wizard displays the list of NLUs.  
+
+You must add at least one intent to the `../res/nlu/regexp.json` file.  Entities and synonyms are optional.
+
 #### Defining intents
 In the `regexp.json` file, add you intents.  Assign a name to each intent. The name must be unique within a skill. Under grammar, add expressions that match one or more utterances. Use regular expressions to substitute values.
 For example:
+
 ```
 "intents" : [
 		{
@@ -44,6 +52,7 @@ For example:
 				"[Goodbye|cu|see you]"
 			]
 ```
+
 You can use _optional words_ in an expression to capture multiple variations of an utterance.  Enclose the optional words in square brackets [] and use a pipe `|` to separate the optional words.
 Example:<br>
 `[What|How] is the weather`<br>
@@ -96,14 +105,37 @@ The expression matches the following utterances:<br>
 #### Defining entities
 In the `regexp.json` file, define each custom entity for use by the skill in the entities section and list their values.<br>
 For example:
+
 ```
 {
-	 "entities" : {
-		 "vegetable" : [
-			 "carrot", "parsnip"
-		 ]
-	 },
+  "entities" : {
+    "vegetable" : [
+      "carrot", "parsnip"
+     ]
+  },
+}
 ```
+
+#### Defining mandatory entities
+You can specify that an entity must be included in an utterance for an intent to be matched. For each intent, define the mandatory entities in the `../res/nlu/intents.json` file.
+For example:
+
+```JAVASCRIPT
+{
+  "get_veg_receipe" : {
+    "visibility" : "always",
+    "entities" : [
+      {
+        "name" : "vegetable",
+        "required" : true
+      }
+    ]
+  }
+}
+```
+
+With the `#get_veg_recipe` intent, the  utterance `Give me a carrot receipe`is matched because the `@vegetable` entity value is mentioned in the utterance.  The `Give me a veg receipe` is not matched because a type of vegetable is not included in the utterance.
+
 
 #### Defining synonyms
 In the `regexp.json` file, define the synonyms that can be used in your intent and entity definitions.<br>
