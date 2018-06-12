@@ -125,6 +125,22 @@ To configure a fallback skill, complete these steps:
 }
 ```
 A fallback skill is created.
+
+#### Reusing evaluation results
+In response to an evaluation request from the routing core, your skill might return the skills response to the user utterance in the `evaluationResponse` object.  You might want to use these results and avoid an extra converse request to your skill.
+
+Evaluation response example:
+```
+{
+  'yes': (request, response, context) => {
+      handler.saveEvaluationContext(context, request.evaluationResponse.context)
+      response.say(request.evaluationResponse.response).deleteSkillSession(true)
+  }
+}
+```
+To persist context information, the handler function copies the context information from the evaluation response object to the context object. 
+
+
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
 * [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/build-skill).
