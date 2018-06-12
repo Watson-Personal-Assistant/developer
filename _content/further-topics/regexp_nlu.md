@@ -191,5 +191,3 @@ The full set of pre-built entities is defined in the values.json file in the Nod
 - ``language``: e.g `english`
 - ``lenghttype``: e.g `inch`
 
-> **What to do next?**<br/>
-Learn how to [integrate with a slackbot]({{site.baseurl}}/further-topics/slackbot-integration/).
