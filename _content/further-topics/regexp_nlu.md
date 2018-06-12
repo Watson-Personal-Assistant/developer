@@ -15,6 +15,8 @@ The key concepts to be familiar with when defining a regexp nlu for your skill a
 	- Open entities: Open entities, such as `any_value`, are defined to capture any user input in the position that the entity is located in an expression.  For example, the expression `"What {any_value} is it"` captures utterances such as `"What time is it"`, and `"What day is it'`.  Open entities are useful when defining fallback intents that are designed to capture most utterances.
 - **Synonyms**:  Link together words and phrases that have the same meaning as values in your intents and your entities. For example, you might define `goodbye`, `c u later`, and `bye` as synonyms.  If you define an utterance as `"goodbye"`, when the end-user says `"c u later"`, the utterance is matched by the intent.
 
+Important: The regex nlu is available if you included the skill NodeJS SDK in your skill.  If you are using another language, such as Python, to develop your skill, the regex nlu is not supported by the core routing component of Watson Assistant Solutions.
+
 #### Defining the regexp nlu for your skill
 Define the regexp nlu for your skill in the  `../res/nlu/regexp.json` file of the NodeJS skill boilerplate.  The format of the file is as follows:
 ```
