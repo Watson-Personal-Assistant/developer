@@ -39,8 +39,7 @@ Complete these high-level steps:
 1. Modify the NLU configuration of your skill.
 2. Upgrade to the latest version of the `skill-sdk-nodejs` SDK.
 
-
-Option b: Migrate to the latest version of the skill boilerplate.  
+Option b: Migrate to the latest version of the skill boilerplate.
 Complete these high-level steps:
 
 1. Migrate to the latest version of the skill boilerplate.
@@ -134,12 +133,11 @@ To migrate to the latest version of the skill boilerplate, complete these steps:
 1.  Clone the latest version of the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate).
 2. Copy the `manifest.json` file from the old `expertise/skill` directory to the `res/assets` directory of your new skill.
 3. Open the `manifest.json` file and add the value `skill` to the NLU parameter. Valid values are:
-
-  ```JAVASCRIPT
+```
     "nlu": [ "skill", "wcs", "regexp" ],
     "nlu": [ "skill", "wcs" ],
     "nlu": [ "skill", "regexp" ],
-  ``` 
+```
 
 4.  If you are using the regexp NLU,
     1. Copy your existing regexp NLU definition, `regexp.json`, to `res/nlu/regexp.json`.
