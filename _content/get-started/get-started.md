@@ -4,7 +4,7 @@ weight: 10
 ---
 The IBM Watson Assistant Solutions offering provides the building blocks for creating personal assistants that automate tasks or answer questions based on their skills.
 
-A skill is a capability in a specific domain, for example, providing weather forecasts. The assistants you create can have *multiple* skills. For example, you might design your assistant to have two skills; providing weather forecasts and answering questions about entertainment events. When your the Watson Assistant Solutions service receives a user utterance, it determines which skill is best equipped to respond and routes the utterance accordingly.
+A skill is a capability in a specific domain, for example, providing weather forecasts. The assistants you create can have *multiple* skills. For example, you might design your assistant to have two skills; providing weather forecasts and answering questions about entertainment events. When your Watson Assistant Solutions service receives a user utterance, it determines which skill is best equipped to respond and routes the utterance accordingly.
 
 Skills use natural language understanding (NLU) engines, such as the IBM Watson Assistant (formerly IBM Watson Conversation) and regexp, for understanding the natural language of the user.  You can choose from the built-in skills that are provided out-of-the-box or you can develop your own custom skills from a boilerplate.  The set of built-in skills that is available to you depends on which flavor of the IBM Watson Assistant Solutions offering you signed up to; namely:
 - IBM Watson Assistant for Automotive
