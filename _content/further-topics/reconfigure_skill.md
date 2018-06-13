@@ -1,6 +1,6 @@
 ---
 Title: Reconfiguring skills to handle NLU evaluations 
-weight: 70
+weight: 60
 ---
 
 In your environment, if your skills are not yet performing NLU evaluations at the skill level or your skills are using the older `skill-sdk`, you must take some action. 
@@ -12,7 +12,7 @@ All skills registered with Watson Assistant Solutions must meet the following re
 1. Use version 0.0.9 or later of the npm packaged [NodeJS SDK](https://www.npmjs.com/package/skill-sdk-nodejs), `skill-sdk-nodejs`.
 2. Handle NLU evaluations at the skill level.
 
-# Scenarios
+## Scenarios
 
 Determine which of the following scenarios matches your environment and follow the appropriate procedures:
 
@@ -50,7 +50,9 @@ Complete these high-level steps:
 If you used other programming languages to create your skills, complete this high-level step:
 1.  Add support for the evaluation method to your skill
 
-# Procedures
+---
+
+## Procedures
 
 Complete the relevant procedures to meet the requirements of Watson Assistant Solutions.
 
@@ -90,7 +92,9 @@ Complete these steps:
         1. Register your skill again with Watson Assistant Solutions.  Use the `PUT /v2/api/skills/{skillName}` Watson Assistant Solutions conversation API.  Specify the name and URL only.
         2. Refresh your configuration of your skill.  Use the `PUT /v2/api/skills/{skillName}/refresh` Watson Assistant Solutions conversation API. 
     4. Test your skill.
+
 ---
+
 #### Upgrading the NodeJS SDK of your skill (Scenario 2)
 To upgrade to the latest version of the skill NodeJS SDK, complete these steps:
 
@@ -99,8 +103,10 @@ To upgrade to the latest version of the skill NodeJS SDK, complete these steps:
 3. If your skill includes the Watson Assistant (formerly Watson Conversation Services) nlu:
     1. Register your skill again with Watson Assistant Solutions.  Use the `PUT /v2/api/skills/{skillName}` Watson Assistant Solutions conversation API.  Specify the skill name and URL only.
     2. Refresh your configuration of your skill.  Use the `PUT /v2/api/skills/{skillName}/refresh` Watson Assistant Solutions conversation API. 
-4. Test your skill.
+    4. Test your skill.
+
 ---
+
 #### Modifying the NLU configuration of your skill (Scenario 3, option a)
 If your skill does not list the value `skill` in the NLU parameter of the `manifest.json` file, you must add it.  
 1. Edit the `manifest.json` file and add the value `skill` to the NLU parameter. Valid values are:
@@ -117,7 +123,9 @@ If your skill does not list the value `skill` in the NLU parameter of the `manif
         1. Register your skill again with Watson Assistant Solutions.  Use the `PUT /v2/api/skills/{skillName}` Watson Assistant Solutions conversation API.  Specify the skill name and URL only.
         2. Refresh your configuration of your skill.  Use the `PUT /v2/api/skills/{skillName}/refresh` Watson Assistant Solutions conversation API. 
     4. Test your skill.
+
 ---
+
 #### Migrating to the latest version of the skill boilerplate (Scenario 3, option b)
 To migrate to the latest version of the skill boilerplate, complete these steps:
 1.  Clone the latest version of the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate).
@@ -153,8 +161,10 @@ To migrate to the latest version of the skill boilerplate, complete these steps:
       1. Register your skill again with Watson Assistant Solutions.  Use the `PUT /v2/api/skills/{skillName}` Watson Assistant Solutions conversation API.  Specify the skill name and URL only.
       2. Refresh your configuration of your skill.  Use the `PUT /v2/api/skills/{skillName}/refresh` Watson Assistant Solutions conversation API.  
     4. Test your skill.
+
 ---
-#### Adding support for the evaluation method to your skill.
+
+#### Adding support for the evaluation method to your skill (Scenario 4)
 If you used other programming languages to create your skills, add support for the evaluation method to your skill.
 
 
