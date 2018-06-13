@@ -1,5 +1,5 @@
 ---
-Title: Reconfiguring skills to handle NLU evaluations 
+title: Reconfiguring skills to handle NLU evaluations 
 weight: 60
 ---
 
@@ -114,12 +114,13 @@ If your skill does not list the value `skill` in the NLU parameter of the `manif
     "nlu": [ "skill", "wcs", "regexp" ],
     "nlu": [ "skill", "wcs" ],
     "nlu": [ "skill", "regexp" ],
-    
 ```
+
 2. Upgrade to the latest version of the `skill-sdk-nodejs` SDK
     1. Upgrade the NodeJS SDK.  From the new skill directory, enter: `npm install`
     2. Deploy your skill.
     3. If your skill includes the Watson Assistant (formerly Watson Conversation Services) nlu:
+    
         1. Register your skill again with Watson Assistant Solutions.  Use the `PUT /v2/api/skills/{skillName}` Watson Assistant Solutions conversation API.  Specify the skill name and URL only.
         2. Refresh your configuration of your skill.  Use the `PUT /v2/api/skills/{skillName}/refresh` Watson Assistant Solutions conversation API. 
     4. Test your skill.
@@ -171,64 +172,66 @@ If you used other programming languages to create your skills, add support for t
 1. Add evaluate endpoints with a similar format to the following evaluation request and response JSONS.   
 Evaluation request: 
 
-```
-{
-  "id": "001",
-  "version": "1.0",
-  "language": "en-US",
-  "text": "Hello",
-  "context": {
-    "user": {
-      "id": "user-001"
-    },
-    "session": {
-      "id": "string",
-      "new": true,
-      "attributes": {},
-      "version": "1.0"
-    },
-    "application": {
-      "id": "app-001",
-      "attributes": {}
-    }
-  }
-}
-
-```
-Evaluation response:
-
-```
-{
-  "intentities": [
+    ```
     {
-      "intents": [
-        {
-          "intent": "hello-world",
-          "confidence": 1
+      "id": "001",
+      "version": "1.0",
+      "language": "en-US",
+      "text": "Hello",
+      "context": {
+        "user": {
+          "id": "user-001"
+        },
+        "session": {
+          "id": "string",
+          "new": true,
+          "attributes": {},
+          "version": "1.0"
+        },
+        "application": {
+          "id": "app-001",
+          "attributes": {}
         }
-      ],
-      "name": "regexp",
-      "entities": []
-    }
-  ],
-  "responseCode": 200,
-  "handleUtterance": true,
-  "requestResult": "Nlu engine did not return an output",
-  "context": {
-    "application": {
-      "id": "app-001",
-      "attributes": {}
-    },
-    "session": {
-      "attributes": {},
-      "skill": {
-        "attributes": {}
       }
     }
-  }
-}
 
-```
+    ```
+
+    Evaluation response:
+
+
+    ```
+    {
+      "intentities": [
+        {
+          "intents": [
+            {
+              "intent": "hello-world",
+              "confidence": 1
+            }
+          ],
+          "name": "regexp",
+          "entities": []
+        }
+      ],
+      "responseCode": 200,
+      "handleUtterance": true,
+      "requestResult": "Nlu engine did not return an output",
+      "context": {
+        "application": {
+          "id": "app-001",
+          "attributes": {}
+        },
+        "session": {
+          "attributes": {},
+          "skill": {
+            "attributes": {}
+          }
+        }
+      }
+    }
+
+    ```
 
 2. Verify that the manifest file of the skill matches the sample file provided in the [NodeJS skill boilerplate]({https://github.com/Watson-Personal-Assistant/SkillBoilerplate/blob/master/res/assets/manifest.json).  
 
