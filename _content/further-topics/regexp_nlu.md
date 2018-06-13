@@ -1,6 +1,6 @@
 ---
 title: Using the regexp nlu
-weight: 60
+weight: 70
 ---
 A _regexp_ natural language understanding (nlu) engine is provided by Watson Assistant Solutions to detect and extract intents and entities from user utterances.  
 
