@@ -39,6 +39,7 @@ Complete these high-level steps:
 1. Modify the NLU configuration of your skill.
 2. Upgrade to the latest version of the `skill-sdk-nodejs` SDK.
 
+
 Option b: Migrate to the latest version of the skill boilerplate.  
 Complete these high-level steps:
 
@@ -47,7 +48,7 @@ Complete these high-level steps:
 
 #### Scenario 4: You are using the skill REST interaces with other programming languages
 
-If you used other programming languages to create your skills, complete this high-level step:
+If you used other programming languages to create your skills and not the NodeJS skill boilerplate, complete this high-level step:
 1.  Add support for the evaluation method to your skill
 
 ---
@@ -57,6 +58,7 @@ If you used other programming languages to create your skills, complete this hig
 Complete the relevant procedures to meet the requirements of Watson Assistant Solutions.
 
 #### Including the `skill-sdk-nodejs` SDK in your skill (Scenario 1)
+
 
 If your skill does not include the `skill-sdk-nodejs` SDK, you must include it in the configuration of your skill.
 Complete these steps:
@@ -134,7 +136,6 @@ To migrate to the latest version of the skill boilerplate, complete these steps:
 3. Open the `manifest.json` file and add the value `skill` to the NLU parameter. Valid values are:
 
   ```JAVASCRIPT
-
     "nlu": [ "skill", "wcs", "regexp" ],
     "nlu": [ "skill", "wcs" ],
     "nlu": [ "skill", "regexp" ],
@@ -196,6 +197,7 @@ Evaluation request:
     }
 
     ```
+
 
     Evaluation response:
 
