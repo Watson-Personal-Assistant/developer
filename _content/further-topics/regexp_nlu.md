@@ -133,7 +133,7 @@ For example:
 
 ```JAVASCRIPT
 {
-  "get_veg_receipe" : {
+  "get_veg_recipe" : {
     "visibility" : "always",
     "entities" : [
       {
@@ -145,7 +145,7 @@ For example:
 }
 ```
 
-With the `#get_veg_recipe` intent, the utterance `Give me a carrot receipe` is matched because the `vegetable` entity value is mentioned in the utterance.  The `Give me a veg receipe` is not matched because a type of vegetable is not included in the utterance.
+With the `#get_veg_recipe` intent, the utterance `Give me a carrot recipe` is matched because the `vegetable` entity value is mentioned in the utterance.  The `Give me a veg recipe` is not matched because a type of vegetable is not included in the utterance.
 
 
 #### Defining synonyms
@@ -154,7 +154,7 @@ For example:<br>
 ```
 "synonyms" : [
 		[ "hi", "hello"	],
-		[ "cu", "see you", "see u" ],
+		[ "see you", "c u", "see u" ],
 		[ "goodbye", "bye", "bye bye" ]
 ]
 ```
@@ -164,11 +164,11 @@ The full set of pre-built entities is defined in the values.json file in the Nod
 - `number`: e.g `1`
 - `dayOfWeek`: e.g `sunday`
 - `month`: e.g `january`
-- `timePrhase`: e.g `now`
+- `timePhrase`: e.g `now`
 - ``datePhrase``: e.g `today`
 - ``partOfDay``: e.g  `morning`
 - ``weatherCondition``: e.g `rain`
--`` unitsSystem``: e.g `metric`
+- `` unitsSystem``: e.g `metric`
 - ``temperatureUnits``: e.g `celsius`
 - ``sunsign``: e.g `aries`
 - ``matchOperation``: e.g `plus`
@@ -189,5 +189,5 @@ The full set of pre-built entities is defined in the values.json file in the Nod
 - ``emoji``: e.g `:-)`
 - ``pronoun``: e.g `me`
 - ``language``: e.g `english`
-- ``lenghttype``: e.g `inch`
+- ``lengthtype``: e.g `inch`
 
