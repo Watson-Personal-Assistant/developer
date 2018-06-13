@@ -10,7 +10,7 @@ Regular expressions (that is, regex or regexp) are used to create strings of tex
 The key concepts to be familiar with when defining a regexp nlu for your skill are as follows:
 - **Intents**:  Goals that you anticipate your users will have when they converse with your skill. A user goal when conversing with a weather skill is to get the forecast. For each intent, you define the utterances that a user might say to state their goal.  For example, for a `#get_weather` intent, you might add `“What’s the weather like today”` and `“What’s the forecast”` as utterance examples.
 - **Entities**:  Objects or terms that your users might use in their utterance, which provide context for an intent. For example, an entity might be a city name, which helps the routing core determine which city to provide a forecast for.  The regexp nlu supports the following types of entities:
-	- Built-in Entities: Pre-defined entities, representing some of the most commonly used entities, are provided by Watson Assistant Solutions. You can reference a  pre-built entity when defining utterances using the `@` symbol.  An example of a built-in entity is `@unitsSystem`. The pre-defined values for `@unitySystem` are `metric` and `imperial`.  Pre-built entities are defined in [ibm.biz/built-in-entities](ibm.biz/built-in-entities).
+	- Built-in Entities: Pre-defined entities, representing some of the most commonly used entities, are provided by Watson Assistant Solutions. You can reference a  pre-built entity when defining utterances using the `@` symbol.  An example of a built-in entity is `@unitsSystem`. The pre-defined values for `@unitsSystem` are `metric` and `imperial`.  Pre-built entities are defined in [ibm.biz/built-in-entities](ibm.biz/built-in-entities).
 	- Custom entities: Entities that are declared by the skill developer.  In the regexp nlu, the skill developer defines a list of values for each user-defined entity.  Synonyms can be used to add some variations to the values.  For example, the developer might add an entity for `rooms`, define three types of rooms; `living room`, `kitchen` and `bedroom`, and define `sitting room` as a synonym of `living room`.
 	- Open entities: Open entities, such as `any_value`, are defined to capture any user input in the position that the entity is located in an expression.  For example, the expression `"What {any_value} is it"` captures utterances such as `"What time is it"`, and `"What day is it'`.  Open entities are useful when defining fallback intents that are designed to capture most utterances.
 - **Synonyms**:  Link together words and phrases that have the same meaning as values in your intents and your entities. For example, you might define `goodbye`, `c u later`, and `bye` as synonyms.  If you define an utterance as `"goodbye"`, when the end-user says `"c u later"`, the utterance is matched by the intent.
@@ -50,9 +50,9 @@ For example:
 "intents" : [
   {
     "name" : ["goodbye"],
-      "grammar" : [
-        "[Goodbye|cu|see you]"
-          ]
+    "grammar" : [
+      "goodbye", "see you"
+    ]
 ```
 
 You can use _optional words_ in an expression to capture multiple variations of an utterance.  Enclose the optional words in square brackets and use a pipe `|` to separate the optional words.
