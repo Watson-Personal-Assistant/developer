@@ -160,34 +160,34 @@ For example:<br>
 ```
 
 #### Pre-built entities
-The full set of pre-built entities is defined in the values.json file in the NodeJS SDK.  For more information, see  [ibm.biz/built-in-entities](ibm.biz/built-in-entities). The pre-built entities include the following:
+The full set of pre-built entities is defined in the values.json file in the NodeJS SDK.  For more information, see  [ibm.biz/built-in-entities](https://ibm.biz/built-in-entities). The pre-built entities include the following:
 - `number`: e.g `1`
 - `dayOfWeek`: e.g `sunday`
 - `month`: e.g `january`
 - `timePhrase`: e.g `now`
-- ``datePhrase``: e.g `today`
-- ``partOfDay``: e.g  `morning`
-- ``weatherCondition``: e.g `rain`
-- `` unitsSystem``: e.g `metric`
-- ``temperatureUnits``: e.g `celsius`
-- ``sunsign``: e.g `aries`
-- ``matchOperation``: e.g `plus`
-- ``usa_state``: e.g `alabama`
-- ``country``: e.g `afghanistan`
-- ``currency``: e.g `dollar`
-- ``weight``: e.g `tonne`
-- ``onOff``: e.g `on`
-- ``setGet``: e.g `set`
-- ``lockUnlock``: e.g `lock`
-- ``incDec``: e.g `increase`
-- ``upDown``: e.g `up`
-- ``timeAmPm``: e.g `am`
-- ``hours12``: e.g `12`
-- ``hours24``: e.g `24`
-- ``minutes``: e.g `5`
-- ``time``: e.g `12:50`
-- ``emoji``: e.g `:-)`
-- ``pronoun``: e.g `me`
-- ``language``: e.g `english`
-- ``lengthtype``: e.g `inch`
+- `datePhrase``: e.g `today`
+- `partOfDay`: e.g  `morning`
+- `weatherCondition`: e.g `rain`
+- `unitsSystem`: e.g `metric`
+- `temperatureUnits`: e.g `celsius`
+- `sunsign`: e.g `aries`
+- `matchOperation`: e.g `plus`
+- `usa_state`: e.g `alabama`
+- `country`: e.g `afghanistan`
+- `currency`: e.g `dollar`
+- `weight`: e.g `tonne`
+- `onOff`: e.g `on`
+- `setGet`: e.g `set`
+- `lockUnlock`: e.g `lock`
+- `incDec`: e.g `increase`
+- `upDown`: e.g `up`
+- `timeAmPm`: e.g `am`
+- `hours12`: e.g `12`
+- `hours24`: e.g `24`
+- `minutes`: e.g `5`
+- `time`: e.g `12:50`
+- `emoji`: e.g `:-)`
+- `pronoun`: e.g `me`
+- `language`: e.g `english`
+- `lengthType`: e.g `inch`
 
