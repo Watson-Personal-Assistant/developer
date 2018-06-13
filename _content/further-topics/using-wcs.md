@@ -1,6 +1,6 @@
 ---
 title: Tutorial - creating a custom skill using a WCS nlu
-weight: 70
+weight: 80
 ---
 
 In this tutorial, you will create a custom skill that uses a Watson Assistant (WCS) nlu.  You will create the skill from the skill boilerplate.  You will connect your skill to a predefined Watson Assistant (formerly Watson Conversation) workspace and use this workspace to handle your intents.
