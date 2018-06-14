@@ -65,24 +65,7 @@ Deploy your skill to IBM Cloud to make your skill available for you and others t
 An `App started` message is returned.
 5.  Verify that your skill is running and reachable on IBM Cloud using the /healthcheck API endpoint.  Enter:<br>
 `curl -X GET --verbose --header 'Accept: application/json' https://paste_your_skill_name_here.mybluemix.net/v1/api/healthcheck`<br>
-If your skill is running and accessible, a `200 OK` response is returned.  For example:<br>
-```shell
-Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
-  > GET /v1/api/healthcheck HTTP/1.1
-  > Host: simpleskill.mybluemix.net
-  > User-Agent: curl/7.51.0
-  > Accept: application/json
-  >
-  < HTTP/1.1 200 OK
-  < X-Backside-Transport: OK OK
-  < Connection: Keep-Alive
-  < Transfer-Encoding: chunked
-  < Access-Control-Allow-Origin: *
-  < Content-Type: application/json
-  < Date: Tue, 27 Jun 2017 01:05:06 GMT
-  < X-Powered-By: Express
-  < X-Global-Transaction-ID: 1919343303
-```
+If your skill is running and accessible, the skill sdk version is returned as the response, for instance, `"{"skill_sdk_version":"0.0.12"}"`<br>
 <br>
 If the skilll is not accessible, complete these steps:
 - Check that the URL you specificed matches the host name of the skill on IBM Cloud.
