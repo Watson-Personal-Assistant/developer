@@ -87,16 +87,16 @@ Connected to simpleskill.mybluemix.net (158.85.156.19) port 80 (#0)
 If the skilll is not accessible, complete these steps:
 - Check that the URL you specificed matches the host name of the skill on IBM Cloud.
 - Use the skill URL to access the skill to verify that it is running.
-- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluxmix.net/docs`.
+- From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluemix.net/docs`.
 
-#### Step 5: Add the skill to your Watson Assistant Solutions instance
+#### Step 4: Add the skill to your Watson Assistant Solutions instance
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
 
 `curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
 
 A `skill updated successfully` message is displayed.
 
-#### Step 6: Test your externally-deployed skill from Watson Assistant Solutions.
+#### Step 5: Test your externally-deployed skill from Watson Assistant Solutions.
 Use the conversation REST API to converse with your skill.  Enter:
 
 `curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/myHelloWorld/converse'`
