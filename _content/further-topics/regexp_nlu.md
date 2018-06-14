@@ -4,7 +4,7 @@ weight: 70
 ---
 A _regexp_ natural language understanding (nlu) engine is provided by Watson Assistant Solutions to detect and extract intents and entities from user utterances.  
 
-Regular expressions (that is, regex or regexp) are used to create strings of text to search for patterns that match intents and entities.  For more information about using regular expressions, see the _Regular Expression operations topic_ in the [Python Standard Library](https://docs.python.org/3/library/re.html#regular-expression-syntax/).
+Regular expressions (that is, regex or regexp) are used to create strings of text to search for patterns that match intents and entities.  For more information about using regular expressions, see the _xregexp_ topic in the [npm package manager website](https://www.npmjs.com/package/xregexp).
 
 #### Key concepts
 The key concepts to be familiar with when defining a regexp nlu for your skill are as follows:
