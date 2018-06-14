@@ -34,25 +34,15 @@ Complete these steps:
 `http://localhost:10011`
 2. Go to Converse.
 3. Click /converse.
-4. Click Try it out.  The text "Hello" is included in the input:
-```JSON
-{
-  "id": "001",
-  "version": "1.0",
-  "language": "en-US",
-  "text": "Hello",
-  "retext": "Hello",
-  "attributes": {
-    "intent": "hello-world"
-},
-```
+4. Click Try it out.  The text "Hello" is included in the input.
 5. Click Execute.
-The conversation REST API responds with "Hello world".  The response is included the text attribute of the  JSON data.  <br>
-The JSON data that is returned includes the following text:
+The conversation REST API responds with "Hello world".  The response is included the text attribute of the  JSON data. 
 ```JSON
+...
 "speech": {
   "text": "Hello world"
 }
+...
 ```
 **Note**:  In this step, you sent both the intent and the input directly to a single skill.  When you send a request to the Watson Assistant Solutions core, additional steps are performed. The Watson Assistant Solutions core determines  which skill is best placed to handle the request.
 
