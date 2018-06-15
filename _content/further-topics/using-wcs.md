@@ -46,7 +46,7 @@ const request = require('request');
 ```
 2. Add the following functions to the `actions.js` file to call the external APIs.
 ```javascript
-let getJoke = function(url, callback) {
+const getJoke = function(url, callback) {
     request.get({
         url: url,
         headers: { 'Accept': 'application/json' }
@@ -123,35 +123,11 @@ Converse with the jokes skill using the  **/skillSets/{skillSetName}/converse** 
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
 
-```shell
-curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": {
-  "context": {}
-}
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
-```
+` curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse' `
 
-```shell
-curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{
-  "text": "how about a chuck norris joke",
-  "language": "en-US",
-  "userID": "application-14c",
-  "deviceType": "phone",
-  "additionalInformation": {
-    "context": {}
-  }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
-```
+` curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ \"text\": \"how about a chuck norris joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { \"context\": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse' `
 
-```shell
-curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here`" -d '{
-  "text": "how about a dad joke",
-  "language": "en-US",
-  "userID": "application-14c",
-  "deviceType": "phone",
-  "additionalInformation": {
-    "context": {}
-  }
-}' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse'
-```
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H \"api_key: paste-your-WA-API-key-here\" -d '{ \"text\": \"how about a dad joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { \"context\": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillSets/mySet/converse' `
+
 > **What to do next?**<br/>
 Complete the [knowledge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).
