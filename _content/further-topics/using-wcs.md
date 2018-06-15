@@ -129,11 +129,11 @@ Converse with the jokes skill using the  **/skills/{skillName}/converse** API en
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
 
-` curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ \"text\": \"tell me a joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "tell me a joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
 
-` curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ \"text\": \"how about a chuck norris joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { \"context\": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a chuck norris joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H \"api_key: paste-your-WA-API-key-here\" -d '{ \"text\": \"how about a dad joke\", \"language\": \"en-US\", \"userID\": \"application-14c\", \"deviceType\": \"phone\", \"additionalInformation\": { \"context\": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a dad joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
 
 > **What to do next?**<br/>
 Complete the [knowledge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).
