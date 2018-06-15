@@ -118,6 +118,12 @@ curl -X GET --verbose --header 'Accept: application/json' https://paste_your_ski
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
 
+#### Step 5.5: Add skill to WA
+Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
+
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ \"name\": \"your-joke-skill-name\", \"url\": \"https://paste_your_skill_name_here.mybluemix.net\" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
+
+
 #### Step 6: Converse with the joke skill
 Converse with the jokes skill using the  **/skills/{skillName}/converse** API endpoint of the Watson Assistant Solutions service.
 
