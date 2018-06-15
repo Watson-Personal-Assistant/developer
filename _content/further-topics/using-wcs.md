@@ -36,7 +36,7 @@ Download the [WCS-workspace-jokes.json]({{site.baseurl}}/further-topics/WCS-work
 
 #### Step 3: Add WCS credentials and workspace info to skill
 1. From the top-level directory of your skill, start the setup wizard from the command-line to define your skill. Enter ```node setup-wizard.js```
-2. Follow the on-screen prompts.  Specify the space and organization where you added your Watson Assistant service.  To find the credentials of your Watson Assistant Workspace, on the Watson Assistant user interface, click **Service credentials** and then click **View credentials**. Specify the user name, password ID and name of your Watson Assistant workspace.  In this tutorial, the workspace name is 'jokes'.  Select WCS as your NLU engine.
+2. Follow the on-screen prompts.  Specify the space and organization where you added your Watson Assistant service.  To find the credentials of your Watson Assistant Workspace, on the Watson Assistant user interface, click **Service credentials** and then click **View credentials**. Specify the user name, password ID and name of your Watson Assistant workspace.  In this tutorial, the workspace name is 'jokes'.  Select WCS and SKILL as your NLU engine.
 
 #### Step 4: Modify the action.js file to handle the intents defined in WCS
 1. Define handlers for the intents, chuck-norris-joke and dad-joke, that are defined in your Watson Assistant workspace in the `actions.js` file.  To handle these intents, add the `request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
