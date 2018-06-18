@@ -36,16 +36,17 @@ Complete these steps to create, deploy, and register a custom skill.
 **Important**:  If you are using an older version of the boilerplate, you must add ```skill``` to the list of NLUs.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
-   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file to include the name and ID of your Watson Assistant workspace.  Alternatively, Edit the .```env.sample file``` in the top-level directory of the NodeJS skill boilerplate and rename it ```.env```. Add the following variables.  All variables are mandatory.
-    - ```WCS_USERNAME```
-    - ```WCS_URL```
-    - ```WCS_PASSWORD```
-    - ```WCS_VERSION_DATE```
-    - ```WCS_VERSION```
-    - ```WCS_WORKSPACE_ID``` 
-    - ```WCS_WORKSPACE_NAME```
-    - ```WCS_WORKSPACE_LANGUAGE```
- 
+   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file to include the name and ID of your Watson Assistant workspace and the workspace credentials.  
+   Alternatively, edit the .```env.sample file``` in the top-level directory of the NodeJS skill boilerplate and rename it ```.env```. Add the following variables.  All variables are mandatory.
+        - ```WCS_USERNAME```
+        - ```WCS_URL```
+        - ```WCS_PASSWORD```
+        - ```WCS_VERSION_DATE```
+        - ```WCS_VERSION```
+        - ```WCS_WORKSPACE_ID``` 
+        - ```WCS_WORKSPACE_NAME```
+        - ```WCS_WORKSPACE_LANGUAGE```
+
 5.  Specify any mandatory entities for each intent in the ```../res/nlu/intents.json``` file.  
 6.  Specify the port that the skill will listen on.  In the  Node.js boilerplate, the default port is 10011. If you have multiple skills deployed on your local system, you might want to change the port number.  Edit the ```.env.sample``` file and rename it ```.env```.
 7. Add skill code for the evaluation handler and the action handler and the unhandled response for each intent to the ```actions.js```  file.
