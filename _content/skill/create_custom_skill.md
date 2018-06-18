@@ -36,8 +36,8 @@ Complete these steps to create, deploy, and register a custom skill.
 **Important**:  If you are using an older version of the boilerplate, you must add ```skill``` to the list of NLUs.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
-   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file to include the name and ID of your Watson Assistant workspace and the workspace credentials.  
-   Alternatively, edit the .```env.sample file``` in the top-level directory of the NodeJS skill boilerplate and rename it ```.env```. Add the following variables.  All variables are mandatory.
+   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  
+   Alternatively, rename the file ```.env.sample file``` as ```.env```. Add the following variables.  All variables are mandatory.
         - ```WCS_USERNAME```
         - ```WCS_URL```
         - ```WCS_PASSWORD```
