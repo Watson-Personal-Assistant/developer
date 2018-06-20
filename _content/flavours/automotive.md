@@ -34,6 +34,7 @@ Sample utterances | <ul><li>What are some good coffee shops nearby</li><li>Are t
 ---
 
 Table 4 Vehicle Owners Manual
+
 Type | Description | 
 --|--------------|
 Description | Provides information that is typically included in a car manual.  Answers how to turn on components, how to perform operations, where components are located, and provides general information about the vehicle.
@@ -45,7 +46,7 @@ Table 5 - Calendar
 Type | Description |
 --|--------------|
 Description | Answers questions about your calendar. Shows free time, busy time, and the time of your next meeting.
-Sample utterances | TBD
+Sample utterances | <ul><li>What is on my calendar for Wednesday? </li><li>Where is my next appointment?</li><li>Am I free friday afternoon?</li><li>How often should I change the engine oil?</li></ul>
 ---
 
 Table 6 - Small Talk
@@ -61,7 +62,7 @@ Table 7 - IoT for Auto
 Type | Description |
 --|--------------|
 Description | Responds to questions about a vehicle, such as fuel levels, tyre pressure. 
-Sample utterances | TBD
+Sample utterances | <ul><li>how fast am I going </li><li>what's the fuel at</li><li>what are the tire pressures</li><li>how hot is the engine</li></ul>
 ---
 
 Table 8 - Auto Default
