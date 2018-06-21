@@ -11,6 +11,8 @@ Skills use natural language understanding (NLU) engines, such as the IBM Watson 
 - IBM Watson Assistant for Hospitality
 - IBM Watson Assistant for Industry
 
+
+
 You can add intelligence to your skills to respond in a personalized way and to enhance routing. For example, as a skill developer, you can use the following types of information to add intelligence to your skills:
 - **Profile information**: information about the user that remains relatively unchanged, for example, their email address.  Instead of each skill managing profile data separately, using the Profile REST API, you can store this information in a central location for all skills to use.
 - **Contextual information**: information that changes frequently, such as current location or the time of day. You can configure context variables to include:
@@ -19,7 +21,9 @@ You can add intelligence to your skills to respond in a personalized way and to 
   - Utterance context: context information, such as your current location, that is sent by your edge device in the utterance. The utterance context might capture whether the user is at home or in her car. A skill might use a different response depending on the utterance context. For example, when a user is at home and asks for a cinema listing, the film poster is sent with the response.
 
 ### Getting started
-Contact your sales representative for information about signing up for the service. After you sign up, a Watson Assistant Solutions instance is provisioned for you, and you will receive a _welcome letter_ with access information.
+Contact your sales representative for information about signing up for the service. After you sign up, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
+
+
 
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
