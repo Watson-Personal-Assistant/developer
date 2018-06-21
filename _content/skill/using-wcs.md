@@ -1,5 +1,5 @@
 ---
-title: Tutorial - creating a custom skill using a WCS nlu
+title: Tutorial - creating a custom skill using WCS NLU
 weight: 40
 ---
 
