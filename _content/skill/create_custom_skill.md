@@ -34,9 +34,9 @@ Complete these steps to create, deploy, and register a custom skill.
   - ```skill, regexp, wcs```
   - ```skill, wcs ```
 
-**Important**:  If you are using an older version of the boilerplate or SDK, you must add ```skill``` to the list of NLUs.  
-        - The value ```skill``` is required to specifying that evaluation requests are handled at the skill.  The handling of evaluation requests by the routing core component of Watson Assistant Solutions is deprecated.  
-        - The NLU values, for example, regexp, specify the NLUs that the skill is uing to extract intents and entities from user utterances.
+    **Important**:  If you are using an older version of the boilerplate or SDK, you must add ```skill``` to the list of NLUs.  
+            - The value ```skill``` is required to specifying that evaluation requests are handled at the skill.  You must support the evaluation method in your skill.  The handling of evaluation requests by the routing core component of Watson Assistant Solutions is deprecated.  
+            - The NLU values, for example, regexp, specify the NLUs that the skill is uing to extract intents and entities from user utterances.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
    - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  
