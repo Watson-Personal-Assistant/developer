@@ -1,6 +1,6 @@
 ---
 title: Enhancing the conversation
-weight: 40
+weight: 60
 ---
 Watson Assistant Solutions provides several features you can use to enhance the coversation between your end-users and your skill and to personalize the conversation.
 
@@ -142,6 +142,4 @@ To persist context information, the handler function copies the context informat
 
 
 > **What to do next?**<br/>
-Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/build-skill).
-* [Tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/skill/using-wcs).
+Learn about the [knowledge and reasoning (alpha) components]({{site.baseurl}}/knowledge/what-is-kr).

@@ -1,6 +1,6 @@
 ---
 title: Tutorial - creating a custom skill using a WCS nlu
-weight: 80
+weight: 40
 ---
 
 In this tutorial, you will create a custom skill that uses a Watson Assistant (WCS) nlu.  You will create the skill from the skill boilerplate.  You will connect your skill to a predefined Watson Assistant (formerly Watson Conversation) workspace and use this workspace to handle your intents.
@@ -138,4 +138,4 @@ Replace the text attribute in the following curl commands with some of those utt
 `curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a dad joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
 
 > **What to do next?**<br/>
-Complete the [knowledge and reasoning (alpha) tutorial ]({{site.baseurl}}/knowledge/about-tutorial).
+Read about [configuring skill authentication]({{site.baseurl}}/skill/adding_skill_authentication).

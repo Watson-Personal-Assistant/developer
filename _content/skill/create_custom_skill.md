@@ -77,5 +77,5 @@ Alternatively, use the following endpoints of the Conversation REST API to regis
 - ```Converse```: Converse with your skill or skill set.
 For more information about the Conversation REST API, click **Conversation API** on the home page to view the Swagger specification.
 
-> **What next?**
-* Read about [configuring skill authentication]({{site.baseurl}}/skill/adding_skill_authentication).
+> **What to do next?**<br/>
+Complete the [tutorial on how to create a skill using the regexp nlu]({{site.baseurl}}/skill/build-skill).
