@@ -21,9 +21,12 @@ You can add intelligence to your skills to respond in a personalized way and to 
   - Utterance context: context information, such as your current location, that is sent by your edge device in the utterance. The utterance context might capture whether the user is at home or in her car. A skill might use a different response depending on the utterance context. For example, when a user is at home and asks for a cinema listing, the film poster is sent with the response.
 
 ### Getting started
-Contact your sales representative for information about signing up for the service. After you sign up, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
+Contact IBM for more information about purchasing Watson Assistant Solutions. See the following pages on IBM Marketplace for more information:
+- (Watson Assistant for Automotive)[https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to]
+- (Watson Assistant for Hospitality)[https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top]
+- (Watson Assistant for Industry)[https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top]
 
-
+After you sign up, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
 
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
