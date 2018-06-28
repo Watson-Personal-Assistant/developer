@@ -39,6 +39,10 @@ further-topics:
   title: Further topics
   icon: pencil
   
+trial:
+  title: Trial Tasks
+  icon: bookmark
+
 get-help:
   title: Help
   icon: life-ring
