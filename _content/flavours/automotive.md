@@ -78,7 +78,6 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - What age are you
     - What color is your car
 
----
 
 > **What to do next?**<br/>
 * [Learn about Watson Assistant for Hospitality]({{site.baseurl}}/flavours/hospitality).
