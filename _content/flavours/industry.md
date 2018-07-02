@@ -13,7 +13,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
 Table 1 - Conversational Essentials
 
  Type | Description
---|--------------|
+------------------|-----------------------------------------------------------------|
 Registered name | built-in-skill-conversational-essentials
 Description | Responds to small-talk such as greetings and goodbyes.
 Sample utterances | 1.Howdy, 2. how are you today?, 3. over and out, 4. I am leaving
