@@ -1,5 +1,6 @@
 ---
-Automotive skills
+title: Automotive skills
+weight: 10
 ---
 IBM Watson Assistant for Automotive provides a framework for creating a digital assistant that provides a unique and personalized experience for your automotive customers. 
 
