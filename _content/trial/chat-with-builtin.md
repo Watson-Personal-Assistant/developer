@@ -20,4 +20,4 @@ Examples of what you can type are:
    - how are you
 
 >**Try more**<br>
-See the [Watson Assistant for Industry page]() for more request examples.
+See the [Watson Assistant for Industry page]({{site.baseurl}}/flavours/industry/) for more request examples.
