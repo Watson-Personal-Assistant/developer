@@ -17,4 +17,4 @@ For more information about the `stt_options` and the `audio_start` messages, see
 The audio client uses the Watson text-to-speech service.  The text-to-speech service to use is not configurable.  The `voice` parameter must be set to `en-US-LisaVoice` in the audio client.
 
 > **What to do next?**<br/>
-Learn how [audio is processed]({{site.baseurl}}/audio/how_it_works_audio).
+Learn about [the IFTTT integration]({{site.baseurl}}/ifttt/what-is-ifttt/).
