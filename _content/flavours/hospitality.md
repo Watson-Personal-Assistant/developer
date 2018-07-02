@@ -1,5 +1,6 @@
 ---
-Hospitality consoles
+title: Hospitality consoles
+weight: 15
 ---
 IBM Watson Assistant for Hospitality provides a framework for creating digital assistants that offer a unique and personalized experience to your guests.
 
