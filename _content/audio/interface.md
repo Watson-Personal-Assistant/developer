@@ -177,4 +177,4 @@ Example:
 }
 ```
 > **What to do next?**<br/>
-Learn about [the IFTTT integration]({{site.baseurl}}/ifttt/what-is-ifttt/).
+Learn how to [configure STT and TTS]({{site.baseurl}}/audio/configure_SST_multi_tentant/).
