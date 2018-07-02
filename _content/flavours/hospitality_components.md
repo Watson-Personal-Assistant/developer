@@ -39,5 +39,4 @@ From the Settings page of the cognitive portal, a front desk manager can add a n
 From the Request Center page, a front desk manager can view all of the bookings made through the Bookings and reservations skill and all service requests made through the service requests skill.  The manager can drill down to manage the details of individual bookings and service requests.
 
 > **What to do next?**<br/>
-Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - create a skill using the  regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+Learn about the [knowledge and reasoning (alpha) components]({{site.baseurl}}/knowledge/what-is-kr).
