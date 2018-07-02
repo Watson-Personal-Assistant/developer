@@ -17,7 +17,7 @@ Contact IBM for more information about purchasing Watson Assistant Solutions. Se
 - [Watson Assistant for Automotive](https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to)
 - [Watson Assistant for Hospitality](https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top)
 - [Watson Assistant for Industry](https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top)
-
+<br>
 
 After you sign up, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
 
