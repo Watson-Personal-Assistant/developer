@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Using WCS NLU
+title: Tutorial - Using the WCS nlu
 weight: 40
 ---
 
