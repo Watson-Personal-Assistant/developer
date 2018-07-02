@@ -51,4 +51,4 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
 
 
 > **What to do next?**<br/>
-[Learn about the Watson Assistant for Hospitality consoles]({{site.baseurl}}/flavour/hospitality_components).
+[Learn about the Watson Assistant for Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
