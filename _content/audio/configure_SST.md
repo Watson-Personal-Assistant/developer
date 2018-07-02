@@ -1,5 +1,5 @@
 ---
-title: Setting the speech-to-text and text-to-speech services to use
+title: Configuring STT and TTS
 weight: 30
 ---
 The audio gateway uses external services to convert speech to text and text to speech.  You set the services to use on an audio client basis.  
