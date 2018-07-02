@@ -32,7 +32,7 @@ Typically, a front desk manager in a hospitality venue uses the cognitive portal
 - Service requests
 - Bookings and reservations
 
-For more information about these skills, see the [Watson Assistant for Hospitality]({{site.baseurl}}/flavours/hospitality_skills)  topic.
+For more information about these skills, see the [Hospitality skills]({{site.baseurl}}/flavours/hospitality) topic.
 
 From the Settings page of the cognitive portal, a front desk manager can add a new venue, such as a restaurant at the hotel. For each venue, the manager specifies the type of venue, name of the venue, its location, contact information, opening hours, and a short introduction to the venue.  After the manager adds the venue to the cognitive portal, training of the built-in skills starts. The manager can create new venues types from the Settings page, for example, a conference room venue type.
 
