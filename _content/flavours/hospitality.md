@@ -9,7 +9,7 @@ To build a digital assistant, you can create your own custom skills and register
 For some of the skills, you use the cognitive portal to add knowledge to the skill.  For more information about the cognitive portal, see [Hospitality tasks]({{site.baseurl}}/flavours/hospitality_components).
 
 All built-in skills for Watson Assistant for Hospitality are assigned to the `cognitive-spaces` skill set.  You also have access to the built-in skill sets that are provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
-<br>
+
 **Venues and Responses**
 - Registered name: responses
 - Description:  Provides responses to questions about venues and responses to other general questions. For venue responses, you add venue types using the cognitive portal. For each venue, you add information that your end-users might want to know about the venue, for example, opening hours, contact details, and location.  For generic responses, you add general questions and answers that your end-users might be interested in.  Front desk staff manage the venue and responses information using the cognitive portal.
@@ -17,6 +17,7 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
     - Who are you
     - Do you have pool?
     - Do you have a restaurant
+
 <br>
 **Service Requests**
 - Registered name: contact-request
@@ -27,6 +28,7 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
     - I want to book a taxi
     - I need 4 towels
     - Please clean the room
+
 <br>
 **Room Control**
 - Registered name: control
@@ -36,6 +38,7 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
     - Turn the lights off
     - Open the curtains
     - Make it warmer
+
 <br>
 **Bookings and Reservations**
 - Registered name: restaurant-reservation
@@ -45,7 +48,7 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
     - Can you make a reservation for me
     - I want to reserve a restaurant
     - I'd like to make a reservation
-<br>
+
 
 > **What to do next?**<br/>
 [Learn about the Watson Assistant for Hospitality consoles]({{site.baseurl}}/flavour/hospitality_components).
