@@ -1,5 +1,6 @@
 ---
-Industry skills
+title: Industry skills
+weight: 5
 ---
 IBM Watson Assistant for Industry provides a framework for creating a digital assistant that provides a unique and personalized experience for your customers.
 
