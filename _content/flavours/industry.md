@@ -7,7 +7,7 @@ IBM Watson Assistant for Industry provides a framework for creating a digital as
 To build your digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available to your when you sign up for Watson Assistant for Industry.  The built-in skills for Watson Assistant for Industry are listed in the following section.
 
 All built-in skills for Watson Assistant for Industry are assigned to the `built-in` skill set.
-<br>
+
 **Conversational Essentials**
 - Registered name: built-in-skill-conversational-essentials
 - Description: Responds to small-talk such as greetings and goodbyes.
@@ -16,6 +16,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - How are you today
     - over and out
     - I am leaving
+    
 <br>
 **Watch**
 - Registered name: built-in-skill-watch
@@ -25,6 +26,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - Date please
     - What time is it in Cork
     - What is the current date
+
 <br>
 **General Knowledge**
 - Registered name: built-in-skill-general-knowledge
@@ -34,6 +36,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - Tell me about bitcoin
     - What do you know about osmosis
     - Who is Albert Einstein
+
 <br>
 **Weather**
 - Registered name: built-in-skill-weather
@@ -43,6 +46,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - How is the weather tomorrow
     - What is the 5 day forecast
     - Should I take an umbrella
+
 <br>
 **Default**
 - Registered name: built-in-skill-default
@@ -52,6 +56,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - How many cents in a euro
     - What's for dinner
     - What age are you
+
 
 > **What to do next?**<br/>
 * [Learn about Watson Assistant for Automotive]({{site.baseurl}}/flavours/automotive).
