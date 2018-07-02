@@ -14,9 +14,11 @@ Table 1 - Conversational Essentials
 
  Type | Description
 --|--------------|
+
 Registered name | built-in-skill-conversational-essentials
 Description | Responds to small-talk such as greetings and goodbyes.
 Sample utterances | <ul><li>Howdy</li><li>how are you today</li><li>over and out</li><li>I am leaving</li></ul>
+
 ---
 
 Table 2 - Watch
