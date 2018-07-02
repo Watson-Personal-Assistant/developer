@@ -66,7 +66,6 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - How are you
     - Howdy
     - over and out
-    - how hot is the engine
 
 <br>
 **Auto Default**
