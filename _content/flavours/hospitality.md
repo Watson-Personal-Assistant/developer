@@ -4,9 +4,9 @@ weight: 15
 ---
 IBM Watson Assistant for Hospitality provides a framework for creating digital assistants that offer a unique and personalized experience to your guests.
 
-To build a digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available when you sign up for Watson Assistant for Hospitality.  The built-in skills for hospitality are listed in Tables 1 - 4.
+To build a digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available when you sign up for Watson Assistant for Hospitality.  The built-in skills for hospitality are listed in the following section.
 
-For some of the skills, you use the cognitive portal to add knowledge to the skill.  For more information about the cognitive portal, see [Hospitality tasks]({{site.baseurl}}/flavours/hospitality_components).
+For some of the skills, you use the cognitive portal to add knowledge to the skill.  For more information about the cognitive portal, see [Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
 
 All built-in skills for Watson Assistant for Hospitality are assigned to the `cognitive-spaces` skill set.  You also have access to the built-in skill sets that are provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
 
@@ -42,7 +42,7 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
 <br>
 **Bookings and Reservations**
 - Registered name: restaurant-reservation
-- Description: Makes reservations in restaurants.
+- Description: Makes reservations in restaurants. Front desk staff manage the requests using the cognitive portal.
 - Sample utterances: 
     - I want to book a table
     - Can you make a reservation for me
