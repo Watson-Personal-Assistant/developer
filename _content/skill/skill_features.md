@@ -142,4 +142,4 @@ To persist context information, the handler function copies the context informat
 
 
 > **What to do next?**<br/>
-Learn about the [knowledge and reasoning (alpha) components]({{site.baseurl}}/knowledge/what-is-kr).
+Learn about the [skills that are available with Watson Assistant for Industry]({{site.baseurl}}/flavours/industry).
