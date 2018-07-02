@@ -18,9 +18,11 @@ understand-service:
 skill:
   title: Skills
   icon: graduation-cap 
+
 flavour:
-  title: Flavors
+  title: Flavor
   icon: pencil
+  
 knowledge:
   title: Knowledge and reasoning
   icon: code
