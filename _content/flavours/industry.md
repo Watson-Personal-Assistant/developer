@@ -14,21 +14,19 @@ Table 1 - Conversational Essentials
 
  Type | Description
 ------------------|-----------------------------------------------------------------|
-Registered name | built-in-skill-conversational-essentials
-Description | Responds to small-talk such as greetings and goodbyes.
+Registered name   | built-in-skill-conversational-essentials
+Description       | Responds to small-talk such as greetings and goodbyes.
 Sample utterances | 1.Howdy, 2. how are you today?, 3. over and out, 4. I am leaving
 
----
 
 Table 2 - Watch
 
- Type | Description
+ Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 --|--------------|
 Registered name | built-in-skill-watch
 Description | Provides date and time information.
 Sample utterances | 1. Time please, 2. Date please?, 3. What time is it in Cork?, 4. What is the current date?
 
----
 
 Table 3 - General Knowledge
 
@@ -38,7 +36,6 @@ Registered name  | built-in-skill-general-knowledge
 Description | Answers general knoweldge questions.
 Sample utterances | 1. What is a hurricane?, 2. Tell me about bitcoin?, 3. What do you know about osmosis?, 4. Who is Albert Einstein?
 
----
 
 Table 4 - Weather
 
@@ -48,7 +45,6 @@ Registed name | built-in-skill-weather
 Description | Responds to questions about the weather.
 Sample utterances | 1. How is the weather in London?, 2. How is the weather tomorrow?, 3. What is the 5 day forecast?, 4, Should I take an umbrella?
 
----
 
 Table 5 - Default
 
