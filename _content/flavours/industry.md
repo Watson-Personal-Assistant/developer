@@ -8,7 +8,7 @@ To build your digital assistant, you can create your own custom skills and regis
 
 All built-in skills for Watson Assistant for Industry are assigned to the `built-in` skill set.
 
-**Conversational Essentials**
+### Conversational Essentials
 - Registered name: built-in-skill-conversational-essentials
 - Description: Responds to small-talk such as greetings and goodbyes.
 - Sample utterances: 
@@ -17,8 +17,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - over and out
     - I am leaving
     
-<br>
-**Watch**
+### Watch
 - Registered name: built-in-skill-watch
 - Description: Provides date and time information.
 - Sample utterances: 
@@ -27,8 +26,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - What time is it in Cork
     - What is the current date
 
-<br>
-**General Knowledge**
+### General Knowledge
 - Registered name: built-in-skill-general-knowledge
 - Description: Answers general knoweldge questions.
 - Sample utterances: 
@@ -37,8 +35,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - What do you know about osmosis
     - Who is Albert Einstein
 
-<br>
-**Weather**
+### Weather
 - Registered name: built-in-skill-weather
 - Description: Responds to questions about the weather.
 - Sample utterances: 
@@ -47,8 +44,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - What is the 5 day forecast
     - Should I take an umbrella
 
-<br>
-**Default**
+### Default
 - Registered name: built-in-skill-default
 - Description: A general fallback skill for the built-in skill set.
 - Sample utterances: 

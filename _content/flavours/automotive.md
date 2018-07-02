@@ -8,7 +8,7 @@ To build your digital assistant, you can create your own custom skills and regis
 
 All built-in skills for Watson Assistant for Automotive are assigned to the `automotive` skill set.  You also have access to the built-in skill sets that are provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
 
-**Navigation**
+### Navigation
 - Registered name: Navigation
 - Description: Navigates end-users to a location. Provides directions to the location based on a users current location and the responses the user makes. Calculates how long it takes it get from the current location of a user to a destination.
 - Sample utterances:
@@ -17,8 +17,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - Direct me to New York
     - Take me to the nearest garage
 
-<br>
-**Lists**
+### Lists
 - Registered name: Lists
 - Description: Organize your to-do lists.  Create lists, add items to lists, remove items from lists and read lists.
 - Sample utterances: 
@@ -27,8 +26,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - Add milk to my shopping list
     - Remove milk from my shopping list
 
-<br>
-**Points of Interest** 
+### Points of Interest
 - Registered name: PointsOfInterest
 - Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating.
 - Sample utterances: 
@@ -39,8 +37,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - What is the phone number of this place
     - What is the rating of this place
 
-<br>
-**Vehicle Owners Manual**
+### Vehicle Owners Manual
 - Registered name: OwnersManual-Skill
 - Description: Provides information that is typically included in a car manual.  Answers how to turn on components, how to perform operations, where components are located, and provides general information about the vehicle.
 - Sample utterances: 
@@ -49,8 +46,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - How do I adjust my seat
     - How often should I change the engine oil
 
-<br>
-**Calendar**
+### Calendar
 - Registered name: Calendar
 - Description: Answers questions about your calendar. Shows free time, busy time, and the time of your next meeting.
 - Sample utterances: 
@@ -58,8 +54,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - Where is my next appointment
     - Am I free today
 
-<br>
-**Auto Small Talk**
+### Auto Small Talk
 - Registered name: AutoSmallTalk
 - Description: Responds to small-talk such as greetings and goodbyes.
 - Sample utterances: 
@@ -67,8 +62,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - Howdy
     - over and out
 
-<br>
-**Auto Default**
+### Auto Default
 - Registered name: AutoDefault
 - Description: A fallback skill for automotive skill set.  Captures utterances that are not handled by other skills.
 - Sample utterances: 
