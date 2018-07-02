@@ -3,6 +3,8 @@ title: Using the regex browser plugin to help with pasting commands
 weight: 20
 ---
 
+You can use the regex browser plugin to help with pasting commands.
+
 ### Tip: Use regex browser plugin to add your API key to docs
 
 In the documentation, there are many commands that you must copy and paste to your command line terminal, but you need to replace a string of text with some value (i.e. the paste-your-API-key-here string) before executing the command.  Fortunately, there is a simple browser plugin/extension that will change strings rendered by the browser.  Regex Replace is a chrome extension that works great for this.
