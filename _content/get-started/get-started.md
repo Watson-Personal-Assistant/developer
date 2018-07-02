@@ -23,6 +23,5 @@ After you sign up, a Watson Assistant Solutions instance is provisioned.  During
 
 > **What to do next?**<br/>
 Complete the following tutorials to help you get started with creating your assistant:
-* [Tutorial - Using the regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
-* [Tutorial - Using the wcs nlu]({{site.baseurl}}/skill/using-wcs).
-* [Tutorial - Using the knoweldge and reasoning (alpha) feature]({{site.baseurl}}/knowledge/about-tutorial).
+[Tutorial - Using the regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
+[Tutorial - Using the wcs nlu]({{site.baseurl}}/skill/using-wcs).
