@@ -14,7 +14,6 @@ Table 1 - Conversational Essentials
 
  Type | Description
 --|--------------|
-
 Registered name | built-in-skill-conversational-essentials
 Description | Responds to small-talk such as greetings and goodbyes.
 Sample utterances | <ul><li>Howdy</li><li>how are you today</li><li>over and out</li><li>I am leaving</li></ul>
@@ -54,7 +53,7 @@ Type | Description |
 --|--------------|
 Registered name  | built-in-skill-default
 Description | A general fallback skill for the built-in skill set.
-Sample utterances | <ul>How far is central park<li>How many cents in a euro </li><li>What's for dinner</li><li>What age are you</li></ul>
+Sample utterances | - How far is central park - How many cents in a euro -<li>What's for dinner -What age are you
 
 
 > **What to do next?**<br/>
