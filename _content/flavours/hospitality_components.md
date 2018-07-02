@@ -1,6 +1,6 @@
 ---
 title: Hospitality tasks
-weight: 10
+weight: 20
 ---
 If you have IBM Watson Assistant for Hospitality, conversations between your end-users and your skills are routed through an audio gateway (alpha) to the core routing component and on to your skills.
 
