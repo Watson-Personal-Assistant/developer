@@ -53,7 +53,7 @@ Type | Description |
 --|--------------|
 Registered name  | built-in-skill-default
 Description | A general fallback skill for the built-in skill set.
-Sample utterances | - How far is central park - How many cents in a euro -<li>What's for dinner -What age are you
+Sample utterances | 1. How far is central park, 2. How many cents in a euro,  3.What's for dinner, 4. What age are you?
 
 
 > **What to do next?**<br/>
