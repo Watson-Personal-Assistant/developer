@@ -69,7 +69,7 @@ The JSON structure of the evaluate request from the routing core to the skills i
   "id": "001",
   "version": "1.0",
   "language": "en-US",
-  "text": "What are the temperatures like today in London city center",
+  "text": "what are the temperatures like today in london city center",
   "context": {
     "user": {
       "id": "john-001"
@@ -225,10 +225,10 @@ Table 8 - Evaluate response parameters
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `responseCode` | The status of the response. For example,  200 (OK) or 400 (bad request) | string | yes
- `requestResult` | The response to the utterance if returned by the NLU engine. The regexp nlu engine does not return a response in an evaluation response. | string | yes
+ `requestResult` | The response to the utterance if returned by the nlu engine. The regexp nlu engine does not return a response in an evaluation response. | string | yes
  `handleUtterance` | Set to false if the skill is capable of handling the utterance but decides not to handle it.  For example, a skill is designed to only display a map when the user is at home.  When the skill detects that the user in  a car, it sets `handleUtterance` to false.   | boolean  | yes
  `context` | Information about the context of the conversation with the user. | object | yes
- `intentities` | The intents and entities returned by the skill for each NLU engine. | array | yes
+ `intentities` | The intents and entities returned by the skill for each nlu engine. | array | yes
 
  Table 9 - Evaluate response parameters - context
 
@@ -277,15 +277,15 @@ Table 15 - Evaluate response parameters - Intentites
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `name` | The NLU type that processed the evaluation request | string | yes
- `entities` | The entities extracted by the NLU engine from the utterance. | array | no
- `intents` | The intents returned by the NLU engine. | array | no
+ `name` | The nlu type that processed the evaluation request | string | yes
+ `entities` | The entities extracted by the nlu engine from the utterance. | array | no
+ `intents` | The intents returned by the nlu engine. | array | no
 
 Table 16 - Evaluate response parameters - Entities 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `entity` | The name of an entity extracted from the utterance by the NLU engine. | string | yes
+ `entity` | The name of an entity extracted from the utterance by the nlu engine. | string | yes
  `value` | The value of the extracted entity. | string | yes
  `confidence` | A confidence value that is associated the entity value. **Note**: A confidence score is always returned by a skill for each entity. However, the confidence score for an entity is only considered if no intent is returned, that is, if entity-based routing is being used. | string | yes 
 
@@ -306,7 +306,7 @@ The JSON structure of the converse request from the routing core to a skill is a
   "version": "1.0",
   "language": "en-US",
   "text": "What are the temperatures like today in London city center",
-  "retext": "what are the temperatures like today in the city center",
+  "retext": "what are the temperatures like today in london city center",
   "attributes": {
     "intent": "get-temperature"
   },
@@ -423,7 +423,7 @@ The JSON structure of the converse response from a skill to the routing core is 
     "intents": [
       {
         "intent": "get-temperature",
-        "confidence": 85514235496521
+        "confidence": 0.85514235496521
       }
     ],
     "entities": [
@@ -443,7 +443,7 @@ The JSON structure of the converse response from a skill to the routing core is 
           "confidence": 0.962316
         }
     ],
-    "confidence": 85514235496521
+    "confidence": 0.85514235496521
   },
   "additionalInformation": {
     "context": {
@@ -455,11 +455,11 @@ The JSON structure of the converse response from a skill to the routing core is 
       },
       "session": {
         "id": "session-001",
-        "new": "true",
+        "new": true,
         "skill": {
             "attributes": {
               "weather-interest": "temperature",
-              "inConversation": "false"
+              "inConversation": false
               }
             },
         "attributes": {
@@ -588,7 +588,7 @@ The JSON structure of the converse response from the routing core to a client de
   "intents": [
     {
       "intent": "get-temperature",
-      "confidence": 85514235496521
+      "confidence": 0.85514235496521
     }
   ],
   "entities": [
@@ -608,7 +608,7 @@ The JSON structure of the converse response from the routing core to a client de
         "confidence": 0.962316
       }
   ],
-  "confidence": 85514235496521
+  "confidence": 0.85514235496521
 },
 "additionalInformation": {
   "context": {
