@@ -177,4 +177,4 @@ Example:
 }
 ```
 > **What to do next?**<br/>
-Learn how to [configure STT and TTS]({{site.baseurl}}/audio/configure_SST_multi_tentant/).
+Learn how to [configure STT and TTS]({{site.baseurl}}/audio/configure_SST/).
