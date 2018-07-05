@@ -7,7 +7,7 @@ This task will be performed using the Watson Assistant Solutions console.
 
 1. Access the console at [https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net).
 
-2. Using the **Select a skillset** choice list on the right side of the UI above the Chat UI, choose **built-in**.
+2. Using the **Select a skillset** choice list on the right side of the UI above the Chat UI, choose **industry**.
 
 3. Click and type in the text field below were it says **_Tap to type_**.
 

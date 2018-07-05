@@ -25,7 +25,7 @@ This task will be performed using the Watson Assistant Solutions console.
 
 10. Click **Next**.
 
-11. Using the **Select a skillset** choice list, choose `built-in` as the skillset to add the new skill to.
+11. Using the **Select a skillset** choice list, choose `industry` as the skillset to add the new skill to.
 
 12. In the **_Tap to type..._** field on the Chat UI, type `tell me a dad joke`.  You should see a reply that is a Dad joke.
 
