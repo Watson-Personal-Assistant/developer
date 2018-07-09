@@ -1,6 +1,6 @@
 ---
 title: Adding an nlu engine
-weight: 25
+weight: 45
 ---
 The NodeJS skill boilerplate and NodeJS SDK support the regexp and the wcs (Watson Assistant) nlu engines out-of-the-box.  You can add other nlu engines to your skill.  
 
