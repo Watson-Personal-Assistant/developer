@@ -19,6 +19,10 @@ skill:
   title: Skills
   icon: graduation-cap 
 
+flavours:
+  title: Flavor
+  icon: pencil
+  
 knowledge:
   title: Knowledge and reasoning
   icon: code

@@ -1,6 +1,6 @@
 ---
-title: Tutorial - creating a custom skill with a regexp NLU
-weight: 60
+title: Tutorial - Using the regexp nlu
+weight: 30
 ---
 Watson Assistant Solutions provides a boilerplate in Node.js for creating a simple hello world skill. Using this skill, when you say hello to your assistant, your assistant responds with hello world.
 
@@ -83,4 +83,5 @@ The JSON data that is returned includes the following text:
 You have completed the tutorial for creating a simple skill.
 
 > **What to do next?**<br/>
-Complete the [tutorial - create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/further-topics/using-wcs).
+Complete the [tutorial on how to create a skill using IBM Watson Assistant nlu ]({{site.baseurl}}/skill/using-wcs).<br>
+Learn more about the [Regexp NLU]({{site.baseurl}}/further-topics/regexp_nlu).
