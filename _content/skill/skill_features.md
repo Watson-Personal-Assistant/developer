@@ -146,7 +146,7 @@ In a converse response, your skill returns text. You can enhance the text by ret
 
 Typically, a card is used to return more verbose text, to display a graphic, or to play music.  
 
-For example, the traffic skill returns an image of a live traffic map of the city center to the client device. The client device determines how this image is render to the user.  The text "Sure. Here is a live traffic map for the city center." is also returned to the client device.
+For example, the traffic skill returns an image of a live traffic map of the city center to the client device. The client device determines how this image is rendered to the user.  The text "Sure. Here is a live traffic map for the city center." is also returned to the client device.
 
 Figure 8 - sending a card in the converse response
 ![Returning information in a card ]({{site.baseurl}}/images/card.png)
