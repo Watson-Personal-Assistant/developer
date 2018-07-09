@@ -9,21 +9,27 @@ A skill is a capability in a specific domain, for example, providing weather for
 Skills use natural language understanding (NLU) engines, such as the IBM Watson Assistant (formerly IBM Watson Conversation) and regexp, for understanding the natural language of the user.  You can choose from the built-in skills that are provided out-of-the-box or you can develop your own custom skills from a boilerplate.  
 
 The set of built-in skills that is available to you depends on which flavor of the IBM Watson Assistant Solutions offering you signed up to; namely:
-- [IBM Watson Assistant for Automotive skills]({{site.baseurl}}/flavours/automotive)
-- [IBM Watson Assistant for Hospitality skills]({{site.baseurl}}/flavours/hospitality)
-- [IBM Watson Assistant for Industry skills]({{site.baseurl}}/flavours/industry)
+- [IBM Watson Assistant for Automotive]({{site.baseurl}}/flavours/automotive)
+- [IBM Watson Assistant for Hospitality]({{site.baseurl}}/flavours/hospitality)
+- [IBM Watson Assistant for Industry]({{site.baseurl}}/flavours/industry)
 
 
 ### Getting started
+You can purchase Watson Assistant Solutions or access a trial before you by.
+
+#### Purchase
 Contact IBM for more information about purchasing Watson Assistant Solutions. See the following pages on IBM Marketplace for more information:
 - [Watson Assistant for Automotive page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to)
 - [Watson Assistant for Hospitality page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top)
 - [Watson Assistant for Industry page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top)
 
 <br>
-After you sign up, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
+After you purchase, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
+
+#### Access a trial
+You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial either from the [Watson Assistant for Industry page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top) on IBM Marketplace or from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
+
+When you sign up, you must provide a valid email address.  After you complete the sign up form, you must validate your account using a 7-digit code that is sent to you by email. You are redirected to the console home page.  Wait a few minutes while your account is provisioned before you sign in.
 
 > **What to do next?**<br/>
-Complete the following tutorials to help you get started with creating your assistant:
-[Tutorial - Using the regexp nlu]({{site.baseurl}}/skill/create_custom_skill).
-[Tutorial - Using the wcs nlu]({{site.baseurl}}/skill/using-wcs).
+[Access the Watson Assistan Solutions service]({{site.baseurl}}/get-started/get-api-key).
