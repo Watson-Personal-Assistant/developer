@@ -4,6 +4,7 @@ weight: 20
 ---
 The Watson Assistant Solutions offering provides a boilerplate in Node.js for creating a skill.  You can use this boilerplate as the basis for creating your custom skill.
 
+---
 ### About this task
 
 The high-level steps for deploying a custom skill are as follows:
