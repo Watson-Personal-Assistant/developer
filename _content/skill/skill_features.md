@@ -15,7 +15,7 @@ For example:
 
 _Figure 1 - setting the in conversation flag_
 
-![in conversation](images/inconversation.png)
+![in conversation]({{site.baseurl}}/images/inconversation.png)
 
 In figure 1, the traffic skill asks the user which region the user wants the traffic news for.  The traffic skill sets an in conversation flag to notify the Watson Assistant Solutions routing core that it is in a conversation and that it is expecting a response. Otherwise, another skill, such the events skill, might return a higher confidence score and process the utterance.
 
@@ -33,7 +33,7 @@ You can route the conversation using intents.  In your skill, you can define res
 
 _Figure 2 - routing by intent_
 
-![in conversation](images/routing_by_intent2.png)
+![in conversation]({{site.baseurl}}/images/routing_by_intent2.png)
 
 In figure 2, the `#get_roadworks` intent is detected and a list of roadworks is provided in the response.
 
@@ -43,7 +43,7 @@ You can also route the conversation using entities.  For example:
 
 _Figure 3 - routing by entities_
 
-![Routing by entities](images/routing_by_entities2.png)
+![Routing by entities]({{site.baseurl}}/images/routing_by_entities2.png)
 
 In figure 3, the routing core routes based on a @trafficarea entity.  A different response is provided depending on whether the value is city center or suburbs.
 
@@ -62,7 +62,7 @@ You can use context variables when you evaluate a request. For example:
 
 _Figure 4 - routing by skill context_
 
-![Routing by skill context](images/skill_context_ex.PNG)
+![Routing by skill context]({{site.baseurl}}/images/skill_context_ex.PNG)
 
 In figure 4, the end-user asks about traffic diversions.  At step 2, the skill sets `$traffic_interest` variable to diversions.  Later in the conversation, when the user asks to see a map at step 7, the skill checks the `$traffic_interest` variable and responds with a map of roadworks and diversions.
 
