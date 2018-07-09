@@ -1,6 +1,6 @@
 ---
 title: Configuring skill authentication
-weight: 40
+weight: 50
 ---
 You can authenticate that requests that are sent to the conversation REST API of a skill have originated from the Watson Assistant Solutions service.  In the Node.js skill boilerplate, authentication of converse requests is disabled by default.
 

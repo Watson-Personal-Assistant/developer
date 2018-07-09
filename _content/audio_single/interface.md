@@ -22,6 +22,8 @@ Example:
 }
 ```
 
+**Note**: Overriding the tts engine to use is not currently supported.
+
 #### Audio data
 Audio data messages are sent between the audio client and the audio gateway. The message is used to send audio data in binary format.  Use the data parameter to specify the content of the binary data in string format.  Use the encoding parameter to specify the type of encoding to use, for example, base64. The message is always preceded by an audio start message.
 
@@ -94,7 +96,8 @@ Example:
   }
 }
 ```
-**Note**:  You can override which text-to-speech option to use in the audio start message.
+
+**Note**: Overriding the tts engine to use is not currently supported.
 
 #### Text
 Text messages are sent between the audio client and the audio gateway.  The audio client can send a text message to the audio gateway.  The audio gateway can use a text message to deliver a textual response.

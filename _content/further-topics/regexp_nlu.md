@@ -57,75 +57,70 @@ For example:
 
 You can use _optional words_ in an expression to capture multiple variations of an utterance.  Enclose the optional words in square brackets and use a pipe `|` to separate the optional words. 
 
-Example:
+Example: `"[What|How] is the weather"`
 
-`[What|How] is the weather`<br>
-The expression matches the following utterances:<br>
-`What is the weather`<br>
-`How is the weather`
+The expression matches the following utterances:
+>What is the weather<br>
+>How is the weather
 
-Place the pipe symbol `|` after the last word to match an empty string at the location of the `|` symbol.
+Place the _pipe symbol_ `|` after the last word to match an empty string at the location of the `|` symbol.
 
-Example:
-`What is the [current|] weather`<br>
-The expression matches the following utterances:<br>
-`What is the current weather`<br>
-`What is the weather`
+Example: `"What is the [current|] weather"`
 
-You can use _a dollar sign_ `($)` to specify a wildcard character.  The `($)` symbol specifies that any words or phrase can precede the symbol.
+The expression matches the following utterances:
+>What is the current weather<br>
+>What is the weather
 
-Example:
-`"$ tell me a joke"`<br>
-The expression matches at least the following utterances:<br>
-`Please tell me a joke`<br>
-`Can you tell me a joke`<br>
+You can use _a dollar sign_ `$` to specify a wildcard character.  The `$` symbol specifies that any words or phrase can precede the symbol.
 
-You can use `an asterisk` `(*)` sign to replace a word or a set of words in the position that the asterisk sign occupies.
+Example: `"$ tell me a joke"`
 
-Example:
+The expression matches at least the following utterances:
+>Please tell me a joke<br>
+>Can you tell me a joke
 
-`"Please tell me a *"`
-The expression matches at least the following utterances:<br>
-`Please tell me a story`<br>
-`Please tell me a joke`<br>
+You can use _an asterisk_ `*` sign to replace a word or a set of words in the position that the asterisk sign occupies.
+
+Example: `"Please tell me a *"`
+
+The expression matches at least the following utterances:
+>Please tell me a story<br>
+>Please tell me a joke
 
 You can reference built-in entities in your expressions.  Reference the entity using the `@` symbol.
 
-Example:
+Example: `"Good @partOfDay"`
 
-`"Good @partOfDay"`<br>
-The expression matches at least the following utterances:<br>
-`Good morning`<br>
-`Good afternoon`<br>
+The expression matches at least the following utterances:
+>Good morning<br>
+>Good afternoon
 
 You can reference your custom entities in your expressions.  Define the entity in the entities section of the `../res/nlu/regexp.json` file.
 
-Example:
+Example: `"What is the current weather in {location}"`
 
-`What is the current weather in {location}`<br>
-If you define possible values for `location` as `London` and `New York`, the expression matches at least the following utterances:<br>
-`What is the current weather in London`<br>
-`What is the current weather in New York`<br>
+If you define possible values for `location` as `London` and `New York`, the expression matches at least the following utterances:
+>What is the current weather in London<br>
+>What is the current weather in New York
 
 You can use an optional entity in the expressions.  The utterance is matched with or without the value of the optional entity.
 
-Example:
+Example: `"What is the horoscope [for|] [{@sunsign}]"`
 
-`"What is the horoscope [for|] [{@sunsign}]"`<br>
-The expression matches the following utterances:<br>
-`What is the horoscope`<br>
-`What is the horoscope for aries`<br>
+The expression matches the following utterances:
+>What is the horoscope<br>
+>What is the horoscope for aries
 
 You can use a positional entity in the expressions.  The utterance is matched if the entity is included in the position it occupies.
 
-Example:
+Example: `"$ play {track_name} [by|] [{band_name}]"`
 
-`"$ play {track_name} [by|] [{band_name}]"`<br>
-The expression matches the following utterances:<br>
-`Please play beautiful day by U2`<br>
-`Play with or without You by U2 `<br>
-The expression does not match<br>
-`Beautiful day by U2`<br>
+The expression matches the following utterances:
+>Please play beautiful day by U2<br>
+>Play with or without You by U2
+
+The expression does not match
+>Beautiful day by U2
 
 #### Defining entities
 In the `regexp.json` file, define each custom entity for use by the skill in the entities section and list its values.<br>
@@ -204,4 +199,3 @@ The full set of pre-built entities is defined in the values.json file in the Nod
 - `pronoun`: e.g `me`
 - `language`: e.g `english`
 - `lengthType`: e.g `inch`
-
