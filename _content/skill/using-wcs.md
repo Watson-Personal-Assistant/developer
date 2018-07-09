@@ -1,5 +1,5 @@
 ---
-title: Tutorial - creating a custom skill using WCS NLU
+title: Tutorial - Using the WCS nlu
 weight: 40
 ---
 
@@ -35,8 +35,12 @@ Import the sample Watson Assistant workspace into your Watson Assistant service 
 Download the [WCS-workspace-jokes.json]({{site.baseurl}}/further-topics/WCS-workspace-jokes.json) file and import it into a new workspace. For instructions, see [Configuring a Watson Assistant workspace](https://console.bluemix.net/docs/services/conversation/configure-workspace.html#creating-workspaces) in the Watson Assistant documentation.
 
 #### Step 3: Add WCS credentials and workspace info to skill
-1. From the top-level directory of your skill, start the setup wizard from the command-line to define your skill. Enter ```node setup-wizard.js```
-2. Follow the on-screen prompts.  Specify the space and organization where you added your Watson Assistant service.  To find the credentials of your Watson Assistant Workspace, on the Watson Assistant user interface, click **Service credentials** and then click **View credentials**. Specify the user name, password ID and name of your Watson Assistant workspace.  In this tutorial, the workspace name is 'jokes'.  Select WCS and SKILL as your NLU engine.
+1. From the top-level directory of your skill, start the setup wizard from the command-line to define your skill. Enter `node setup-wizard.js`.
+2. Follow the on-screen prompts.  For the WCS info... 
+  - Specify the user name, password and URL. To find this info, click on your Watson Assistant service, then on the Watson Assistant UI, click **Show** on the **Manage** tab.
+  - Specify 'jokes' as the workspace name.  
+  - Specify the version and version date of the Watson Assistant service.  Using `v1` and `2018-2-16` will probably work.  To get the precise info from the Watson Assistant service UI, click **API reference** and the URL in the browser will have the version in the path as `api/v#/` and the version date will be found under the **Versioning** section.
+  - Select WCS and SKILL as your NLU engine.
 
 #### Step 4: Modify the action.js file to handle the intents defined in WCS
 1. Define handlers for the intents, chuck-norris-joke and dad-joke, that are defined in your Watson Assistant workspace in the `actions.js` file.  To handle these intents, add the `request` module to the `actions.js` file to include external APIs that provide Chuck Norris and Dad jokes.
@@ -88,7 +92,7 @@ const getJoke = function(url, callback) {
     );
 },
 ```
-4. Update the catch-all intent handler to send the request to WCS.  Update the `unhandled` code to include:
+4. Update the catch-all intent handler to send the request to WCS.  Update the `unhandled` code to look like the following:
 ```javascript
 'unhandled': (request, response, context) => {
     handler.converse(request, response, context, converseCallback);
@@ -118,24 +122,24 @@ curl -X GET --verbose --header 'Accept: application/json' https://paste_your_ski
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
 
-#### Step 5.5: Add skill to WA
+#### Step 6: Add skill to WA
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "name": "your-joke-skill-name", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "name": "paste-your-joke-skill-name", "url": "https://paste-your-skill-name-here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
 
 
-#### Step 6: Converse with the joke skill
+#### Step 7: Converse with the joke skill
 Converse with the jokes skill using the  **/skills/{skillName}/converse** API endpoint of the Watson Assistant Solutions service.
 
 Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "tell me a joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "tell me a joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "dad", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "dad", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a chuck norris joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a chuck norris joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
 
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a dad joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/your-joke-skill-name/converse' `
+`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a dad joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
 
 > **What to do next?**<br/>
 Read about [configuring skill authentication]({{site.baseurl}}/skill/adding_skill_authentication).

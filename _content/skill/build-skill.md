@@ -1,5 +1,5 @@
 ---
-title: Tutorial - creating a custom skill using regexp NLU
+title: Tutorial - Using the regexp nlu
 weight: 30
 ---
 Watson Assistant Solutions provides a boilerplate in Node.js for creating a simple hello world skill. Using this skill, when you say hello to your assistant, your assistant responds with hello world.

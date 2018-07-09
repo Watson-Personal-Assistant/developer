@@ -9,7 +9,7 @@ The examples in this topic are based on an assistant with three custom skills:
 - an events skill
 - a fallback skill
 
-#### Setting an inconversation flag
+#### Setting an _in conversation_ flag
 During a conversation, a skill may prompt for more information from the end-user to assist with routing.
 For example:
 
@@ -38,7 +38,7 @@ _Figure 2 - routing by intent_
 In figure 2, the `#get_roadworks` intent is detected and a list of roadworks is provided in the response.
 
 You can also route the conversation using entities.  For example:
-- You might route using on an entity that is provided in an utterance.
+- You might route on an entity that is provided in an utterance.
 - You might route on an entity if only an entity is provided in the utterance.
 
 _Figure 3 - routing by entities_
@@ -82,11 +82,11 @@ A skill can use the utterance context when it evaluates a request and when it de
 
 In certain circumstances, you might want the skill to reject an utterance that it is equipped to handle.  For example, the traffic skill is designed to handle the `#get_map` intent. The goal of this intent is to display a live traffic map.  On evaluation, the skill returns a confidence level above its threshold value. However, you want the traffic skill to display a map if the user is at home and not if they are in their car.  You can design your skill to call the reject utterance function in the evaluation request.
 
-_Figure 6 - reject evaluation per utterance context_
+_Figure 6 - reject utterance per utterance context_
 
 ![Rejecting an utterance based on the utterance context]({{site.baseurl}}/images/reject_utterance2.png)
 
-In figure 6, when `$location` in utterance context is set to at home, the evaluation request is processed. Later in the conversation, when `$location` in utterance context is set to _in the car_, the evaluation request is rejected.
+In figure 6, when `$location` in utterance context is set to _at home_, the evaluation request is processed. Later in the conversation, when `$location` in utterance context is set to _in the car_, the evaluation request is rejected.
 **Note**: The `$location` variable is set by the app that is running in the car or the house, that is, the app that is sending the request.
 
 ##### Sample code
@@ -115,7 +115,7 @@ Define fallback skills to capture these circumstances. Design your fallback skil
 
 To configure a fallback skill, complete these steps:
 1.  Create a fallback skill, add fallback intents to the skill, and associate actions with these intents. <br>**Important**: Create fallback intents that are broad enough to capture most utterances and are likely to return a high confidence score for any utterance.
-3.  Add the skill to a skill set and tag it as a fallback skill.  For example, in skillsData, set:
+2.  Add the skill to a skill set and tag it as a fallback skill.  For example, in skillsData, set:
 ```
 {
   "fallback": true,
@@ -129,7 +129,7 @@ A fallback skill is created.
 #### Reusing evaluation results
 In response to an evaluation request from the routing core, your skill might return the skills response to the user utterance in the `evaluationResponse` object.  You might want to use these results and avoid an extra converse request to your skill.
 
-Evaluation response example:
+Sample code:
 ```
 {
   'yes': (request, response, context) => {
@@ -140,6 +140,24 @@ Evaluation response example:
 ```
 To persist context information, the handler function copies the context information from the evaluation response object to the context object. 
 
+#### Sending extra information in cards
+
+In a converse response, your skill returns text. You can enhance the text by returning extra information in a card.  
+
+Typically, a card is used to return more verbose text, to display a graphic, or to play music.  
+
+For example, the traffic skill returns an image of a live traffic map of the city center to the client device. The client device determines how this image is rendered to the user.  The text "Sure. Here is a live traffic map for the city center." is also returned to the client device.
+
+Figure 8 - sending a card in the converse response
+![Returning information in a card ]({{site.baseurl}}/images/card.png)
+
+Sample code:
+```JAVASCRIPT
+
+response.card('some action', {"some", "json"}),
+```
+
+**Note** Only one card object can be sent per converse response.
 
 > **What to do next?**<br/>
-Learn about the [knowledge and reasoning (alpha) components]({{site.baseurl}}/knowledge/what-is-kr).
+Learn about the [skills that are available with Watson Assistant for Industry]({{site.baseurl}}/flavours/industry).

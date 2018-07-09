@@ -1,7 +1,9 @@
 ---
-title: Using the regex browser plugin to help with pasting commands
+title: Using the regex browser plugin
 weight: 20
 ---
+
+You can use the regex browser plugin to help with pasting commands.
 
 ### Tip: Use regex browser plugin to add your API key to docs
 
