@@ -13,7 +13,7 @@ The high-level steps for deploying a custom skill are as follows:
 2. Host your skill externally, for example on IBM Cloud, for you and others to use.
 3. Register the skill with your Watson Assistant Solutions instance.
 
-You can add a custom or third party nlu engine to your skill. For instructions, see [Adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/)
+You can add a custom or third party nlu engine to your skill. For instructions, see [Adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/).
 
 ---
 ### Before you begin
@@ -46,7 +46,8 @@ Complete these steps to create, deploy, and register a custom skill.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
    - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  
-   Alternatively, rename the file ```.env.sample file``` as ```.env```. Add the following variables.  All variables are mandatory.
+   Alternatively, rename the file ```.env.sample```  fileas ```.env```. Add the following variables.  All variables are mandatory.
+   
         - ```WCS_USERNAME```
         - ```WCS_URL```
         - ```WCS_PASSWORD```
@@ -55,7 +56,8 @@ Complete these steps to create, deploy, and register a custom skill.
         - ```WCS_WORKSPACE_ID``` 
         - ```WCS_WORKSPACE_NAME```
         - ```WCS_WORKSPACE_LANGUAGE```
-    - If you are using a custom nlu, follow the instructions in [adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/)
+        
+    - If you are using a custom nlu, follow the instructions in [adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/).
 5.  Specify any mandatory entities for each intent in the ```../res/nlu/intents.json``` file.  
 6.  Specify the port that the skill will listen on.  In the  Node.js boilerplate, the default port is 10011. If you have multiple skills deployed on your local system, you might want to change the port number.  Edit the ```.env.sample``` file and rename it ```.env```.
 7. Add skill code for the evaluation handler and the action handler and the unhandled response for each intent to the ```actions.js```  file.
