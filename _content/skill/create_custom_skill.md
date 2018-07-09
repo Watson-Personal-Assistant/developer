@@ -41,7 +41,7 @@ Complete these steps to create, deploy, and register a custom skill.
   - ```skill, wcs, your_custom_nlu ```
 
     **Important**:  If you are using an older version of the boilerplate or SDK, you must add ```skill``` to the list of NLUs.
-    The value ```skill``` is required to specify that evaluation requests are handled at the skill.  If you not using the NodeJS boilerplate and SDK, you must support the evaluation method in your skill. The handling of evaluation requests by the routing core component of Watson Assistant Solutions is deprecated. The NLU values, for example, ```regexp```, specify the NLUs that the skill is uing to extract intents and entities from user utterances.
+    The value ```skill``` is required to specify that evaluation requests are handled at the skill.  If you not using the NodeJS boilerplate and SDK, you must support the evaluation method in your skill. The handling of evaluation requests by the routing core component of Watson Assistant Solutions is deprecated. The NLU values, for example, ```regexp```, specify the NLU engines that the skill uses to extract intents and entities from user utterances.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
    - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  
@@ -54,7 +54,7 @@ Complete these steps to create, deploy, and register a custom skill.
         - ```WCS_WORKSPACE_ID``` 
         - ```WCS_WORKSPACE_NAME```
         - ```WCS_WORKSPACE_LANGUAGE```
-
+    - If you are using a custom nlu, follow the instructions in [adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/)
 5.  Specify any mandatory entities for each intent in the ```../res/nlu/intents.json``` file.  
 6.  Specify the port that the skill will listen on.  In the  Node.js boilerplate, the default port is 10011. If you have multiple skills deployed on your local system, you might want to change the port number.  Edit the ```.env.sample``` file and rename it ```.env```.
 7. Add skill code for the evaluation handler and the action handler and the unhandled response for each intent to the ```actions.js```  file.
