@@ -8,7 +8,7 @@ To build a digital assistant, you can create your own custom skills and register
 
 For some of the skills, you use the cognitive portal to add knowledge to the skill.  For more information about the cognitive portal, see [Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
 
-All built-in skills for Watson Assistant for Hospitality are assigned to the `cognitive-spaces` skill set.  You also have access to the built-in skill sets that are provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
+All built-in skills for Watson Assistant for Hospitality are assigned to the `cognitive-spaces` skillset.  You also have access to the `industry` skillset that is provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
 
 ### Venues and Responses
 - Registered name: responses
@@ -37,15 +37,50 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
     - Open the curtains
     - Make it warmer
 
-### Bookings and Reservations
-- Registered name: restaurant-reservation
-- Description: Makes reservations in restaurants. Front desk staff manage the requests using the cognitive portal.
+### Small-talk
+- Registered name: small-talk
+- Description: Responds to small-talk such as greetings and goodbyes.
 - Sample utterances: 
-    - I want to book a table
-    - Can you make a reservation for me
-    - I want to reserve a restaurant
-    - I'd like to make a reservation
+    - Howdy
+    - How are you today
+    - over and out
+    - I am leaving
 
+### Wisdom
+- Registered name: wisdom
+- Description: Answers general knoweldge questions.
+- Sample utterances: 
+    - What is a hurricane
+    - Tell me about bitcoin
+    - What do you know about osmosis
+    - Who is Albert Einstein
+
+### Weather
+- Registered name: weather
+- Description: Responds to questions about the weather.
+- Sample utterances:
+    - How is the weather in London
+    - How is the weather tomorrow
+    - What is the 5 day forecast
+    - Should I take an umbrella
+
+### Fun
+- Registered name: fun
+- Description: A skill for telling jokes.
+- Sample utterances:
+    -  Can you tell me a joke
+    -  Make me laugh
+    -  Best joke ever
+
+
+### Default
+- Registered name: default
+- Description:  A general fallback skill for the cognitive-spaces skillset.
+- Sample utterances: 
+    - How far is central park
+    - How many cents in a euro
+    - What's for dinner
+    - What age are you
 
 > **What to do next?**<br/>
 [Learn about the Watson Assistant for Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
