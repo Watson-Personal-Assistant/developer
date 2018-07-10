@@ -43,8 +43,9 @@ When you create your IoT device mapping, adhere to the following rules:
 - An IoT controller can manage multiple IoT devices.
 - An IoT controller can manage multiple IoT device types, for example, a light and a fan.
 - An IoT controller can reside in a different location to the IoT device it manages.  
-- An IOT controller does not need to be mapped to a space.  However, it must be connected to the IOT devices it manages.
-- A speaker and the IOT device must be associated with the same IoT controller for a command to run.  An IoT controller stores the configuration details of the speakers that they can accept commands from.
+- An IoT controller does not need to be mapped to a space.  However, it must be connected to the IOT devices it manages.
+- A speaker must be associated with an IoT controller.  IoT controllers store the configuration details of the speakers that they can accept commands from.
+- A speaker and the IOT device must be associated with the same IoT controller for a command to run.  
 
 
 #### Sending the speaker ID
