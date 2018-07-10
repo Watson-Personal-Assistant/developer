@@ -17,7 +17,7 @@ The set of built-in skills that is available to you depends on which flavor of t
 ### Getting started
 You can purchase Watson Assistant Solutions or access a trial before you by.
 
-#### Purchase
+#### Purchase Watson Assistant Solutions
 Contact IBM for more information about purchasing Watson Assistant Solutions. See the following pages on IBM Marketplace for more information:
 - [Watson Assistant for Automotive page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to)
 - [Watson Assistant for Hospitality page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top)
@@ -26,10 +26,14 @@ Contact IBM for more information about purchasing Watson Assistant Solutions. Se
 <br>
 After you purchase, a Watson Assistant Solutions instance is provisioned.  During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt). After your instance is provisioned, you receive a _welcome letter_ with access information.
 
-#### Access a trial
-You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial either from the [Watson Assistant for Industry page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top) on IBM Marketplace or from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
+#### Access a trial of Watson Assistant Solutions
+You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial either from [IBM Marketplace](https://www.ibm.com/account/reg/us-en/signup?formid=urx-32902) or from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
 
-When you sign up, you must provide a valid email address.  After you complete the sign up form, you must validate your account using a 7-digit code that is sent to you by email. You are redirected to the console home page.  Wait a few minutes while your account is provisioned before you sign in.
+When you sign up, you must provide a valid email address.  After you complete the sign up form, you must validate your account using a 7-digit code that is sent to you by email. You are redirected to the console home page.  Wait a few minutes while your account is provisioned before you log in.
+
+You can log in to your trial instance using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key.
+
+To get started with your trial, complete some introductory  tasks, starting with [Add a skill]({{site.baseurl}}/trial/add-running-skill).
 
 > **What to do next?**<br/>
 [Access the Watson Assistan Solutions service]({{site.baseurl}}/get-started/get-api-key).
