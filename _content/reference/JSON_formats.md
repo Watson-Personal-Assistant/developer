@@ -1,5 +1,6 @@
 ---
-JSON structure
+title: JSON structure
+weight: 10
 ---
 In your custom skills, communication between your client device, the core routing component of Watson Assistant Solutions, and your custom skills is implemented using evaluate and converse methods.  
 
@@ -58,7 +59,6 @@ Parameter | Description | Type | Required
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  An empty context object is allowed.| object | yes
----
 
 ### 2. Evaluate request from the routing core to the skills
 
@@ -554,6 +554,7 @@ Parameter | Description | Type | Required
  `version`  | The version of the session.  Version information is set by the routing core.  | string | 
 
  Table 36 - Converse response parameters - skill context 
+ 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
 `attributes` |   Includes any session context attributes.  Include `"inConversation": "true"` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. | object | yes
@@ -676,4 +677,3 @@ Parameter | Description |
  Parameter | Description |
 ---------|----------|
  `context` | Contains the utterance context. | 
----
