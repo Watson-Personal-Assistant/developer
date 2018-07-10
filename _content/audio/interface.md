@@ -84,7 +84,10 @@ Example:
 }
 ```
 
-**Note**:  You can override which speech-to-text option to use in the audio start message.
+**Note**:  
+- You can also override which speech-to-text option to use in the audio start message.
+- You cannot override the audio format and sampling rate that is set in `content_type`.
+
 
 #### Text-to-speech options
 Text-to-speech options messages are sent from the audio client to the audio gateway.  The message specifies which text to speech engine to use for the current transaction.
@@ -103,7 +106,8 @@ Example:
 }
 ```
 
-**Note**: Overriding the tts engine to use is not supported.
+**Note**: 
+- Overriding the tts engine to use or any of its parameters is not supported.
 
 #### Text
 Text messages are sent between the audio client and the audio gateway.  The audio client can send a text message to the audio gateway.  The audio gateway can use a text message to deliver a textual response.
