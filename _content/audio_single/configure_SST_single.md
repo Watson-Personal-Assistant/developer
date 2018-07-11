@@ -13,7 +13,7 @@ You can set the speech-to-text `engine` parameter when you configure your audio 
 
 For more information about setting the `engine` parameter in the audio client, see the Audio Client Sample Code readme file.
 
-For more information about the `stt_options` and the `audio_start` messages, see the [audio streaming interface]({{site.baseurl}}/audio_single/how_it_works_audio) topic.
+For more information about the `stt_options` and the `audio_start` messages, see the [audio streaming interface]({{site.baseurl}}/audio_single/interface) topic.
 
 ### Text-to-speech
 The audio client uses the Watson text-to-speech service.  The text-to-speech service to use is not configurable.  The `voice` parameter is set to `en-US-LisaVoice`.
