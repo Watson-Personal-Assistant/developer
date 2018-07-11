@@ -3,8 +3,6 @@ title: Tracking your service usage
 weight: 20
 ---
 
-**Important**: The topic does not apply to trial accounts.  Trial users are do not have a limit of digital interactions.
-
 When you purchase a flavor of Watson Assistant Solutions, you purchase a plan. As part of your plan, you are entitled to use a specific number of entities or digital interactions, or both per month. For example, your plan might include 3000 entities and 30000k digital interactions per month.
 
 Entities and digital interactions are defined as follows:
@@ -25,6 +23,8 @@ After your Watson Assistant Solutions instance is provisioned, you can use eithe
 You can view a summary of your plan entitlements on the Watson Assistant Solutions console home page. Here, you see the number of entities and digital interactions you  purchased and used for the current month. Click **Manage Usage** or **Admin** from the menu bar to open the Admin page.  On this page, you can view overage, or excess, for the current month.
 
 Your user profile might be associated with multiple tenants.  Each tenant has a separate plan. The **Admin** dialog displays a plan summary for each tenant you are assigned to.  If you have sufficient admin permissons, you can edit the name of each tenant and the date that the tenant contract ends.  
+
+**Important**: The topic does not apply to trial accounts.  Trial users have unlimited digital interactions. Trial users have access to a single tenant only.  The **Admin** page on the console shows the tenant name, tenant ID, and tenant creation date only.
 
 
 > **What to do next?**<br/>
