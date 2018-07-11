@@ -17,7 +17,7 @@ Complete these steps to configure IAM authentication for your instances:
     2. Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your local system.
     3. Start the script from the command line.  Enter `./wa-get-iam.sh` and follow the on-screen prompts.
     4. When prompted, provide your IAM API key (step 2a).  The script provides you with an IAM ID.
-3.	Send an email to the Watson Assistant Solutions support team to request that your IAM ID and IBMid be associated with your instances. See your welcome letter for contact details.   Include the following information:<br/>
+3.	Send an email to the [Watson Assistant Solutions support team](mailto:k4o2a6m8u6n8n2t6@ibm-sagan.slack.com) to request that your IAM ID and IBMid be associated with your instances. See your welcome letter for contact details.   Include the following information:<br/>
   -	IAM ID
   -	IBMid
   -	Watson Assistant Solutions instances names or your existing Watson Assistant Solutions API keys.
