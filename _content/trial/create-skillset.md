@@ -33,7 +33,7 @@ Complete these steps to add a skill to the skillset:
   {
     "fallback": false,
     "skillNames": [
-      "added-skill-jokes",
+      "joke-skill",
       "general-knowledge",
       "weather"
     ]
@@ -43,7 +43,7 @@ Complete these steps to add a skill to the skillset:
 7. Verify that the following messages are displayed in the response body.
   ```
   [
-    "link between my-skillset and added-skill-jokes added",
+    "link between my-skillset and joke-skill added",
     "link between my-skillset and general-knowledge added",
     "link between my-skillset and weather added"
   ]
