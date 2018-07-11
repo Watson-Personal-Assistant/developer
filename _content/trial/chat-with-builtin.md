@@ -3,21 +3,23 @@ title: Chat with the built-in skillset
 weight: 10
 ---
 
-This task will be performed using the Watson Assistant Solutions console. 
+Skills are grouped into skillsets. The built-in skills for Watson Assistant for Industry are in the industry skillset.  
 
-1. Access the console at [https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net).
+### Procedure
 
-2. Using the **Select a skillset** choice list on the right side of the UI above the Chat UI, choose **industry**.
+1. Log in to the Watson Assistant Solutions console.
+    1. Go to [https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net).
+    2. Log in with your IBMid.
+2. Go to the chat box on the console home page.
+3. From the **Select a skillset** drop down, select `industry`.
+4. In the **Tap to type** field, add your text. For example:
 
-3. Click and type in the text field below were it says **_Tap to type_**.
+    - what is the weather in london
+    - who is ghandi
+    - hello
+    - goodbye
+    - what time is it
+    - how are you
 
-Examples of what you can type are:
-   - what is the weather in london
-   - who is ghandi
-   - hello
-   - goodbye
-   - what time is it
-   - how are you
-
->**Try more**<br>
-See the [Watson Assistant for Industry page]({{site.baseurl}}/flavours/industry/) for more request examples.
+> **What to do next?**<br/>
+See the [Watson Assistant for Industry skills]({{site.baseurl}}/flavours/industry/) page for more utterance examples.
