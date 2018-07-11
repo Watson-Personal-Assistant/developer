@@ -404,7 +404,7 @@ Parameter | Description |
  `retext` | The user utterance after the text is normalized. |
  `attributes` | Includes the intent with the higest confidence score.  If no intent was returned, the entity with the highest confidence score is specified. Note: The intent or entity must have a confidence score that is above the confidence score threshold that is set in th manifest file of the skill. The default threshold in the NodeJS boilerplate is `0.85`. |
  `context` | Information about the context of the conversation with the user. |
- `skill` | | Information about the skill that processed the response. | 
+ `skill` | | Information about the skill. | 
  `evaluationResponse` | Information about response to the utterance that the skill returned with the highest confidence level.
 
 #### Table 19 - Converse request parameters - attributes
@@ -460,7 +460,7 @@ Parameter | Description |
 ---------|----------|-
  `attributes` | Includes any utteranace context information. |
 
-#### Table 27 - Converse response parameters - skill
+#### Table 27 - Converse request parameters - skill
 
  Parameter | Description | 
 ---------|----------|
@@ -469,7 +469,7 @@ Parameter | Description |
  `intents` | The intent of the skill that returned the highest confidence score. |
  `confidence` | The confidence score of the intent or entity that returned the highest confidence score. |
 
-#### Table 28 - Converse response parameters - entities 
+#### Table 28 - Converse request parameters - entities 
 
 Parameter | Description | 
 ---------|----------|
@@ -477,20 +477,20 @@ Parameter | Description |
  `value` | The value of the extracted entity. |
  `confidence` | A confidence value that is associated the entity value. |
 
-#### Table 29 - Converse response parameters - intents 
+#### Table 29 - Converse request parameters - intents 
 
 Parameter | Description |
 ---------|----------|
  `intent` | The name of the intent with the highest confidence score. 
  `confidence` | The confidence score of the intent. | 
  
-#### Table 30 - Converse response parameters - evaluationResponse 
+#### Table 30 - Converse request parameters - evaluationResponse 
 
 Parameter | Description |
 ---------|----------|
  `response` | The response to the utterance.
  `handleRequest` | Reflects the value of the handleUtterance parameter returned by the skill in the evaluation response. | 
- `context` | Information about the context of the conversation with the user.  See Table 20 for a description of the context object| 
+ `context` | Context infomration that was returned by the skill in the evaluation response.  See Table 9 for a description of the context object. | 
 
 ---
 
@@ -641,11 +641,11 @@ Parameter | Description | Type | Required
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `id`  | The ID of the session that is assigned by the routing core. | string | 
- `new` | Specifies whether a conversation with the user is already in progress.   | boolean | 
- `skill` | Includes attributes representing the skill context | object | 
- `attributes` |  Includes any session context information. An empty attributes object is allowed.| object | 
- `version`  | The version of the session.  Version information is set by the routing core. The version is always `1.0`. | string | 
+ `id`  | The ID of the session that is assigned by the routing core. | string | yes
+ `new` | Specifies whether a conversation with the user is already in progress.   | boolean | yes
+ `skill` | Includes attributes representing the skill context | object | yes
+ `attributes` |  Includes any session context information. An empty attributes object is allowed.| object | yes
+ `version`  | The version of the session.  Version information is set by the routing core. The version is always `1.0`. | string | yes
 
 #### Table 41 - Converse response parameters - skill context 
  
