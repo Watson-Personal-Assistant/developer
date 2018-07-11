@@ -33,5 +33,7 @@ Build an audio client Java application to emulate an audio device from a sample 
 
 12. In the terminal window, execute the built jar file using by typing `java -jar target/wpa-1.4-SNAPSHOT.jar`.
 
+13. To send audio, press **Return** key on your keyboard and then speak "Hello".  You don't have to hold down the return key or click it again after saying the utterance, just pause and your speech will be sent through the audio gateway to your Watson Assistant Solutions tenant.
+
 > **What to do next?**<br/>
 Use the sample code to connect a Raspberry Pi to your assistant or, if you have your own hardware, use the code and the [client device interface specification]({{site.baseurl}}/audio/interface/) to connect it to your assistant.
