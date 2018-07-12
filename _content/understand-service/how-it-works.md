@@ -7,7 +7,7 @@ You can configure skills to react to user utterances.
 A high-level description of the flow of the conversation between a client device and Watson Assistant Solutions presented in Figure 1. For a detailed description, see the [how routing works in detail]({{site.baseurl}}/advanced/how-it-works_advanced) topic.
 
 Figure 1 - how routing works
-![Routing flow](../images/routing_flow.png)
+![Routing flow]({{site.baseurl}}/images/routing_flow.png)
 
 1. A client device routes a captured utterance to the Watson Assistant Solutions.
 2. The routing component of  Watson Assistant Solutions sends the utterance to all registered skills for evaluation.
