@@ -1,8 +1,8 @@
-
 ---
-title: Command and control skills
+title: Creating command and control skills
 weight: 10
 ---
+
 A command and control skill allows users to control IoT devices from an assistant. 
 
 In a single conversation, Watson Assistant Solutions can route user utterances between different skills. For example, a user might say "turn off the light" and then ask "what time is sunrise tomorrow". The command is routed to a room control skill and the question is routed to a time skill. You can design these skills to share context information, such as location, between them to enhance the conversation.
@@ -33,7 +33,7 @@ As part of your fulfillment solution, you must create a mapping of IoT devices a
 
 Figure 1 displays the mapping between IoT devices and IoT controllers
 
-![Mapping](mapping.png)
+![Mapping]((../images/mapping.png)
 
 When you create your IoT device mapping, adhere to the following rules:
 
@@ -73,7 +73,7 @@ For example:
 
 Figure 2 displays the flow of commands from the smart speaker to the IoT device.
 
-![Mapping](flow_of_commands.png)
+![Mapping]((../images/flow_of_commands.png)
 
 The steps in this flow are as follows:
 
