@@ -4,7 +4,7 @@ weight: 50
 ---
 The routing core component of Watson Assistant Solutions uses the following routing algorithms to find the skill that is best placed to handle an utterance and to deliver a response from that skill to the client.
 
-For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/understand_service/how_routing_works/) topic.  The routing flow is described in detail in the following sections:
+For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/understand_service/how-routing-works/) topic.  The routing flow is described in detail in the following sections:
 
 ### Scenario 1: A new conversation with a client device
 
@@ -59,4 +59,4 @@ For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/
     - If no fallback skill can process the request, routing core sends a response to the client device with the text `I'm not trained for this` as the response.
 
 > **What to do next?**<br>
-To see a summmary, read [How routing works]({{site.baseurl}}/understand_service/how_routing_works/)
+To see a summmary, read [How routing works]({{site.baseurl}}/understand_service/how-routing-works/)
