@@ -20,8 +20,8 @@ You can use the Watson Assistant Chatbot web app to talk to your skillset using 
     `https://wa-chat-bot.mybluemix.net?wa_key=paste-your-API-key-here&skillset=my-skillset`
 5. In the Watson Assistant Chatbot web app, click the microphone button.
 6. Using your voice, say "tell me a Dad joke".
-7. Click the  stop recording button.  Watson tells you a Dad joke through your your speakers.
-8. Say something else to experiment with the voice interaciton. 
+7. Click the  stop recording button.  Watson tells you a Dad joke through your speakers.
+8. Say something else to experiment with the voice interaction. 
 
 > **What to do next?**<br/>
 Enhance your hello/goodbye skill using the [Regexp NLU]({{site.baseurl}}/further-topics/regexp_nlu/) topic as a reference.<br>
