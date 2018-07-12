@@ -89,7 +89,7 @@ The steps in this flow are as follows:
 
 Complete these steps:
 
-1. Create and deploy your custom command and control skill.  Register your skill with Watson Assistant Solutions.  See the _Adding a custom skill_ topic for more information
+1. Create and deploy your custom command and control skill.  Register your skill with Watson Assistant Solutions.  See the [Adding a custom skill]({{site.baseurl}}/skill/create_custom_skill/) topic for more information
 2. Deploy your custom skill.
 3. Create a skill fulfillment service.
 4. Create an IoT device mapping.
