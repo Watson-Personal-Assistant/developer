@@ -14,7 +14,7 @@ Skills are grouped into skillsets. The built-in skills for Watson Assistant for 
 3. From the **Select a skillset** drop down, select `industry`.
 4. In the **Tap to type** field, add your text. For example:
 
-    - what is the weather in london
+    - what is the weather
     - who is ghandi
     - hello
     - goodbye
