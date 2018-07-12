@@ -31,11 +31,14 @@ Contact IBM for more information about purchasing Watson Assistant Solutions. Se
 #### Access a trial of Watson Assistant Solutions
 You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
 
-When you sign up, you must provide a valid email address.  After you complete the sign up form, you must validate your account using a 7-digit code that is sent to you by email. You are redirected to the console home page.  Wait a few minutes while your account is provisioned.
-
 You can log in to your trial instance using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key.
 
-To get started with your trial, complete some introductory  tasks, starting with [Add a skill]({{site.baseurl}}/trial/add-running-skill).
+To get started with your trial, complete the following tasks:
+- [Add a skill]({{site.baseurl}}/trial/add-running-skill).
+- [Chat with the built-in skillset]({{site.baseurl}}/trial/chat_with_builtin).
+- [Create a new skillset]({{site.baseurl}}/trial/create-skillset).
+- [Speak to your skillset]({{site.baseurl}}/trial/speak-to-skillset).
+- [Evulate device with Java app]({{site.baseurl}}/trial/emulate-device).
 
 > **What to do next?**<br/>
 [Access the Watson Assistan Solutions service]({{site.baseurl}}/get-started/get-api-key).
