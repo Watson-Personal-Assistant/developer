@@ -33,7 +33,7 @@ As part of your fulfillment solution, you must create a mapping of IoT devices a
 
 Figure 1 displays the mapping between IoT devices and IoT controllers
 
-![]({{site.baseurl}}/images/mapping.png)
+![]({{site.baseurl}}/images/mapping.PNG)
 
 When you create your IoT device mapping, adhere to the following rules:
 
