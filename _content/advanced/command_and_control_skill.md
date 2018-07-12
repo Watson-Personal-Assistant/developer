@@ -33,7 +33,7 @@ As part of your fulfillment solution, you must create a mapping of IoT devices a
 
 Figure 1 displays the mapping between IoT devices and IoT controllers
 
-![Mapping]((../images/mapping.png)
+![]({{site.baseurl}}/images/mapping.png)
 
 When you create your IoT device mapping, adhere to the following rules:
 
@@ -73,7 +73,7 @@ For example:
 
 Figure 2 displays the flow of commands from the smart speaker to the IoT device.
 
-![Mapping]((../images/flow_of_commands.png)
+![]({{site.baseurl}}/images/flow_of_commands.png)
 
 The steps in this flow are as follows:
 
