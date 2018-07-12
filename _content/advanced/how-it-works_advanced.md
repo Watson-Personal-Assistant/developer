@@ -4,7 +4,7 @@ weight: 50
 ---
 The routing core component of Watson Assistant Solutions uses the following routing algorithms to find the skill that is best placed to handle an utterance and to deliver a response from that skill to the client.
 
-For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/understand_service/how-routing-works/) topic.  The routing flow is described in detail in the following sections:
+For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/understand_service/how-it-works/) topic.  The routing flow is described in detail in the following sections:
 
 ### Scenario 1: A new conversation with a client device
 
@@ -45,10 +45,10 @@ For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/
 4. For the skill that is in conversation, the  routing core inspects the confidence threshold of the skill  in the `../res/assets/manifest.json`.  The default threshold is `0.85`.  The routing core chooses the skill if its highest confidence score is above the threshold value set for the skill:
     - If the skill that is in a conversation is eliminated, the routing core evaluates all the confidence scores of all other skills by completing steps 8-14 in scenario 1.
     - If the skill that is in conversation is not eliminated:
-        1. The routing core sends the converse request to the skill that is in conversation with the client device.
-        2. The skill processes the request.  The skill calls the action code for the specific intent.  If an entity is chosen, the skill calls the action code for entities.
-        3. The skill returns a response with the text and optionally a card with additional informaton. See step 13 in scenario 1 for details.
-        4. The core routing component sends the response to the client device.
+     1. The routing core sends the converse request to the skill that is in conversation with the client device.
+     2. The skill processes the request.  The skill calls the action code for the specific intent.  If an entity is chosen, the skill calls the action code for entities.
+     3. The skill returns a response with the text and optionally a card with additional informaton. See step 13 in scenario 1 for details.
+     4. The core routing component sends the response to the client device.
    
 ### Sceanrio 4 - No skill is capable of handling the request
 
@@ -59,4 +59,4 @@ For a summary of the routing flow, see the [How routing works]({{site.baseurl}}/
     - If no fallback skill can process the request, routing core sends a response to the client device with the text `I'm not trained for this` as the response.
 
 > **What to do next?**<br>
-To see a summmary, read [How routing works]({{site.baseurl}}/understand_service/how-routing-works/)
+To see a summmary, read [How routing works]({{site.baseurl}}/understand_service/how-it-works/)
