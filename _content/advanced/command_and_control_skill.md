@@ -96,3 +96,6 @@ Complete these steps:
 5. Connect your IoT devices and IOT controllers.
 
 **Note**: The steps are geared towards customers who have Watson Assistant for Industry or Watson Assistant for Automotive.
+
+> **What to do next?**<br>
+To see how to create a skill, read [Adding a custom skill]({{site.baseurl}}/skill/create_custom_skill/)
