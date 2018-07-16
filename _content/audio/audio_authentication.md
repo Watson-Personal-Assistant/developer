@@ -4,6 +4,8 @@ weight: 20
 ---
 Before an audio client can connect to the audio gateway, you must provision the audio client with an IAM API key.  This key is sometimes referred to as a platform API key or an IBM Cloud API key. For more information, see the [Setting up IAM Authentication]({{site.baseurl}}/further-topics/login-with-IBMid/). For better security, audio clients should use separate API keys.
 
+**Restriction**: When you create your IAM API key, the associated IBMid must be linked to one tenant only.
+
 The audio client passes an IAM token to authenticate when it first connects to audio gateway. To convert your IAM ID to an IAM token, you can use the following command:
 
 `curl -s 'https://iam.bluemix.net/oidc/token?grant_type=urn:ibm:params:oauth:grant- type:apikey&response_type=cloud_iam&apikey=<apikey>' -H'Content-Type:x-www-form-urlencoded' -XPOST`
