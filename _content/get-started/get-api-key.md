@@ -15,7 +15,7 @@ Log in to the Watson Assistant Solutions console to access your instance.  From 
 #### About this task
 You can log in to the console with your IBMid or your Watson Assistant Solutions API key.  
 
-If you purchased Watson Assistant Solutions, your API key is provided in your Welcome Letter.  To use an IBMid, complete the instructions in [Setting up IAM Authentication]({{site.baseurl}}/further-topics/login-with-IMBid) before using your IBMid.
+If you purchased Watson Assistant Solutions, your API key is provided in your Welcome Letter.  To use an IBMid, complete the instructions in [Setting up IAM Authentication]({{site.baseurl}}/further-topics/login-with-IBMid) before using your IBMid.
 
 If you are a trial user of Watson Assistant Solutions, your IBMid is set up for IAM Authenticaton.  When you log in with your IBMid, your API key is available from the profile menu on the top right corner of the UI.
 
