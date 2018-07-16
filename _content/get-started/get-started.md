@@ -43,4 +43,4 @@ To get started with your trial, complete the following tasks:
 - [Emulate device with Java app]({{site.baseurl}}/trial/emulate-device).
 
 > **What to do next?**<br/>
-[Access the Watson Assistan Solutions service]({{site.baseurl}}/get-started/get-api-key).
+[Access the Watson Assistant Solutions service]({{site.baseurl}}/get-started/get-api-key).
