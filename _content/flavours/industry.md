@@ -6,10 +6,10 @@ IBM Watson Assistant for Industry provides a framework for creating a digital as
 
 To build your digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available to your when you sign up for Watson Assistant for Industry.  The built-in skills for Watson Assistant for Industry are listed in the following section.
 
-All built-in skills for Watson Assistant for Industry are assigned to the `built-in` skill set.
+All built-in skills for Watson Assistant for Industry are assigned to the `industry` skillset.
 
 ### Conversational Essentials
-- Registered name: built-in-skill-conversational-essentials
+- Registered name: conversational-essentials
 - Description: Responds to small-talk such as greetings and goodbyes.
 - Sample utterances: 
     - Howdy
@@ -17,8 +17,8 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - over and out
     - I am leaving
     
-### Watch
-- Registered name: built-in-skill-watch
+### Time
+- Registered name: time
 - Description: Provides date and time information.
 - Sample utterances: 
     - Time please
@@ -27,7 +27,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - What is the current date
 
 ### General Knowledge
-- Registered name: built-in-skill-general-knowledge
+- Registered name: general-knowledge
 - Description: Answers general knoweldge questions.
 - Sample utterances: 
     - What is a hurricane
@@ -36,7 +36,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - Who is Albert Einstein
 
 ### Weather
-- Registered name: built-in-skill-weather
+- Registered name: weather
 - Description: Responds to questions about the weather.
 - Sample utterances: 
     - How is the weather in London
@@ -44,9 +44,20 @@ All built-in skills for Watson Assistant for Industry are assigned to the `built
     - What is the 5 day forecast
     - Should I take an umbrella
 
+### Points of Interest
+- Registered name: points-of-interest
+- Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating.
+- Sample utterances: 
+    - Any restaurants in London
+    - Are there any gas stations near me
+    - Tell me more about this place
+    - What are the opening hours of this place
+    - What is the phone number of this place
+    - What is the rating of this place
+
 ### Default
-- Registered name: built-in-skill-default
-- Description: A general fallback skill for the built-in skill set.
+- Registered name: default
+- Description: A general fallback skill for the industry skillset.
 - Sample utterances: 
     - How far is central park
     - How many cents in a euro

@@ -5,6 +5,9 @@ weight: 10
 Watson Assistant Solutions supports IAM authentication for accessing the Watson Assistant Solutions console and its REST APIs.  Before you use IAM authentication, you must create an IBMid and an IAM ID and send both to Watson Assistant Solutions support. The support team will link your IBMid and your IAM ID with your instances.
 
 ### About this task
+
+**Important**: The topic does not apply to trial accounts.
+
 A script, [wa-get-iam.sh](https://watson-personal-assistant.github.io/developer/assets/scripts/wa-get-iam-id.sh), is available for download to help you create your IAM ID.
 
 **Tip**: To create an IAM ID, you must first create an IAM API key. This key is sometimes referred to as a Platform API key or an IBM Cloud API key.

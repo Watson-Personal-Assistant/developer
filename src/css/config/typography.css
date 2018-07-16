@@ -40,11 +40,11 @@ blockquote {
 }
 
 li {
-  margin-top: 0.25rem;
+  margin: 0 0 0.25rem;
 }
 
 ul {
-  margin-top: 0;
+  margin: 0 0 0.75rem;
 }
 
 p {
