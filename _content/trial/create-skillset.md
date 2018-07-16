@@ -7,7 +7,7 @@ In this task, you’ll use REST APIs to create a new skillset.  After you log in
 
 ### Before you begin
 
-Add the sample skill to your tenant. See the [Add a running skill]({{site.baseur}}/trial/add-running-skill/) trial task.
+Add the sample skill to your tenant. See the [Add a running skill]({{site.baseurl}}/trial/add-running-skill/) trial task.
 
 ### Procedure
 
@@ -57,4 +57,4 @@ You can chat with the skills in your skillset from the chat box on the console h
 * What is the weather in london
 
 > **What to do next?**<br/>
-Create a hello/goodbye skill by following the [creating a custom skill using regexp NLU]({{site.baseurl}}/skills/build-skill/) tutorial and add it to your skillset.
+Create a hello/goodbye skill by following the [creating a custom skill using regexp NLU]({{site.baseurl}}/skill/build-skill/) tutorial and add it to your skillset.
