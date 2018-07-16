@@ -11,6 +11,7 @@ Watson Assistant Solutions supports IAM authentication for accessing the Watson 
 A script, [wa-get-iam.sh](https://watson-personal-assistant.github.io/developer/assets/scripts/wa-get-iam-id.sh), is available for download to help you create your IAM ID.
 
 **Tip**: To create an IAM ID, you must first create an IAM API key. This key is sometimes referred to as a Platform API key or an IBM Cloud API key.
+**Restriction**: To create an IAM ID for an audio client, the IBMid you use must be associated with a single tenant.
 
 ### Procedure
 Complete these steps to configure IAM authentication for your instances:
