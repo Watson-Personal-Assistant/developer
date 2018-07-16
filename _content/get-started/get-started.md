@@ -33,7 +33,7 @@ You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign u
 
 You can log in to your trial instance using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key. 
 
-To give access to your tenant to others in your organization, share you API key with them so that they can log in with your API key.
+To give access to your tenant to others in your organization, share your API key with them so that they can log in with your API key.
 
 To get started with your trial, complete the following tasks:
 - [Chat with the built-in skillset]({{site.baseurl}}/trial/chat-with-builtin).
