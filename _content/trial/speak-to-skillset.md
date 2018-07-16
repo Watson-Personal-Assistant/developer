@@ -7,7 +7,7 @@ You can use the Watson Assistant Chatbot web app to talk to your skillset using 
 
 ### Before you begin
 
-* [Create an new skillset]({{site.baseur}}/trial/create-skillset/).
+* [Create a new skillset]({{site.baseur}}/trial/create-skillset/).
 
 ### Procedure
 
