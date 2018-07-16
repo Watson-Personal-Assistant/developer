@@ -36,11 +36,11 @@ You can log in to your trial instance using an IBMid or an API key. When you rec
 If you want to give access to your tenant to others in your organization, share you API key with them so that they can log in with your API key.
 
 To get started with your trial, complete the following tasks:
+- [Chat with the built-in skillset]({{site.baseurl}}/trial/chat-with-builtin).
 - [Add a skill]({{site.baseurl}}/trial/add-running-skill).
-- [Chat with the built-in skillset]({{site.baseurl}}/trial/chat_with_builtin).
 - [Create a new skillset]({{site.baseurl}}/trial/create-skillset).
 - [Speak to your skillset]({{site.baseurl}}/trial/speak-to-skillset).
-- [Evulate device with Java app]({{site.baseurl}}/trial/emulate-device).
+- [Emulate device with Java app]({{site.baseurl}}/trial/emulate-device).
 
 > **What to do next?**<br/>
 [Access the Watson Assistan Solutions service]({{site.baseurl}}/get-started/get-api-key).
