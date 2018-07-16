@@ -20,7 +20,7 @@ skill:
   icon: graduation-cap 
 
 flavours:
-  title: Flavor
+  title: Flavors
   icon: pencil
   
 knowledge:
@@ -44,9 +44,17 @@ further-topics:
   icon: pencil
   
 trial:
-  title: Trial Tasks
+  title: Trial tasks
   icon: bookmark
 
+advanced:
+  title: Advanced
+  icon: code
+  
+reference:
+  title: Reference
+  icon: code
+  
 get-help:
   title: Help
   icon: life-ring

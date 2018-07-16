@@ -8,7 +8,7 @@ Audio streaming between an audio gateway for hospitality and an audio client use
 Messages are used on the web socket interface to communicate between the audio client and the audio gateway.  All messages are in JSON format.  Each message includes a transaction ID that is used by the audio gateway to track the transaction.  To ensure that each ID is unique, consider using a globally unique identifier (GUID) for the transaction ID.
 
 #### Audio start
-Audio start messages are sent between the audio client and the audio gateway.  The message indicates that the sender is ready to send audio data.  You can optionally specify which speech-to-text (stt) and text-to-speech option (tts) to use for the transaction.  If included, the `stt` and `tts` values override the default settings.
+Audio start messages are sent between the audio client and the audio gateway.  The message indicates that the sender is ready to send audio data.  You can optionally specify which speech-to-text (stt) engine to use for the transaction.  If included, the `stt` value override the default settings.
 
 Example:
 ```
@@ -36,10 +36,6 @@ Example:
 "encoding": "base64"
 }
 ```
-
-#### Audio data adaptive streaming
-Audio data adaptive streaming messages are sent between the audio client and the audio gateway.  The message is used to apply an adaptive streaming format to the audio to improve audio quality.  Otherwise, the audio might sound choppy or it might not be possible to deliver the audio message before the playback of the audio exceeds the audio buffer.
-
 #### Audio end
 Audio end messages are sent between the audio client and the audio gateway.   The message indicates that the sender has completed the sending of audio data. The message is always preceded by an audio start message.
 
@@ -79,25 +75,10 @@ Example:
 }
 ```
 
-**Note**:  You can override which speech-to-text option to use in the audio start message.
 
-#### Text-to-speech options
-Text-to-speech options messages are sent from the audio client to the audio gateway.  The message specifies which text to speech engine to use for the current transaction.
-
-Example:
-```
-{
-  "id": "86836b60-0a5f-11e7-aa14-a3b192c91ac9",
-  "action": "tts_options",
-  "options": {
-    "engine": "watson",
-    "accept": "audio/l16; rate=16000; channels=1",
-    "voice": "en-US_LisaVoice"
-  }
-}
-```
-
-**Note**: Overriding the tts engine to use is not currently supported.
+**Note**:  
+- You can also override which speech-to-text option to use in the audio start message.
+- You cannot override the audio format and sampling rate that is set in `content_type`.
 
 #### Text
 Text messages are sent between the audio client and the audio gateway.  The audio client can send a text message to the audio gateway.  The audio gateway can use a text message to deliver a textual response.
