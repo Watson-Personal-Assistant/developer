@@ -11,7 +11,7 @@ Add the sample skill to your tenant. See the [Add a running skill]({{site.baseur
 
 ### Procedure
 
-Complete these steps to create a skillset:
+#### Create a skillset:
 
 1. Log in to the Watson Assistant Solutions console.
     1. Go to [https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net).
@@ -23,32 +23,31 @@ Complete these steps to create a skillset:
 6. Click **Execute**.
 7. Verify that a `skillSet added successfully` message is displayed in the response body.
 
-Complete these steps to add a skill to the skillset:
+#### Add a skill to the skillset:
 
 1. In the **Common Use** section, click the **PUT /v2/api/skillSets/{skillSetName}** API.
 2. Click **Try it out** on the right side of the UI.
 3. In the skillSetName field, enter `my-skillset`.
 4. In the Example Value text box, edit the JSON code to include the following:
-  ```
-  {
+```json
+{
     "fallback": false,
     "skillNames": [
-      "joke-skill",
-      "general-knowledge",
-      "weather"
+        "joke-skill",
+        "general-knowledge",
+        "weather"
     ]
-  }
-  ```
-6. Click **Execute**.
-7. Verify that the following messages are displayed in the response body.
-  ```
-  [
-    "link between my-skillset and joke-skill added",
-    "link between my-skillset and general-knowledge added",
-    "link between my-skillset and weather added"
-  ]
-
-  ```
+}
+```
+5. Click **Execute**.
+6. Verify that the following messages are displayed in the response body.
+```
+[
+  "link between my-skillset and joke-skill added",
+  "link between my-skillset and general-knowledge added",
+  "link between my-skillset and weather added"
+]
+```
 
 You can chat with the skills in your skillset from the chat box on the console home page. Select your skillset from the S**elect a skillset** drop-down.   For example, enter:
 * Tell me a Dad joke
