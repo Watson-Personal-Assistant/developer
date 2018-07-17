@@ -26,6 +26,10 @@ flavours:
 knowledge:
   title: Knowledge and reasoning
   icon: code
+
+reference:
+  title: Reference Materials
+  icon: code
   
 audio:
   title: Audio
