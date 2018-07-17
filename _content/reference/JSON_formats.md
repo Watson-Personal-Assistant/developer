@@ -7,7 +7,7 @@ In your custom skills, communication between your client device, the core routin
 In figure 1, the flow of a conversation between your client device and your assistant is displayed. For more information about the flow of the conversation, see the _How routing works_ topic.  
 
 Figure 1 - converse flow
-![Routing flow]({{site.baseurl}}/images/converse_flow.PNG)
+![Routing flow]({{site.baseurl}}/images/routing_flow.png)
 
 In sections 1-6, an example of the JSON structure at each step in the flow is presented.
 
