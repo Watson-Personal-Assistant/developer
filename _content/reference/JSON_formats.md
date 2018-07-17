@@ -38,7 +38,7 @@ The JSON structure of the converse request from the client device to the routing
     "context": {
       "locationName": "at-home",
       "locationLatitude": 36.169941,
-      "LocationLongitude": -115.139829
+      "locationLongitude": -115.139829
     }
   }
 }
@@ -89,7 +89,7 @@ The JSON structure of the evaluate request from the routing core to the skills i
       "attributes": {
         "locationName": "at-home",
       "locationLatitude": 36.169941,
-      "LocationLongitude": -115.139829
+      "locationLongitude": -115.139829
       }
     }
   }
@@ -169,7 +169,7 @@ The JSON structure of the evaluate response from a skill to the routing core is 
       "attributes": {
         "locationName": "at-home",
         "locationLatitude": 36.169941,
-        "LocationLongitude": -115.139829
+        "locationLongitude": -115.139829
       }
     }
   },
@@ -339,7 +339,7 @@ The JSON structure of the converse request from the routing core to a skill is a
       "attributes": {
         "locationName": "at-home",
         "locationLatitude": 36.169941,
-        "LocationLongitude": -115.139829
+        "locationLongitude": -115.139829
       }
     }
     },
@@ -394,7 +394,7 @@ The JSON structure of the converse request from the routing core to a skill is a
         "attributes": {
           "locationName": "at-home",
           "locationLatitude": 36.169941,
-          "LocationLongitude": -115.139829
+          "locationLongitude": -115.139829
         }
       }
     }
@@ -432,7 +432,8 @@ Parameter | Description |
  `application` | The application ID and any utterance context information. |
 
 #### Table 21 -  Converse request parameters - user context
-Parameter | Description |
+
+ Parameter | Description |
 ---------|----------|
  `id` | The unique ID of the user. |
 
@@ -557,7 +558,7 @@ The JSON structure of the converse response from a skill to the routing core is 
         "attributes": {
           "locationName": "at-home",
           "locationLatitude": 36.169941,
-          "LocationLongitude": -115.139829
+          "locationLongitude": -115.139829
           }
       },
       "session": {
@@ -721,7 +722,7 @@ The JSON structure of the converse response from the routing core to a client de
   "context": {
     "locationName": "at-home",
     "locationLatitude": 36.169941,
-    "LocationLongitude": -115.139829
+    "locationLongitude": -115.139829
       }
     }
   }
