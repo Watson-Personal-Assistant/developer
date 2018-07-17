@@ -6,7 +6,8 @@ In your custom skills, communication between your client device, the core routin
 
 In figure 1, the flow of a conversation between your client device and your assistant is displayed. For more information about the flow of the conversation, see the _How routing works_ topic.  
 
-Figure 1 - [conversation flow](../converse_flow.PNG)
+Figure 1 - converse flow
+![Routing flow]({{site.baseurl}}/images/converse_flow.PNG)
 
 In sections 1-6, an example of the JSON structure at each step in the flow is presented.
 
@@ -15,7 +16,7 @@ The following high-level scenario is captured in the JSON examples:
 ### Scenario
 John has registered members of his family to use an assistant named Watson.  John is currently at his home in London and is planning to travel to the city center if the temperature does not get too hot. He says "hello Watson" to wake up his device in the kitchen, and asks "What are the temperatures like today in London city center".  
 
-Internally, some context information is set as the request flows through Watson Assistant Solutions to a weather skill.  John's user ID is sent in the request to the assistant.  In the utterance context, `$location` is set to `at-home`.
+Internally, some context information is set as the request flows through Watson Assistant Solutions to a weather skill.  John's user ID is sent in the request to the assistant.  In the utterance context, `$locationName` is set to `at-home`.
 
 The weather skill determines from the utterance that John is interested in temperatures specifically and takes note of this interest for future conversation turns with the weather skill. His interest in the city center might be of value to other skills.  In an evaluation response, the weather skill adds `$weather_interest` to the skill context and sets it to `temperature`.  In the session context, the skill sets `$zone`  to city-center.  
 
@@ -35,7 +36,9 @@ The JSON structure of the converse request from the client device to the routing
   "deviceType": "smart-speaker",
   "additionalInformation": {
     "context": {
-      "location": "at-home"
+      "locationName": "at-home",
+      "locationLatitude": 36.169941,
+      "LocationLongitude": -115.139829
     }
   }
 }
@@ -57,7 +60,7 @@ Parameter | Description | Type | Required
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  An empty context object is allowed.  You can add any additional parameters that might be useful to your skill under `context`. | object | yes
+ `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  An empty context object is allowed.  You can add any additional parameters that might be useful to your skill under `context`. In the example, latitude and longitude parameters are added to represent the location of the user. | object | yes
 
  **Important** In the current implementation, the routing core does not send `deviceType` and `clientID` to the skill. However, you can add this information to the utterance context under additional information.
 
@@ -84,7 +87,9 @@ The JSON structure of the evaluate request from the routing core to the skills i
     "application": {
       "id": "app-001",
       "attributes": {
-        "location": "at-home"
+        "locationName": "at-home",
+      "locationLatitude": 36.169941,
+      "LocationLongitude": -115.139829
       }
     }
   }
@@ -99,7 +104,7 @@ Parameter | Description |
  `id` | The request ID that is assigned by the routing core.|
  `version` | The request version that is assigned by the routing core. The version is always `1.0`.  |
  `language` | The language that the user utterance is in. |
- `text` | The user utterance after the routing core has normalized the text. |
+ `text` | The user utterance after the routing core has normalized the text. In all languages, uppercase text is converted to lowercase.   In US English (en-US), further normalization techniques are applied, for example, numerals are converted to words, punctuation is removed. |
  `context` | Information about the context of the conversation with the user.|
 
 #### Table 4 - Evaluate request parameters - context 
@@ -162,7 +167,9 @@ The JSON structure of the evaluate response from a skill to the routing core is 
     "application": {
       "id": "app-001",
       "attributes": {
-        "location": "at-home"
+        "locationName": "at-home",
+        "locationLatitude": 36.169941,
+        "LocationLongitude": -115.139829
       }
     }
   },
@@ -330,7 +337,9 @@ The JSON structure of the converse request from the routing core to a skill is a
     "application": {
       "id": "app-001",
       "attributes": {
-        "location": "at-home"
+        "locationName": "at-home",
+        "locationLatitude": 36.169941,
+        "LocationLongitude": -115.139829
       }
     }
     },
@@ -383,7 +392,9 @@ The JSON structure of the converse request from the routing core to a skill is a
       "application": {
         "id": "app-001",
         "attributes": {
-          "location": "at-home"
+          "locationName": "at-home",
+          "locationLatitude": 36.169941,
+          "LocationLongitude": -115.139829
         }
       }
     }
@@ -400,7 +411,7 @@ Parameter | Description |
  `version` | The request version that is assigned by the routing core. The version is always `1.0`. |
  `language` | The language that the user utterance is in.   |
  `text` | The user utterance. |
- `retext` | The user utterance after the text is normalized. In all languages, upper case text is converted to lower case.   In US English (en-US), puncuation is removed. |
+ `retext` | The user utterance after the text is normalized. In all languages, uppercase text is converted to lowercase.   In US English (en-US), further normalization techniques are applied, for example, numerals are converted to words, punctuation is removed. |
  `attributes` | Includes the intent with the highest confidence score.  If no intent was returned, the entity with the highest confidence score is specified. Note: The intent or entity must have a confidence score that is above the confidence score threshold that is set in th manifest file of the skill. The default threshold in the NodeJS boilerplate is `0.85`. |
  `context` | Information about the context of the conversation with the user. |
  `skill` | | Information about the skill. | 
@@ -544,7 +555,9 @@ The JSON structure of the converse response from a skill to the routing core is 
       "application": {
         "id": "app-001",
         "attributes": {
-          "location": "at-home"
+          "locationName": "at-home",
+          "locationLatitude": 36.169941,
+          "LocationLongitude": -115.139829
           }
       },
       "session": {
@@ -650,7 +663,7 @@ Parameter | Description | Type | Required
  
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
-`attributes` |   Includes any session context attributes.  Include `"inConversation": "true"` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. | object | yes
+`attributes` |   Includes any session context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. | object | yes
 
 #### Table 42 - Converse response parameters - session context 
 
@@ -706,7 +719,9 @@ The JSON structure of the converse response from the routing core to a client de
 },
 "additionalInformation": {
   "context": {
-    "location": "at-home"
+    "locationName": "at-home",
+    "locationLatitude": 36.169941,
+    "LocationLongitude": -115.139829
       }
     }
   }
