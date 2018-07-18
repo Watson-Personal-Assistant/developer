@@ -36,9 +36,11 @@ The JSON structure of the converse request from the client device to the routing
   "deviceType": "smart-speaker",
   "additionalInformation": {
     "context": {
-      "locationName": "at-home",
-      "locationLatitude": 36.169941,
-      "LocationLongitude": -115.139829
+      "location": {
+        "name": "home",
+        "latitude": 36.169941,
+        "longitude": -115.139829
+      }
     }
   }
 }
@@ -87,9 +89,11 @@ The JSON structure of the evaluate request from the routing core to the skills i
     "application": {
       "id": "app-001",
       "attributes": {
-        "locationName": "at-home",
-      "locationLatitude": 36.169941,
-      "LocationLongitude": -115.139829
+        "location": {
+          "name": "home",
+          "latitude": 36.169941,
+          "longitude": -115.139829
+        }
       }
     }
   }
@@ -167,9 +171,13 @@ The JSON structure of the evaluate response from a skill to the routing core is 
     "application": {
       "id": "app-001",
       "attributes": {
-        "locationName": "at-home",
-        "locationLatitude": 36.169941,
-        "LocationLongitude": -115.139829
+        "location": {
+          "location": {
+            "name": "home",
+            "latitude": 36.169941,
+            "longitude": -115.139829
+          }
+        }
       }
     }
   },
@@ -226,6 +234,7 @@ The JSON structure of the evaluate response from a skill to the routing core is 
         }
     ]
 }
+
 ```
 
 #### Table 8 - Evaluate response parameters 
@@ -337,9 +346,11 @@ The JSON structure of the converse request from the routing core to a skill is a
     "application": {
       "id": "app-001",
       "attributes": {
-        "locationName": "at-home",
-        "locationLatitude": 36.169941,
-        "LocationLongitude": -115.139829
+        "location": {
+          "name": "home",
+          "latitude": 36.169941,
+          "longitude": -115.139829
+        }
       }
     }
     },
@@ -392,9 +403,11 @@ The JSON structure of the converse request from the routing core to a skill is a
       "application": {
         "id": "app-001",
         "attributes": {
-          "locationName": "at-home",
-          "locationLatitude": 36.169941,
-          "LocationLongitude": -115.139829
+          "location": {
+            "name": "home",
+            "latitude": 36.169941,
+            "longitude": -115.139829
+          }
         }
       }
     }
@@ -555,9 +568,11 @@ The JSON structure of the converse response from a skill to the routing core is 
       "application": {
         "id": "app-001",
         "attributes": {
-          "locationName": "at-home",
-          "locationLatitude": 36.169941,
-          "LocationLongitude": -115.139829
+          "location": {
+           "name": "home",
+            "latitude": 36.169941,
+            "longitude": -115.139829
+            }
           }
       },
       "session": {
@@ -719,9 +734,11 @@ The JSON structure of the converse response from the routing core to a client de
 },
 "additionalInformation": {
   "context": {
-    "locationName": "at-home",
-    "locationLatitude": 36.169941,
-    "LocationLongitude": -115.139829
+    "location": {
+        "name": "home",
+        "latitude": 36.169941,
+        "longitude": -115.139829
+        }
       }
     }
   }
