@@ -3,7 +3,7 @@ title: Add a running skill
 weight: 20
 ---
 
-A sample skill is deployed and running at `https://added-skill-jokes.mybluemix.net`.  The skill is designed to tell jokes. In this task, you’ll register the sample skill with your Watson Assistant Solutions instance and add it to an existing skillset.
+A sample skill is deployed and running at `https://added-skill-jokes.mybluemix.net`.  The skill is designed to tell jokes. In this task, you’ll register the sample skill with your Watson Assistant Solutions tenant and add it to an existing skillset.
 
 ### Procedure
 

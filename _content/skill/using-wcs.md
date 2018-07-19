@@ -8,7 +8,7 @@ In this tutorial, you will create a custom skill that uses a Watson Assistant (W
 The high-level steps in this tutorial are as follows:
 1. Create a skill using the skill boilerplate and connect it to a Watson Assistant workspace.
 3. Host your skill on IBM Cloud for you and others to use.
-2. Register the skill with your Watson Assistant Solutions instance.
+2. Register the skill with your Watson Assistant Solutions tenant.
 
 ### Before you begin
 1.  Clone, fork or download the zip from [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.

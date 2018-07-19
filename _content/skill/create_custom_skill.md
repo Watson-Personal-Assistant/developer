@@ -11,7 +11,7 @@ The high-level steps for deploying a custom skill are as follows:
 
 1. Create a custom skill using the skill boilerplate.
 2. Host your skill externally, for example on IBM Cloud, for you and others to use.
-3. Register the skill with your Watson Assistant Solutions instance.
+3. Register the skill with your Watson Assistant Solutions tenant.
 
 You can add a custom or third party nlu engine to your skill. For instructions, see [Adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/).
 
@@ -19,7 +19,7 @@ You can add a custom or third party nlu engine to your skill. For instructions, 
 ### Before you begin
 
 1. Design your skill.  Decide on the intents, entities and conversation flow for your skill.  For more information, see [Designing your assistant]({{site.baseurl}}/design/how-to-design-your-assistant/).
-2. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+2. Get access to your Watson Assistant Solutions tenant.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
 3. Install [GIT](https://git-scm.com/downloads).
 4. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
 5. Clone the [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate), rename the folder to your skill name, and install node dependencies using the `npm install` command.
@@ -74,7 +74,7 @@ If you plan to host your skill on IBM Cloud and you entered your IBM Cloud crede
 2. To log in to IBM Cloud, enter `bx login --sso -a my.bluemix.net -o paste-your-IBMid-here -s dev`
 3. To push your skill to IBM Cloud, enter  `bx app push`.  An `App started` message is displayed.
 
-#### Step 3: Register your skill with your  Watson Assistant Solutions instance
+#### Step 3: Register your skill with your  Watson Assistant Solutions tenant.
 1. Log in to the Watson Assistant Solutions console.
 2. Click the **Skills** tab and click **Add Skill**.  Specify the skill end point URL and the skill name.
 3. Follow the on-screen dialog to review and test your skill and to optionally add your skill to a new or existing skill set.

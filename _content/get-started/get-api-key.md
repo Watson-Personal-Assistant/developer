@@ -2,10 +2,10 @@
 title: Accessing the service
 weight: 20
 ---
-After your Watson Assistant Solutions instance is provisioned, you can access your instance from the console or through REST APIs.
+After your Watson Assistant Solutions tenant is provisioned, you can access your tenant from the console or through REST APIs.
 
 ### Using the console
-Log in to the Watson Assistant Solutions console to access your instance.  From the console, you can complete these tasks:
+Log in to the Watson Assistant Solutions console to access your tenant.  From the console, you can complete these tasks:
 - Manage your skills and skillsets.
 - Manage your clients.
 - Converse with your skills using a chat interface.
@@ -26,7 +26,7 @@ To log in to the Watson Assistant Solutions console, complete these steps:
 The Watson Assistant Solutions console is displayed.
 
 ### Using REST API calls
-To access your instance using REST APIs, include your Watson Assistant Solutions API key as an `api_key` header in your API calls.
+To access your tenant using REST APIs, include your Watson Assistant Solutions API key as an `api_key` header in your API calls.
 
 **Note**: Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
 

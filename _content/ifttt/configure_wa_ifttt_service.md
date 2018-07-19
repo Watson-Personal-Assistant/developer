@@ -2,7 +2,7 @@
 title: Deploying an IFTTT service
 weight: 15
 ---
-Create a service on IFTTT to define what an applet can do when it uses your Watson Assistant Solutions instance in a trigger. In your service, specify the API that the IFTTT platform will use to communicate with your Watson Assistant Solutions instance.
+Create a service on IFTTT to define what an applet can do when it uses your Watson Assistant Solutions tenant in a trigger. In your service, specify the API that the IFTTT platform will use to communicate with your Watson Assistant Solutions tenant.
 
 ### Procedure
 Complete these steps:
@@ -25,7 +25,7 @@ Complete these steps:
 3. Modify or add the following configuration parameters.
    - service_key: The key provided on the API tab.
    - wa_api_url: Enter: `https://watson-personal-assistant-toolkit.mybluemix.net`
-   - wa_api_key: Your Watson Assistant Solutions instance API key.
+   - wa_api_key: Your Watson Assistant Solutions tenant API key.
    - oauth: Add values for `client_id`, `client_secret`, `authorization_url`,` token_url`, and `introspect_url` based on the values provided by your OAuth2 provider.
    - ifttt-skill-key: A GUID you create for your skill. Save it for later use in your IFTTT skill configuration.
 4. Push the service to IBM Cloud. Use the ```bx app push``` command.

@@ -11,10 +11,10 @@ The high-level steps for deploying an IFTTT skill are as follows:
 1. Clone the IFTTT skill boilerplate.
 1. Configure the skill.
 2. Host your IFTTT skill externally, for example, on IBM Cloud.
-3. Register the IFTTT skill with your Watson Assistant Solutions instance.
+3. Register the IFTTT skill with your Watson Assistant Solutions tenant.
 
 ### Before you begin
-1. Get access to your Watson Assistant Solutions instance.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+1. Get access to your Watson Assistant Solutions tenant.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [GIT](https://git-scm.com/downloads).
 3. Install [NodeJS](https://nodejs.org/dist/v8.9.1/)
 4. Clone the IFTTT skill boilerplate.  Contact the Watson Assistant Solutions team for access to the service boilerplate.
@@ -23,7 +23,7 @@ The high-level steps for deploying an IFTTT skill are as follows:
 6. Deploy an [IFTTT service]({{site.baseurl}}/ifttt/configure_wa_ifttt_service/).
 
 ### Procedure
-Complete these steps to clone, deploy, and register the IFTTT skill with your instance.
+Complete these steps to clone, deploy, and register the IFTTT skill with your tenant.
 
 #### Step 1: Create the IFTTT skill
 1. From the skill boilerplate top-level directory, optionally edit the IFTTT skill manifest file if you want to change the skill name, author, host name, or domain.
@@ -43,7 +43,7 @@ If you plan to host your skill on IBM Cloud, complete these steps:
 2. To log in to IBM Cloud, enter ```bx login -a my.bluemix.net -o paste-your-IBMid-here -s dev```
 3. To push your skill to IBM Cloud, enter  ```bx app push```.  An ```App started``` message is displayed.
 
-#### Step 3: Register your skill with your  Watson Assistant Solutions instance
+#### Step 3: Register your skill with your  Watson Assistant Solutions tenant
 1. Log in to the Watson Assistant Solutions console.
 2. Click the **Skills** tab and click **Add Skill**.  Specify the skill end point URL and the skill name.
 3. Follow the on-screen dialog to review and test your skill and to optionally add your skill to a new or existing skill set.

@@ -7,15 +7,15 @@ When you purchase a flavor of Watson Assistant Solutions, you purchase a plan. A
 
 Entities and digital interactions are defined as follows:
 
-- Entity: A logical grouping of clients (that is, physical or virtual devices) that can access your Watson Assistance instance. For example, you might have an entity named ‘hotel room’ with three clients; a television, camera, and audio speaker.
-- Digital interaction: The number of 5-minute intervals per month in which at least one user utterance accesses your Watson Assistant Solutions instance. A day is divided into static 5-minute intervals. For example, 09:00:00-09:04:59 is one interval. Multiple utterances from a single user in the same 5-minute interval are defined as a single digital interaction. Utterances from a single user that span two different 5-minute intervals are defined as two digital interactions.
+- Entity: A logical grouping of clients (that is, physical or virtual devices) that can access your Watson Assistance tenant. For example, you might have an entity named ‘hotel room’ with three clients; a television, camera, and audio speaker.
+- Digital interaction: The number of 5-minute intervals per month in which at least one user utterance accesses your Watson Assistant Solutions tenant. A day is divided into static 5-minute intervals. For example, 09:00:00-09:04:59 is one interval. Multiple utterances from a single user in the same 5-minute interval are defined as a single digital interaction. Utterances from a single user that span two different 5-minute intervals are defined as two digital interactions.
 
 Usage is calculated as follows:
 
-- If a user utterance instance includes a client ID (for example, speaker-1) and if that client ID is mapped to an entity (hotel room), usage is calculated as using that entity.
+- If a user utterance includes a client ID (for example, speaker-1) and if that client ID is mapped to an entity (hotel room), usage is calculated as using that entity.
 - If client ID is not specified, defined, or mapped to an entity, usage is calculated as using a digital interaction.
 
-After your Watson Assistant Solutions instance is provisioned, you can use either the Things REST API or the console to manage your clients and entities. Tasks you can perform include the following:
+After your Watson Assistant Solutions tenant is provisioned, you can use either the Things REST API or the console to manage your clients and entities. Tasks you can perform include the following:
 - Create a client
 - Associate a client with an existing or a new entity.
 - Delete existing clients.

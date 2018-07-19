@@ -26,12 +26,12 @@ Contact IBM for more information about purchasing Watson Assistant Solutions. Se
 - [Automotive page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to)
 - [Hospitality page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top)
 
- During the provisioning stage, you select whether to provision your instance on the US South (Dallas) data center or the data center in Germany (Frankfurt).
+ During the provisioning stage, you select whether to provision your tenant on the US South (Dallas) data center or the data center in Germany (Frankfurt).
 
 #### Access a trial of Watson Assistant Solutions
 You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
 
-You can log in to your trial instance using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key. 
+You can log in to your trial tenant using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key. 
 
 To give access to your tenant to others in your organization, share your API key with them so that they can log in with your API key.
 

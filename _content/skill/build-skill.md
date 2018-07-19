@@ -7,11 +7,11 @@ Watson Assistant Solutions provides a boilerplate in Node.js for creating a simp
 The high-level steps in this tutorial are as follows:
 1. Create a skill using the 'HelloWorld' skill boilerplate.
 3. Host your skill on IBM Cloud for you and others to use.
-2. Register the skill with your Watson Assistant Solutions instance.
+2. Register the skill with your Watson Assistant Solutions tenant.
 
 ---
 ### Before you begin
-1. Get access to your Watson Assistant instance on IBM Cloud.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+1. Get access to your Watson Assistant tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
 3. Install [NodeJS](https://nodejs.org/dist/).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
@@ -62,7 +62,7 @@ If the skilll is not accessible, complete these steps:
 - Use the skill URL to access the skill to verify that it is running.
 - From a web browser, check if you can open the Swagger documenation for the skill. For example: enter the URL `https://paste_your_skill_name_here.mybluemix.net/docs`.
 
-#### Step 4: Add the skill to your Watson Assistant Solutions instance
+#### Step 4: Add the skill to your Watson Assistant Solutions tenant.
 Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
 
 `curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "api_key: paste-your-WA-API-key-here" -d '{ "name": "myHelloWorld", "url": "https://paste_your_skill_name_here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
