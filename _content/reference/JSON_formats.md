@@ -16,7 +16,7 @@ The following high-level scenario is captured in the JSON examples:
 ### Scenario
 John has registered members of his family to use an assistant named Watson.  John is currently at his home in London and is planning to travel to the city center if the temperature does not get too hot. He says "hello Watson" to wake up his device in the kitchen, and asks "What are the temperatures like today in London city center".  
 
-Internally, some context information is set as the request flows through Watson Assistant Solutions to a weather skill.  John's user ID is sent in the request to the assistant.  In the utterance context, `$locationName` is set to `at-home`.
+Internally, some context information is set as the request flows through Watson Assistant Solutions to a weather skill.  John's user ID is sent in the request to the assistant.  In the utterance context, under `location`, `name` is set to `home`.
 
 The weather skill determines from the utterance that John is interested in temperatures specifically and takes note of this interest for future conversation turns with the weather skill. His interest in the city center might be of value to other skills.  In an evaluation response, the weather skill adds `$weather_interest` to the skill context and sets it to `temperature`.  In the session context, the skill sets `$zone`  to city-center.  
 
@@ -62,7 +62,15 @@ Parameter | Description | Type | Required
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  An empty context object is allowed.  You can add any additional parameters that might be useful to your skill under `context`. In the example, latitude and longitude parameters are added to represent the location of the user. | object | yes
+ `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  Add location information to a `location` object. An empty context object is also allowed.  You can add any additional parameters that might be useful to your skill under `context`.  | object | yes
+
+#### Table 3 - Converse request parameters - location
+
+  Parameter | Description | Type | Required
+---------|----------|---------|---------
+ `name` | A value that represents the location of the user, for example, at home, at work, in the car.  | string | no
+ `latitude` | Latitude of the center point of the location of the user. | no
+ `longitude` | Longitude of the center point of the location of the user.  | no
 
  **Important** In the current implementation, the routing core does not send `deviceType` and `clientID` to the skill. However, you can add this information to the utterance context under additional information.
 
