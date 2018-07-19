@@ -56,6 +56,7 @@ You can chat with the skills in your skillset from the chat box on the console h
 * Who is ghandi
 * What is the weather in london
 
+### Video
 <video width="640" height="480" controls>
   <source src="{{site.baseurl}}/trial/videos/create-new-skillset.mp4" type="video/mp4">
 Your browser does not support the video tag.

@@ -32,6 +32,7 @@ You can chat with the skill from the chat box on the console home page. For exam
 - Tell me a Chuck Norris joke
 - Tell me a joke
 
+### Video
 <video width="640" height="480" controls>
   <source src="{{site.baseurl}}/trial/videos/add-running-skill.mp4" type="video/mp4">
 Your browser does not support the video tag.
