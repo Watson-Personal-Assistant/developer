@@ -21,5 +21,5 @@ Skills are grouped into skillsets. The built-in skills for Watson Assistant for 
     - what time is it
     - how are you
 
-> **What to do next?**<br/>
+> **Become a pro**<br>
 See the [Watson Assistant for Industry skills]({{site.baseurl}}/flavours/industry/) page for more utterance examples.

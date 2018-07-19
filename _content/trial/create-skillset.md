@@ -56,5 +56,5 @@ You can chat with the skills in your skillset from the chat box on the console h
 * Who is ghandi
 * What is the weather in london
 
-> **What to do next?**<br/>
+> **Become a pro**<br>
 Create a hello/goodbye skill by following the [creating a custom skill using regexp NLU]({{site.baseurl}}/skill/build-skill/) tutorial and add it to your skillset.

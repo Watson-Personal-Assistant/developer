@@ -24,6 +24,6 @@ You can use the Watson Assistant Chatbot web app to talk to your skillset using 
 8. Say something else to experiment with the voice interaction. 
 9. Click the bookmark button to copy the URL to your assistant and share it with your friends!
 
-> **What to do next?**<br/>
+> **Become a pro**<br>
 Enhance your hello/goodbye skill using the [Regexp NLU]({{site.baseurl}}/further-topics/regexp_nlu/) topic as a reference.<br>
 Set up a [slack bot]({{site.baseurl}}/further-topics/slackbot-integration/) and let others chat to your assistant.

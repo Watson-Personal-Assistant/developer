@@ -32,5 +32,5 @@ You can chat with the skill from the chat box on the console home page. For exam
 - Tell me a Chuck Norris joke
 - Tell me a joke
 
-> **What to do next?**<br/>
+> **Become a pro**<br>
 Create your own joke skill. Complete the [Creating a custom skill using WCS NLU]({{site.baseurl}}/skill/using-wcs/) tutorial.
