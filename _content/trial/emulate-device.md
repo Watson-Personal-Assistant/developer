@@ -30,7 +30,7 @@ clicking the link for the **apache-maven-*-bin.zip**.
 10. Edit the `config/configure.properties` file copied earlier and set the following values as follows:
   - host=wa-audio-gateway.mybluemix.net
   - userID=paste-any-name-you-want-here
-  - skillset=built-in
+  - skillset=industry
   - IAMAPIKey=paste-the-IAM-API-Key-created-earlier
 
 11. In the Terminal window, in the `AudioClientSampleCodeJava` directory, build the app using command <br/>
