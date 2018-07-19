@@ -32,5 +32,10 @@ You can chat with the skill from the chat box on the console home page. For exam
 - Tell me a Chuck Norris joke
 - Tell me a joke
 
+<video width="640" height="480" controls>
+  <source src="{{site.baseurl}}/trial/videos/add-running-skill.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 > **Become a pro**<br>
 Create your own joke skill. Complete the [Creating a custom skill using WCS NLU]({{site.baseurl}}/skill/using-wcs/) tutorial.

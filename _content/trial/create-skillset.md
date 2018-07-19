@@ -49,12 +49,17 @@ Add the sample skill to your tenant. See the [Add a running skill]({{site.baseur
 ]
 ```
 
-You can chat with the skills in your skillset from the chat box on the console home page. Select your skillset from the S**elect a skillset** drop-down.   For example, enter:
+You can chat with the skills in your skillset from the chat box on the console home page. Select your skillset from the **Select a skillset** drop-down.   For example, enter:
 * Tell me a Dad joke
 * Tell me a Chuck Norris joke
 * Tell me a joke
 * Who is ghandi
 * What is the weather in london
+
+<video width="640" height="480" controls>
+  <source src="{{site.baseurl}}/trial/videos/create-new-skillset.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 > **Become a pro**<br>
 Create a hello/goodbye skill by following the [creating a custom skill using regexp NLU]({{site.baseurl}}/skill/build-skill/) tutorial and add it to your skillset.
