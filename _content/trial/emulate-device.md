@@ -41,5 +41,11 @@ clicking the link for the **apache-maven-*-bin.zip**.
 
 13. To send audio, press the **Return** key on your keyboard and then speak "Hello".  You don't have to hold down the return key or press it again after saying the utterance, just press it once and then pause after saying your utterance and the audio will be sent through the audio gateway to your Watson Assistant Solutions tenant.
 
+### Video
+<video width="640" height="480" controls>
+  <source src="{{site.baseurl}}/trial/videos/emulate-device.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 > **Become a pro**<br>
 Use the sample code to connect a Raspberry Pi to your assistant or, if you have your own hardware, use the code and the [client device interface specification]({{site.baseurl}}/audio/interface/) to connect it to your assistant.
