@@ -13,7 +13,7 @@ The high-level steps in this tutorial are as follows:
 
 ---
 ### Before you begin
-1. Get access to your Watson Assistant Solutions instance on IBM Cloud.  For instructions, see [Access your Watson Assistance  instance]({{site.baseurl}}/get-started/get-api-key/).
+1. Get access to your Watson Assistant Solutions tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
 3. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
 4. Install the [IBM Cloud cli tool](https://console.bluemix.net/docs/cli/index.html#cli).
@@ -41,7 +41,7 @@ Complete these steps:
 3. Modify or add the following configuration parameters.
    - service_key: The key provided on the API tab.
    - wa_api_url: Enter `https://watson-personal-assistant-toolkit.mybluemix.net`
-   - wa_api_key: Your Watson Assistant Solutions instance API key.
+   - wa_api_key: Your Watson Assistant Solutions tenant API key.
    - oauth: Add values for `client_id`, `client_secret`, `authorization_url`,` token_url`, and `introspect_url` based on the values provided when you register the service for an IBMid.
    - ifttt-skill-key: A GUID your create for your skill. Save it for later use in your IFTTT skill configuration.
 4. Push the service to IBM Cloud.
@@ -106,7 +106,7 @@ Complete these steps:
   - `iftttServiceEndpoint`: The URL of your IFTTT service endpoint.
   - `ifttt-skill-key`: The skill key you specified when you created an IFTTT service on the IFTTT platform.
 3. Push the skill to IBM Cloud.  Use the ```bx app push``` command.
-4. Register the skill with your Watson Assistant Solutions instance.
+4. Register the skill with your Watson Assistant Solutions tenant.
 For more information about deploying the IFTTT skill, see [Deplying the IFTTT skill ]({{site.baseurl}}/ifttt/create_ifttt_skill).
 
 #### Step 7: Create an applet on IFTTT
@@ -140,4 +140,4 @@ For more information about deploying the IFTTT skill, see [Deplying the IFTTT sk
 
 
 > **What to do next?**<br/>
-Read how to [link your IBMid with your instance]({{site.baseurl}}/further-topics/login-with-IBMid).
+Read how to [link your IBMid with your tenant]({{site.baseurl}}/further-topics/login-with-IBMid).

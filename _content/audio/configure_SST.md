@@ -22,3 +22,5 @@ The audio gateway sets the audio format to `audio/ogg;codecs=vorbis`  and sets t
 
 > **What to do next?**<br/>
 Learn about [monitoring audio progress indicators from the console]({{site.baseurl}}/audio/progress_indicators/).
+
+

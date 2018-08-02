@@ -1,6 +1,8 @@
 ---
 Title: How audio is processed with a controller
 weight: 50
+
+
 ---
 Typically, you use the local speaker and microphone of the audio device to process audio. However, you might have a smart speaker in your environment that you would like to use to perform external processing or you might have additional device controls, for example, for volume or display. 
 

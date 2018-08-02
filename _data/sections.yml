@@ -19,18 +19,18 @@ skill:
   title: Skills
   icon: graduation-cap 
 
+flavours:
+  title: Flavors
+  icon: pencil
+  
 knowledge:
   title: Knowledge and reasoning
-  icon: code
-
-reference:
-  title: Reference Materials
   icon: code
 
 audio_basic:
   title: Audio - Getting started
   icon: code 
-
+  
 audio:
   title: Audio - Advanced
   icon: code
@@ -46,6 +46,18 @@ ifttt:
 further-topics:
   title: Further topics
   icon: pencil
+  
+trial:
+  title: Trial tasks
+  icon: bookmark
+
+advanced:
+  title: Advanced
+  icon: code
+  
+reference:
+  title: Reference
+  icon: code
   
 get-help:
   title: Help

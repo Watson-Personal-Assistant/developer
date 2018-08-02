@@ -1,6 +1,6 @@
 ---
 title: Configuring skill authentication
-weight: 40
+weight: 50
 ---
 You can authenticate that requests that are sent to the conversation REST API of a skill have originated from the Watson Assistant Solutions service.  In the Node.js skill boilerplate, authentication of converse requests is disabled by default.
 
@@ -10,7 +10,7 @@ You can either create your own skill key to use for authentication or use the sk
 After you enable authentication and register the skill key with Watson Assistant solutions, the key is included in the header of any converse requests that are sent to the conversation REST API of the skill.  For example:
 `--header "skillKey: 1535666c-1777-4ac6-84cc-cf466ae896fb"`
 
-If you have multiple Watson Assistant Solutions instances in your environment, and these instances share the same skill, you can provide a key for each instance.
+If you have multiple Watson Assistant Solutions tenants in your environment, and these tenants share the same skill, you can provide a key for each tenant.
 
 ### Before you begin
 Create a skill key.  Complete either of these steps:

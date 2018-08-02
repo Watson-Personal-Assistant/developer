@@ -107,3 +107,6 @@ To view log files, use the logs endpoint:
 `{host}/logs [GET]`
 
 Log data is grouped by transaction ID.
+
+> **What to do next?**<br/>
+Learn about [configuring STT and TTS]({{site.baseurl}}/audio_single/configure_SST_single/).

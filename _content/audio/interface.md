@@ -8,7 +8,8 @@ Audio streaming between an audio gateway and an audio client uses a web socket i
 Messages are used on the web socket interface to communicate between the audio client and the audio gateway.  All messages are in JSON format.  Each message includes a transaction ID that is used by the audio gateway to track the transaction.  To ensure that each ID is unique, consider using a globally unique identifier (GUID) for the transaction ID.
 
 #### Audio start
-Audio start messages are sent between the audio client and the audio gateway.  The message indicates that the sender is ready to send audio data.  You can optionally specify which speech-to-text (stt) engine to use for the transaction.  If included, the `stt` value overridess the default settings.
+Audio start messages are sent between the audio client and the audio gateway.  The message indicates that the sender is ready to send audio data.  You can optionally specify which speech-to-text (stt) engine to use for the transaction.  If included, the `stt` value overrides the default settings.
+
 
 Example:
 

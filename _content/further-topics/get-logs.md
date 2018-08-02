@@ -27,7 +27,7 @@ To access your logs, complete these steps:
 1. Log in to the console. For instructions, see [Accessing the Watson Assistant Solutions Service]({{site.baseurl}}/get-started/get-api-key/).
 2. Click the **Logs** tab.
 3. If you are accessing logs for the first time, enter your GUID, click **Connect**, and close the dialog.
-4. Click the **Logs** tab on the console to open the Kibana log tool with your log data.  To see logs that are associated with  Watson Assistant Solutions, enter the search string `type:watsonassistant`.  To filter the log data to show only your instance, enter your tenant ID and tentant name.
+4. Click the **Logs** tab on the console to open the Kibana log tool with your log data.  To see logs that are associated with  Watson Assistant Solutions, enter the search string `type:watsonassistant`.  To filter the log data to show only your tenant, enter your tenant ID and tentant name.
 
 Alternatively, open the log files from [IBM Cloud Logging ](https://console.bluemix.net/docs/services/CloudLogAnalysis/index.html#getting-started-with-cla).
 > **What to do next?**<br/>
