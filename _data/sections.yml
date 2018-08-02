@@ -26,9 +26,13 @@ flavours:
 knowledge:
   title: Knowledge and reasoning
   icon: code
+
+audio_basic:
+  title: Audio - Getting started
+  icon: code 
   
 audio:
-  title: Audio
+  title: Audio - Advanced
   icon: code
   
 audio_single:

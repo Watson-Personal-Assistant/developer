@@ -21,4 +21,6 @@ The audio client uses the Watson text-to-speech service.  The text-to-speech ser
 The audio gateway sets the audio format to `audio/ogg;codecs=vorbis`  and sets the sampling rate to `16000` hertz.
 
 > **What to do next?**<br/>
-Learn about [the IFTTT integration]({{site.baseurl}}/ifttt/what-is-ifttt/).
+Learn about [monitoring audio progress indicators from the console]({{site.baseurl}}/audio/progress_indicators/).
+
+
