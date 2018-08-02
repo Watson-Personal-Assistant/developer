@@ -23,15 +23,15 @@ You can disable the logging of PI data using the Logging REST API.
 Complete these steps:
 1. To disable the logging of PI data, open a command-line and enter:
 ```shell
-curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/off" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
+curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/management/logging/pi/off" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 3. To view if PI data is being logged, enter:
 ```shell
-curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi" -H "accept: application/json" -H "api_key: paste-your-WA-API-key-here`"
+curl -X GET "https://watson-personal-assistant-toolkit.mybluemix.net/management/logging/pi" -H "accept: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 4. To enable the logging of PI data, enter:
 ```shell
-curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
+curl -X PUT "https://watson-personal-assistant-toolkit.mybluemix.net/management/logging/pi/on" -H "accept: application/json" -H "Content-Type: application/json" -H "api_key: paste-your-WA-API-key-here`"
 ```
 
 For more information about accessing logs for your Watson Assistant Solutions tenant, see [Accessing your Watson Assistant Solutions logs]({{site.baseurl}}/further-topics/get-logs/).
