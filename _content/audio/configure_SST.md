@@ -11,7 +11,7 @@ When `watson` is chosen, the audio gateway sets the audio format to `audio/ogg;c
 
 You can set the speech-to-text `engine` parameter when you configure your audio client.  You can override the speech-to-text engine to use for a specific transaction using an `stt_options` message or an `audio_start` message.
 
-For more information about setting the `engine` parameter in the audio client, see [Audio Client Sample Code GIT repository readme file](https://github.com/Watson-Personal-Assistant/AudioClientSampleCodeJava).
+For more information about setting the `engine` parameter in the audio client, see the [configuration properties]({{site.baseurl}}/audio/config_properties/) topic.
 
 For more information about the `stt_options` and the `audio_start` messages, see the [audio streaming interface]({{site.baseurl}}/audio/how_it_works_audio) topic.
 
