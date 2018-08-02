@@ -6,8 +6,7 @@ weight: 105
 The flow for sending audio from an audio client through an audio gateway to your skills in Watson Assistant Soluitons is shown in figure 1.
 
 Figure 1 - audio flow
-
-![audio flow]({{site.baseurl}}/audio_basic/flow.PNG)<br/>
+![audio flow]({{site.baseurl}}/images/flow.PNG) 
 
 The steps in this flow are as follows:
 1. When it turns on, the audio client sends an IAM token to the audio gateway and the gateway authenticates the client.
