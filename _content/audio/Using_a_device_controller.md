@@ -62,7 +62,5 @@ If the controller sends an OAS command for diverting audio output to the audio s
 
 When the controller sends a RAS command to trigger the reading of audio data from the audio socket, the client responds with a `micOn` response and starts to read data from the audio socket. The audio data is sent to the Watson server for transcription. Once the transcription has responded with an acceptable confidence level, the client sends a `micClose` response. Any further data that is received on the audio socket is discarded.
 
-For information about the flow of audio from the audio client to the audio gateway component, see the _How audio input is processed with a controller_ topic in the product documentation.
-
 > **What to do next?**<br/>
 Learn [how audio is processed with a controller]({{site.baseurl}}/audio/how_it_works_audio_controller/).
