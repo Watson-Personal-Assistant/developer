@@ -7,7 +7,7 @@ The flow for sending audio from an audio client through an audio gateway to your
 
 Figure 1 - audio flow
 
-![audio flow](flow.PNG)<br/>
+![audio flow]({{site.baseurl}}/flow.PNG)<br/>
 
 The steps in this flow are as follows:
 1. When it turns on, the audio client sends an IAM token to the audio gateway and the gateway authenticates the client.
