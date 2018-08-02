@@ -2,6 +2,7 @@
 Title: How audio is processed with a controller
 weight: 50
 ---
+
 Typically, you use the local speaker and microphone of the audio device to process audio. However, you might have a smart speaker in your environment that you would like to use to perform external processing or you might have additional device controls, for example, for volume or display. 
 
 Watson Assistant Solutions provides you with the option to use your own smart speaker and microphone with the audio client. The smart speaker acts as a device controller for the audio client. You use a command socket interface to send commands between the device controller and the audio client and an audio socket interface to send audio.
@@ -13,7 +14,7 @@ The audio client passes an IAM token when it first connects to audio gateway to 
 The flow for processing audio input in Watson Assistant Solutions when a device controller is used is shown in figure 1.
 
 Figure 1 - audio flow with a device controller
-![Flow with a device controller]({{site.baseurl}}/controller.png)
+![Flow with a device controller]({{site.baseurl}}/audio/controller.png)
 
 The steps in this flow are as follows:
 1.  When it turns on, the audio client sends an IAM token to the audio gateway and the gateway authenticates the client.
