@@ -2,7 +2,7 @@
 title: Using audio
 weight: 5
 ---
-You can chat with your Watson Assistant Solutions skills using by voice.  
+You can chat with your Watson Assistant Solutions skills using voice.  
 
 To get started, download a sample Java-based audio client to your local system, Raspberry Pi, or to an audio device.  Set some connection parameters to connect to your tenant and chat with your skills using your voice and your mic. For instructions, see [Using the sample audio client]({{site.baseurl}}/audio/audio_client_simple).
 
