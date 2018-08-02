@@ -149,9 +149,9 @@ Parameter | Description |
  `id` | The unique ID of the application. The parameter is for future use.|
  `attributes` | Includes utterance context information, if present. Add location information to a `location` object. |
 
- #### Table 8 - Converse request parameters - location
+#### Table 8 - Converse request parameters - location
 
-  Parameter | Description |
+Parameter | Description |
 ---------|----------|
  `name` | A value that represents the location of the user, for example, at home, at work, in the car.  | 
  `latitude` | Latitude of the center point of the location of the user.
@@ -306,7 +306,7 @@ Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object.| object | yes 
 
- #### Table 15 - Converse request parameters - location
+#### Table 15 - Converse request parameters - location
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -503,9 +503,9 @@ Parameter | Description |
 ---------|----------|-
  `attributes` | Includes any utterance context information. Add location information to a `location` object. |
 
- #### Table 27 - Converse request parameters - location
+#### Table 27 - Converse request parameters - location
 
-  Parameter | Description | 
+Parameter | Description | 
 ---------|----------|
  `name` | A value that represents the location of the user, for example, at home, at work, in the car. 
  `latitude` | Latitude of the center point of the location of the user. 
@@ -692,9 +692,9 @@ Parameter | Description | Type | Required
  `id` | The unique ID of the application. The parameter is for future use. | string | yes
  `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object. | object | yes
 
- #### Table 41 - Converse request parameters - location
+#### Table 41 - Converse request parameters - location
 
-  Parameter | Description | Type | Required
+Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `name` | A value that represents the location of the user, for example, at home, at work, in the car.  | string | no
  `latitude` | Latitude of the center point of the location of the user.| string  | no
@@ -811,7 +811,7 @@ Parameter | Description |
 
 #### Table 48 - Converse response parameters - skill
 
- Parameter | Description | 
+Parameter | Description | 
 ---------|----------|
  `name` | The name of the skill that processed the request. | 
  `entities` | The entities that were extracted from the utterance. | 
@@ -847,8 +847,8 @@ Parameter | Description |
 
 #### Table 53 - Converse request parameters - location
 
-  Parameter | Description | 
----------|----------|-
+Parameter | Description | 
+---------|----------|
  `name` | A value that represents the location of the user, for example, at home, at work, in the car. 
  `latitude` | Latitude of the center point of the location of the user.
  `longitude` | Longitude of the center point of the location of the user. 
