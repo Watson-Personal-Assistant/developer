@@ -1,5 +1,5 @@
 ---
-Title: How audio is processed with a controller
+title: How audio is processed with a controller
 weight: 50
 ---
 
