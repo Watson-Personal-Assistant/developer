@@ -9,7 +9,7 @@ The Bot Analytics tool displays key metrics for your Watson Assistant Solutions 
 
 Complete these steps:
 1. On the console toolbar, click the Analytics menu.
-![launch](launch.gif) The home page is displayed.
+![Start](launch.gif) The home page is displayed.
 2. In the Bot Analytics tool, click 
 ![tribar](tribar.png) to show the menu. The menu ![tribar](insights_menu.PNG) is displayed.
 3. Click ![launch](insights_drop_down.png).
@@ -30,30 +30,22 @@ You can filter the data on the page to narrow the scope to a skill or intent and
 
 #### Setting the scope of the chart
 
-The scope of the data in all of the charts is your Watson Assistant solutions tenant by default, which maps to an assistant. 
+The scope of the data in all of the charts is your Watson Assistant solutions assistant by default. 
 
-With some charts, you can filter the data that is displayed in the graph or bar chart. 
- 
-- To filter by skill, select a skill from the drop-down menu.<br> ![Setting the time range](users_skill_filter.PNG)
-- To filter by intent, select a skill from the drop-down menu.<br> ![Setting the time range](users_intent_filter.PNG)
+With some charts, you can filter the data that is displayed in the graph or bar chart.
 
-**Note**: Filtering is only applied to charts with (Skill, Intent) in their title.For example:
+- To filter by skill, select a skill from the pull-down menu.<br> ![Setting the time range](users_skill_filter.PNG)
+- To filter by intent, select a skill and an intent from the pull-down menu.<br> ![Setting the time range](users_intent_filter.PNG)
+
+**Note**: Filtering is only applied to charts with (Skill, Intent) in their title.
+
+For example:
 ![Filter in the title](title_filter.PNG)
 
 #### Setting the time range
 
 The default time period for each page is the last 30 days.  Use the slider to increase or decrease the time period. The maximum time period is the last 6 months (180 days).
 ![Setting the time range](time_range.gif)
-
-### Exporting data to a CSV file
-
-You can export the raw data of each chart to csv format.  
-![Export to CSV](export_to_excel.gif)
-
-### Viewing the chart JSON
-
-You can view the underlying JSON object that is used to define the metadata of a chart.
-![View JSON](view_json.gif)
 
 > **What to do next?**<br>
 Learn more about the metrics displayed [on each page]({{site.baseurl}}/analytics/analytics_pages).
