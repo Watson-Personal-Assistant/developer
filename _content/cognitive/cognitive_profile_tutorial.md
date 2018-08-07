@@ -20,7 +20,7 @@ Pass the following JSON object to the `/user` endpoint to create a cognitive pro
   {
     "first_name": "John",
     "last_name": "Smith",
-    "user_id": "222222"
+    "user_id": "222228"
   }
 
 ```
@@ -34,7 +34,7 @@ HTTP Status code 200 is displayed.
   ```
   {
     "timestamp" : 100212,
-    "user_id": 222222,
+    "user_id": 222228,
     "event_type": "like",
     "relates_to": {
       "domain": "restaurant",
@@ -58,44 +58,55 @@ HTTP Status code 200 is displayed.
   }
 
   ```
+
+A HTTP Status code 200 is displayed.
+
+2. View the profile for John Smith to see the impact of the event.  
+
+Pass the following JSON object to the `/profile` endpoint:
+
+  ```
+  {
+    "domain": "restaurant",
+    "user_id": 222228
+  }
+
+```
 The following response is displayed.  The likeability of German restaurants is represented by a magnitude score of 0.2.  The profile service applies a confidence score of 0.83 to this value.  The likeability of medium priced restaurants is also 0.2 and a confidence score of 0.83 is applied.
 
   ```
 
+[
   {
-    "userId": 222222,
-    "response": [
+    "magnitude": 0.2,
+    "key": [
       {
-        "confidence": 0.8333333333333334,
-        "key": [
-          {
-            "name": "german",
-            "class": "category"
-          }
-        ],
-        "magnitude": 0.2
-      },
-      {
-        "confidence": 0.8333333333333334,
-        "key": [
-          {
-            "name": "$$",
-            "class": "price"
-          }
-        ],
-        "magnitude": 0.2
+        "class": "category",
+        "name": "german"
       }
-    ]
+    ],
+    "confidence": 0.8333333333333334
+  },
+  {
+    "magnitude": 0.2,
+    "key": [
+      {
+        "class": "price",
+        "name": "$$"
+      }
+    ],
+    "confidence": 0.8333333333333334
   }
+]
 
   ```
-2. Submit a `hate` event for John Smith for the same restaurant.  John Smith visited the same restaurant one day later and received terrible service.  Pass the same event to the `/events` endpoint, but change the event type to `hate` and update the timestamp.
+3. Submit a `hate` event for John Smith for the same restaurant.  John Smith visited the same restaurant one day later and received terrible service.  Pass the same event to the `/events` endpoint, but change the event type to `hate` and update the timestamp.
     
   ```
 
   {
     "timestamp" : 100213,
-    "user_id": 222222,
+    "user_id": 222228,
     "event_type": "hate",
     "relates_to": {
       "domain": "restaurant",
@@ -119,38 +130,101 @@ The following response is displayed.  The likeability of German restaurants is r
   }
 
   ```
+ A HTTP Status code 200 is displayed.
 
-The following response is displayed.  In this case, John has a strong negative reaction to the restaurant.  His dislike for the restaurant is shown in the magnitude score of 0.36 for German restaurants and medum-priced restaurants.  His strong feel towards the restaurant is reflected in a confidence score of 1.
+ 4. View the profile for John Smith to see the impact of the event.  
+
+Pass the following JSON object to the `/profile` endpoint:
 
   ```
   {
-    "userId": 222222,
-    "response": [
-      {
-        "confidence": 1,
-        "key": [
-          {
-            "name": "german",
-            "class": "category"
-          }
-        ],
-        "magnitude": 0.3666666666666667
-      },
-      {
-        "confidence": 1,
-        "key": [
-          {
-            "name": "$$",
-            "class": "price"
-          }
-        ],
-        "magnitude": 0.3666666666666667
-      }
-    ]
+    "domain": "restaurant",
+    "user_id": 222228
   }
 
+```
+The following response is displayed. In this case, John has a strong negative reaction to the restaurant.  His dislike for the restaurant is shown in the magnitude score of -0.33 for German restaurants and medum-priced restaurants.  His strong feeling towards the restaurant is reflected in a confidence score of 0.82.
+
   ```
-### Step 4: Send a request to the profile service to rate and sort a list of restaurants.
+ [
+  {
+    "magnitude": -0.3333333333333333,
+    "key": [
+      {
+        "class": "category",
+        "name": "german"
+      }
+    ],
+    "confidence": 0.8222222222222223
+  },
+  {
+    "magnitude": -0.3333333333333333,
+    "key": [
+      {
+        "class": "price",
+        "name": "$$"
+      }
+    ],
+    "confidence": 0.8222222222222223
+  }
+]
+
+  ```
+Step 4 (Optional): Filter the profile data to exclude and include specific class values before rating and sorting a list of items.
+
+Pass the following JSON object to the /filters endpoint to exclude restaurants in the cheap price range and force the profile service to include restaurants with greek cuisine.  
+```
+
+  {
+    "attributes": [
+      {
+        "class": "cuisine"
+      }
+    ],
+    "class": "restaurant",
+    "domain": "restaurant",
+    "override": [
+      {
+        "deselect": [
+          {
+            "class": "price_range",
+            "name": "cheap"
+          }
+        ],
+        "select": [
+          {
+            "class": "cuisine",
+            "name": "greek"
+          }
+        ]
+      }
+    ],
+    "user_id": 222228
+  }
+
+```
+
+A response similar to the following is displayed
+
+```
+{
+  "filters": [
+    {
+      "class": "cuisine",
+      "values": [
+        {
+          "magnitude": 1,
+          "rank": 1,
+          "name": "greek",
+          "confidence": 1
+        }
+      ]
+    }
+  ]
+}
+
+```
+### Step 5: Send a request to the profile service to rate and sort a list of restaurants.
 
 Pass the following JSON object to the `/ratings` endpoint to rank and sort the restaurants according to John Smiths preferences.
 
@@ -217,7 +291,7 @@ Pass the following JSON object to the `/ratings` endpoint to rank and sort the r
       "distance": 100
     }
   ],
-  "user_id": "222222"
+  "user_id": 2222228
 }
 
 ```
