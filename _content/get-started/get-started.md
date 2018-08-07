@@ -16,19 +16,24 @@ The set of built-in skills that is available to you depends on which flavor of t
 - [Automotive skills]({{site.baseurl}}/flavours/automotive)
 - [Hospitality skills]({{site.baseurl}}/flavours/hospitality)
 
-### Getting started
+## Getting started
+
 You can purchase Watson Assistant Solutions or access a trial before you buy.
 
-#### Purchase Watson Assistant Solutions
+### Purchase Watson Assistant Solutions
+
 Contact IBM for more information about purchasing Watson Assistant Solutions. See the following pages on IBM Marketplace for more information:
 
 - [Industry page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-industry/purchase#product-header-top)
 - [Automotive page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-automotive/purchase#product-header-to)
 - [Hospitality page](https://www.ibm.com/us-en/marketplace/watson-assistant-for-hospitality/purchase#product-header-top)
 
- During the provisioning stage, you select whether to provision your tenant on the US South (Dallas) data center or the data center in Germany (Frankfurt).
+During the provisioning stage, you select whether to provision your tenant on the US South (Dallas) data center or the data center in Germany (Frankfurt).
 
-#### Access a trial of Watson Assistant Solutions
+Log in to your tenant from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
+
+### Access a trial of Watson Assistant Solutions
+
 You can sign up for a 90-day trial of the Watson Assistant for Industry.  Sign up for a trial from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net).  
 
 You can log in to your trial tenant using an IBMid or an API key. When you receive an email notifying you that your account is provisioned, sign in to the console using your IBMid. Go to the profile menu on the top right corner of the home page to find your API key. 
