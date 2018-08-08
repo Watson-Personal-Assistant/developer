@@ -9,10 +9,10 @@ The Bot Analytics tool displays key metrics for your Watson Assistant Solutions 
 
 Complete these steps:
 1. On the console toolbar, click the Analytics menu.
-![Start](launch.gif) The home page is displayed.
+![Start]({{site.baseurl}}/analytics/launch.gif) The home page is displayed.
 2. In the Bot Analytics tool, click 
-![tribar](tribar.png) to show the menu. The menu ![tribar](insights_menu.PNG) is displayed.
-3. Click ![launch](insights_drop_down.png).
+![tribar]({{site.baseurl}}/analytics/tribar.png) to show the menu. The menu ![tribar](insights_menu.PNG) is displayed.
+3. Click ![launch]({{site.baseurl}}/analytics/insights_drop_down.png).
 4. Select a page. The pages provide the following insights:
 
     - Dashboard page: a snapshot of how your Watson Assistant Solutions tenant is behaving.
@@ -22,7 +22,7 @@ Complete these steps:
     - Intents page: insights into the volume of requests that were handled by intents.
     - Skills: insights into the volume of requests that were handled by skills.
     - Path Flow: insights into the typical flow of conversations.
-5. Click ![tribar](tribar.png) to hide the insights (![launch](insights_menu.PNG)) menu.
+5. Click ![tribar]({{site.baseurl}}/analytics/tribar.png) to hide the insights (![launch]({{site.baseurl}}/analytics/insights_menu.PNG)) menu.
  
 ### Filtering pages
 
@@ -34,18 +34,18 @@ The scope of the data in all of the charts is your Watson Assistant solutions as
 
 With some charts, you can filter the data that is displayed in the graph or bar chart.
 
-- To filter by skill, select a skill from the pull-down menu.<br> ![Setting the time range](users_skill_filter.PNG)
-- To filter by intent, select a skill and an intent from the pull-down menu.<br> ![Setting the time range](users_intent_filter.PNG)
+- To filter by skill, select a skill from the pull-down menu.<br> ![Setting the time range]({{site.baseurl}}/analytics/users_skill_filter.PNG)
+- To filter by intent, select a skill and an intent from the pull-down menu.<br> ![Setting the time range]({{site.baseurl}}/analytics/users_intent_filter.PNG)
 
 **Note**: Filtering is only applied to charts with (Skill, Intent) in their title.
 
 For example:
-![Filter in the title](title_filter.PNG)
+![Filter in the title]({{site.baseurl}}/analytics/title_filter.PNG)
 
 #### Setting the time range
 
 The default time period for each page is the last 30 days.  Use the slider to increase or decrease the time period. The maximum time period is the last 6 months (180 days).
-![Setting the time range](time_range.gif)
+![Setting the time range]({{site.baseurl}}/analytics/time_range.gif)
 
 > **What to do next?**<br>
 Learn more about the metrics displayed [on each page]({{site.baseurl}}/analytics/analytics_pages).

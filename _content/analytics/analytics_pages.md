@@ -140,22 +140,22 @@ The page includes the following charts:
 
 In figure 10, the `#don't understand` intent from the fallback skill handled the most utterances. This chart shows that a high volume of utterances are unhandled.
 
-![Intents by utterance](intents_intents_by_utterance.PNG)
+![Intents by utterance]({{site.baseurl}}/analytics/intents_intents_by_utterance.PNG)
 
 
 In figure 11, the `#checking` intent was involved in the most conversations.
 
-![Intents by conversation](intents_intents_by_conversation.PNG)
+![Intents by conversation]({{site.baseurl}}/analytics/intents_intents_by_conversation.PNG)
 
 
 In figure 12, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
 
-![Intents by conversation - top](intents_intents_by_avg_confidence.png)
+![Intents by conversation - top]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence.png)
 
 
 In figure 13, of the bottom performers, the `#travelling` intent had the poorest average confidence score of under 71%.
 
-![Intents by conversation - bottom](intents_intents_by_avg_confidence_bottom.png)
+![Intents by conversation - bottom]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence_bottom.png)
 
 ---
 #### The Skills page
@@ -173,23 +173,23 @@ The page includes the following charts:
 
 In figure 14, the fallback skill handled the most utterances. The card checking skill also handled a high volume of intents (over 2k).
 
-![Skills by utterance](skills_skills_utterances.PNG)
+![Skills by utterance]({{site.baseurl}}/analytics/skills_skills_utterances.PNG)
 
 
 In figure 15, the card checking skill was involved in the most conversations.
 
-![ISkills by conversation](skills_skills_conversations.PNG)
+![ISkills by conversation]({{site.baseurl}}/analytics/skills_skills_conversations.PNG)
 
 
 In figure 16, of the top performers, the small talk skill had the highest average confidence score of over 98%.
 
-![Skills by conversation - top](skills_avg_confidence_top.PNG)
+![Skills by conversation - top]({{site.baseurl}}/analytics/skills_avg_confidence_top.PNG)
 
 
 In figure 17, of the bottom performers, the fallback skill had the poorest average confidence score at 90%.  A value of 90% is still high, indicating that the confidence scores of your skill overall were high during the time period.
 
 
-![Skills by conversation - bottom](skills_avg_confidence_bottom.PNG)
+![Skills by conversation - bottom]({{site.baseurl}}/analytics/skills_avg_confidence_bottom.PNG)
 
 ---
 
@@ -201,7 +201,7 @@ Use the Conversation path analysis page to view the conversation paths and exit 
 
 In figure 18, you can see that 39% of users exited the conversation early after the `#cards` intent.  Expand the nodes to see where you expected users to exit.  If users are abandoning the conversation, you might need to revise your design.
 
-![Conversation path analysis](conversation_path_analysis.png)
+![Conversation path analysis]({{site.baseurl}}/analytics/conversation_path_analysis.png)
 
 > **What to do next?**<br>
 See how to use [the Bot Analytics tool]({{site.baseurl}}/analytics/bot_analytics_tool)

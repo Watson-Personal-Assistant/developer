@@ -7,7 +7,7 @@ Use analytics to gauge how well your assistant is performing and to improve the 
 
 Watch this video for a short introduction.</br>
 <video width="254" height="252" controls>
-  <source src="analytics_tool.mp4" type="video/mp4">
+  <source src="{{site.baseurl}}/analytics_tool.mp4" type="video/mp4">
 </video>
 2 mins
 </br>
