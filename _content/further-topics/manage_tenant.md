@@ -23,7 +23,7 @@ If more that one tenant is provisioned for your deployment, click the down arrow
 
 #### Update a tenant configuration
 
-Complete these steps as an administrator to update a tenant configuration:
+Complete these steps to update a tenant configuration:
 
 1. click **Admin** > **Usage** from the menu bar of the console. The summary table displays the list of tenants.
 2. In the tenant summary view, click **Edit**.
@@ -40,21 +40,21 @@ Adding a user
 
 Complete these steps as an administrator to add a new user to your tenant:
 
-1. Click **Admin** > **Add User by IBM id** from the console menu bar.
-2. Click **Add User**. Enter one or more IBMids separated by commas.
-3. Click Submit. 
+1. Click **Admin** > **Add User** from the console menu bar.
+2. Enter one or more IBMids separated by commas.
+3. Click **Submit**. 
 
 
 #### Removing a user from your tenant
 
-Adding a user
-![Add user](add_user.gif)
+Removing a user
+![Remove user](add_user.gif)
 
 Complete these steps as an administrator to remove a new user from your tenant:
 
-1. Click **Admin** > **Add User by IBM id** from the console menu bar.
-2. Click **Delete** User. Enter one or more IBMids separated by commas.
-3. Click submit. 
+1. Click **Admin** > **Remove User** from the console menu bar.
+2. Select the check box for each user you want to delete.
+3. Click **Submit**. 
 
 > **What to do next?**<br/>
 Learn how to [access your log data]({{site.baseurl}}/further-topics/get-logs/).
