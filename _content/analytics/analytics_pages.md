@@ -90,7 +90,7 @@ Figure 7 shows that 2.5k active users shown in figure 4 represent 79% of users w
 
 The retention matrix in figure 8 shows that on March 15 the number of active users was 55. The number of these users that returned to access your assistant on each subsequent day declined.  By day 12, only 7 of the 55 users returned.  By glancing at the shading pattern, you can see the number of users decreasing steadily on subsequent days.
 
-![Retention matrix]({{site.baseurl}}/analytics/retention_matrix.png)
+![Retention matrix]({{site.baseurl}}/analytics/retention_matrix.PNG)
 
 #### The Conversation page
 
