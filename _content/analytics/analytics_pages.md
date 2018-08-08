@@ -119,9 +119,15 @@ In figure 7, the average confidence score was high at 90%.
 
 ![Average daily confidence]({{site.baseurl}}/analytics/conversaton_avg_daily_conf.png)
 
+
 Figure 8 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_hear intent (87.8% of conversations) 
 
+![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path.PNG).
+
+
 Figure 9 shows that by far the most common path from the _session start_ intent was to access the _Welcome_hear_ intent (87.8% of conversations).  
+
+![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path_analysis.png).
 
 ---
 
