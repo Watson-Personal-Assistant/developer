@@ -6,11 +6,11 @@ weight: 5
 Use analytics to gauge how well your assistant is performing and to improve the design of your assistant.
 
 Watch this video for a short introduction.
-<video width="1054" height="252" controls>
+<video width="1054" height="452" controls>
   <source src="{{site.baseurl}}/analytics/analytics_tool.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-2 mins
+**2 mins**
 
 
 Watson Assistant Solutions provides a Bot Analytics tool in alpha mode for carrying out analysis on data collected.  Data collection for Bot Analytics in enabled by default when your account is provisioned. Metrics are computed nightly at 00:00 GMT.
