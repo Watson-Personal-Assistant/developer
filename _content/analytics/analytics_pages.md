@@ -80,15 +80,15 @@ The page includes the following charts:
 
 The example examines the number of new and returning users on the 15 March 2018.
 
-Figure 4 shows that on the 15 March over 2.5k active users accessed your assistant, compared to only 529 new users.
+Figure 6 shows that on the 15 March over 2.5k active users accessed your assistant, compared to only 529 new users.
 
 ![Number of users]({{site.baseurl}}/analytics/retention_users.png)
 
-Figure 5 shows that 2.5k active users shown in figure 4 represent 79% of users who accessed your assistant on 15 March.
+Figure 7 shows that 2.5k active users shown in figure 4 represent 79% of users who accessed your assistant on 15 March.
 
 ![Returning users]({{site.baseurl}}/analytics/returning_users.png)
 
-The retention matrix in figure 4 shows that on March 15 the number of active users was 55. The number of these users that returned to access your assistant on each subsequent day declined.  By day 12, only 7 of the 55 users returned.  By glancing at the shading pattern, you can see the number of users decreasing steadily on subsequent days.
+The retention matrix in figure 8 shows that on March 15 the number of active users was 55. The number of these users that returned to access your assistant on each subsequent day declined.  By day 12, only 7 of the 55 users returned.  By glancing at the shading pattern, you can see the number of users decreasing steadily on subsequent days.
 
 ![Retention matrix]({{site.baseurl}}/analytics/retention_matrix.png)
 
@@ -110,22 +110,22 @@ You can filter your view to see the same information for either:
 
 The example looks at the details of conversations that took place with the assistant on the 15 March 2018.  
 
-In figure 6, on the 15 March, users  only accessed one skill and one intent on average.
+In figure 9, on the 15 March, users  only accessed one skill and one intent on average.
 
 ![Skills and intents per user]({{site.baseurl}}/analytics/conversaton_skills_intents_user.png).
 
 
-In figure 7, the average confidence score was high at 90%.
+In figure 10, the average confidence score was high at 90%.
 
 ![Average daily confidence]({{site.baseurl}}/analytics/conversaton_avg_daily_conf.png)
 
 
-Figure 8 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_hear intent (87.8% of conversations) 
+Figure 11 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_hear intent (87.8% of conversations) 
 
 ![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path.PNG).
 
 
-Figure 9 shows that by far the most common path from the _session start_ intent was to access the _Welcome_hear_ intent (87.8% of conversations).  
+Figure 12 shows that by far the most common path from the _session start_ intent was to access the _Welcome_hear_ intent (87.8% of conversations).  
 
 ![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path_analysis.png).
 
@@ -144,22 +144,22 @@ The page includes the following charts:
 
 ##### Example
 
-In figure 10, the `#don't understand` intent from the fallback skill handled the most utterances. This chart shows that a high volume of utterances are unhandled.
+In figure 13, the `#don't understand` intent from the fallback skill handled the most utterances. This chart shows that a high volume of utterances are unhandled.
 
 ![Intents by utterance]({{site.baseurl}}/analytics/intents_intents_by_utterance.PNG)
 
 
-In figure 11, the `#checking` intent was involved in the most conversations.
+In figure 14, the `#checking` intent was involved in the most conversations.
 
 ![Intents by conversation]({{site.baseurl}}/analytics/intents_intents_by_conversation.PNG)
 
 
-In figure 12, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
+In figure 15, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
 
 ![Intents by conversation - top]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence.png)
 
 
-In figure 13, of the bottom performers, the `#travelling` intent had the poorest average confidence score of under 71%.
+In figure 16, of the bottom performers, the `#travelling` intent had the poorest average confidence score of under 71%.
 
 ![Intents by conversation - bottom]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence_bottom.png)
 
@@ -177,22 +177,22 @@ The page includes the following charts:
 
 ##### Example
 
-In figure 14, the fallback skill handled the most utterances. The card checking skill also handled a high volume of intents (over 2k).
+In figure 17, the fallback skill handled the most utterances. The card checking skill also handled a high volume of intents (over 2k).
 
 ![Skills by utterance]({{site.baseurl}}/analytics/skills_skills_utterances.PNG)
 
 
-In figure 15, the card checking skill was involved in the most conversations.
+In figure 18, the card checking skill was involved in the most conversations.
 
 ![ISkills by conversation]({{site.baseurl}}/analytics/skills_skills_conversations.PNG)
 
 
-In figure 16, of the top performers, the small talk skill had the highest average confidence score of over 98%.
+In figure 19, of the top performers, the small talk skill had the highest average confidence score of over 98%.
 
 ![Skills by conversation - top]({{site.baseurl}}/analytics/skills_avg_confidence_top.PNG)
 
 
-In figure 17, of the bottom performers, the fallback skill had the poorest average confidence score at 90%.  A value of 90% is still high, indicating that the confidence scores of your skill overall were high during the time period.
+In figure 20, of the bottom performers, the fallback skill had the poorest average confidence score at 90%.  A value of 90% is still high, indicating that the confidence scores of your skill overall were high during the time period.
 
 
 ![Skills by conversation - bottom]({{site.baseurl}}/analytics/skills_avg_confidence_bottom.PNG)
@@ -205,7 +205,7 @@ Use the Conversation path analysis page to view the conversation paths and exit 
 
 ##### Example
 
-In figure 18, you can see that 39% of users exited the conversation early after the `#cards` intent.  Expand the nodes to see where you expected users to exit.  If users are abandoning the conversation, you might need to revise your design.
+In figure 21, you can see that 39% of users exited the conversation early after the `#cards` intent.  Expand the nodes to see where you expected users to exit.  If users are abandoning the conversation, you might need to revise your design.
 
 ![Conversation path analysis]({{site.baseurl}}/analytics/conversation_path_analysis.png)
 
