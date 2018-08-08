@@ -26,11 +26,11 @@ Complete these steps:
  
 ### Filtering pages
 
-You can filter the data on the page to narrow the scope to a skill or intent and to a specific time range. 
+You can filter the data on the page to narrow the scope to a skill or intent and to scope to a specific time range. 
 
 #### Setting the scope of the chart
 
-The scope of the data in all of the charts is your Watson Assistant solutions assistant by default. 
+The scope of the data in all of the charts is your Watson Assistant Solutions assistant by default. 
 
 With some charts, you can filter the data that is displayed in the graph or bar chart.
 
@@ -40,6 +40,7 @@ With some charts, you can filter the data that is displayed in the graph or bar 
 **Note**: Filtering is only applied to charts with (Skill, Intent) in their title.
 
 For example:
+
 ![Filter in the title]({{site.baseurl}}/analytics/title_filter.PNG)
 
 #### Setting the time range
