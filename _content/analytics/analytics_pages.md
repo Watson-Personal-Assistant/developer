@@ -1,6 +1,6 @@
 ---
 title: Bot Analytics pages
-weight: 5
+weight: 20
 ---
 
 The Bot Analytics tool includes the following pages:
