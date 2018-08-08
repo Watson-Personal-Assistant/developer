@@ -122,7 +122,7 @@ In figure 10, the average confidence score was high at 90%.
 
 Figure 11 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_near intent (87.8% of conversations) 
 
-![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path_analysis.png)
+![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path.PNG)
 
 ---
 
