@@ -27,14 +27,14 @@ The example shows the performance of the assistant over the last 6 months (180 d
 
 In figure 1, you can see that conversations were short (85 seconds) with few steps (4 on average).
 
-![Metrics - daily average](dashboard_avg.PNG)
+![Metrics - daily average]({{site.baseurl}}/analytics/dashboard_avg.PNG)
 
 
 In figure 2, you can see that slightly more conversations were started from a user or client than by the assistant. Most of users during the 6 months were returning users. Confidence was low at 49%.
 
 Overall, the short conversations and poor performance indicate that the assistant is not performing optimally.
 
-![Metrics - daily rate](dashboard_rate.PNG)
+![Metrics - daily rate]({{site.baseurl}}/analytics/dashboard_rate.PNG)
 
 ---
 
@@ -54,15 +54,15 @@ The example shows the performance of the `#transfer` intent on the 3 March 2018.
 
 Figure 3 shows that the `#transfer` intent was involved in six conversations, all of which were user initiated.
 
-![Number of conversations](basic_no_of_conversations.png)
+![Number of conversations]({{site.baseurl}}/analytics/basic_no_of_conversations.png)
 
 Figure 4 shows that the `#transfer` intent handled 22 utterances on the day.
 
-![Number of utterances](basic_no_of_utterances.png)
+![Number of utterances]({{site.baseurl}}/analytics/basic_no_of_utterances.png)
 
 Figure 5 shows that the average conversation length that involved the `#transfer` intent was 484 seconds and involved nine steps.
 
-![Number of utterances](basic_conversation_lenght.png)
+![Number of utterances]({{site.baseurl}}/analytics/basic_conversation_lenght.png)
 
 ---
 
@@ -82,15 +82,15 @@ The example examines the number of new and returning users on the 15 March 2018.
 
 Figure 4 shows that on the 15 March over 2.5k active users accessed your assistant, compared to only 529 new users.
 
-![Number of users](retention_users.png)
+![Number of users]({{site.baseurl}}/analytics/retention_users.png)
 
 Figure 5 shows that 2.5k active users shown in figure 4 represent 79% of users who accessed your assistant on 15 March.
 
-![Returning users](returning_users.png)
+![Returning users]({{site.baseurl}}/analytics/returning_users.png)
 
 The retention matrix in figure 4 shows that on March 15 the number of active users was 55. The number of these users that returned to access your assistant on each subsequent day declined.  By day 12, only 7 of the 55 users returned.  By glancing at the shading pattern, you can see the number of users decreasing steadily on subsequent days.
 
-![Retention matrix](retention_matrix.png)
+![Retention matrix]({{site.baseurl}}/analytics/retention_matrix.png)
 
 #### The Conversation page
 
@@ -103,8 +103,8 @@ The page includes the following charts:
 * Key conversation flows: a graphical representation of the paths through the conversation from the source node to the target node.
 
 You can filter your view to see the same information for either:
--  a specific skill<br> ![filter by skill](users_skill_filter.PNG)
--  a specific intent<br> ![filter by intent](users_intent_filter.PNG)
+-  a specific skill<br> ![filter by skill]({{site.baseurl}}/analytics/users_skill_filter.PNG)
+-  a specific intent<br> ![filter by intent]({{site.baseurl}}/analytics/users_intent_filter.PNG)
 
 ##### Example
 
@@ -112,12 +112,12 @@ The example looks at the details of conversations that took place with the assis
 
 In figure 6, on the 15 March, users  only accessed one skill and one intent on average.
 
-![Skills and intents per user](conversaton_skills_intents_user.png).
+![Skills and intents per user]({{site.baseurl}}/analytics/conversaton_skills_intents_user.png).
 
 
 In figure 7, the average confidence score was high at 90%.
 
-![Average daily confidence](conversaton_avg_daily_conf.png)
+![Average daily confidence]({{site.baseurl}}/analytics/conversaton_avg_daily_conf.png)
 
 Figure 8 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_hear intent (87.8% of conversations) 
 
