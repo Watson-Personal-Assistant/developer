@@ -38,6 +38,10 @@ audio_single:
 ifttt:
   title: IFTTT integration
   icon: code
+
+analytics:
+  title: Analytics
+  icon: code
   
 further-topics:
   title: Further topics
