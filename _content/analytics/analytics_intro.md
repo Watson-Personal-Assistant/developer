@@ -6,7 +6,7 @@ weight: 5
 Use analytics to gauge how well your assistant is performing and to improve the design of your assistant.
 
 Watch this video for a short introduction.
-<video width="954" height="552" controls>
+<video width="1054" height="252" controls>
   <source src="{{site.baseurl}}/analytics/analytics_tool.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
