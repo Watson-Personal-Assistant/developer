@@ -76,28 +76,28 @@ The following response is displayed.  The likeability of German restaurants is r
 
   ```
 
-[
-  {
-    "magnitude": 0.2,
-    "key": [
-      {
-        "class": "category",
-        "name": "german"
-      }
-    ],
-    "confidence": 0.8333333333333334
-  },
-  {
-    "magnitude": 0.2,
-    "key": [
-      {
-        "class": "price",
-        "name": "$$"
-      }
-    ],
-    "confidence": 0.8333333333333334
-  }
-]
+  [
+    {
+      "magnitude": 0.2,
+      "key": [
+        {
+          "class": "category",
+          "name": "german"
+        }
+      ],
+      "confidence": 0.8333333333333334
+    },
+    {
+      "magnitude": 0.2,
+      "key": [
+        {
+          "class": "price",
+          "name": "$$"
+        }
+      ],
+      "confidence": 0.8333333333333334
+    }
+  ]
 
   ```
 3. Submit a `hate` event for John Smith for the same restaurant.  John Smith visited the same restaurant one day later and received terrible service.  Pass the same event to the `/events` endpoint, but change the event type to `hate` and update the timestamp.
@@ -132,7 +132,7 @@ The following response is displayed.  The likeability of German restaurants is r
   ```
  A HTTP Status code 200 is displayed.
 
- 4. View the profile for John Smith to see the impact of the event.  
+4. View the profile for John Smith to see the impact of the event.  
 
 Pass the following JSON object to the `/profile` endpoint:
 
@@ -146,77 +146,77 @@ Pass the following JSON object to the `/profile` endpoint:
 The following response is displayed. In this case, John has a strong negative reaction to the restaurant.  His dislike for the restaurant is shown in the magnitude score of -0.33 for German restaurants and medum-priced restaurants.  His strong feeling towards the restaurant is reflected in a confidence score of 0.82.
 
   ```
- [
-  {
-    "magnitude": -0.3333333333333333,
-    "key": [
-      {
-        "class": "category",
-        "name": "german"
-      }
-    ],
-    "confidence": 0.8222222222222223
-  },
-  {
-    "magnitude": -0.3333333333333333,
-    "key": [
-      {
-        "class": "price",
-        "name": "$$"
-      }
-    ],
-    "confidence": 0.8222222222222223
-  }
-]
+  [
+    {
+      "magnitude": -0.3333333333333333,
+      "key": [
+        {
+          "class": "category",
+          "name": "german"
+        }
+      ],
+      "confidence": 0.8222222222222223
+    },
+    {
+      "magnitude": -0.3333333333333333,
+      "key": [
+        {
+          "class": "price",
+          "name": "$$"
+        }
+      ],
+      "confidence": 0.8222222222222223
+    }
+  ]
 
   ```
-Step 4 (Optional): Filter the profile data to exclude and include specific class values before rating and sorting a list of items.
+Step 4 (Optional): Filter the profile data to exclude and include specific class values before you request the service to rate and sort a list of items.
 
-Pass the following JSON object to the /filters endpoint to exclude restaurants in the cheap price range and force the profile service to include restaurants with greek cuisine.  
+Pass the following JSON object to the `/filters` endpoint to exclude restaurants in the cheap price range and force the profile service to include restaurants that are closed.  
 ```
 
-  {
-    "attributes": [
-      {
-        "class": "cuisine"
-      }
-    ],
-    "class": "restaurant",
-    "domain": "restaurant",
-    "override": [
-      {
-        "deselect": [
-          {
-            "class": "price_range",
-            "name": "cheap"
-          }
-        ],
-        "select": [
-          {
-            "class": "cuisine",
-            "name": "greek"
-          }
-        ]
-      }
-    ],
-    "user_id": 222228
-  }
+{
+  "attributes": [
+    {
+      "class": "is_closed"
+    }
+  ],
+  "class": "restaurant",
+  "domain": "restaurant",
+  "prioritize": [
+    {
+      "deselect": [
+        {
+          "class": "price",
+          "name": "$"
+        }
+      ],
+      "select": [
+        {
+          "class": "is_closed",
+          "name": "true"
+        }
+      ]
+    }
+  ],
+  "user_id": "222229"
+}
 
 ```
 
-A response similar to the following is displayed
+A response similar to the following is displayed.  The results show that any restaurant that is closed will be included with a rank of 1 in the results.
 
 ```
 {
   "filters": [
     {
-      "class": "cuisine",
+      "class": "is_closed",
       "values": [
         {
           "magnitude": 1,
-          "rank": 1,
-          "name": "greek",
-          "confidence": 1
+          "confidence": 1,
+          "name": "true",
+          "rank": 1
         }
       ]
     }
@@ -264,7 +264,7 @@ Pass the following JSON object to the `/ratings` endpoint to rank and sort the r
       "rating": 3,
       "latitude": 40.707077,
       "longitude": -74.002464,
-      "price": "$$",
+      "price": "$",
       "city": "New York",
       "zip_code": "10038",
       "country": "US",
@@ -291,7 +291,7 @@ Pass the following JSON object to the `/ratings` endpoint to rank and sort the r
       "distance": 100
     }
   ],
-  "user_id": 2222228
+  "user_id": "222229"
 }
 
 ```
@@ -299,28 +299,28 @@ The following response is displayed:
 
 ```
 {
-  "userId": "222222",
   "signals": [
     {
-      "rank": 1,
+      "rating": 1.0,
       "id": "carmiel-best",
-      "rating": 1.0
+      "rank": 2
     },
     {
-      "rank": 2,
-      "id": "fresh-salt-new-york",
-      "rating": 0.6123979928024736
-    },
-    {
-      "rank": 3,
+      "rating": 1.0,
       "id": "aaa-salt-haifa",
-      "rating": 0.0
+      "rank": 1
+    },
+    {
+      "rating": 0.0,
+      "id": "fresh-salt-new-york",
+      "rank": 3
     }
-  ]
+  ],
+  "userId": "222229"
 }
 
 ```
-A German restaurant, carmiel-best, is top of the list.
+A German restaurant, fresh-salt-new-york, is top of the list. It is closed and it is a German restaurant.  We suppressed low price restaurants. The restaurant, aaa-salt-haifa, is low privde and is lower in the rankings.  
 
 > **What to do next?**
 - Read about [cognitive profiling]({{site.baseurl}}/cognitive/cognitive_profile_intro).
