@@ -84,7 +84,7 @@ Figure 6 shows that on the 15 March over 2.5k active users accessed your assista
 
 ![Number of users]({{site.baseurl}}/analytics/retention_users.png)
 
-Figure 7 shows that 2.5k active users shown in figure 4 represent 79% of users who accessed your assistant on 15 March.
+Figure 7 shows that 2.5k active users shown in figure 6 represent 79% of users who accessed your assistant on 15 March.
 
 ![Returning users]({{site.baseurl}}/analytics/returning_users.png)
 
@@ -100,7 +100,7 @@ The page includes the following charts:
 
 * Skills and intents per user: Average number of skills and average number of intents that are accessed on average by users per day.
 * Average daily confidence: Average confidence score of the skills that processed converse requests.
-* Key conversation flows: a graphical representation of the paths through the conversation from the source node to the target node.
+* Key conversation flows: A graphical representation of the paths through the conversation from the source node to the target node.
 
 You can filter your view to see the same information for either:
 -  a specific skill<br> ![filter by skill]({{site.baseurl}}/analytics/users_skill_filter.PNG)
@@ -112,7 +112,7 @@ The example looks at the details of conversations that took place with the assis
 
 In figure 9, on the 15 March, users  only accessed one skill and one intent on average.
 
-![Skills and intents per user]({{site.baseurl}}/analytics/conversaton_skills_intents_user.png).
+![Skills and intents per user]({{site.baseurl}}/analytics/conversaton_skills_intents_user.png)
 
 
 In figure 10, the average confidence score was high at 90%.
@@ -120,14 +120,9 @@ In figure 10, the average confidence score was high at 90%.
 ![Average daily confidence]({{site.baseurl}}/analytics/conversaton_avg_daily_conf.png)
 
 
-Figure 11 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_hear intent (87.8% of conversations) 
+Figure 11 shows the path that the conversations took through the skills.  The most common path by users was to access the Welcome_near intent (87.8% of conversations) 
 
-![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path.PNG).
-
-
-Figure 12 shows that by far the most common path from the _session start_ intent was to access the _Welcome_hear_ intent (87.8% of conversations).  
-
-![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path_analysis.png).
+![Skills and intents per user]({{site.baseurl}}/analytics/conversation_path_analysis.png)
 
 ---
 
@@ -144,22 +139,22 @@ The page includes the following charts:
 
 ##### Example
 
-In figure 13, the `#don't understand` intent from the fallback skill handled the most utterances. This chart shows that a high volume of utterances are unhandled.
+In figure 12, the `#don't understand` intent from the fallback skill handled the most utterances. This chart shows that a high volume of utterances are unhandled.
 
 ![Intents by utterance]({{site.baseurl}}/analytics/intents_intents_by_utterance.PNG)
 
 
-In figure 14, the `#checking` intent was involved in the most conversations.
+In figure 13, the `#checking` intent was involved in the most conversations.
 
 ![Intents by conversation]({{site.baseurl}}/analytics/intents_intents_by_conversation.PNG)
 
 
-In figure 15, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
+In figure 14, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
 
 ![Intents by conversation - top]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence.PNG)
 
 
-In figure 16, of the bottom performers, the `#travelling` intent had the poorest average confidence score of under 71%.
+In figure 15, of the bottom performers, the `#travelling` intent had the poorest average confidence score of under 71%.
 
 ![Intents by conversation - bottom]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence_bottom.PNG)
 
@@ -177,22 +172,22 @@ The page includes the following charts:
 
 ##### Example
 
-In figure 17, the fallback skill handled the most utterances. The card checking skill also handled a high volume of intents (over 2k).
+In figure 16, the fallback skill handled the most utterances. The card checking skill also handled a high volume of intents (over 2k).
 
 ![Skills by utterance]({{site.baseurl}}/analytics/skills_skills_utterances.PNG)
 
 
-In figure 18, the card checking skill was involved in the most conversations.
+In figure 17, the card checking skill was involved in the most conversations.
 
 ![ISkills by conversation]({{site.baseurl}}/analytics/skills_skills_conversations.PNG)
 
 
-In figure 19, of the top performers, the small talk skill had the highest average confidence score of over 98%.
+In figure 18, of the top performers, the small talk skill had the highest average confidence score of over 98%.
 
 ![Skills by conversation - top]({{site.baseurl}}/analytics/skills_avg_confidence_top.PNG)
 
 
-In figure 20, of the bottom performers, the fallback skill had the poorest average confidence score at 90%.  A value of 90% is still high, indicating that the confidence scores of your skill overall were high during the time period.
+In figure 19, of the bottom performers, the fallback skill had the poorest average confidence score at 90%.  A value of 90% is still high, indicating that the confidence scores of your skill overall were high during the time period.
 
 
 ![Skills by conversation - bottom]({{site.baseurl}}/analytics/skills_avg_confidence_bottom.PNG)
@@ -205,7 +200,7 @@ Use the Conversation path analysis page to view the conversation paths and exit 
 
 ##### Example
 
-In figure 21, you can see that 39% of users exited the conversation early after the `#cards` intent.  Expand the nodes to see where you expected users to exit.  If users are abandoning the conversation, you might need to revise your design.
+In figure 20, you can see that 39% of users exited the conversation early after the `#cards` intent.  Expand the nodes to see where you expected users to exit.  If users are abandoning the conversation, you might need to revise your design.
 
 ![Conversation path analysis]({{site.baseurl}}/analytics/conversation_path_analysis.png)
 
