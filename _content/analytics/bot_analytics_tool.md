@@ -11,7 +11,7 @@ Complete these steps:
 1. On the console toolbar, click the Analytics menu.
 ![Start]({{site.baseurl}}/analytics/launch.gif) The home page is displayed.
 2. In the Bot Analytics tool, click 
-![tribar]({{site.baseurl}}/analytics/tribar.PNG) to show the menu. The menu ![tribar](insights_menu.PNG) is displayed.
+![tribar]({{site.baseurl}}/analytics/tribar.PNG) to show the menu. The menu ![tribar]({{site.baseurl}}/analytics/insights_menu.PNG) is displayed.
 3. Click ![launch]({{site.baseurl}}/analytics/insights_drop_down.png).
 4. Select a page. The pages provide the following insights:
 
