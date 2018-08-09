@@ -5,6 +5,8 @@ weight: 10
 
 To quickly get started with the voice interface, download a sample Java-based audio client and connect it to your Watson Assistant Solutions tenant.
 
+**Note**: To reconfigure your audio client, start the procedure from step 3.
+
 ### Before you begin
 1. Install [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
     1. Scroll down to the **Java SE 8u*** section.
@@ -28,7 +30,7 @@ To quickly get started with the voice interface, download a sample Java-based au
 
 1. Copy the sample audio client to your system. Open a Git terminal and enter:<br>`git clone https://github.com/Watson-Personal-Assistant/AudioClientSampleCodeJava.git`
 2. In the sample client, copy the `config/configure.properties.example` file and rename it to `config/configure.properties`.
-3. Set the following mandatory parameters:
+3. Set the following mandatory parameters in the `config/configure.properties` file on the audio client.
     ```
     host=wa-audio-gateway.mybluemix.net
     userID=paste-any-ID-here
