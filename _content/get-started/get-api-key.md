@@ -1,5 +1,5 @@
 ---
-title: Accessing the service
+title: Accessing your tenant
 weight: 20
 ---
 After your Watson Assistant Solutions tenant is provisioned, you can access your tenant from the console or through REST APIs.
@@ -26,6 +26,41 @@ To log in to the Watson Assistant Solutions console, complete these steps:
 The Watson Assistant Solutions console is displayed.
 
 ### Using REST API calls
+Access Watson Assistant Solutions REST APIs using an IAM access token.  
+
+#### Procedure
+1. Create an IAM API key (IBM Cloud API key) using your IBMid.
+2. Create an IAM access token.  To convert your IAM ID to an IAM token, you can use the following command:
+
+```
+
+curl -X POST \
+  https://iam.ng.bluemix.net:443/oidc/token \
+  -H 'accept: application/json' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -d 'apikey=<paste_your_IAM_API_key_here>&grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey'
+
+```
+
+An IAM access token is provided in the access token field in the response.
+For example:
+```
+
+{
+    "access_token": "eyJraWQiOiIyMDE3MDkyMC...",
+    "refresh_token": "V4LVRdDoNyT6rqS...",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "expiration": 1510126862
+}
+
+```
+3.  Include the IAM access token in the authorization header of the Watson Assistant Solutions REST API call.  For example:
+
+curl -X GET \
+  https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills \
+  -H 'authorization: Bearer <Access token obtained above>'
+
 To access your tenant using REST APIs, include your Watson Assistant Solutions API key as an `api_key` header in your API calls.
 
 **Note**: Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
