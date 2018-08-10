@@ -19,7 +19,7 @@ Complete these steps to configure IAM authentication for your tenants:
 2.	Create an IAM ID.
     1. Create an IAM API key and save it for future use.  For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
     2. Copy the [wa-get-iam-id.sh]({{site.baseurl}}/assets/scripts/wa-get-iam-id.sh) script to your local system.
-    3. Start the script from the command line.  Enter `./wa-get-iam.sh` and follow the on-screen prompts.
+    3. Start the script from the command line.  Enter `./wa-get-iam-id.sh` and follow the on-screen prompts.
     4. When prompted, provide your IAM API key (step 2a).  The script provides you with an IAM ID.
 3.	Send an email to the [Watson Assistant Solutions support team](mailto:k4o2a6m8u6n8n2t6@ibm-sagan.slack.com) to request that your IAM ID and IBMid be associated with your tenants. See your welcome letter for contact details.   Include the following information:<br/>
   -	IAM ID
