@@ -44,6 +44,8 @@ When you have an IAM API key (also known as a Platform or Cloud API key), use th
 
 `curl -s -X POST -H 'Content-Type: x-www-form-urlencoded' 'https://iam.bluemix.net/oidc/token?grant_type=urn:ibm:params:oauth:grant-type:apikey&response_type=cloud_iam&apikey=<paste-your-iam-api-key-here>'`
 
+**Note:** The IAM token will expire an hour after it is created.  
+
 **Note**: Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
 
 > **What to do next?**<br/>
