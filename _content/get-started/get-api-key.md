@@ -11,8 +11,6 @@ You can log in to the console with your IBMid or your Watson Assistant Solutions
 - If you purchased Watson Assistant Solutions, your API key is provided in your Welcome Letter.  
 - If you are a trial user of Watson Assistant Solutions, your IBMid is set up for IAM Authenticaton.  When you log in with your IBMid, your API key is available from the profile menu on the top right corner of the UI.
 
-#### Procedure
-
 Complete these steps:
 
 1. Open a web browser and enter the following URL:[https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net)
@@ -33,7 +31,7 @@ For example:
 
 `curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'authorization: Bearer paste-your-IAM-token-here' -d '{ "text": "Hello", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skillsets/industry/converse'`
 
-For IAM authentication, you must create an IAM API key (that is, a platform/cloud API key), and use it to create a temporary IAM access token.
+For IAM authentication, you must create an IAM API key (that is, a platform/cloud API key), and use it to create a temporary IAM access token. For instructions, see [Managing user API keys](https://console.bluemix.net/docs/iam/userid_keys.html#userapikey) in IBM Cloud Docs.
 
 When you have an IAM API key (also known as a Platform or Cloud API key), use the following command to convert it to an IAM token:
 
