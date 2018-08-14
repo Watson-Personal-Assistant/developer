@@ -149,7 +149,7 @@ In figure 13, the `#checking` intent was involved in the most conversations.
 ![Intents by conversation]({{site.baseurl}}/analytics/intents_intents_by_conversation.PNG)
 
 
-In figure 14, of the top performers the `#hello_intent` had the highest average confidence score. The `#quesitons-feeling` intent also returned a high confidence score on average at 97.52%.
+In figure 14, of the top performers the `#hello_intent` had the highest average confidence score. The `#questions-feeling` intent also returned a high confidence score on average at 97.52%.
 
 ![Intents by conversation - top]({{site.baseurl}}/analytics/intents_intents_by_avg_confidence.PNG)
 
