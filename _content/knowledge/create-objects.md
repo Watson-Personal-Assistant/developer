@@ -1,159 +1,212 @@
 ---
-title: Create object and relations
+title: Create a world model
 weight: 20
 ---
-This page will walk you through first phase of learning how to make your assistant proactive.
+Create a world model for John and his hotel room.  Create an agent to subscribe to world model changes.
 
-In this phase of the tutorial, you will create objects and relations programmatically using the Watson Assistant Solutions Knowledge and Reasoning (alpha) components NodeJS SDK.
 
-1. **Create objects and relations in the Knowledge (alpha) component**
-2. Create and test a Cloud Function to be the condition part of the Rule
-3. Create and test a Cloud Function to be the action part of the Rule
-4. Create a Rule in the Rules component and get it to fire
+---
+### Before you begin
 
-### Pre-requisite
-Make sure you have already [setup your NodeJS development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
+1. Install [GIT](https://git-scm.com/downloads).
+2. Install [NodeJS v8](https://nodejs.org/dist/v8.9.1/).
+3. Clone the [Knoweldge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk).
+4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
+5. Install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
+6. Install [Python 2.7]().
 
-### Step 1: Fork the Knowledge and Reasoning (alpha) SDK
-1. Go to  [https://github.com/Watson-Personal-Assistant/kr-node-sdk](https://github.com/Watson-Personal-Assistant/kr-node-sdk).
-2. Click the gray **Fork** button in the top right corner.
+---
+### Procedure 
 
-### Step 2: Clone your fork of the SDK
-1. Click the green **Clone or download** button.
-2. Copy the `https` path.
-3. Using the Terminal app, do command
-
-    `git clone your-github-url`
-
-### Step 3: Create a javascript file and add includes
-
-Create a new file named `myapp.js` and include the object, relation and dotenv module.
+1. In the `kr-node-sdk` folder, add .bak to the files `homeSecurity.js`, `condition.js`, and `action.js`.  **Note**: You will create these files during the tutorial.  Use these files as a reference if your tutorial fails to run.
+2. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Add the following code to the start of the file:
 
 ```javascript
 require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const actions = require('./action');
+const conditions = require('./condition');
+const Agent = require('./sdk/messages');
+
+const app = express();
+
+app.use(bodyParser.json());
+
 var KnowledgeObject = require('./sdk/object');
 var KnowledgeRelation = require('./sdk/relation');
 ```
 
-### Step 4: Create objects for the tutorial
+3. Write a function to create a person, a house, and a door object in local memory.
 
-Using the `KnowledgeObject` object, define a function to create a `Person`, `House`, and `Door` with the following code:
+Use the `KnowledgeObject` object.
 
 ```javascript
-var createObjects = function() {
-  person = new KnowledgeObject('Person',
-      {
-        'name': 'TestBen',
-        "latitude": 12.456,
-        "longitude": 67.99
-      }
-  );
+// Create objects in local memory
+var person = new KnowledgeObject('Person',
+  {
+    'name': 'TestBen',
+    "latitude": 12.456,
+    "longitude": 67.99
+  }
+);
 
-  house = new KnowledgeObject('House',
-      {
-        "latitude": 12.345,
-        "longitude": 67.890,
-        "name": "home"
-      }
-  );
+var house = new KnowledgeObject('House',
+  {
+    "latitude": 12.345,
+    "longitude": 67.890,
+    "name": "home"
+  }
+);
 
-  door = new KnowledgeObject('Door',
-      {
-        "isOpen": false,
-        "name": "Front door"
-      }
-  );
-};
+var door = new KnowledgeObject('Door',
+  {
+    "isOpen": false,
+    "name": "Front door"
+  }
+);
 ```
 
-### Step 5: Create relationships between the objects
-
-Using the `KnowledgeRelation` object, define a function to create two relationships; one called `ownership` for `Person` to `House` and another named `has-as-part` for `House` to `Door`.
+4. Save the knowledge objects to the world model in the datastore.
 
 ```javascript
-var createRelations = function() {
-  personToHouse = new KnowledgeRelation(
-    'ownership', person, house);
-
-  houseToDoor = new KnowledgeRelation(
-    'has-as-part', house, door);
-};
-```
-
-### Step 6: Call creation functions to create the objects and relations in the Knowledge component
-
-Create a promise that creates the KnowledgeObjects and then creates the KnowledgeRelations if successful using the following code:
-
-```javascript
+// Save the objects to the world model
 Promise.all(
-    [
-      createObjects(),
-      person.create(),
-      house.create(),
-      door.create()
-    ]
+  [
+    person.create(),
+    house.create(),
+    door.create()
+  ]
 ).then(
   function (results) {
     console.log('All objects created\n\n');
 
-    Promise.all(
-        [
-          createRelations(),
-          personToHouse.create(),
-          houseToDoor.create()
-        ]).then(
+```
 
-        function (results) {
-          console.log('All relations created\n\n');
-        }
+4.  Create relationships between the following objects in local memory:
+
+    - The house and the front door.
+    - Tthe owner and the house.
+
+Use the the `KnowledgeRelation` object.
+
+In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship,  the person has `ownership` of the house.
+
+```javascript
+ // Create relations in local memory
+var personToHouse = new KnowledgeRelation('ownership', person, house);
+var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
+
+```
+
+5.  Save the relationship objects to the world model in the datastore.
+
+```javascript
+// Save relationships to the world model
+Promise.all(
+      [
+        personToHouse.create(),
+        houseToDoor.create()
+      ]).then(
+      function (results) {
+        console.log('All relations created\n\n');
+        runAgent();
+      }
     );
   }
 );
 
 ```
 
-### Step 7: Create .env file, add the Watson Assistant Solutions API key and execute
+6. Create a proactive agent (`doorOpenAgent`) to react to the state change event
 
-Before the code above can be ran, you need to create a .env file that includes the URL to Watson Assistant Solutions service and the API key.
-
-To do this copy the `.env.sample` file to `.env` and edit the `.env` file to have the following:
+```javascript
+// create the agents using the conditions and actions
+function runAgent() {
+  Promise.all([
+    doorOpenAgent.connect(),
+  ]).then(function () {
+    doorOpenAgent.subscribe();
+    console.log('Subscription created\n\n');
+  }, cleanup); //cleanup if the sub fails
+}
 
 ```
-HUB_URL=https://watson-personal-assistant-toolkit.mybluemix.net/
-API_KEY=your-API-key
-AGENT_PORT=
-AGENT_HOST=[this will need to be publicly visible; perhaps you should try ngrok]
+7.  Add a function to remove the objects and relations from the world model after the tutorial is ended.
+
+```javascript
+// Delete objects from the world model
+function cleanup() {
+  Promise.all(
+    [
+      person.delete(),
+      house.delete(),
+      door.delete()
+    ]);
+}
+
 ```
 
-After providing the Watson Assistant Solutions service `URL` and `API key`, install the necessary node packages to run the code by using command:
+8.  Add a funtion to ...
+
+```Javascript
+app.get('/openDoor', function (req, res) {
+  KnowledgeObject.retrieve(door.id).then((doorObj) => {
+    if (!doorObj.attributes.isOpen) {
+      doorObj.attributes['isOpen'] = true;
+      doorObj.update();
+      res.status(200);
+      res.send("opened door");
+    } else {
+      res.status(200);
+      res.send("door was already open");
+    }
+  });
+});
+
+```
+
+9.  Add a funtion to ...
+app.get('/closeDoor', function (req, res) {
+  KnowledgeObject.retrieve(door.id).then((doorObj) => {
+    if (doorObj.attributes.isOpen) {
+      doorObj.attributes['isOpen'] = false;
+      doorObj.update();
+      res.status(200);
+      res.send("closed door");
+    } else {
+      res.status(200);
+      res.send("door was already closed");
+    }
+  });
+});
+
+10.  Add a function to start the agent.
+
+```javascript
+// Server Startup
+const port = process.env.PORT || process.env.RULE_PORT || 8080;
+app.listen(port, () => {
+  console.log(`Agent REST service is alive!\nListening on port ${port}\n\n`)
+});
+module.exports.App = app;
+
+```
+11.  Save your changes to the `homeSecurity.js` file.
+12. Create a .env file that includes the URL to Watson Assistant Solutions service and the API key.
+
+Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the following:
+
+    ```
+    HUB_URL=https://watson-personal-assistant-toolkit.mybluemix.net/
+    API_KEY=paste-your-API-key-here
+
+    ```
+13. Install the node packages required to run the code. Enter:
 
 `npm install`
 
-Then run the code by using the command:
-
-`node myapp.js`
-
-If all runs correctly, you should see output similar to:
-
-```
-Saved object with id:  4152 and type: House
-Saved object with id:  4272 and type: Person
-Saved object with id:  4144 and type: Door
-All objects created
-
-
-Created relation: 4272 (Person) -[ownership]-> 4152 (House)
-Created relation: 4152 (House) -[has-as-part]-> 4144 (Door)
-All relations created
-```
-
-**Note the ID of the Door**, in this case 4144, you'll need this in the later steps.
-
-If the code fails to run, you might try attaching the chrome devtools using command:
-
-`node --inspect --debug-brk myapp.js`.
-
-Hopefully, all goes well and you have created 3 objects and 2 relations in your Watson Assistant Solutions Knowledge component.
 
 > **What to do next?**<br/>
-Learn how to [create rules in the Rules component]({{site.baseurl}}/knowledge/create-condition-function).
+ [create the condition part of the rule]({{site.baseurl}}/knowledge/create-condition-function).
