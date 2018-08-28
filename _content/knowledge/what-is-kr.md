@@ -1,11 +1,21 @@
 ---
-title: What is the Knowledge and Reasoning (alpha) component?
+title: Adding Proactivity with Knowledge and Reasoning
 weight: 5
 ---
 
-The Knowledge and Reasoning (alpha) components of Watson Assistant Solutions power the personalized and proactive experience of your application.  As your users interact with the assistant through your application, the Skill will create and maintain information about them and their world so that your assistant can proactively assist your users. Rules, created with the Rules APIs and SDK, can kick off services or engage your users when the information in their world changes or something you want to act on is created.
+Add proactivity to your assistant to create a personalized experience for your users.
 
-In the pages that follow, you'll go through a simulated tutorial to better understand how to create and change information in the Knowledge (alpha) component as well as create a rule to engage your user.
+Design your skills to learn about the world around your users.  Store information about users and objects in their world, for example, houses, cars, or hotel rooms. Update this information continuously as you interact with users.
+
+Get notified when changes in their world occur, such as when a light in a hotel room turns on or the door of a car opens. Consider whether this change is something to act on.  If yes, you might ask a question, for example "do you want to close the blinds?".  Or you might take some action, for example, send an alert to the car owner.  Or you might update the information that you have for that user in the knowledge store.  Build proactivity into your assistant using the Knowledge and Reasoning capability of Watson Assistant Solutions.
+
+The Knowledge and Reasoning (alpha) capability provides a shared knowledge store for storing the world models of your users.  Use the Knowledge and Reasoning REST API endpoints to create and maintain these models.  
+
+Create custom agents to subscribe to state changes and to fire some rules.  As part of your agent, you might create a function to evaluate the condition part of a rule and a function to run the action part of the rule.
+
+The Knowledge and Reasoning component has a WebSphere Message Hub that implements a publish and subscription messaging mechanism.  Subscribe the rules of your agent to the publication topics the agent is interested. Your agent is then notified of changes in the world model of users.  
+
+Complete the Knowledge and Reasoning _proactivity_ tutorial for an example of how to use its capability in your assistant.
 
 > **What to do next?**<br/>
-Go through a [Knowledge and Rules (alpha) tutorial]({{site.baseurl}}/knowledge/about-tutorial).
+Complete the [proactivity tutorial]({{site.baseurl}}/knowledge/about-tutorial).
