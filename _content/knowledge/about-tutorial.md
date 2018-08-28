@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Adding proactivity
-weight: 5
+weight: 10
 ---
 
 The tutorial simulates a home security scenario to demonstrate how to add proactivity to an assistant.
