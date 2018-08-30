@@ -18,10 +18,10 @@ To create an API token for your slack bot, complete these steps:
 
 To set up a python environment, complete these steps:
 1. Install python version 3.6.2 or later from the [python.org website](http://www.python.org/download/)
-2. Install the python packages `python-dotenv`, `slackclient`, `sys`, and `requests`. For example:
+2. Install the required python libraries. For example:
 
 ```
-py pip install python-dotenv slackclient requests
+pip3 install -r requirements.txt
 
 ```
 
@@ -126,7 +126,9 @@ cf restage $YOUR_APP_NAME
 6. Verify that you can chat with your bot. Send it a direct message to your bot on slack.
 
 ### Adding context
+You can simulate context variables in your slack bot conversation.  Provide the context information in the `/context.json` file. The file must be in valid JSON format. The context information is sent in the request to the Watson Assistant Solutions core routing component.  
 
+Use this mechanism if you are testing a skill that requires location information.
 
 ### Viewing logs
 
