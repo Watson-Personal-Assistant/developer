@@ -2,9 +2,9 @@
 title: Creating a slack bot
 weight: 65
 ---
-Use the sample chat bot that is provided iwth Watson Assistant Soluitons to chat with your assistant.
+Use the sample chat bot that is provided with Watson Assistant Solutions to chat with your assistant.
 
-#### Seting up your environment
+#### Setting up your environment
 
 To create an API token for your slack bot, complete these steps:
 
@@ -13,11 +13,11 @@ To create an API token for your slack bot, complete these steps:
 3. Click Custom Integrations under the Manage sidebar.
 4. Click Bots.
 5. Click Add Configuration.
-6. Assign your bot a unique username.
-7. Save the API token and the username for later use.
+6. Assign your bot a unique user name.
+7. Save the API token and the user name for later use.
 
 To set up a python environment, complete these steps:
-1. Install python version 3.6.1 or later from the [python.org website](http://www.python.org/download/)
+1. Install python version 3.6.2 or later from the [python.org website](http://www.python.org/download/)
 2. Install the python packages `python-dotenv`, `slackclient`, `sys`, and `requests`. For example:
 
 ```
@@ -79,7 +79,7 @@ To run a specific unit test, enter:
 python3 -m unittest test.<test name> 
 
 ```
-where values for _test name _ includes `test_WA_configuration`, `test_slack_configuration`, `test_env_file`, `test_context_file`, and `settings`. 
+Where values for _test name _ includes `test_WA_configuration`, `test_slack_configuration`, `test_env_file`, `test_context_file`, and `settings`. 
 
 
 5. Start your slack bot. Enter:
@@ -104,14 +104,29 @@ After you test that your slack bot is running locally, push the bot to IBM Cloud
 cf push $PLACE_YOUR_APP_NAME_HERE --no-route true --health-check-type process
 ```
 
-1.  Add VCAP variables for each variable you specified in the `.env` file. For instructions, see [IBM Cloud Docs](https://console.ng.bluemix.net/docs/manageapps/depapps.html#ud_env).
-2. Restage your application through the IBM Cloud UI or from the command-line.  For example:
+4.  Add VCAP variables for each variable you specified in the `.env` file. 
+
+From the command line enter:
+```
+cf set-env $YOUR_APP_NAME variable_name variable_value
+
+```
+For example:
+```
+cf  set-env WA_SKILLSET industry
+
+```
+
+5. Restage your application through the IBM Cloud UI or from the command line.  For example:
 
 ```
 cf restage $YOUR_APP_NAME
 ```
 ---
 6. Verify that you can chat with your bot. Send it a direct message to your bot on slack.
+
+### Adding context
+
 
 ### Viewing logs
 
@@ -121,7 +136,7 @@ All chat bot logs are in the `/slackbot.log` file. The file mostly consists of r
 
 You can log all responses that return either a fallback response or no response from your assistant.  The responses are written to the `/fallback_responses.csv` file.
 
-To enable the logging of unrecognized intents, add comma-separated fallback responses to the `FALLBACK_RESPONSES `variable in the local `.env` file.  If you are running your slack bot on IBM Cloud, add a  VCAP environment variables.  In the variable, match the fallback responses from your fallback skill.  
+To enable the logging of unrecognized intents, add comma-separated fallback responses to the `FALLBACK_RESPONSES `variable in the local `.env` file.  If you are running your slack bot on IBM Cloud, add a  VCAP environment variable.  In the variable, match the fallback responses from your fallback skill.  
 
 For example:
 
@@ -132,3 +147,4 @@ FALLBACK_RESPONSES="I didn't quite catch that, I don't understand"
 
 ### Viewing analytics
 
+You can integrate your slackbot with the Dashbot analytics tool. Provide the parameters to connect,  to your Dashbot account, for example, your Dashbot API key, in the .env file or as an environment variable on IBM Cloud. See the `sample.env` file for the parameters to specify.  For more information about Dashbot, see [Dashbot Docs](https://www.dashbot.io/docs/).

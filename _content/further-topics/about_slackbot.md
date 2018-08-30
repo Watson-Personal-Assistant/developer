@@ -11,9 +11,11 @@ Run the slack bot locally or host it on IBM Cloud.  Once started, you can chat w
 For example:<br>
 ![Chat with a Slack bot](slackbot.gif) 
 
-The slack bot is an easy way to converse with your assistant for demonstration or testing purposes. Use the slack bot to test how your custom skill reports and to see how it responds within a skillset. 
+The slack bot is an easy way to converse with your assistant for demonstration or testing purposes. Use the slack bot to test how your custom skill responds. Use it to see how well the conversation flows between skills in  a skillset.
 
-A slack bot is ideal for testing multiple users conversing with your assistant simultaneously.  Use the slackbot as part of any crowdsourcing activites to test utterances.  The slack bot can be configured to log fallback responses, such as "I don't understand" in a log file.  Use the logs to identify utteraance that fall within the domain of your skills and retrain your skills to respond appropriately.
+A slack bot is ideal for testing multiple users conversing with your assistant simultaneously.  
+
+Use the slack bot as part of any crowd sourcing activities to test utterances.  The slack bot can be configured to log fallback responses, such as "sorry, I don't understand", in a log file.  Use the logs to identify utterance that fall within the domain of your skills and retrain your skills to respond appropriately.
 
 > **What to do next?**<br/>
 Learn how to [create a slack bot]({{site.baseurl}}/further-topics/slackbot-integration/)
