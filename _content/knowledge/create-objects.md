@@ -1,16 +1,15 @@
 ---
 title: Create a world model
-weight: 20
+weight: 15
 ---
-Create a world model for John and his hotel room.  Create an agent to subscribe to world model changes.
-
+Create a world model for John and his home.  Create an agent that subscribes to changes in the world model.
 
 ---
 ### Before you begin
 
 1. Install [GIT](https://git-scm.com/downloads).
 2. Install [NodeJS v8](https://nodejs.org/dist/v8.9.1/).
-3. Clone the [Knoweldge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk).
+3. Clone the [Knowledge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
 5. Install the [IBM Cloud CLI tool](https://console.bluemix.net/docs/cli/index.html#cli).
 6. Install [Python 2.7]().
@@ -18,7 +17,7 @@ Create a world model for John and his hotel room.  Create an agent to subscribe 
 ---
 ### Procedure 
 
-1. In the `kr-node-sdk` folder, add .bak to the files `homeSecurity.js`, `condition.js`, and `action.js`.  **Note**: You will create these files during the tutorial.  Use these files as a reference if your tutorial fails to run.
+1. In the `kr-node-sdk` folder, add .bak to the files `homeSecurity.js`, `condition.js`, and `action.js`.  **Note**: You create these files during the tutorial.  Use these files as a reference if your tutorial fails to run.
 2. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Add the following code to the start of the file:
 
 ```javascript
@@ -46,7 +45,7 @@ Use the `KnowledgeObject` object.
 // Create objects in local memory
 var person = new KnowledgeObject('Person',
   {
-    'name': 'TestBen',
+    'name': 'John',
     "latitude": 12.456,
     "longitude": 67.99
   }
@@ -68,7 +67,7 @@ var door = new KnowledgeObject('Door',
 );
 ```
 
-4. Save the knowledge objects to the world model in the datastore.
+4. Save the knowledge objects to the world model in the data store.
 
 ```javascript
 // Save the objects to the world model
@@ -84,14 +83,14 @@ Promise.all(
 
 ```
 
-4.  Create relationships between the following objects in local memory:
+5.  Create relationships between the following objects in local memory:
 
     - The house and the front door.
-    - Tthe owner and the house.
+    - The owner and the house.
 
-Use the the `KnowledgeRelation` object.
+Use the `KnowledgeRelation` object.
 
-In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship,  the person has `ownership` of the house.
+In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the person has `ownership` of the house.
 
 ```javascript
  // Create relations in local memory
@@ -100,7 +99,7 @@ var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
 
 ```
 
-5.  Save the relationship objects to the world model in the datastore.
+6.  Save the relationship objects to the world model in the data store.
 
 ```javascript
 // Save relationships to the world model
@@ -119,7 +118,7 @@ Promise.all(
 
 ```
 
-6. Create a proactive agent (`doorOpenAgent`) to react to the state change event
+7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
 
 ```javascript
 // create the agents using the conditions and actions
@@ -133,7 +132,7 @@ function runAgent() {
 }
 
 ```
-7.  Add a function to remove the objects and relations from the world model after the tutorial is ended.
+8.  Add a function to remove the objects and relations if creation of the world model does not complete successfully.
 
 ```javascript
 // Delete objects from the world model
@@ -148,9 +147,11 @@ function cleanup() {
 
 ```
 
-8.  Add a funtion to ...
+9.  Add a function to update the status of the door to open when the function is called.  The function checks that the door is closed before sending the update to the world model.
+
 
 ```Javascript
+// Open the door
 app.get('/openDoor', function (req, res) {
   KnowledgeObject.retrieve(door.id).then((doorObj) => {
     if (!doorObj.attributes.isOpen) {
@@ -167,7 +168,10 @@ app.get('/openDoor', function (req, res) {
 
 ```
 
-9.  Add a funtion to ...
+10. Add a function to update the status of the door to closed when the function is called.  The function checks that the door is open before sending the update to the world model.
+    
+```
+//Close the door
 app.get('/closeDoor', function (req, res) {
   KnowledgeObject.retrieve(door.id).then((doorObj) => {
     if (doorObj.attributes.isOpen) {
@@ -182,7 +186,9 @@ app.get('/closeDoor', function (req, res) {
   });
 });
 
-10.  Add a function to start the agent.
+```
+
+11. Add a function to start the agent.
 
 ```javascript
 // Server Startup
@@ -193,20 +199,7 @@ app.listen(port, () => {
 module.exports.App = app;
 
 ```
-11.  Save your changes to the `homeSecurity.js` file.
-12. Create a .env file that includes the URL to Watson Assistant Solutions service and the API key.
-
-Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the following:
-
-    ```
-    HUB_URL=https://watson-personal-assistant-toolkit.mybluemix.net/
-    API_KEY=paste-your-API-key-here
-
-    ```
-13. Install the node packages required to run the code. Enter:
-
-`npm install`
-
+12. Save your changes to the `homeSecurity.js` file.
 
 > **What to do next?**<br/>
- [create the condition part of the rule]({{site.baseurl}}/knowledge/create-condition-function).
+ [Create the condition part of the rule]({{site.baseurl}}/knowledge/create-condition-function).
