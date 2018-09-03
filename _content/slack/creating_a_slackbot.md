@@ -55,9 +55,6 @@ Complete these steps to build a slack bot locally:
     # Max Message Pointer Cache Size
     MAX_MESSAGE_CACHE=1000
 
-    # (OPTIONAL) Comma seperated fallback phrases, Comma separated. 
-    FALLBACK_RESPONSES="I didn't quite catch that, I don't understand"
-
     ```
 4. Install the required python libraries. For example:
     ```
