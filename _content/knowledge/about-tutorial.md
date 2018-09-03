@@ -14,7 +14,7 @@ John has used his assistant frequently. The assistant has learned about John dur
 ## High-level steps
 
 Step 1. Create a world model for John and his home.<br>
-Step 2. Create a proactive agent that subscribes to state change events from the world model.  Add functions to the agent to fire a rule when a state change event is recieved. The rule evaluates a condition and if the condition is true, runs an action.<br>
+Step 2. Create a proactive agent that subscribes to state change events from the world model.  Add functions to the agent to fire a rule when a state change event is received. The rule evaluates a condition and if the condition is true, runs an action.<br>
 Step 3. Start the agent locally and test the rule.<br>
 Step 4. Push the agent to Cloud Functions and test the rule.<br>
 
