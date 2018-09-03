@@ -14,17 +14,14 @@ Complete these steps:
 
 1.  Clone the [Skill debugger tool](https://github.com/Watson-Personal-Assistant/skill-debugger-tool). 
 2.  Start your skill. Enter:
+    ```
+    npm run start
 
-```
-npm run start
-
-```
-
+    ```
 3. Start the skill debug tool.  Depending on your local platform, start the tool from `../skill_debugger_tool/macOS` or `../skill_debugger_tool/Windows`. 
 4. If your skill URL is not set to `http://localhost:10011`, go to File > Skill URL to specify the URL.
 5. If your skill uses an authentication key, go to File > Skill Key to specify the key.
 6. Enter a converse request in the Converse request box. For example:
-
 ```JSON
 {
     "text": "hello",
@@ -36,10 +33,8 @@ npm run start
         "context": {}
     }
 }
-
 ```
 7. (Optional) Provide skill and session context information in the Context box.  For example:
-
 ```JSON
 {
     "skill": {
@@ -64,7 +59,6 @@ npm run start
 ```
 8. Click **Submit request**.
 9. View the evaluation response from the skill.  For example:
-
 ```JSON
 {
     "responseCode": 200,
@@ -113,7 +107,6 @@ npm run start
 ```
 
 10.  View the converse response from the skill. For example:
-
 ```JSON
 {
   "reject": false,
