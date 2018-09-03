@@ -103,7 +103,7 @@ Complete these steps:
 
     ```
 10.  View the converse response from the skill. For example:
-
+    
     ```JSON
     {
       "reject": false,
@@ -154,7 +154,7 @@ Complete these steps:
         }
       }
     }
-
     ```
+
 > **What next?**
 - For more information about the JSON object that is returned in the evaluation response and the converse response, see [Json structure]({{site.baseurl}}/reference/JSON_formats/).
