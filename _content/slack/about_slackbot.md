@@ -16,4 +16,4 @@ The slack bot is an easy way to converse with your assistant for demonstration o
 A slack bot is ideal for testing multiple users conversing with your assistant simultaneously.  
 
 > **What to do next?**<br/>
-Learn how to [create a slack bot]({{site.baseurl}}/further-topics/creating_a_slackbot/).
+Learn how to [create a slack bot]({{site.baseurl}}/slack/creating_a_slackbot/).
