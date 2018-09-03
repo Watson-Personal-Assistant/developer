@@ -103,58 +103,57 @@ Complete these steps:
 
     ```
 10.  View the converse response from the skill. For example:
-    
-    ```JSON
-    {
-      "reject": false,
-      "error": 200,
-      "deleteSkillSession": true,
-      "captureInput": false,
-      "speech": {
-        "text": "Hello world"
-      },
-      "internal": {},
-      "skill": {
-        "entities": [],
-        "intents": [
-          {
-            "intent": "hello-world",
-            "confidence": 1
-          }
-        ],
-        "confidence": 1
-      },
-      "additionalInformation": {
-        "context": {
-          "application": {
-            "id": "app-001",
-            "attributes": {}
+        ```JSON
+        {
+          "reject": false,
+          "error": 200,
+          "deleteSkillSession": true,
+          "captureInput": false,
+          "speech": {
+            "text": "Hello world"
           },
-          "session": {
-            "skill": {
-              "attributes": {
-                "inConversation": false
+          "internal": {},
+          "skill": {
+            "entities": [],
+            "intents": [
+              {
+                "intent": "hello-world",
+                "confidence": 1
               }
-            },
-            "attributes": {
-              "id": "session-001",
-              "new": true,
-              "skill": {
+            ],
+            "confidence": 1
+          },
+          "additionalInformation": {
+            "context": {
+              "application": {
+                "id": "app-001",
+                "attributes": {}
+              },
+              "session": {
+                "skill": {
+                  "attributes": {
+                    "inConversation": false
+                  }
+                },
                 "attributes": {
-                  "weather-interest": "temperature",
-                  "inConversation": false
+                  "id": "session-001",
+                  "new": true,
+                  "skill": {
+                    "attributes": {
+                      "weather-interest": "temperature",
+                      "inConversation": false
+                    }
+                  },
+                  "attributes": {
+                    "zone": "city-center"
+                  },
+                  "version": "1.0"
                 }
-              },
-              "attributes": {
-                "zone": "city-center"
-              },
-              "version": "1.0"
+              }
             }
           }
         }
-      }
-    }
-    ```
-
+        ```
+    
 > **What next?**
 - For more information about the JSON object that is returned in the evaluation response and the converse response, see [Json structure]({{site.baseurl}}/reference/JSON_formats/).
