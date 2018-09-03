@@ -26,10 +26,8 @@ Complete these steps to build a slack bot locally:
 
 1. Clone the [Watson Assistant Solutions slack bot](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot).
 2. Copy the sample `.env` file.  On Linux or Mac OS, enter: `cp .env.sample .env`.  On Windows systems, enter: `xcopy .env.sample .env`. The file must be in the root folder. **Tip**: Keep any credential configuration files private.
-3. Edit the `.env` file.  
-
-For example:
-
+3. Edit the `.env` file.  For example:
+    
     ```
     # Log Level (DEBUG, INFO, WARNING, ERROR)
     LOG_LEVEL="WARNING"
