@@ -65,6 +65,7 @@ For more information about using the skill boilerplate to create your skill, see
   1. Start your skill from your skill top-level directory.  Enter: `npm run start`
   2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:10011.
   3. Converse with your skill. Use the Converse endpoint to ask a question and view a response in JSON format.
+  4. (Optional) Use the [skill debug tool]({{site.baseurl}}/skill/debugging_a_skill) to simulate a conversation with the Watson Assistant Solutions core.  
 
 #### Step 2: Deploy your skill.
 If you want to host your skill on third-party cloud platform, follow the instructions for deploying applications from your cloud provided.
