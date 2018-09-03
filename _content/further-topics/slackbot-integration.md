@@ -1,141 +1,150 @@
 ---
-title: Slackbot Integration
-weight: 50
+title: Creating a slack bot
+weight: 65
 ---
+Use the sample chat bot that is provided with Watson Assistant Solutions to chat with your assistant.
 
-## How to build a slack-bot powered by Watson Assistant Solutions
+#### Setting up your environment
 
-Refer to the github project [Watson Assistant Solutions Slackbot Integration](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot)
+To create an API token for your slack bot, complete these steps:
 
+1. Go to https://YOUR_SLACK.slack.com/
+2. Click Configure Apps on the left side bar.
+3. Click Custom Integrations under the Manage sidebar.
+4. Click Bots.
+5. Click Add Configuration.
+6. Assign your bot a unique user name.
+7. Save the API token and the user name for later use.
 
-### Description
-A Python Application for a slackbot that routes text requests and gets responses from Watson Assistant Solutions
+To set up a python environment, complete these steps:
+1. Install python version 3.6.2 or later from the [python.org website](http://www.python.org/download/)
+2. Install the python packages `python-dotenv`, `slackclient`, `sys`, and `requests`. For example:
 
-[![License](https://img.shields.io/badge/license-APACHE2-blue.svg)]() [![Python](https://img.shields.io/badge/Python-3.6.2-yellow.svg)]()
-
----
-
-### Requirements:
-
-* sys
-* requests
-* python-dotenv
-* slackclient
-
----
-
-### Notes on configuration
-When running the application you'll need to ensure you have your .env file setup in the root folder.  Credential configuration files should be kept private.
-
-The application looks for configuration in:
 ```
-/.env
+py pip install python-dotenv slackclient requests
+
 ```
 
-The .env file should look like the code block below, with your own valid keys added you can reference /.env.sample
-```
-# Slack Credentials
-SLACK_API_TOKEN="REPLACE"
-BOT_ID="REPLACE"
+#### Building a slack bot
 
-# WA Credentials
+Complete these steps to build a slack bot locally:
+
+1. Clone the [Watson Assistant Solutions slack bot](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot).
+2. Find the `../simple_WA_slackbot/.env.sample` and rename it to `.env`.  The file must be in the root folder. **Tip**: Keep any credential configuration files private.
+3. Edit the `.env` file.  
+
+For example:
+
+```
+# Log Level (DEBUG, INFO, WARNING, ERROR)
+LOG_LEVEL="WARNING"
+
+# Slack bot Credentials
+SLACK_API_TOKEN="Place_your_slack_bot_API_token_here"
+BOT_ID=""Place_your_bot_user_name_here""
+
+# Waton Assistant Soltuions Credentials
 WA_URL="https://watson-personal-assistant-toolkit.mybluemix.net"
-WA_COLLECTION="REPLACE"
-WA_API_KEY="REPLACE"
-WA_USER_ID="CanBeAnything"
+WA_SKILLSET="place_your_assistant_skillset_name_here"
+WA_API_KEY="place_your_watson_assistant_solutions_api_key_here""
 WA_LANGUAGE="en-US"
+WA_DEVICE_TYPE="slackbot"
 
-# Fallback Phrases, Comma separated. OPTIONAL (Leave as empty string if undesired)
+# Bot Configuration - Number of characters before card data is made into a JSON snippit
+MAX_CARD_CHARACTERS=1500
+
+# (OPTIONAL) Configurations for Dashbot analytic services 
+ANALYTICS_ENABLED="FALSE"
+ANALYTICS_API_KEY=""
+ANALYTICS_INPUT_URL="https://tracker.dashbot.io/track?platform=slack&v=9.8.0-rest&type=incoming&apiKey="
+ANALYTICS_RESPONSE_URL="https://tracker.dashbot.io/track?platform=slack&v=9.8.0-rest&type=outgoing&apiKey="
+
+# Max Message Pointer Cache Size
+MAX_MESSAGE_CACHE=1000
+
+# (OPTIONAL) Comma seperated fallback phrases, Comma separated. 
 FALLBACK_RESPONSES="I didn't quite catch that, I don't understand"
-```
-
-To get started quickly just copy the sample to .env and edit from there
 
 ```
-cp .env.sample .env
+
+4. Test that your slack bot is working. To run all unit tests, enter:
+
 ```
+python3 -m unittest discover
 
-For help setting up a custom bot user to get the BOT_ID and SLACK_API_TOKEN, go to Slack's documentation on [Bot Users](https://api.slack.com/custom-integrations/bot-users) and click the link `creating a new bot user` in the **Custom bot users** paragraph.
-
-### To Run Locally
-
-Create a valid .env configuration file (see above).
-
-Make sure you have all the required python libraries installed.
-
-```sh
-pip3 install -r requirements.txt
 ```
+To run a specific unit test, enter:
 
-Now you can run your application
+```
+python3 -m unittest test.<test name> 
+
+```
+Where values for _test name _ includes `test_WA_configuration`, `test_slack_configuration`, `test_env_file`, `test_context_file`, and `settings`. 
+
+
+5. Start your slack bot. Enter:
 
 ```sh
 python3 bot.py
 ```
 
-Once your app is running you should be good to go. You can message your bot directly on slack, or you can invite him to a channel and @botname {text goes here} to use it.
+6. Chat with your slack bot. Either:
+- Send a direct message to your bot on slack.
+- Invite your slack bot to a slack channel and enter `@botname _question_` to chat.  
 
+### Hosting your slack bot on IBM Cloud
+
+After you test that your slack bot is running locally, push the bot to IBM Cloud for others to use.
+
+1. Install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#cli).
+2. Log in to IBM Cloud.
+3.  Go to your slack bot directory and push your slack bot application to IBM Cloud.  Assign a name to the application. Enter:
+
+```
+cf push $PLACE_YOUR_APP_NAME_HERE --no-route true --health-check-type process
+```
+
+4.  Add VCAP variables for each variable you specified in the `.env` file. 
+
+From the command line enter:
+```
+cf set-env $YOUR_APP_NAME variable_name variable_value
+
+```
+For example:
+```
+cf  set-env WA_SKILLSET industry
+
+```
+
+5. Restage your application through the IBM Cloud UI or from the command line.  For example:
+
+```
+cf restage $YOUR_APP_NAME
+```
 ---
+6. Verify that you can chat with your bot. Send it a direct message to your bot on slack.
 
-### To Run on IBM Cloud
-
-Get the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#cli).
-
-Then login, using the command:
-
-```
-bx login --sso
-```
-
-Push and run the code on Bluemix (replace $YOUR_APP_NAME_HERE with anything you want as this will be used as the part of the URL to your Bluemix app).
-
-```
-bx cf push $YOUR_APP_NAME_HERE --no-route true --health-check-type process
-```
-
-You'll need to add VCAP environment variables, you can do this in three different ways, documented [here](https://console.ng.bluemix.net/docs/manageapps/depapps.html#ud_env):
-[https://console.ng.bluemix.net/docs/manageapps/depapps.html#ud_env](https://console.ng.bluemix.net/docs/manageapps/depapps.html#ud_env)
-
-Once your environment variables are set, you'll need to re-stage the application which you can do through the Bluemix UI or from the command line by running...
-
-```
-bx cf restage $YOUR_APP_NAME
-```
-
-Once your app is finished staging you should be good to go. You can message your bot directly on slack, or you can invite him to a channel and @botname {text goes here} to use it.
-
----
+### Adding context
 
 
-### Running Tests
+### Viewing logs
 
-The following line will run all the unit tests.
+All chat bot logs are in the `/slackbot.log` file. The file mostly consists of requests, responses, and slack logging.
 
-```sh
-python3 -m unittest discover
-```
+### Logging unrecognized intents
 
-You can run a specific test with a command like below
+You can log all responses that return either a fallback response or no response from your assistant.  The responses are written to the `/fallback_responses.csv` file.
 
-```sh
-python3 -m unittest test.test_env_file
-```
+To enable the logging of unrecognized intents, add comma-separated fallback responses to the `FALLBACK_RESPONSES `variable in the local `.env` file.  If you are running your slack bot on IBM Cloud, add a  VCAP environment variable.  In the variable, match the fallback responses from your fallback skill.  
 
----
-
-### General Logs
-
-All chat logs are stored in the /slackbot.log file, mostly consisting of user utterances, responses, and slack logging.
-
-### Unrecognized intent logging
-
-Any response from WA that comes back with a fallback response (Defined in environment variables) or with no response will be written to the /fallback_responses.csv file
-
-To enable this feature please ensure that in your .env variables (local) or in your VCAP environment variables (bluemix) you add comma separated responses that come from your fallback skill.
-
-You can find it in the .env.sample file
+For example:
 
 ```
 # Fallback Phrases, Comma separated. OPTIONAL (Leave as empty string if undesired)
 FALLBACK_RESPONSES="I didn't quite catch that, I don't understand"
 ```
+
+### Viewing analytics
+
+You can integrate your slackbot with the Dashbot analytics tool. Provide the parameters to connect,  to your Dashbot account, for example, your Dashbot API key, in the .env file or as an environment variable on IBM Cloud. See the `sample.env` file for the parameters to specify.  For more information about Dashbot, see [Dashbot Docs](https://www.dashbot.io/docs/).
