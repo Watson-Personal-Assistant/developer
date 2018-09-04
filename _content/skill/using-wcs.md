@@ -10,6 +10,8 @@ The high-level steps in this tutorial are as follows:
 3. Host your skill on IBM Cloud for you and others to use.
 2. Register the skill with your Watson Assistant Solutions tenant.
 
+**Tip** In this procedure, if your tentants are deployed on the German data center, to access the Watson Assistant Solutions service, use the `https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/` URL.
+
 ### Before you begin
 1.  Clone, fork or download the zip from [skill boilerplate](https://github.com/Watson-Personal-Assistant/SkillBoilerplate) to your local system.
 2. Install the node dependencies for the skill.
