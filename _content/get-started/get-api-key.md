@@ -13,7 +13,9 @@ You can log in to the console with your IBMid or your Watson Assistant Solutions
 
 Complete these steps:
 
-1. Open a web browser and enter the following URL:[https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net)
+1. Open a web browser and enter one of the following URLs:
+   - For trial accounts or US South data center deployments, use  [https://watson-personal-assistant-toolkit.mybluemix.net](https://watson-personal-assistant-toolkit.mybluemix.net)
+   - For German data center deployments, use [https://watson-personal-assistant-toolkit.eu-de.mybluemix.net](https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/)
 2. Log in to the console using your IBMid or Watson Assistant Solutions API key.
 The Watson Assistant Solutions console is displayed.
 

@@ -36,7 +36,7 @@ Complete these steps to build a slack bot locally:
     SLACK_API_TOKEN="Place_your_slack_bot_API_token_here"
     BOT_ID=""Place_your_bot_user_name_here""
 
-    # Waton Assistant Soltuions Credentials
+    # Waton Assistant Soltuions Credentials - Use `https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/` for the German data center.
     WA_URL="https://watson-personal-assistant-toolkit.mybluemix.net"
     WA_SKILLSET="place_your_assistant_skillset_name_here"
     WA_API_KEY="place_your_watson_assistant_solutions_api_key_here""
