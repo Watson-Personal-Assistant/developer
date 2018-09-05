@@ -21,7 +21,7 @@ Managing a tenant involves the following tasks:
 
 If more that one tenant is provisioned for your deployment, click the down arrow to select a different tenant.
 
-![Select tenant](select_tenant.png)
+![Select tenant]({{site.baseurl}}/further-topics/select_tenant.png)
 
 #### Update a tenant configuration
 
@@ -38,7 +38,7 @@ Complete these steps to update a tenant configuration:
 #### Add a new user to your tenant
 
 Adding a user
-![Add user](add_user.gif)
+![Add user]({{site.baseurl}}/further-topics/add_user.gif)
 
 Complete these steps to add a new user to a tenant:
 
