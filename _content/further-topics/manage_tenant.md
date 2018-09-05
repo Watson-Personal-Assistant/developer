@@ -50,7 +50,7 @@ Complete these steps to add a new user to a tenant:
 #### Removing a user from your tenant
 
 Removing a user
-![Remove user](add_user.gif)
+![Remove user]({{site.baseurl}}/further-topics/add_user.gif)
 
 Complete these steps to remove a new user from a tenant:
 
