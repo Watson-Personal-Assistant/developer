@@ -3,7 +3,7 @@ title: Notice regarding personal data
 weight: 20
 ---
 
-**Notice**: Watson Assistant Solutions processes personal data. </br>
+**Notice**: Watson Assistant Solutions processes personal data. <br>
 For details,  review the Data Processing and Protection Data Sheet at the following location: [https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=5ED334703EFC11E7AF4D782C571014EC](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=5ED334703EFC11E7AF4D782C571014EC)  
  
 You are the sole controller of the personal data, IBM is the processor of the personal data. The collection and processing of personal data undertaken through Watson Assistant Solutions is under your control and instructions via the use and configuration of the features of the service. It is your sole responsibility as a Watson Assistant Solutions developer to ensure that the data processing performed by Watson Assistant Solutions meets any data protection or other legal or regulatory requirement, which may be specific to the countries/geographies in which you offer product and services. Consult with your legal counsel and privacy specialists in your organization for advice on your privacy obligations and responsibilities as data controller.
