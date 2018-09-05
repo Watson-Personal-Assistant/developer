@@ -1,5 +1,5 @@
 ---
-title: Accessing the service
+title: Accessing your tenant
 weight: 20
 ---
 After your Watson Assistant Solutions tenant is provisioned, you can access your tenant from the console or through REST APIs.
