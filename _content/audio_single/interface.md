@@ -148,4 +148,4 @@ Example:
 ```
 
 > **What to do next?**<br/>
-Learn about the [IoT control interface]({{site.baseurl}}/audio_single/iot_control_interface/).
+Learn about the [hospitality consoles]({{site.baseurl}}/flavours/hospitality_components/).

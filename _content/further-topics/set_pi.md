@@ -7,6 +7,8 @@ In compliance with GDPR requirements, you can turn off the logging of personal i
 
 You can manage the logging of PI data through the console or using the Logging REST API. Before you can use the logging API, you must request an IAM access token.  You include the access token in your API calls to the logging REST API.
 
+**Tip**: If your tenants are deployed on the German data center, use the following URL to access the Watson Assistant Solutions service: `https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/`
+
 ### Using the console
 You can disable the logging of PI data from the Watson Assistant Solutions console.
 

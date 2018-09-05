@@ -4,11 +4,7 @@ weight: 10
 ---
 Before a custom audio client can connect to the audio gateway, you must provision the audio client with an IAM API key.   For better security, audio clients should use separate API keys.
 
-**Restriction**: When you create your IAM API key, the associated IBMid must be linked to one tenant only.
-
 ### Setting up IAM authentication 
-
-**Restriction**: When you create your IAM API key, the associated IBMid must be linked to one tenant only.
 
 The audio client passes an IAM token to authenticate when it first connects to audio gateway. To convert your IAM ID to an IAM token, you can use the following command:
 

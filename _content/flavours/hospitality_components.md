@@ -17,7 +17,7 @@ For example, a guest might ask `What time does the main restaurant open today?`.
 
 Guests can issue commands through their smart speaker. The Watson Assistant Solutions service routes the commands to your command and control skills, such as the room control skill. If the guest says `turn down the lights`, the room control skill routes the command through the Watson IoT platform to a device controller. The controller sends the request to turn down the lights to an IoT device, such as the lighting system.  
 
-The IOT devices are physically connected to IoT controllers. An IT administrator must also logically connect IoT devices and controllers using either the [IoT control REST API interface]({{site.baseurl}}/audio_single/iot_control_interface) or the admin portal user interface.
+The IOT devices are physically connected to IoT controllers. An IT administrator must also logically connect IoT devices and controllers using either the admin portal user interface.
 
 From the Manage Clients page of the admin portal, an administrator can register, modify and delete clients (that is, devices).  For each client, the administrator provides an ID and password and registers the client with a controller.
 
