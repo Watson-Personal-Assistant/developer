@@ -2,7 +2,7 @@
 title: Creating a slack bot
 weight: 65
 ---
-Use the sample chat UI that is provided with Watson Assistant Solutions to chat with your assistant.
+Use the sample Slack UI that is provided with Watson Assistant Solutions to chat with your assistant.
 
 #### Setting up your environment
 
