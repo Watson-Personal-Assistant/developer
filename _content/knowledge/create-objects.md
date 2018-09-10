@@ -12,7 +12,13 @@ In this phase of the tutorial, you will create objects and relations programmati
 4. Create a Rule in the Rules component and get it to fire
 
 ### Pre-requisite
-Make sure you have already [setup your NodeJS development environment]({{site.baseurl}}/skill/setup-local-dev-env/)
+Set up your environment.
+1. Get access to your Watson Assistant Solutions tenant.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
+2. Install [Git](https://git-scm.com/downloads).
+3. Install [NodeJS V8](https://nodejs.org/dist/).
+4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
+5. Install the [IBM Cloud cli tool](https://console.bluemix.net/docs/cli/index.html#cli).
+6. Install [Python 2.7](https://www.python.org/download/releases/2.7/).
 
 ### Step 1: Fork the Knowledge and Reasoning (alpha) SDK
 1. Go to  [https://github.com/Watson-Personal-Assistant/kr-node-sdk](https://github.com/Watson-Personal-Assistant/kr-node-sdk).

@@ -13,7 +13,7 @@ The high-level steps in this tutorial are as follows:
 
 ---
 ### Before you begin
-1. Get access to your Watson Assistant tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
+1. Get access to your Watson Assistant Solutions tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
 3. Install [NodeJS](https://nodejs.org/dist/).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).
