@@ -62,7 +62,7 @@ Parameter | Description | Type | Required
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  Add location information to a `location` object. An empty context object is also allowed.  You can add any additional parameters that might be useful to your skill under `context`.  | object | yes
+ `context` | The utterance context. For example, the utterance context might capture whether a user is at home or in his car. A skill might use a different response depending on the utterance context. When a user is at home and asks about expected temperatures, the skill might return a temperature map with the response. When the user is in the car, the temperature map is not returned.  Add location information to a `location` object. An empty context object is also allowed.  You can add any additional parameters that might be useful to your skill under `context`. **Note** The utterance context is stateless and cannot be saved by the Context API. | object | yes
 
 #### Table 3 - Converse request parameters - location
 
@@ -109,7 +109,7 @@ The JSON structure of the evaluate request from the routing core to the skills i
 
 ```
 
-#### Table 3 - Evaluate request parameters
+#### Table 4 - Evaluate request parameters
 
 Parameter | Description |
 ---------|----------
@@ -119,7 +119,7 @@ Parameter | Description |
  `text` | The user utterance after the routing core has normalized the text. In all languages, uppercase text is converted to lowercase.   In US English (en-US), further normalization techniques are applied, for example, numerals are converted to words, punctuation is removed. |
  `context` | Information about the context of the conversation with the user.|
 
-#### Table 4 - Evaluate request parameters - context 
+#### Table 5 - Evaluate request parameters - context 
 
  Parameter | Description |
 ---------|----------|
@@ -127,13 +127,13 @@ Parameter | Description |
  `session` | Information about the session.  |
  `application` | The application ID and any utterance context information.  The parameter is for future use.|
 
-#### Table 5 -  Evaluate request parameters - user context
+#### Table 6 -  Evaluate request parameters - user context
 
 Parameter | Description |
 ---------|----------|
  `id` | The unique ID of the user.  |
 
-#### Table 6 - Evaluate request parameters - session context 
+#### Table 7 - Evaluate request parameters - session context 
 
 Parameter | Description |
 ---------|----------|
@@ -142,14 +142,14 @@ Parameter | Description |
  `attributes` | Includes session context and skill context information. **Note**: Because the sample evaluate request is the first request in the conversation, no session or skill context attributes are included in the example.|
  `version`  | The version of the session that is assigned by the routing core. The version is always `1.0`. |
 
-#### Table 7 -  Converse request parameters - application context
+#### Table 8 -  Evaluate request parameters - application context
 
 Parameter | Description | 
 ---------|----------|-
  `id` | The unique ID of the application. The parameter is for future use.|
  `attributes` | Includes utterance context information, if present. Add location information to a `location` object. |
 
-#### Table 8 - Converse request parameters - location
+#### Table 9 - Evaluate request parameters - location
 
 Parameter | Description |
 ---------|----------|
@@ -253,7 +253,7 @@ The JSON structure of the evaluate response from a skill to the routing core is 
 
 ```
 
-#### Table 9 - Evaluate response parameters 
+#### Table 10 - Evaluate response parameters 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -263,7 +263,7 @@ Parameter | Description | Type | Required
  `context` | Information about the context of the conversation with the user. | object | yes
  `intentities` | The intents and entities returned by the skill for each nlu engine. | array | yes
 
-####  Table 10 - Evaluate response parameters - context
+####  Table 11 - Evaluate response parameters - context
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -271,13 +271,13 @@ Parameter | Description | Type | Required
  `session` | Information about the session, including session context information.   | object | yes
  `application` | The application ID and utterance context information.  | object | yes
 
-#### Table 11 -  Evaluate response parameters - user context
+#### Table 12 -  Evaluate response parameters - user context
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `id` | The unique ID of the user.  | string | yes
 
-#### Table 12 - Evaluate response parameters - session context 
+#### Table 13 - Evaluate response parameters - session context 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -287,26 +287,26 @@ Parameter | Description | Type | Required
  `attributes` |  Includes any session context information. An empty attributes object is allowed.| object |  yes
  `version`  | The version of the session.  The version is always `1.0`.  | string | yes
 
-#### Table 13 -  Evaluate response parameters - skill context
+#### Table 14 -  Evaluate response parameters - skill context
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `attributes`  | Includes any skill context information. An empty attributes object is allowed.| object | yes |
 
-#### Table 14 -  Evaluate response parameters - application context
+#### Table 15 -  Evaluate response parameters - application context
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `id` |  The unique ID of the application. The parameter is for future use. | string | yes
  `attributes` | Includes any utterance context information.  An empty attributes object is allowed. | object | yes
 
-#### Table 14 -  Converse request parameters - application attributes
+#### Table 16 -  Evaluate response parameters - application attributes
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object.| object | yes 
 
-#### Table 15 - Converse request parameters - location
+#### Table 17 - Evaluate response parameters - location
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -314,7 +314,7 @@ Parameter | Description | Type | Required
  `latitude` | Latitude of the center point of the location of the user.| string  | no
  `longitude` | Longitude of the center point of the location of the user. | string  | no
 
-#### Table 16 - Evaluate response parameters - Intentites
+#### Table 18 - Evaluate response parameters - Intentites
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -322,7 +322,7 @@ Parameter | Description | Type | Required
  `entities` | The entities extracted by the nlu engine from the utterance. | array | no
  `intents` | The intents returned by the nlu engine. | array | no
 
-#### Table 17 - Evaluate response parameters - Entities 
+#### Table 19 - Evaluate response parameters - Entities 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -330,7 +330,7 @@ Parameter | Description | Type | Required
  `value` | The value of the extracted entity. | string | yes
  `confidence` | A confidence value that is associated the entity value. **Note**: A confidence score is always returned by a skill for each entity. However, the confidence score for an entity is only considered if no intent is returned, that is, if entity-based routing is being used. | string | yes 
 
-#### Table 18 - Evaluate response parameters - Intents 
+#### Table 20 - Evaluate response parameters - Intents 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -440,7 +440,7 @@ The JSON structure of the converse request from the routing core to a skill is a
 
 ```
 
-#### Table 19 - Converse request parameters
+#### Table 21 - Converse request parameters
 
 Parameter | Description |
 ---------|----------|
@@ -454,13 +454,13 @@ Parameter | Description |
  `skill` | | Information about the skill. | 
  `evaluationResponse` | Information about response to the utterance that the skill returned with the highest confidence level.
 
-#### Table 20 - Converse request parameters - attributes
+#### Table 22 - Converse request parameters - attributes
 
  Parameter | Description |
 ---------|----------|
  `intent` | The name of the intent with the highest confidence score. |
 
-#### Table 21 - Converse request parameters - context
+#### Table 23 - Converse request parameters - context
 
  Parameter | Description |
 ---------|----------|
@@ -469,13 +469,13 @@ Parameter | Description |
  `application` | The application ID and any utterance context information. |
 
 
-#### Table 21 -  Converse request parameters - user context
+#### Table 24 -  Converse request parameters - user context
 
 Parameter | Description |
 ---------|----------|
  `id` | The unique ID of the user. |
 
-#### Table 23 - Converse request parameters - session context
+#### Table 25 - Converse request parameters - session context
 
 Parameter | Description |
 ---------|----------|
@@ -484,26 +484,26 @@ Parameter | Description |
  `attributes` |  Includes any session context information. |
  `version`  | The version of the session.  Version information is set by the routing core. The version is always `1.0`. | 
 
-#### Table 24 -  Evaluate response parameters - skill context
+#### Table 26 -  Converse request parameters  - skill context
 
 Parameter | Description |
 ---------|----------|
  `attributes`  | Includes any skill context information. | 
 
-#### Table 25 -  Converse request parameters - application context
+#### Table 27 -  Converse request parameters - application context
 
 Parameter | Description | 
 ---------|----------|-
  `id` | The unique ID of the application. The parameter is for future use. |
  `attributes` | Includes attributes representing utterance context information. |
 
-#### Table 26 -  Converse request parameters - application attributes
+#### Table 28 -  Converse request parameters - application attributes
 
 Parameter | Description |
 ---------|----------|-
  `attributes` | Includes any utterance context information. Add location information to a `location` object. |
 
-#### Table 27 - Converse request parameters - location
+#### Table 29 - Converse request parameters - location
 
 Parameter | Description | 
 ---------|----------|
@@ -511,7 +511,7 @@ Parameter | Description |
  `latitude` | Latitude of the center point of the location of the user. 
  `longitude` | Longitude of the center point of the location of the user. 
 
-#### Table 28 - Converse request parameters - skill
+#### Table 30 - Converse request parameters - skill
 
  Parameter | Description | 
 ---------|----------|
@@ -520,7 +520,7 @@ Parameter | Description |
  `intents` | The intent of the skill that returned the highest confidence score. |
  `confidence` | The confidence score of the intent or entity that returned the highest confidence score. |
 
-#### Table 29 - Converse request parameters - entities 
+#### Table 31 - Converse request parameters - entities 
 
 Parameter | Description | 
 ---------|----------|
@@ -528,14 +528,14 @@ Parameter | Description |
  `value` | The value of the extracted entity. |
  `confidence` | A confidence value that is associated the entity value. |
 
-#### Table 30 - Converse request parameters - intents 
+#### Table 32 - Converse request parameters - intents 
 
 Parameter | Description |
 ---------|----------|
  `intent` | The name of the intent with the highest confidence score. 
  `confidence` | The confidence score of the intent. | 
  
-#### Table 31 - Converse request parameters - evaluationResponse 
+#### Table 33 - Converse request parameters - evaluationResponse 
 
 Parameter | Description |
 ---------|----------|
@@ -622,7 +622,7 @@ The JSON structure of the converse response from a skill to the routing core is 
 }
 ```
 
-#### Table 32 - Converse response parameters
+#### Table 34 - Converse response parameters
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -635,20 +635,20 @@ Parameter | Description | Type | Required
  `skill` | Information about the skill that processed the response. | object | yes |
  `additionalInformation` | Additional information about the conversation, including context information and whether the skill is in conversation. | object | yes
 
-#### Table 33 - Converse response parameters - speech
+#### Table 35 - Converse response parameters - speech
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `text` | The response from the skill.  | string | yes
 
-#### Table 34 - Converse response parameters - card
+#### Table 36 - Converse response parameters - card
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `type` | The type of action that the card object invokes.  In the example, the action is named `show-temp-map`.  The card is used to display a temperature map when the user is at home.   | string | yes
  `content` | The attributes of the card.  For example, you might add `image-url` or `music-url` to specify the image to display or the music to play.  | array | yes
 
-#### Table 35 - Converse response parameters - skill
+#### Table 37 - Converse response parameters - skill
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -657,7 +657,7 @@ Parameter | Description | Type | Required
  `intents` | The intent that processed the utterance. | array | yes
  `confidence` | The confidence score of the intent or entity that processed the request. | string | yes
 
-#### Table 36 - Converse response parameters - entities 
+#### Table 38 - Converse response parameters - entities 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -665,34 +665,34 @@ Parameter | Description | Type | Required
  `value` | The value of the extracted entity. | string | yes
  `confidence` | A confidence value that is associated the entity value. **Note**: A confidence score is always returned by a skill for each entity. | string | yes 
 
-#### Table 37 - Converse response parameters - intents 
+#### Table 39 - Converse response parameters - intents 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `intent` | The name of the intent that processed the utterance. | string | yes
  `confidence` | The confidence score of the intent that processed the utterance | string | yes
 
-#### Table 38 - Converse response parameters - additional information
+#### Table 40 - Converse response parameters - additional information
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `context` | Information about the context of the conversation with the user.  | object | yes
 
-#### Table 39 - Converse response parameters - context
+#### Table 41 - Converse response parameters - context
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `application` | The application ID and utterance context information.| object | yes
  `session` | Information about the session, including session context information and skill context information.  | object | yes
 
-#### Table 40 - Converse response parameters - Application context 
+#### Table 42 - Converse response parameters - Application context 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `id` | The unique ID of the application. The parameter is for future use. | string | yes
  `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object. | object | yes
 
-#### Table 41 - Converse request parameters - location
+#### Table 43 - Converse request parameters - location
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -700,7 +700,7 @@ Parameter | Description | Type | Required
  `latitude` | Latitude of the center point of the location of the user.| string  | no
  `longitude` | Longitude of the center point of the location of the user.| string   | no
 
-#### Table 42 - Converse response parameters - Session context 
+#### Table 44 - Converse response parameters - Session context 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -710,13 +710,13 @@ Parameter | Description | Type | Required
  `attributes` |  Includes any session context information. An empty attributes object is allowed.| object | yes
  `version`  | The version of the session.  Version information is set by the routing core. The version is always `1.0`. | string | yes
 
-#### Table 43 - Converse response parameters - skill context
+#### Table 45 - Converse response parameters - skill context
  
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
 `attributes` |   Includes any session context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. | object | yes
 
-#### Table 44 - Converse response parameters - session context
+#### Table 46 - Converse response parameters - session context
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -782,7 +782,7 @@ The JSON structure of the converse response from the routing core to a client de
 
 ```
 
-#### Table 45 - Converse response parameters
+#### Table 47 - Converse response parameters
 
 Parameter | Description |
 ---------|----------|
@@ -796,20 +796,20 @@ Parameter | Description |
 response.|
  `Additional information` | Extra context information about the conversation.|
 
-#### Table 46 - Converse request parameters - speech
+#### Table 48 - Converse response parameters - speech
 
 Parameter | Description |
 ---------|----------
  `text` | The response to the utterance. |
 
-#### Table 47 - Converse request parameters - card
+#### Table 49 - Converse response parameters - card
 
 Parameter | Description |
 ---------|----------|
  `type` | The type of action that the card  invokes.  In the example, the action is named `show-temp-map`.  The card is used to display a temperature map when the user is at home.   | string | yes
  `content` | The attributes of the card.  For example, `content` might add `image-url` or `music-url` to specify the image to display or the music to play.  | array | yes
 
-#### Table 48 - Converse response parameters - skill
+#### Table 50 - Converse response parameters - skill
 
 Parameter | Description | 
 ---------|----------|
@@ -818,7 +818,7 @@ Parameter | Description |
  `intents` | The intent that processed the utterance. |
  `confidence` | The confidence score of the intent or entity that processed the request. |
 
-#### Table 49 - Converse response parameters - entities 
+#### Table 51 - Converse response parameters - entities 
 
 Parameter | Description | 
 ---------|----------|
@@ -826,26 +826,26 @@ Parameter | Description |
  `value` | The value of the extracted entity. | string | yes
  `confidence` | A confidence value that is associated the entity value. | 
 
-#### Table 50 - Converse response parameters - intents 
+#### Table 52 - Converse response parameters - intents 
 
 Parameter | Description |
 ---------|----------|
  `intent` | The name of the intent that processed the utterance. | string | yes
  `confidence` | The confidence score of the intent that processed the utterance | string | yes
 
-#### Table 51 - Converse request parameters - Additional information
+#### Table 53 - Converse response parameters - Additional information
 
  Parameter | Description |
 ---------|----------|
  `context` | Contains the utterance context. |
 
- #### Table 52 - Converse request parameters - Context
+ #### Table 54 - Converse response parameters - Context
 
  Parameter | Description |
 ---------|----------|
  `context` | Contains the utterance context. Add location information to a `location` object. | 
 
-#### Table 53 - Converse request parameters - location
+#### Table 55 - Converse response parameters - location
 
 Parameter | Description | 
 ---------|----------|
