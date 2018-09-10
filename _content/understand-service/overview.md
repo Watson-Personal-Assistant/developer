@@ -2,7 +2,7 @@
 title: Product components
 weight: 10
 ---
-Multiple components are used to build a digital assistant using the Watson Assistant Solutions offering.
+Multiple components are used to build an AI assistant using the Watson Assistant Solutions offering.
 
 The components are shown in figure 1:
 

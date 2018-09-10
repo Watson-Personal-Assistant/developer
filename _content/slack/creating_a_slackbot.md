@@ -2,7 +2,7 @@
 title: Creating a slack bot
 weight: 65
 ---
-Use the sample chat bot that is provided with Watson Assistant Solutions to chat with your assistant.
+Use the sample chat UI that is provided with Watson Assistant Solutions to chat with your assistant.
 
 #### Setting up your environment
 
@@ -105,7 +105,7 @@ Use this mechanism if you are testing a skill that requires location information
 
 ### Viewing logs
 
-All chat bot logs are in the `/slackbot.log` file. The file mostly consists of requests, responses, and slack logging.
+All chat UI logs are in the `/slackbot.log` file. The file mostly consists of requests, responses, and slack logging.
 
 ### Viewing analytics
 

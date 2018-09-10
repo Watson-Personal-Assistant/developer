@@ -10,7 +10,7 @@ In this scenario, the user would like to be notified if their house's entrance d
 This scenario is implemented using the following NodeJS code:
 1. **Create Object and Relation script**: Simulates what you would do in your Skill to create the door, house and person objects and then relate them together.
 2. **Cloud Function for the condition part of the Rule**: A function that gets invoked when an object is updated and determines if that object is a door, the door is open and the home owner is away.
-3. **Cloud Function for the action part of the Rule**: A function when invoked will place a message in a chat bot indicating which door is open.
+3. **Cloud Function for the action part of the Rule**: A function when invoked will place a message in a chat UI indicating which door is open.
 
 First, you will build the code to create the objects and relations.
 

@@ -24,9 +24,9 @@ var request = require('request');
 var KnowledgeObject = require('./sdk/object');
 ```
 
-### Step 2:  Create the main function to send notification to chat bot
+### Step 2:  Create the main function to send notification to chat UI
 
-Add the main function that will get the name of the Door that is open and notify the owner.  Here we will simulate the notification through a chat bot UI that you can use to talk to your assistant using your Watson Assistant Solutions API key.
+Add the main function that will get the name of the Door that is open and notify the owner.  Here we will simulate the notification through a chat UI that you can use to talk to your assistant using your Watson Assistant Solutions API key.
 
 ```javascript
 function main(event) {

@@ -2,9 +2,9 @@
 title: Automotive skills
 weight: 10
 ---
-IBM Watson Assistant for Automotive provides a framework for creating a digital assistant that provides a unique and personalized experience for your automotive customers. 
+IBM Watson Assistant for Automotive provides a framework for creating an AI assistant that provides a unique and personalized experience for your automotive customers. 
 
-To build your digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available when you sign up for Watson Assistant for Automotive.  The built-in skills are listed in the following section.
+To build your AI assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available when you sign up for Watson Assistant for Automotive.  The built-in skills are listed in the following section.
 
 All built-in skills for Watson Assistant for Automotive are assigned to the `automotive` skillset.  You also have access to the `industry` skillset that is provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).  The industry built-in skills are also added to the `automotive` skillset.
 

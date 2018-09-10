@@ -40,7 +40,7 @@ The curl command should return a response similar to the following:
 }
 ```
 
-### Step 2: Open chat bot UI and point it to your assistant
+### Step 2: Open chat UI and point it to your assistant
 
 In order to see the proactive notification, open a web browser tab/window to [https://wpa-chat-bot.mybluemix.net](https://wpa-chat-bot.mybluemix.net).
 
@@ -48,7 +48,7 @@ Then in the field where you can **Type a request or command** enter in the follo
 
 `/wa paste-your-api-key-here`
 
-### Step 3: Change the value of the door and see message in chat bot
+### Step 3: Change the value of the door and see message in chat UI
 
 Use the following curl command to call the **/knowledge/object** REST API of the Knowledge component to change the `isStatus` value of the Door:
 
@@ -56,7 +56,7 @@ Use the following curl command to call the **/knowledge/object** REST API of the
 
 `curl -X PUT --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ "attributes": { "isOpen": true } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/knowledge/object/paste-your-door-ID-here?api_key=paste-your-api-key-here'`
 
-If everything worked correctly, then you should see an `Alert!` message in the browser running the chat bot. This might take a few seconds, but shouldn't take more than a minute.  If it doesn't happen, then you can go to the Cloud Functions monitor UI at URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard) and see if your functions have been invoked more than once each.
+If everything worked correctly, then you should see an `Alert!` message in the browser running the chat UI. This might take a few seconds, but shouldn't take more than a minute.  If it doesn't happen, then you can go to the Cloud Functions monitor UI at URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard) and see if your functions have been invoked more than once each.
 
 ### Finish
 
