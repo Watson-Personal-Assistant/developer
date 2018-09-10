@@ -1,5 +1,5 @@
 ---
-title: Create action function for the rule
+title: Create an action function
 weight: 25
 ---
 Create a file `action.js` for the action part of the rule.
@@ -13,8 +13,8 @@ Complete these steps:
   var KnowledgeRelation = require('./sdk/relation');
 
   ```
-  The action part of the rule finds the front door that is open and sends an alert to the owner of the house that the door belongs to.  An alert is sent to the home owner through a [chat bot UI](http://wpa-chat-bot.mybluemix.net).  
-2. Add a main function to `action.js` to find the name of the door that has opened and to send an alert to the chat bot to notify the owner of the potential security breach.
+  The action part of the rule finds the front door that is open and sends an alert to the owner of the house that the door belongs to.  An alert is sent to the home owner through a [chat UI](http://wpa-chat-bot.mybluemix.net).  
+2. Add a main function to `action.js` to find the name of the door that has opened and to send an alert to the chat UI to notify the owner of the potential security breach.
   ```Javascript
   // Main function
   function main(event) {

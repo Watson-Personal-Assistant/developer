@@ -5,7 +5,7 @@ weight: 40
 Invoke the rule by running the home security app locally.  Open the front door of the house and check for an alert in the Chatbot UI.
 
 Complete these steps:
-1. Create an `.env file that includes the URL to Watson Assistant Solutions and your API key.
+1. Create an `.env` file that includes the URL to Watson Assistant Solutions and your API key.
 Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the following:
     ```
     HUB_URL=https://watson-personal-assistant-toolkit.mybluemix.net/
@@ -41,7 +41,7 @@ Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the followin
 
     ```
     The objects are created in the world model.
-4. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wpa-chat-bot.mybluemix.net`.  In the Type a request or command field enter:<br>
+4. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`.  In the Type a request or command field enter:<br>
 `/wa paste-your-watson-assistant-solutions-api-key-here`
 5. Call the function in step 9 of the [Create a world model]({{site.baseurl}}/knowledge/create-objects) topic to open the front door. 
 Enter:<br>
@@ -50,6 +50,8 @@ Enter:<br>
 6. Verify that an alert is displayed in the Chatbot UI.
 7. (Optional) Reset the status of the door to closed.  Enter:<br>
     `http://localhost:8080/closedoor`
+
+For help with errors, see [Troublehshooting] ({{site.baseurl}}/get_help/tips).
 
 > **What to do next?**<br/>
 Run [the security demonstration as a Cloud Function]({{site.baseurl}}/audio_single/audio_support).

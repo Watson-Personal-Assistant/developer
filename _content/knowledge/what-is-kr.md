@@ -1,5 +1,5 @@
 ---
-title: Adding Proactivity with Knowledge and Reasoning
+title: Adding Proactivity
 weight: 5
 ---
 Add proactivity to your assistant to create a personalized experience for your users.

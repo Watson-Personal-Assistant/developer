@@ -1,5 +1,5 @@
 ---
-title: Create a condition function for the rule
+title: Create a condition function 
 weight: 20
 ---
 Create a file `condition.js` for the condition part of the rule.
@@ -85,7 +85,7 @@ Complete these steps:
 
   ```
   The function returns `True` or `False`.<br>
-4.  Add code to allow you test the condition rule locally as well as on IBM Cloud Functions.
+4.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
   ```Javascript
   // To support testing locally and running in Cloud Functions
   if (require.main === module) {
