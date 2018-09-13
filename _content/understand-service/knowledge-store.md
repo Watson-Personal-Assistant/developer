@@ -20,4 +20,4 @@ Using the REST API or a NodeJS SDK, create and modify objects in the knowledge d
 See the [tutorial]({{site.baseurl}}/knowledge/what-is-kr) for more information.
 
 > **What to do next?**<br/>
-Understand [how the rules component works]({{site.baseurl}}/understand-service/agent-subscription).
+Understand [how routing works]({{site.baseurl}}/understand-service/how-it-works).
