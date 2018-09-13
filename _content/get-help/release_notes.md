@@ -42,4 +42,4 @@ _Problem_: The following message is displayed but there is no restriction on usa
 
 _Solution_: Log in to the console using your IBMid.
 
-> **What next?** Read our [legal notices]({{site.baseurl}}/legal/terms-of-use)
+> **What next?** Read [troubleshooting]({{site.baseurl}}/get-help/tips)
