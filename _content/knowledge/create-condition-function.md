@@ -5,16 +5,19 @@ weight: 20
 Create a file `condition.js` for the condition part of the rule.
 
 Complete these steps:
+
 1. Create the`condition.js` file and include the object, relation, and dotenv modules.
+
   ```Javascript
   require('dotenv').config({path: __dirname + '/.env'});
   var KnowledgeObject = require('./sdk/object');
   var KnowledgeRelation = require('./sdk/relation');
 
   ```
-  **Tip**: `__dirname` is required for Cloud Functions to find the file in the container.
-  The condition part of the rule finds the owner of a house when the agent is notified that the front door has opened.  Before sending an alert to the home owner, the agent checks that the house is unoccupied. 
+  
+  **Tip**: `__dirname` is required for Cloud Functions to find the file in the container. The condition part of the rule finds the owner of a house when the agent is notified that the front door has opened.  Before sending an alert to the home owner, the agent checks that the house is unoccupied. 
 2. Add a function to `condition.js` that finds the owner of a house from a door ID.
+
   ```Javascript
   function getHouseAndPersonForDoor(doorId) {
     console.log('in getHouseAndPersonForDoor');
@@ -41,8 +44,9 @@ Complete these steps:
   }
 
   ```
-  In this function, which is given a specific door ID, the function traverses the `has-as-part` relationship to the house object.  The function traverses the `ownership` relationships to the owner.  The function returns the person, the house and the front door.<br>
-2. Create a NodeJS function to check that the update event referred to a door.  The agent is not interested in updates to houses or owners.
+In this function, which is given a specific door ID, the function traverses the `has-as-part` relationship to the house object.  The function traverses the `ownership` relationships to the owner.  The function returns the person, the house and the front door.
+3. Create a NodeJS function to check that the update event referred to a door.  The agent is not interested in updates to houses or owners.
+  
   ```Javascript
 
   function checkType(event, type) {
@@ -55,7 +59,8 @@ Complete these steps:
   }
 
   ```
-3.  Create the main function that checks if the owner is away when the door is opened.
+4.  Create the main function that checks if the owner is away when the door is opened.
+
   ```Javascript
   function main(event, callback) {
     console.log('in condition main');
@@ -85,7 +90,7 @@ Complete these steps:
 
   ```
   The function returns `True` or `False`.<br>
-4.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
+5.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
   ```Javascript
   // To support testing locally and running in Cloud Functions
   if (require.main === module) {
@@ -109,7 +114,7 @@ Complete these steps:
   }
 
   ```
-5. Save your changes to `conditon.js`.
+6. Save your changes to `conditon.js`.
 
 > **What to do next?**<br/>
 [Create the action part of the rule]({{site.baseurl}}/knowledge/create-action-function).
