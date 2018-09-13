@@ -23,17 +23,17 @@ Learn about what's new in each release of Watson Assistant Solutions.
 
 ### 17 May 2018
 
-- **Integration with IFTTT (alpha)**:  Watson Assistant Solutions is integrated with IFTTT. You can use your assistant as the trigger and another IFTTT service for the action in your IFTTT applets.  See [Integrating with IFTTT](https://watson-personal-assistant.github.io/developer/ifttt/what-is-ifttt/).
-- **Analytics tools (alpha**): A conversational analytics tool is added.  From the dashboard page, view a summary of the key metrics that relate to user conversations, user retention, and skill performance for your assistant.  Drill down to the other pages that display more detailed metrics for your assistant. See [Getting started with analytics](https://watson-personal-assistant.github.io/developer/analytics/analytics_intro/). 
-- **Support for multiple tenants**:  Support for switching between multiple tenants is added to the console. You can edit your tenant configuration. See [Managing your tenant](https://watson-personal-assistant.github.io/developer/further-topics/manage_tenant/).
-- **Audio support updates**: Audio support is generally available.  Connect to the audio gateway component using the sample audio client.  See [Using audio](https://watson-personal-assistant.github.io/developer/audio_basic/audio_support/).
-- **Skill debug tool**:  A debug tool is available for debugging NodeJS skills locally without having to register them with Watson Assistant Solutions.  See [Debugging a skill](https://watson-personal-assistant.github.io/developer/skill/debugging_a_skill/).
-- **IAM authentication**: You can log in to your tenant using an IBM ID or an API key.  See [Accessing your tenant](https://watson-personal-assistant.github.io/developer/get-started/get-api-key/).
+- **Integration with IFTTT (alpha)**:  Watson Assistant Solutions is integrated with IFTTT. You can use your assistant as the trigger and another IFTTT service for the action in your IFTTT applets.  See [Integrating with IFTTT]({{site.baseurl}}/ifttt/what-is-ifttt/).
+- **Analytics tools (alpha**): A conversational analytics tool is added.  From the dashboard page, view a summary of the key metrics that relate to user conversations, user retention, and skill performance for your assistant.  Drill down to the other pages that display more detailed metrics for your assistant. See [Getting started with analytics]({{site.baseurl}}/analytics/analytics_intro/). 
+- **Support for multiple tenants**:  Support for switching between multiple tenants is added to the console. You can edit your tenant configuration. See [Managing your tenant]({{site.baseurl}}/further-topics/manage_tenant/).
+- **Audio support updates**: Audio support is generally available.  Connect to the audio gateway component using the sample audio client.  See [Using audio]({{site.baseurl}}/audio_basic/audio_support/).
+- **Skill debug tool**:  A debug tool is available for debugging NodeJS skills locally without having to register them with Watson Assistant Solutions.  See [Debugging a skill]({{site.baseurl}}/skill/debugging_a_skill/).
+- **IAM authentication**: You can log in to your tenant using an IBM ID or an API key.  See [Accessing your tenant]({{site.baseurl}}/get-started/get-api-key/).
 
 ### 19 April 2018
 
 - **Controlling personal information (PI)**: Disable the logging of personal information (PI) from the console. 
-- **Support for multiple tenants**: Use your tenant ID in the REST API calls to target a specific tenant.  Use your tenant ID to filter your log data. See [Accessing your tenant](https://watson-personal-assistant.github.io/developer/get-started/get-api-key/).
+- **Support for multiple tenants**: Use your tenant ID in the REST API calls to target a specific tenant.  Use your tenant ID to filter your log data. See [Accessing your tenant]({{site.baseurl}}/get-started/get-api-key/).
 - **Knowledge and reasoning (alpha) updates**: Subscribe proactive agents directly to the Message Hub for state change events from the world model.
 
 > **What to do next?**<br/>
