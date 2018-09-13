@@ -7,7 +7,7 @@ Create a file `action.js` for the action part of the rule.
 Complete these steps:
 
 1. Create the `action.js` file and include the object, relation, and dotenv modules.
-```Javascript
+```JAVASCRIPT
   require('dotenv').config({path: __dirname + '/.env'});
   var KnowledgeObject = require('./sdk/object');
   var KnowledgeRelation = require('./sdk/relation');
@@ -15,7 +15,7 @@ Complete these steps:
 ```
 The action part of the rule finds the front door that is open and sends an alert to the owner of the house that the door belongs to.  An alert is sent to the home owner through a [chat UI](http://wpa-chat-bot.mybluemix.net).  
 2. Add a main function to `action.js` to find the name of the door that has opened and to send an alert to the chat UI to notify the owner of the potential security breach.
-```Javascript
+```JAVASCRIPT
   // Main function
   function main(event) {
     console.log('in action main');
@@ -56,7 +56,7 @@ The action part of the rule finds the front door that is open and sends an alert
 
 ```
 3. Add code to allow you to test the action rule locally as well as on IBM Cloud Functions.
-  ``` Javascript
+  ```JAVASCRIPT
   // To support testing locally and running in Cloud Functions
   if (require.main === module) {
     console.log("running locally")
@@ -80,7 +80,7 @@ The action part of the rule finds the front door that is open and sends an alert
 ```
 4. Save your changes to `action.js`.
 5. Update the `doorOpenAgent` in the `homeSecurity.js` file to run the `condtions.js` and `actions.js` functions.  Update the agent as follows:
-  ```javascript
+  ```JAVASCRIPT
   // create the agents to connect to the Message Hub and subscribe to object update events.
   var doorOpenAgent = new Agent('object-update',
     conditions.main,
