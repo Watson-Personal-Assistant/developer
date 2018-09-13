@@ -1,12 +1,23 @@
 
-# Release Notes 
+# Release Notes
+The following release notes are for the September 6, 2018 release of Watson Assistant Solutions.
 
 ### What's new
-Learn about what's new and fixed in each release of Watson Assistant .  See x.
+Learn about what's new in each release of Watson Assistant Solutions.  See the [What's new]() topic for details.
 
 ### Fixed in this release
 
+The following updates were made in the September 6 release:
+- Confidence scores that are returned by skills during the evaluation phase are now logged.
+- The error messages that are provided for NLU engine errors in the NodeJS skill SDK are improved.
+- Fixed the inaccurate conversion of sun to Sunday in the retext value sent by the Watson Assistant Solutions core.
+
 ### Announcements
+
+1.	The skill debug tool has moved location.  The debug tool is available from the following repository: [https://github.com/Watson-Personal-Assistant/skill-debugger-tool](https://github.com/Watson-Personal-Assistant/skill-debugger-tool). Read more about debugging a skill using the tool. 
+2. If you are using the knowledge and reasoning (alpha) feature, you must update your proactive agents to subscribe directly to an IBM Message Hub component for state change events. The rules API is being deprecated in an upcoming release. Before the April release, you subscribe your proactive agents to the Rules API for state change events. The rules component sends event notifications to your proactive agents.  In the April release, a IBM Message Hub component is made available and you must update your proactive agents to subscribe directly to the Message Hub for state change events. 
+3. Your skills must perform NLU evaluations at the skill level.  The evaluation by the core is deprecated in the September release. For more information about how to configure skills to perform NLU evaluation, see [Reconfiguring skills to handle NLU evaluations](https://watson-personal-assistant.github.io/developer/further-topics/reconfigure_skill/).
+4. The `/logging` API endpoint is being deprecated in an upcoming release.  Instead, use the `/management/logging` endpoint to enable and disable the logging of personal information (PI).  For instructions, see [Logging personal information](https://watson-personal-assistant.github.io/developer/further-topics/set_pi/).
 
 ### Known issues
 
