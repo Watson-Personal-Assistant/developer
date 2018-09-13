@@ -54,4 +54,4 @@ Enter:<br>
 If you fail to run it locally, try pushing it to IBM Cloud Functions and run it from there.
 
 > **What to do next?**<br/>
-Run [the security demonstration as a Cloud Function]({{site.baseurl}}/knowledge/create-rule/).
+Run [the security demonstration as a Cloud Function]({{site.baseurl}}/knowledge/create-cloudfunction/).
