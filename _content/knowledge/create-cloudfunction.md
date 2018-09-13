@@ -11,10 +11,9 @@ You can run the proactive agent as a Cloud Function.
     zip -r homeSecurity.zip homeSecurity.js package.json node_modules/ .env sdk/
   ```
 4. Log in to IBM Cloud. Enter:`bx login -sso`.
-5. To push the .zip file to Cloud Functions, enter the following `bx wsk` command:
+5. To push the .zip file to Cloud Functions, enter the following `bx wsk` command:.
   ```
-  bx wsk action create action action.zip --web true --kind nodejs:8
-
+    bx wsk action create action action.zip --web true --kind nodejs:8
   ```
 6. Get the Web URL for the security demonstration.  Enter: 
   ```
