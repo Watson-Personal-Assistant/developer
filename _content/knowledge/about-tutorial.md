@@ -13,10 +13,13 @@ John has used his assistant frequently. The assistant has learned about John dur
 
 ## High-level steps
 
-- Step 1. Create a world model for John and his home.
-- Step 2. Create a proactive agent that subscribes to state change events from the world model.  Add functions to the agent to fire a rule when a state change event is received. The rule evaluates a condition and if the condition is true, runs an action.
-- Step 3. Start the agent locally and test the rule.
-- Step 4. Push the agent to Cloud Functions and test the rule.
+Step 1. Create a world model for John and his home.
+
+Step 2. Create a proactive agent that subscribes to state change events from the world model. Add functions to the agent to fire a rule when a state change event is received. The rule evaluates a condition and if the condition is true, runs an action.
+
+Step 3. Start the agent locally and test the rule.
+
+Step 4. Push the agent to Cloud Functions and test the rule.
 
 > **What to do next?**<br/>
 Learn how to [create world model objects]({{site.baseurl}}/knowledge/create-objects).
