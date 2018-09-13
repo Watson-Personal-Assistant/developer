@@ -4,9 +4,9 @@ weight: 10
 ---
 Assistants that are built with Watson Assistant Solutions are most impactful when they are designed to be personal, proactive, and portable.
 
-Engagement with a digital assistant is inherently different than traditional mobile or web applications, especially if your assistant has a voice interface or a combination of text and voice. Digital assistants should rely on contextual information and memory to maintain simplicity for the user.
+Engagement with an AI assistant is inherently different than traditional mobile or web applications, especially if your assistant has a voice interface or a combination of text and voice. AI assistants should rely on contextual information and memory to maintain simplicity for the user.
 
-Digital assistants may come in all form factors and vary widely through the capabilities they offer. For a great experience, look to design fundamentals. The mantra for designers is _who, where, and wow_.  It involves understanding users, what they are trying to do, and how you can wow them.
+AI assistants may come in all form factors and vary widely through the capabilities they offer. For a great experience, look to design fundamentals. The mantra for designers is _who, where, and wow_.  It involves understanding users, what they are trying to do, and how you can wow them.
 
 #### Who: understand _who_ your users are
 Think about your primary users (that is, personas). Who are they, are they business professionals, stay at home parents, students, the elderly? Do they have specific traits or interests that will help you better understand their needs?

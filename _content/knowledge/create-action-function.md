@@ -99,3 +99,4 @@ Complete these steps:
 
 > **What to do next?**<br/>
 Learn how to [invoke the rule]({{site.baseurl}}/knowledge/create-rule).
+

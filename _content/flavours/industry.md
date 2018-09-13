@@ -2,9 +2,9 @@
 title: Industry skills
 weight: 5
 ---
-IBM Watson Assistant for Industry provides a framework for creating a digital assistant that provides a unique and personalized experience for your customers.
+IBM Watson Assistant for Industry provides a framework for creating an AI assistant that provides a unique and personalized experience for your customers.
 
-To build your digital assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available to your when you sign up for Watson Assistant for Industry.  The built-in skills for Watson Assistant for Industry are listed in the following section.
+To build your AI assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available to your when you sign up for Watson Assistant for Industry.  The built-in skills for Watson Assistant for Industry are listed in the following section.
 
 All built-in skills for Watson Assistant for Industry are assigned to the `industry` skillset.
 

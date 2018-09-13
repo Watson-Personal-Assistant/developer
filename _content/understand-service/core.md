@@ -1,5 +1,5 @@
 ---
-title: The conversation component
+title: Conversing with your assisstant
 weight: 20
 ---
 User input to Watson Assistant Solutions can be in text or audio form. Watson Assistant Solutions uses the conversation component to route requests to the skill that is best placed to handle each request.

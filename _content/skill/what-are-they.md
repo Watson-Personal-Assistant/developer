@@ -20,7 +20,7 @@ Objects or terms that your users might use in their utterance, which provide con
 The flow of conversation between the user and the skill or skills. When a skill receive a converse request, a condition is evaluated and an action is triggered.  A condition might include a specific intent, such as #get_weather. A response might be "today will be sunny with clear skies".  Alternatively, a response might evaluate another condition or a  response might request more information from the user. For information about how Watason Assistant processes a dialog, see [Dialogs](https://console.bluemix.net/docs/services/conversation/dialog-build.html#dialog-build) in the Watson Assistant documentation. Watson Assistant Solutions provides features, such as setting context variables, that the skills developer can take advantage of to improve the dialog flow.
 
 ### Information available to your skills
-With Watson Assistant Solutions, you can create digital assistants that converse with _multiple skills_. As a skill developer, you can use several features that enhance the conversation flow with a single skill and the conversation flow between multiple skills.
+With Watson Assistant Solutions, you can create AI assistants that converse with _multiple skills_. As a skill developer, you can use several features that enhance the conversation flow with a single skill and the conversation flow between multiple skills.
 
 You can add intelligence to your skills to respond in a personalized way and to enhance routing. For example, as a skill developer, you can use the following types of information to add intelligence to your skills.
 

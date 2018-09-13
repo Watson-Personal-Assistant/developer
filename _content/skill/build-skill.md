@@ -9,9 +9,11 @@ The high-level steps in this tutorial are as follows:
 3. Host your skill on IBM Cloud for you and others to use.
 2. Register the skill with your Watson Assistant Solutions tenant.
 
+**Tip** In this procedure, if your tentants are deployed on the German data center, to access the Watson Assistant Solutions service, use the `https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/` URL.
+
 ---
 ### Before you begin
-1. Get access to your Watson Assistant tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance  tenant]({{site.baseurl}}/get-started/get-api-key/).
+1. Get access to your Watson Assistant Solutions tenant on IBM Cloud.  For instructions, see [Access your Watson Assistance Solutions tenant]({{site.baseurl}}/get-started/get-api-key/).
 2. Install [Git](https://git-scm.com/downloads).
 3. Install [NodeJS](https://nodejs.org/dist/).
 4. Register for an [IBM Cloud account](https://www.ibm.com/account/us-en/signup/register.html).

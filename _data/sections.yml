@@ -39,12 +39,19 @@ audio_single:
   title: Audio (hospitality)
   icon: code
   
+slack:
+  title: Slack integration
+  icon: code
 ifttt:
   title: IFTTT integration
   icon: code
+
+analytics:
+  title: Analytics
+  icon: code
   
 further-topics:
-  title: Further topics
+  title: Administering
   icon: pencil
   
 trial:
