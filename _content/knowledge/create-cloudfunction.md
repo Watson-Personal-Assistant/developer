@@ -19,17 +19,20 @@ You can run the proactive agent as a Cloud Function.
 6. Get the Web URL for the security demonstration.  Enter: 
   ``` 
   bx wsk action get homeSecurity --url
+  
   ```
   The curl command should return a response similar to the following:
-      ```
-      {
-        "sample-homeSecurity": "https://openwhisk.ng.bluemix.net/api/v1/web/blah%40us.ibm.com_dev/default/homSecurity/6e5adba1-718d-4304-       a3c1-4d28e55a5524/",
-        "id": "6e5adba1-718d-4304-a3c1-4d28e55a5524"
-      }
-      ```
+  ```
+  {
+    "sample-homeSecurity": "https://openwhisk.ng.bluemix.net/api/v1/web/blah%40us.ibm.com_dev/default/homSecurity/6e5adba1-718d-4304-       a3c1-4d28e55a5524/",
+    "id": "6e5adba1-718d-4304-a3c1-4d28e55a5524"
+  }
+
+  ```
 7. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`. In the Type a request or command field enter:
   ```
   /wa paste-your-watson-assistant-solutions-api-key-here
+  
   ```
 8. Call the function to open the front door. Enter:
   ```
