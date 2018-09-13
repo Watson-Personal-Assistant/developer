@@ -11,7 +11,7 @@ An assistant is designed to proactively warn home owners when the front door to 
 
 John has used his assistant frequently. The assistant has learned about John during these conversations and stores information about John and his home in its knowledge store.  While John is away from his home, the front door opens.  The assistant is notified that the door is open and sends a text message to John to warn him of a potential security breach at his home.
 
-## High-level steps
+### High-level steps
 
 Step 1. Create a world model for John and his home.
 
