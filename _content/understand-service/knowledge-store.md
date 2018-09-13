@@ -1,12 +1,17 @@
 ---
-title: The knowledge component (alpha)
+title: Adding proactivity to your assistant
 weight: 30
 ---
-The knowledge component stores object models and information about objects in a database. Using the REST API or a NodeJS SDK, your skills create and modify objects in the knowledge database.
+Use the Knowledge and Reasoning (alpha) component on Watson Assistant Solutions to add proactivity to your assistant.  Learn about the world around your users and alert them when something changes in their world.
 
-Context information that is passed by your application using the conversation API also adds and updates information in the knoweldge component.
+Knowledge and reasoning provides a shared  knowledge store for storing the world models of your users.  Use the Knowledge REST API endpoints to create and maintain these models.
 
-The knowledge REST API provides the following end points:
+Create custom agents to subscribe to state changes events from the model and to fire some rules.  As part of your agent, you might create a function to evaluate the condition part of a rule and a function to run the action part of the rule.
+
+The Knowledge and Reasoning component has a WebSphere Message Hub that implements a publish and subscription messaging mechanism.  Subscribe the rules of your agent to the publication topics the agent is interested. Your agent is then notified of changes in the world model of users. 
+The knowledge component stores object models and information about objects in a database. 
+
+Using the REST API or a NodeJS SDK, create and modify objects in the knowledge database. The knowledge REST API provides the following end points:
 - Object:  retrieve, create, update, and delete objects in the Knowledge component.
 - Relation: create and delete relations between objects.
 - Query: query for objects of a certain type or attribute value.
