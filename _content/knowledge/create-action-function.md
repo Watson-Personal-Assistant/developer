@@ -53,7 +53,7 @@ The action part of the rule finds the front door that is open and sends an alert
       });
     }
 ```
-3. Add code to allow you to test the action rule locally as well as on IBM Cloud Functions.T
+3. Add code to allow you to test the action rule locally as well as on IBM Cloud Functions.
 ```javascript
     // To support testing locally and running in Cloud Functions
     if (require.main === module) {
@@ -77,7 +77,7 @@ The action part of the rule finds the front door that is open and sends an alert
 ```
 4. Save your changes to `action.js`.
 5. Update the `doorOpenAgent` in the `homeSecurity.js` file to run the `conditions.js` and `actions.js` functions.  Update the agent as follows:
-```Javascript
+```javascript
     // create the agents to connect to the Message Hub and subscribe to object update events.
     var doorOpenAgent = new Agent('object-update',
       conditions.main,
