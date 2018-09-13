@@ -1,18 +1,22 @@
 ---
-title: The Knowledge and Reasoning (alpha) tutorial
+title: Tutorial - Adding proactivity
 weight: 10
 ---
 
-In the following tutorial, you will go through the creation of a simple home security scenario using the Knowledge and Reasoning (alpha) components.
+The tutorial simulates a home security scenario to demonstrate how to add proactivity to an assistant.
 
-In this scenario, the user would like to be notified if their house's entrance door is opened while he/she is away.
+## Home Security scenario
 
-This scenario is implemented using the following NodeJS code:
-1. **Create Object and Relation script**: Simulates what you would do in your Skill to create the door, house and person objects and then relate them together.
-2. **Cloud Function for the condition part of the Rule**: A function that gets invoked when an object is updated and determines if that object is a door, the door is open and the home owner is away.
-3. **Cloud Function for the action part of the Rule**: A function when invoked will place a message in a chat UI indicating which door is open.
+An assistant is designed to proactively warn home owners when the front door to their home opens.  The assistant sends an alert only when it suspects unauthorized access, that is, when an owner is away from home.
 
-First, you will build the code to create the objects and relations.
+John has used his assistant frequently. The assistant has learned about John during these conversations and stores information about John and his home in its knowledge store.  While John is away from his home, the front door opens.  The assistant is notified that the door is open and sends a text message to John to warn him of a potential security breach at his home.
+
+## High-level steps
+
+Step 1. Create a world model for John and his home.<br>
+Step 2. Create a proactive agent that subscribes to state change events from the world model.  Add functions to the agent to fire a rule when a state change event is received. The rule evaluates a condition and if the condition is true, runs an action.<br>
+Step 3. Start the agent locally and test the rule.<br>
+Step 4. Push the agent to Cloud Functions and test the rule.<br>
 
 > **What to do next?**<br/>
-Learn how to [create objects in Knowledge (alpha) component]({{site.baseurl}}/knowledge/create-objects).
+Learn how to [create world model objects]({{site.baseurl}}/knowledge/create-objects).
