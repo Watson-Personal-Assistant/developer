@@ -44,4 +44,4 @@ When you have an IAM API key (also known as a Platform or Cloud API key), use th
 Your assistant might use other IBM Cloud, Watson or 3rd party services, each with their own API keys. You must provision and manage those keys separately.
 
 > **What to do next?**<br/>
-Learn how to [design your assistant]({{site.baseurl}}/design/how-to-design-your-assistant).
+See [what's new]({{site.baseurl}}/get-started/whats_new).

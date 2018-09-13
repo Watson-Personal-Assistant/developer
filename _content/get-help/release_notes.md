@@ -1,5 +1,8 @@
+---
+title: Release Notes
+weight: 20
+---
 
-# Release Notes
 The following release notes are for the September 6, 2018 release of Watson Assistant Solutions.
 
 ### What's new

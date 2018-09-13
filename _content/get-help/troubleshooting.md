@@ -1,6 +1,6 @@
 ---
 title: Using the regex browser plugin
-weight: 20
+weight: 40
 ---
 
 You can use the regex browser plugin to help with pasting commands.

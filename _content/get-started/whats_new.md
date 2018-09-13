@@ -1,5 +1,7 @@
-
-# What's new 
+---
+title: What's new
+weight: 30
+---
 
 Learn about what's new in each release of Watson Assistant Solutions.
 
@@ -34,4 +36,5 @@ Learn about what's new in each release of Watson Assistant Solutions.
 - **Support for multiple tenants**: Use your tenant ID in the REST API calls to target a specific tenant.  Use your tenant ID to filter your log data. See [Accessing your tenant](https://watson-personal-assistant.github.io/developer/get-started/get-api-key/).
 - **Knowledge and reasoning (alpha) updates**: Subscribe proactive agents directly to the Message Hub for state change events from the world model.
 
-> **What next?** Read our [legal notices]({{site.baseurl}}/legal/terms-of-use)
+> **What to do next?**<br/>
+Learn how to [design your assistant]({{site.baseurl}}/design/how-to-design-your-assistant).
