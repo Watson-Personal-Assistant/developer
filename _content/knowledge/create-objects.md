@@ -1,7 +1,8 @@
-----
-title: Create a world model
-weight: 15
 ---
+title: Create a world model
+weight: 12
+---
+
 Create a world model for John and his home.  Create an agent that subscribes to changes in the world model.
 
 ---
