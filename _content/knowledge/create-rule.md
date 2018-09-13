@@ -51,7 +51,7 @@ Enter:<br>
 7. (Optional) Reset the status of the door to closed.  Enter:<br>
     `http://localhost:8080/closedoor`
 
-For help with errors, see [Troublehshooting] ({{site.baseurl}}/get_help/tips).
+If you fail to run it locally, try pushing it to IBM Cloud Functions and run it from there.
 
 > **What to do next?**<br/>
 Run [the security demonstration as a Cloud Function]({{site.baseurl}}/audio_single/audio_support).
