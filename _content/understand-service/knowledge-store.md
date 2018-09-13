@@ -17,5 +17,7 @@ Using the REST API or a NodeJS SDK, create and modify objects in the knowledge d
 - Query: query for objects of a certain type or attribute value.
 - Heartbeat: check the availability of the knowledge component.
 
+See the [tutorial]({{site.baseurl}}/knowledge/what-is-kr) for more information.
+
 > **What to do next?**<br/>
 Understand [how the rules component works]({{site.baseurl}}/understand-service/agent-subscription).
