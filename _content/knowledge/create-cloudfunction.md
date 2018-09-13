@@ -25,7 +25,6 @@ The curl command should return a response similar to the following:.
     "sample-homeSecurity": "https://openwhisk.ng.bluemix.net/api/v1/web/blah%40us.ibm.com_dev/default/homSecurity/6e5adba1-718d-4304-      a3c1-4d28e55a5524/",
     "id": "6e5adba1-718d-4304-a3c1-4d28e55a5524"
 }
-
  ```
 7. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`. In the Type a request or command field enter:
   ```
@@ -42,7 +41,7 @@ The curl command should return a response similar to the following:.
     https://kr-sdk-node-newdemo.mybluemix.net/closedoor
   ```
 
-**Tip**: If an alert does not display, go to the Cloud Functions monitor UI at the URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard). Check whether your functions have been invoked more than once each.
+**Tip**: If an alert does not display, go to the Cloud Functions monitor UI at the URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard). Check whether your functions have been invoked more than once each..
 
 > **What to do next?**<br/>
 Learn about [using audio]({{site.baseurl}}/audio/audio_support).<br/>
