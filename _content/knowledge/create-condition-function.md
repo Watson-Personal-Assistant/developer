@@ -8,7 +8,7 @@ Complete these steps:
 
 1. Create the`condition.js` file and include the object, relation, and dotenv modules.
 
- ```Javascript
+ ```JAVASCRIPT
   require('dotenv').config({path: __dirname + '/.env'});
   var KnowledgeObject = require('./sdk/object');
   var KnowledgeRelation = require('./sdk/relation');
@@ -17,7 +17,7 @@ Complete these steps:
 Tip: `__dirname` is required for Cloud Functions to find the file in the container. The condition part of the rule finds the owner of a house when the agent is notified that the front door has opened.  Before sending an alert to the home owner, the agent checks that the house is unoccupied. 
 2. Add a function to `condition.js` that finds the owner of a house from a door ID.
 
-  ```Javascript
+  ```JAVASCRIPT
   function getHouseAndPersonForDoor(doorId) {
     console.log('in getHouseAndPersonForDoor');
     var door, house, owner;
@@ -46,7 +46,7 @@ Tip: `__dirname` is required for Cloud Functions to find the file in the contain
 In this function, which is given a specific door ID, the function traverses the `has-as-part` relationship to the house object.  The function traverses the `ownership` relationships to the owner.  The function returns the person, the house and the front door.
 3. Create a NodeJS function to check that the update event referred to a door.  The agent is not interested in updates to houses or owners.
   
-  ```Javascript
+  ```JAVASCRIPT
 
   function checkType(event, type) {
     var eventType = event[0]['type'];
@@ -60,7 +60,7 @@ In this function, which is given a specific door ID, the function traverses the 
   ```
 4.  Create the main function that checks if the owner is away when the door is opened.
 
-  ```Javascript
+  ```JAVASCRIPT
   function main(event, callback) {
     console.log('in condition main');
     var doorId = event[0]['id'];
@@ -90,7 +90,7 @@ In this function, which is given a specific door ID, the function traverses the 
   ```
   The function returns `True` or `False`.<br>
 5.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
-  ```Javascript
+  ```JAVASCRIPT
   // To support testing locally and running in Cloud Functions
   if (require.main === module) {
     console.log("running locally")
