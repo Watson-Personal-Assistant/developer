@@ -62,7 +62,6 @@ Complete these steps:
 
       ```
 4.  Create the main function that checks if the owner is away when the door is opened.
-
       ```JAVASCRIPT
       function main(event, callback) {
         console.log('in condition main');
@@ -93,7 +92,7 @@ Complete these steps:
       ```
       The function returns `True` or `False`.
 5.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
-      ```JAVASCRIPT
+    ```JAVASCRIPT
       // To support testing locally and running in Cloud Functions
       if (require.main === module) {
         console.log("running locally")
@@ -114,8 +113,7 @@ Complete these steps:
         exports.main = main;
         exports.checkType = checkType;
       }
-
-      ```
+    ```
 6. Save your changes to `conditon.js`.
 
 > **What to do next?**<br/>
