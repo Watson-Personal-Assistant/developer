@@ -6,15 +6,15 @@ Create a file `action.js` for the action part of the rule.
 
 Complete these steps:
 
-1. Create the `action.js` file and include the object, relation, and dotenv modules..
-```
+1. Create the `action.js` file and include the object, relation, and dotenv modules.
+```javascript
     require('dotenv').config({path: __dirname + '/.env'});
     var KnowledgeObject = require('./sdk/object');
     var KnowledgeRelation = require('./sdk/relation');
 ```
 The action part of the rule finds the front door that is open and sends an alert to the owner of the house that the door belongs to.  An alert is sent to the home owner through a [chat UI](http://wpa-chat-bot.mybluemix.net).  
 2. Add a main function to `action.js` to find the name of the door that has opened and to send an alert to the chat UI to notify the owner of the potential security breach.
-```
+```javascript
     // Main function
     function main(event) {
       console.log('in action main');
@@ -54,30 +54,30 @@ The action part of the rule finds the front door that is open and sends an alert
     }
 ```
 3. Add code to allow you to test the action rule locally as well as on IBM Cloud Functions.T
-```
-// To support testing locally and running in Cloud Functions
-if (require.main === module) {
-  console.log("running locally")
-  // parse the input from the command line $ node index.js 123
-  doorID = process.argv[2]
-  console.log(process.argv)
-  main({ results: [{ id: doorID, type: 'Door' }] })
-    .then((result) => {
-      console.log("action is done running success");
-      console.log(JSON.stringify(result));
-    })
-    .catch((err) => {
-      console.log("action is done running error");
-      console.log(JSON.stringify(err));
-    });
-} else {
-  console.log("running in openwhisk")
-  exports.main = main;
-}
+```javascript
+    // To support testing locally and running in Cloud Functions
+    if (require.main === module) {
+      console.log("running locally")
+      // parse the input from the command line $ node index.js 123
+      doorID = process.argv[2]
+      console.log(process.argv)
+      main({ results: [{ id: doorID, type: 'Door' }] })
+        .then((result) => {
+          console.log("action is done running success");
+          console.log(JSON.stringify(result));
+        })
+        .catch((err) => {
+          console.log("action is done running error");
+          console.log(JSON.stringify(err));
+        });
+    } else {
+      console.log("running in openwhisk")
+      exports.main = main;
+    }
 ```
 4. Save your changes to `action.js`.
 5. Update the `doorOpenAgent` in the `homeSecurity.js` file to run the `conditions.js` and `actions.js` functions.  Update the agent as follows:
-```
+```Javascript
     // create the agents to connect to the Message Hub and subscribe to object update events.
     var doorOpenAgent = new Agent('object-update',
       conditions.main,
@@ -93,5 +93,5 @@ if (require.main === module) {
     }
 ```
 > **What to do next?**<br/>
-Learn how to [invoke the rule]({{site.baseurl}}/knowledge/create-rule)..
+Learn how to [invoke the rule]({{site.baseurl}}/knowledge/create-rule).
 
