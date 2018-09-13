@@ -7,10 +7,10 @@ You can run the proactive agent as a Cloud Function.
 1. Update the `name` and `host` pararameters for the app in the `mainifest.yml` file. 
 2. Edit the `package.json` to reference which JavaScript file includes the main function. Enter:`"main":"homeSecurity.js`. Cloud Functions require you to set the main parameter unless the name of your file is `index.js`.
 3. Create a .zip file containing everything that is required to run `homeSecurity.js` and the JavaScript code it includes as a cloud function action. Enter:
-  ```
-  zip -r homeSecurity.zip homeSecurity.js package.json node_modules/ .env sdk/
+```
+ zip -r homeSecurity.zip homeSecurity.js package.json node_modules/ .env sdk/
 
-  ``` 
+``` 
 4. Log in to IBM Cloud. Enter:`bx login -sso`.
 5. To push the .zip file to Cloud Functions, enter the following `bx wsk` command:
   ```
