@@ -84,103 +84,100 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     - The house and the front door.
     - The owner and the house.
   Use the `KnowledgeRelation` object.
-  In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the person has `ownership` of the house.
+  In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the
+  person has `ownership` of the house.
     ```javascript
-    // Create relations in local memory
-    var personToHouse = new KnowledgeRelation('ownership', person, house);
-    var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
-
+        // Create relations in local memory
+        var personToHouse = new KnowledgeRelation('ownership', person, house);
+        var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
     ```
 6.  Save the relationship objects to the world model in the data store.
     ```javascript
-    // Save relationships to the world model
-    Promise.all(
-          [
-            personToHouse.create(),
-            houseToDoor.create()
-          ]).then(
-          function (results) {
-            console.log('All relations created\n\n');
-            runAgent();
+        // Save relationships to the world model
+        Promise.all(
+              [
+                personToHouse.create(),
+                houseToDoor.create()
+              ]).then(
+              function (results) {
+                console.log('All relations created\n\n');
+                runAgent();
+              }
+            );
           }
         );
-      }
-    );
-
     ```
 7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
     ```javascript
+        // create the agents to connect to the Message Hub and subscribe to object update events.
+        var doorOpenAgent = new Agent('object-update');
 
-    // create the agents to connect to the Message Hub and subscribe to object update events.
-    var doorOpenAgent = new Agent('object-update');
-
-    function runAgent() {
-      Promise.all([
-        doorOpenAgent.connect(),
-      ]).then(function () {
-        doorOpenAgent.subscribe();
-        console.log('Subscription created\n\n');
-      }, cleanup); //cleanup if the sub fails
-    }
-
+        function runAgent() {
+          Promise.all([
+            doorOpenAgent.connect(),
+          ]).then(function () {
+            doorOpenAgent.subscribe();
+            console.log('Subscription created\n\n');
+          }, cleanup); //cleanup if the sub fails
+        }
     ```
 8.  Add a function to remove the objects and relations if creation of the world model does not complete successfully.
     ```javascript
-    // Delete objects from the world model
-    function cleanup() {
-      Promise.all(
-        [
-          person.delete(),
-          house.delete(),
-          door.delete()
-        ]);
-    }
+        // Delete objects from the world model
+        function cleanup() {
+          Promise.all(
+            [
+              person.delete(),
+              house.delete(),
+              door.delete()
+            ]);
+        }
 
     ```
 9.  Add a function to update the status of the door to open when the function is called.  The function checks that the door is closed before sending the update to the world model.
     ```Javascript
-    // Open the door
-    app.get('/openDoor', function (req, res) {
-      KnowledgeObject.retrieve(door.id).then((doorObj) => {
-        if (!doorObj.attributes.isOpen) {
-          doorObj.attributes['isOpen'] = true;
-          doorObj.update();
-          res.status(200);
-          res.send("opened door");
-        } else {
-          res.status(200);
-          res.send("door was already open");
-        }
-      });
-    });
+        // Open the door
+        app.get('/openDoor', function (req, res) {
+          KnowledgeObject.retrieve(door.id).then((doorObj) => {
+            if (!doorObj.attributes.isOpen) {
+              doorObj.attributes['isOpen'] = true;
+              doorObj.update();
+              res.status(200);
+              res.send("opened door");
+            } else {
+              res.status(200);
+              res.send("door was already open");
+            }
+          });
+        });
 
     ```
 10. Add a function to update the status of the door to closed when the function is called.  The function checks that the door is open before sending the update to the world model.
     ```
-    //Close the door
-    app.get('/closeDoor', function (req, res) {
-      KnowledgeObject.retrieve(door.id).then((doorObj) => {
-        if (doorObj.attributes.isOpen) {
-          doorObj.attributes['isOpen'] = false;
-          doorObj.update();
-          res.status(200);
-          res.send("closed door");
-        } else {
-          res.status(200);
-          res.send("door was already closed");
-        }
-      });
-    });
+        //Close the door
+        app.get('/closeDoor', function (req, res) {
+          KnowledgeObject.retrieve(door.id).then((doorObj) => {
+            if (doorObj.attributes.isOpen) {
+              doorObj.attributes['isOpen'] = false;
+              doorObj.update();
+              res.status(200);
+              res.send("closed door");
+            } else {
+              res.status(200);
+              res.send("door was already closed");
+            }
+          });
+        });
 
     ```
 11. Add a function to start the agent.
     ```javascript
-    // Server Startup
-    const port = process.env.PORT || process.env.RULE_PORT || 8080;
-    app.listen(port, () => {
-      console.log(`Agent REST service is alive!\nListening on port ${port}\n\n`)
-    });
-    module.exports.App = app;
+        // Server Startup
+        const port = process.env.PORT || process.env.RULE_PORT || 8080;
+        app.listen(port, () => {
+          console.log(`Agent REST service is alive!\nListening on port ${port}\n\n`)
+        });
+        module.exports.App = app;
 
     ```
 12. Save your changes to the `homeSecurity.js` file.
