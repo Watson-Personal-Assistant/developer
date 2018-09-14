@@ -58,7 +58,7 @@ Table 1 - Audio client configuration parameters
 | cmdSocketPort  | The port to use for external commands. The default port is 10010.  |External control parameter.
 | audioSocketPort  | The port to use for audio streaming.  The default port is 10011.   |External control parameter.
 | statusPingRate  |The rate  at which the audio client sends operational status messages to its controller in milliseconds. The default value is 7000 ms.  | External control parameter.
-| voice  | The text-to-speech service to use.  The default value is en-US-LisaVoice.  |Text-to-speech parameter.
+| voice  | The text-to-speech voice to use.  The default value is en-US_LisaVoice.  |Text-to-speech parameter.
 | useDefaultAudio  | If set to true, use the default audio output of the device.  For example, on a Raspberry Pi, the default output is an aux jack.  If you are using a USB speaker, set the value to false.  Tip: If no audio is heard, change the value of this parameter.  | Audio output parameter
 | debug  |  If set to true, debug mode is enabled.  The value is set to true by default. | Debugging parameter. |
 | logAdditionalAudioInfo  | If set to true, additional audio information is gathered for debugging purposes.  The value is set to true by default.    | Debugging parameter. |

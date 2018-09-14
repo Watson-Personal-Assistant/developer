@@ -16,7 +16,7 @@ For more information about setting the `engine` parameter in the audio client, s
 For more information about the `stt_options` and the `audio_start` messages, see the [audio streaming interface]({{site.baseurl}}/audio_single/interface) topic.
 
 ### Text-to-speech
-The audio client uses the Watson text-to-speech service.  The text-to-speech service to use is not configurable.  The `voice` parameter is set to `en-US-LisaVoice`.
+The audio client uses the Watson text-to-speech service.  The voice used by text-to-speech service is configurable.  The `voice` parameter is set to `en-US_LisaVoice`.
 
 The audio gateway sets the audio format to `audio/ogg;codecs=vorbis`  and sets the sampling rate to `16000` hertz.
 
