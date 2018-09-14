@@ -29,7 +29,7 @@ clicking the link for the **apache-maven-*-bin.zip**.
 
 10. Edit the `config/configure.properties` file copied earlier and set the following values as follows:
   - host=wa-audio-gateway.mybluemix.net
-  - userID=paste-any-name-you-want-here
+  - userID=any-name-with-alphanumeric-hyphen-or-underscore-characters
   - skillset=industry
   - IAMAPIKey=paste-the-IAM-API-Key-created-earlier
 
