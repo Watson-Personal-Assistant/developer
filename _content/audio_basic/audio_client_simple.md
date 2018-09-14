@@ -33,9 +33,9 @@ To quickly get started with the voice interface, download a sample Java-based au
 3. Set the following mandatory parameters in the `config/configure.properties` file on the audio client.
     ```
     host=wa-audio-gateway.mybluemix.net
-    userID=paste-any-ID-here
+    userID=any-name-with-alphanumeric-hyphen-or-underscore-characters
     skillset=paste-skillset-here-eg-industry
-    IAMAPIKey=paste-any-your-IAM-API-key-here
+    IAMAPIKey=paste-the-IAM-API-Key-created-earlier
     ```
 4. Build your audio client. From the top-level directory of your client, enter:
     ```

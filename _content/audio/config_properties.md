@@ -10,7 +10,7 @@ Table 1 - Audio client configuration parameters
 | Parameter  |Description | Type |
 |-----|:-------------------------|:----------------|
 | `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` |Audio gateway connection parameter |
-| `userID` (mandatory)  | The user ID or client ID of the sender |Audio gateway connection parameter |
+| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. |Audio gateway connection parameter |
 | `IAMAPIKey` (mandatory) | The client IAM API key for the device.  |Audio gateway connection parameter |
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. | Audio gateway connection parameter  |
 | `engine `  | The speech-to-text (STT) engine that the audio gateway must use to convert speech to text.  Valid values are `watson` or `google`.  The default value is `google`.   | Speech-to-text parameter |
