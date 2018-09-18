@@ -13,7 +13,7 @@ A sample skill is deployed and running at `https://added-skill-jokes.mybluemix.n
 2. From the top navigation bar, click **Skills**.
 3. Click the **Add skill** button, which is upper right of the table.
 4.	In the Skill endpoint URL field, add the URL
-`https://added-skill-jokes.mybluemix.net`.
+`https://added-skill-jokes.mybluemix.net` or, if you have gone through the [Skill Tutorial - Using the WCS nlu]({{site.baseurl}}/skill/using-wcs), then type the URL to your running joke skill instead.
 5. In the Skill Name field, enter a unique name, for example, `joke-skill`.
 6. Click **Next**.
 7. Click **Register**.

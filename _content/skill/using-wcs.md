@@ -124,24 +124,8 @@ curl -X GET --verbose --header 'Accept: application/json' https://paste_your_ski
 ```
 If your skill is running and accessible, a `200 OK` response is returned.
 
-#### Step 6: Add skill to WA
-Use the skills endpoint of the Conversation REST API to add the skill that is running on IBM Cloud. Enter:
-
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "name": "paste-your-joke-skill-name", "url": "https://paste-your-skill-name-here.mybluemix.net" }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills'`
-
-
-#### Step 7: Converse with the joke skill
-Converse with the jokes skill using the  **/skills/{skillName}/converse** API endpoint of the Watson Assistant Solutions service.
-
-Replace the text attribute in the following curl commands with some of those utterances to converse with your skill.
-
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "tell me a joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
-
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "dad", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
-
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a chuck norris joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
-
-`curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'api_key: paste-your-WA-API-key-here' -d '{ "text": "how about a dad joke", "language": "en-US", "userID": "application-14c", "deviceType": "phone", "additionalInformation": { "context": {} } }' 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/skills/paste-your-joke-skill-name/converse' `
+#### Step 6: Add skill using Watson Assistant Solutions console
+Add your skill to the industry skillset and test that it responds correctly with the rest of the industry skills by following the [Add a running skill]({{site.baseurl}}/trial/add-running-skill) instructions.  Be sure to use the URL of your running skill you just deployed in above step.
 
 > **What to do next?**<br/>
 Read about [configuring skill authentication]({{site.baseurl}}/skill/adding_skill_authentication).
