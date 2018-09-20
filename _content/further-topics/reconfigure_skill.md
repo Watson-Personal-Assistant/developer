@@ -142,7 +142,7 @@ To migrate to the latest version of the skill boilerplate, complete these steps:
 4.  If you are using the regexp NLU,
     1. Copy your existing regexp NLU definition, `regexp.json`, to `res/nlu/regexp.json`.
     2. Copy your existing intents file, `intents.json`, to `res/nlu/intents.json`.
-5.  If you are using a Watson Assistant (formerly Watson Conversation Service) NLU, edit the `res/nlu/wcs.json` file in the new version of the skill. Include the WCS credentials you specified when you previously registered the skill Watson Assitant Solutions.
+5.  If you are using a Watson Assistant (formerly Watson Conversation Service) NLU, edit the `res/nlu/wcs.json` file in the new version of the skill. Include the WCS credentials you specified when you previously registered the skill Watson Assistant Solutions.
 6. Copy the contents from the `action.js` file to the `action.js` in the new version of your skill.
     1. Copy your existing intents from the `createActionsHandler` function to the new `action.js` file.
     2. If you used the deprecated method of calling WCS, replace with the new `handler.converse` or reuse the evaluation results.
