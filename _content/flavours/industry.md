@@ -44,17 +44,6 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
     - What is the 5 day forecast
     - Should I take an umbrella
 
-### Points of Interest
-- Registered name: points-of-interest
-- Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating.
-- Sample utterances: 
-    - Any restaurants in London
-    - Are there any gas stations near me
-    - Tell me more about this place
-    - What are the opening hours of this place
-    - What is the phone number of this place
-    - What is the rating of this place
-
 ### Default
 - Registered name: default
 - Description: A general fallback skill for the industry skillset.

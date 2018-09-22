@@ -35,6 +35,17 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
     - How do I adjust my seat
     - How often should I change the engine oil
 
+### Points of Interest
+- Registered name: points-of-interest
+- Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating.
+- Sample utterances: 
+    - Any restaurants in London
+    - Are there any gas stations near me
+    - Tell me more about this place
+    - What are the opening hours of this place
+    - What is the phone number of this place
+    - What is the rating of this place
+
 ### Auto Default
 - Registered name: auto-default
 - Description: A fallback skill for automotive skill set.  Captures utterances that are not handled by other skills.
