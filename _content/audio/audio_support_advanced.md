@@ -18,4 +18,4 @@ Some of the advanced tasks that you can perform to set up, monitor, and control 
 - Using a smart speaker as a [device controller]({{site.baseurl}}/audio/Using_a_device_controller).
 
 > **What to do next?**<br/>
-Learn how [set-up IAM authentication]({{site.baseurl}}/audio/audio_authentication).
+Learn how to [set up IAM authentication]({{site.baseurl}}/audio/audio_authentication).
