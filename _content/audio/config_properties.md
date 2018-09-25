@@ -13,6 +13,8 @@ Table 1 - Audio client configuration parameters
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. |Audio gateway connection parameter |
 | `IAMAPIKey` (mandatory) | The client IAM API key for the device.  |Audio gateway connection parameter |
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. | Audio gateway connection parameter  |
+| `tenantID`  (mandatory for multiple tenants) | The ID of the tentant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants. | Audio gateway connection parameter  |
+| `language`  | The language that the client communicates in.  The default value is `en-US`. | Langugae parameter  |
 | `engine `  | The speech-to-text (STT) engine that the audio gateway must use to convert speech to text.  Valid values are `watson` or `google`.  The default value is `google`.   | Speech-to-text parameter |
 | `urltts`  | If set to `true`, the audio gateway plays back audio from a URL.  If set to `false`, the gateway streams audio using data messages.  The default value is `false`.  | Audio response type parameter |
 | `cmdSocketPort`  | The port to use for external commands. The default port is 10010.  |External control parameter |
