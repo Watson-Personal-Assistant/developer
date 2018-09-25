@@ -36,8 +36,8 @@ audio:
   icon: code
   
 audio_custom:
-title: Audio - Custom client
-icon: code
+  title: Audio - Custom client
+  icon: code
   
 audio_single:
   title: Audio (hospitality)
