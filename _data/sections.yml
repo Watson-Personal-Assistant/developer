@@ -35,6 +35,10 @@ audio:
   title: Audio - Advanced
   icon: code
   
+audio_custom:
+title: Audio - Custom client
+icon: code
+  
 audio_single:
   title: Audio (hospitality)
   icon: code
