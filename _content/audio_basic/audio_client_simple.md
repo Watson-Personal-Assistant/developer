@@ -34,6 +34,7 @@ To quickly get started with the voice interface, download a sample Java-based au
     ```
     host=wa-audio-gateway.mybluemix.net
     userID=any-name-with-alphanumeric-hyphen-or-underscore-characters
+    tenantID=paste-tenant-ID-here-if-you-have-multiple-tenants
     skillset=paste-skillset-here-eg-industry
     IAMAPIKey=paste-the-IAM-API-Key-created-earlier
     ```
