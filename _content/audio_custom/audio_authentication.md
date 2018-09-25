@@ -38,4 +38,4 @@ Use the web socket connection to send audio streaming interfaces messages.
 
 
 > **What to do next?**<br/>
-Review the [audio streaming interface messages]({{site.baseurl}}/audio/interface).
+Review the [audio streaming interface messages]({{site.baseurl}}/audio_custom/interface).
