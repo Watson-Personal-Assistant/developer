@@ -3,7 +3,7 @@ title: Using the sample audio client
 weight: 10
 ---
 
-To quickly get started with the voice interface, download a sample Java-based audio client and connect it to your Watson Assistant Solutions tenant.
+To quickly get started with the voice interface, download a [sample Java-based audio client](https://github.com/Watson-Personal-Assistant/AudioClientSampleCodeJava) and connect it to your Watson Assistant Solutions tenant.
 
 **Note**: To reconfigure your audio client, start the procedure from step 3.
 
