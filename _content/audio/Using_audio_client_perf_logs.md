@@ -1,5 +1,5 @@
 ---
-title: Viewing the logs
+title: Viewing performance logs
 weight: 33
 ---
 
