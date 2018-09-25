@@ -28,4 +28,4 @@ Table 1 - Audio client configuration parameters
 | `logAdditionalAudioInfo`  | If set to `true`, log information about the size of the audio packets and the time that is taken to receive them. The value is set to `true` by default.  | Logging parameter |
 
 > **What to do next?**<br/>
-Review the [audio streaming interface messages]({{site.baseurl}}/audio/interface).
+Learn more about [Raspberry PI]({{site.baseurl}}/audio/Using_raspberry_PI).
