@@ -37,7 +37,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     var KnowledgeObject = require('./sdk/object');
     var KnowledgeRelation = require('./sdk/relation');
     ``` 
-    <br> **Remember** The app `homeSecurity.js` will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial.
+    <br> **Important** The app `homeSecurity.js` will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial.
 3. Write a function to create a person, a house, and a door object in local memory.
   Use the `KnowledgeObject` object.
     ```javascript
