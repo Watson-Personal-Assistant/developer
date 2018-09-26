@@ -11,6 +11,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
 ### Navigation
 - Registered name: navigation
 - Description: Navigates end-users to a location. Provides directions to the location based on a users current location and the responses the user makes. Calculates how long it takes it get from the current location of a user to a destination.
+- Maturity level: Beta
 - Sample utterances:
     - Navigate me from New York to New Jersey
     - How much time will it take to get to New Jersey
@@ -20,6 +21,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
 ### IoT for Auto
 - Registered name: IoT-for-auto
 - Description: Responds to questions about a vehicle, such as questions about fuel levels, tyre pressure.
+- Maturity level: Beta
 - Sample utterances: 
     - How fast am I going
     - What's the fuel at
@@ -29,6 +31,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
 ### Vehicle Owners Manual
 - Registered name: vehicle-owners-manual
 - Description: Provides information that is typically included in a car manual.  Answers how to turn on components, how to perform operations, where components are located, and provides general information about the vehicle.
+- Maturity level: Generally available
 - Sample utterances: 
     - How do I turn on my fog lights
     - Where is my gas cap located
@@ -38,6 +41,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
 ### Points of Interest
 - Registered name: points-of-interest
 - Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating.
+- Maturity level: Generally available
 - Sample utterances: 
     - Any restaurants in London
     - Are there any gas stations near me
@@ -49,6 +53,7 @@ All built-in skills for Watson Assistant for Automotive are assigned to the `aut
 ### Auto Default
 - Registered name: auto-default
 - Description: A fallback skill for automotive skill set.  Captures utterances that are not handled by other skills.
+- Maturity level: Beta
 - Sample utterances: 
     - How many cents in a euro
     - What's for dinner

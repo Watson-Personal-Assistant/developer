@@ -11,6 +11,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
 ### Conversational Essentials
 - Registered name: conversational-essentials
 - Description: Responds to small-talk such as greetings and goodbyes.
+- Maturity level: Beta
 - Sample utterances: 
     - Howdy
     - How are you today
@@ -20,6 +21,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
 ### Time
 - Registered name: time
 - Description: Provides date and time information.
+- Maturity level: Beta
 - Sample utterances: 
     - Time please
     - Date please
@@ -28,6 +30,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
 
 ### General Knowledge
 - Registered name: general-knowledge
+- Maturity level: Demo
 - Description: Answers general knoweldge questions.
 - Sample utterances: 
     - What is a hurricane
@@ -37,6 +40,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
 
 ### Weather
 - Registered name: weather
+- Maturity level: Beta
 - Description: Responds to questions about the weather.
 - Sample utterances: 
     - How is the weather in London
@@ -46,6 +50,7 @@ All built-in skills for Watson Assistant for Industry are assigned to the `indus
 
 ### Default
 - Registered name: default
+- Maturity level: Demo
 - Description: A general fallback skill for the industry skillset.
 - Sample utterances: 
     - How far is central park
