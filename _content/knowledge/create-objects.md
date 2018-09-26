@@ -79,10 +79,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
         console.log('All objects created\n\n');
 
     ```
-5.  Create relationships between the following objects in local memory:
-
-    - The house and the front door.
-    - The owner and the house.
+5.  Create relationships between (1) the house and the front door and (2) the owner and the house in local memory:
   Use the `KnowledgeRelation` object.
   In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the
   person has `ownership` of the house.
