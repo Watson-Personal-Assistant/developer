@@ -85,31 +85,7 @@ Complete these steps:
 
       ```
       The function returns `True` or `False`.
-5.  Add code to allow you to test the condition rule locally as well as on IBM Cloud Functions.
-    ```javascript
-          // To support testing locally and running in Cloud Functions
-          if (require.main === module) {
-            console.log("running locally")
-            // parse the input from the command line $ node index.js 123
-            doorID = process.argv[2]
-            console.log(process.argv)
-            main({ results: [{ id: doorID, type: 'Door' }] })
-              .then((result) => {
-                console.log("action is done running success");
-                console.log(JSON.stringify(result));
-              })
-              .catch((err) => {
-                console.log("action is done running error");
-                console.log(JSON.stringify(err));
-              });
-          } else {
-            console.log("running in openwhisk")
-            exports.main = main;
-            exports.checkType = checkType;
-          }
-
-      ```
-6. Save your changes to `condition.js`.
+5. Save your changes to `condition.js`.
 
 > **What to do next?**<br/>
 [Create the action part of the rule]({{site.baseurl}}/knowledge/create-action-function).
