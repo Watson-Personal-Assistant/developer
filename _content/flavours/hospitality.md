@@ -44,22 +44,8 @@ All built-in skills for Watson Assistant for Hospitality are assigned to the `co
 - Registered name: booking-and-reservations
 - Description: Makes reservations in any of the venues that are defined.
 - Maturity level: Beta
-- Sample utterances: 
-    - Lower the lights
-    - Turn the lights off
-    - Open the curtains
-    - Make it warmer
-
-### Greeting
-- Registered name: greeting
-- Description: Responds to greetings.
-- Maturity level:
-- Sample utterances: 
-    - Howdy
-    - How are you today
-    - over and out
-    - I am leaving
-
+- Sample utterance:
+    - I want to book a table
 
 > **What to do next?**<br/>
 [Learn about the Watson Assistant for Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
