@@ -2,7 +2,7 @@
 title: Create a condition function 
 weight: 20
 ---
-Create a file `condition.js` for the condition part of the rule.
+Create a file `condition.js` for the condition part of the rule. The condition part of the rule finds the owner of a  house when the agent is notified that the front door has opened. Before sending an alert to the home owner, the agent checks that the house is unoccupied. 
 
 Complete these steps:
 
@@ -13,7 +13,7 @@ Complete these steps:
           var KnowledgeRelation = require('./sdk/relation');
      ```
     Tip: `__dirname` is required for Cloud Functions to find the file in the container. 
-2. The condition part of the rule finds the owner of a  house when the agent is notified that the front door has opened. Before sending an alert to the home owner, the agent checks that the house is unoccupied. Add a function to `condition.js` that finds the owner of a house from a door ID. 
+2. Add a function to `condition.js` that finds the owner of a house from a door ID. 
       ```javascript
           function getHouseAndPersonForDoor(doorId) {
             console.log('in getHouseAndPersonForDoor');
