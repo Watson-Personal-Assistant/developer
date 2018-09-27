@@ -57,10 +57,10 @@ The action part of the rule finds the front door that is open and sends an alert
 ```javascript
     // To support testing locally and running in Cloud Functions
     if (require.main === module) {
-      console.log("running locally")
+      console.log("running locally");
       // parse the input from the command line $ node index.js 123
-      doorID = process.argv[2]
-      console.log(process.argv)
+      doorID = process.argv[2];
+      console.log(process.argv);
       main({ results: [{ id: doorID, type: 'Door' }] })
         .then((result) => {
           console.log("action is done running success");
@@ -71,7 +71,7 @@ The action part of the rule finds the front door that is open and sends an alert
           console.log(JSON.stringify(err));
         });
     } else {
-      console.log("running in openwhisk")
+      console.log("running in openwhisk");
       exports.main = main;
     }
 ```
