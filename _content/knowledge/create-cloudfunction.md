@@ -32,12 +32,12 @@ The curl command should return a response similar to the following:.
   ```
 8. Call the function to open the front door. Enter:
   ```
-    https://kr-sdk-node-newdemo.mybluemix.net/opendoor
+    https://kr-sdk-node-newdemo.mybluemix.net/openDoor
   ```
 9. Verify that an alert is displayed in the Chat UI.
 10. Reset the status of the door to closed.  Enter:
   ```
-    https://kr-sdk-node-newdemo.mybluemix.net/closedoor
+    https://kr-sdk-node-newdemo.mybluemix.net/closeDoor
   ```
 
 **Tip**: If an alert does not display, go to the Cloud Functions monitor UI at the URL [https://console.bluemix.net/openwhisk/dashboard](https://console.bluemix.net/openwhisk/dashboard). Check whether your functions have been invoked more than once each.
