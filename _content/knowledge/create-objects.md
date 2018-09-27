@@ -38,7 +38,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ``` 
 3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
-    // Create objects in local memory
+    // Create objects in local memory.
     var person = new KnowledgeObject('Person',
       {
         'name': 'John',
@@ -64,7 +64,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 4. Save the knowledge objects to the world model in the data store.
     ```javascript
-    // Save the objects to the world model
+    // Save the objects to the world model.
     Promise.all(
       [
         person.create(),
@@ -78,13 +78,13 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 5.  Create relationships between (1) the house and the front door and (2) the owner and the house in local memory. Use the `KnowledgeRelation` object. In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the person has `ownership` of the house.
     ```javascript
-        // Create relations in local memory
+        // Create relations in local memory.
         var personToHouse = new KnowledgeRelation('ownership', person, house);
         var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
     ```
 6.  Save the relationship objects to the world model in the data store.
     ```javascript
-        // Save relationships to the world model
+        // Save relationships to the world model.
         Promise.all(
               [
                 personToHouse.create(),
@@ -100,7 +100,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
     ```javascript
-        // create the agents to connect to the Message Hub and subscribe to object update events.
+        // Create the agents to connect to the Message Hub and subscribe to events.
         var doorOpenAgent = new Agent('object-update');
 
         function runAgent() {
@@ -114,7 +114,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 8.  Add a function to remove the objects and relations if creation of the world model does not complete successfully.
     ```javascript
-        // Delete objects from the world model
+        // Delete objects from the world model.
         function cleanup() {
           Promise.all(
             [
@@ -127,7 +127,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 9.  Add a function to update the status of the door to open when the function is called.  The function checks that the door is closed before sending the update to the world model.
     ```Javascript
-        // Open the door
+        // Open the door.
         app.get('/openDoor', function (req, res) {
           KnowledgeObject.retrieve(door.id).then((doorObj) => {
             if (!doorObj.attributes.isOpen) {
@@ -163,7 +163,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 11. Add a function to start the agent.
     ```javascript
-        // Server Startup
+        // Server startup
         const port = process.env.PORT || process.env.RULE_PORT || 8080;
         app.listen(port, () => {
           console.log(`Agent REST service is alive!\nListening on port ${port}\n\n`)
