@@ -129,7 +129,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 
     ```
 9.  Add a function to update the status of the door to open when the function is called.  The function checks that the door is closed before sending the update to the world model.
-    ```Javascript
+    ```javascript
         // Open the door.
         app.get('/openDoor', function (req, res) {
           KnowledgeObject.retrieve(door.id).then((doorObj) => {
