@@ -61,6 +61,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
         "name": "Front door"
       }
     );
+    
     ```
 4. Save the knowledge objects to the world model in the data store.
     ```javascript
@@ -93,24 +94,26 @@ Create a world model for John and his home.  Create an agent that subscribes to 
               function (results) {
                 console.log('All relations created\n\n');
                 runAgent();
-              }
-            );
-          }
-        );
+             }
+          );
+        }
+      );
     ```
 7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
     ```javascript
-        // Create the agents to connect to the Message Hub and subscribe to events.
-        var doorOpenAgent = new Agent('object-update');
-
-        function runAgent() {
-          Promise.all([
-            doorOpenAgent.connect(),
-          ]).then(function () {
-            doorOpenAgent.subscribe();
-            console.log('Subscription created\n\n');
-          }, cleanup); //cleanup if the sub fails
-        }
+    // Create the agents to connect to the Message Hub and subscribe to events.
+    var doorOpenAgent = new Agent('object-update',
+      conditions.main,
+      actions.main);
+      
+    function runAgent() {
+      Promise.all([
+        doorOpenAgent.connect(),
+      ]).then(function () {
+        doorOpenAgent.subscribe();
+        console.log('Subscription created\n\n');
+      }, cleanup); //cleanup if the sub fails
+    }
     ```
 8.  Add a function to remove the objects and relations if creation of the world model does not complete successfully.
     ```javascript
