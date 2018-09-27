@@ -48,13 +48,13 @@ Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the followin
 5. Call the function in step 9 of the [Create a world model]({{site.baseurl}}/knowledge/create-objects) topic to open the front door. 
 Enter:
 ```
-    http://localhost:8080/opendoor
+    http://localhost:8080/openDoor
 ```
 The function calls the `/knowledge/object` endpoint to set the `isOpen` parameter of the door to `TRUE`. You can also make the call using a cURL command or through the Swagger documentation. 
 6. Verify that an alert is displayed in the Chatbot UI.
 7. (Optional) Reset the status of the door to closed.  Enter:
 ```   
-    http://localhost:8080/closedoor
+    http://localhost:8080/closeDoor
 ```
 
 If you fail to run it locally, try pushing it to IBM Cloud Functions and run it from there.
