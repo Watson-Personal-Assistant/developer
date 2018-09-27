@@ -6,14 +6,14 @@ Create a file `condition.js` for the condition part of the rule.
 
 Complete these steps:
 
-1. Create the`condition.js` file and include the object, relation, and dotenv modules.
-     ```JAVASCRIPT
+1. Create the `condition.js` file and include the object, relation, and dotenv modules.
+     ```javascript
           require('dotenv').config({path: __dirname + '/.env'});
           var KnowledgeObject = require('./sdk/object');
           var KnowledgeRelation = require('./sdk/relation');
      ```
-    Tip: `__dirname` is required for Cloud Functions to find the file in the container. The condition part of the rule finds the owner of a  house when the agent is notified that the front door has opened. Before sending an alert to the home owner, the agent checks that the house is unoccupied. 
-2. Add a function to `condition.js` that finds the owner of a house from a door ID.
+    Tip: `__dirname` is required for Cloud Functions to find the file in the container. 
+2. The condition part of the rule finds the owner of a  house when the agent is notified that the front door has opened. Before sending an alert to the home owner, the agent checks that the house is unoccupied. Add a function to `condition.js` that finds the owner of a house from a door ID. 
       ```javascript
           function getHouseAndPersonForDoor(doorId) {
             console.log('in getHouseAndPersonForDoor');
