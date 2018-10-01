@@ -34,6 +34,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 
     var KnowledgeObject = require('./sdk/object');
     var KnowledgeRelation = require('./sdk/relation');
+    
     ```
 3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
