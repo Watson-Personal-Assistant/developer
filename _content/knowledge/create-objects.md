@@ -19,22 +19,22 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 ### Procedure 
 
 1. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Note that the `homeSecurity.js` app will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial. Add the following code to the start of the file:
-    ```javascript
-    require('dotenv').config();
-    const express = require('express');
-    const bodyParser = require('body-parser');
-    const request = require('request');
-    const actions = require('./action');
-    const conditions = require('./condition');
-    const Agent = require('./sdk/messages');
+```javascript
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const actions = require('./action');
+const conditions = require('./condition');
+const Agent = require('./sdk/messages');
 
-    const app = express();
+const app = express();
 
-    app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-    var KnowledgeObject = require('./sdk/object');
-    var KnowledgeRelation = require('./sdk/relation');
-    ``` 
+var KnowledgeObject = require('./sdk/object');
+var KnowledgeRelation = require('./sdk/relation');
+``` 
 3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
     // Create objects in local memory.
