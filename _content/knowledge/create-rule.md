@@ -49,7 +49,7 @@ The function calls the `/knowledge/object` endpoint to set the `isOpen` paramete
     http://localhost:8080/closeDoor
 ```
 
-If you fail to run it locally, try pushing it to IBM Cloud Functions and run it from there.
+If you fail to run it locally, try pushing it to IBM Cloud and run it from there.
 
 > **What to do next?**<br/>
-Run [the security demonstration as a Cloud Function]({{site.baseurl}}/knowledge/create-cloudfunction/).
+Run [the security demonstration from IBM Cloud]({{site.baseurl}}/knowledge/create-cloudfunction/).
