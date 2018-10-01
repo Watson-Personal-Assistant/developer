@@ -2,7 +2,7 @@
 title: Invoke the rule
 weight: 40
 ---
-Invoke the rule by running the home security app locally.  Open the front door of the house and check for an alert in the Chatbot UI.
+Invoke the rule by running the home security app locally.  Open the front door of the house and check for an alert in the Chat UI.
 
 Complete these steps:
 1. Create an `.env` file that includes the URL to Watson Assistant Solutions and your API key.
