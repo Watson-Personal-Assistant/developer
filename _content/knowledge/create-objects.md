@@ -98,7 +98,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
         }
       );
     ```
-7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
+7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.  The conditions.js and actions.js files are created in later steps.
     ```javascript
     // Create the agents to connect to the Message Hub and subscribe to events.
     var doorOpenAgent = new Agent('object-update',
