@@ -85,7 +85,14 @@ Complete these steps:
 
       ```
       The function returns `True` or `False`.
-5. Save your changes to `condition.js`.
+5. Make the function accessible to other code.  Enter:
+```javascript
+
+    exports.main = main;
+    exports.checkType = checkType;
+ ```
+
+6. Save your changes to `condition.js`.
 
 > **What to do next?**<br/>
 [Create the action part of the rule]({{site.baseurl}}/knowledge/create-action-function).
