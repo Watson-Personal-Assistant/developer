@@ -56,22 +56,7 @@ The action part of the rule finds the front door that is open and sends an alert
     exports.main = main;
 ```
 3. Save your changes to `action.js`.
-4. Update the `doorOpenAgent` in the `homeSecurity.js` file to run the `conditions.js` and `actions.js` functions.  Update the agent as follows:
-```javascript
-    // create the agents to connect to the Message Hub and subscribe to object update events.
-   var doorOpenAgent = new Agent('object-update',
-      conditions.main,
-      actions.main);
 
-    function runAgent() {
-      Promise.all([
-        doorOpenAgent.connect(),
-      ]).then(function () {
-        doorOpenAgent.subscribe();
-        console.log('Subscription created\n\n');
-      }, cleanup); //cleanup if the sub fails
-    }
-```
 > **What to do next?**<br/>
 Learn how to [invoke the rule]({{site.baseurl}}/knowledge/create-rule).
 
