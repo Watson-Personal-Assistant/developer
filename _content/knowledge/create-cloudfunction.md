@@ -26,7 +26,7 @@ The curl command should return a response similar to the following:.
     "id": "6e5adba1-718d-4304-a3c1-4d28e55a5524"
 }
  ```
-7. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`. In the Type a request or command field enter:
+7. Open the Chat UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`. In the Type a request or command field enter:
   ```
     /wa paste-your-watson-assistant-solutions-api-key-here
   ```
