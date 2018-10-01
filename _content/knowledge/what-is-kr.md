@@ -4,7 +4,7 @@ weight: 5
 ---
 Add proactivity to your assistant to create a personalized experience for your users.
 
-Design your skills to learn about the world around your users.  Store information about users and objects in their world, for example, houses, cars, or hotel rooms. Update this information continuously as you interact with users.
+Design your skills to learn about the world around your users.  Store information about users and objects in their world, for example, houses, cars, or hotel rooms. Update this information as you interact with users.
 
 Get notified when changes in their world occur, such as when a light in a hotel room turns on or the door of a car opens. Consider whether this change is something to act on.  If yes, you might ask a question, for example "do you want to close the blinds?".  Or you might take some action, for example, send an alert to the car owner.  Or you might update the information that you have for that user in the knowledge store.  Build proactivity into your assistant using the Knowledge and Reasoning capability of Watson Assistant Solutions.
 
