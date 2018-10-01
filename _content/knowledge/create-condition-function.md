@@ -42,7 +42,7 @@ Complete these steps:
 
       ```
     In this function, which is given a specific door ID, the function traverses the `has-as-part` relationship to the house object.  The function traverses the `ownership` relationships to the owner.  The function returns the person, the house and the front door.
-3. Create a NodeJS function to check that the update event referred to a door.  The agent is not interested in updates to houses or owners
+3. Create a function to check that the update event referred to a door.  The agent is not interested in updates to houses or owners.
       ```javascript
       // Check that the update event is on a door.
       function checkType(event, type) {
