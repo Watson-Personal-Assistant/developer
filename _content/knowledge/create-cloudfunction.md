@@ -6,7 +6,7 @@ You can run the proactive agent on IBM Cloud.
 
 1. Update the `name` pararameter for the app in the `manifest.yml` file.
 2. Log in to IBM Cloud. Enter:`bx login`.
-3. From the tutorial directory, push you app to IBM Cloud.  Enter:
+3. From the tutorial directory, push your app to IBM Cloud.  Enter:
 ```
 bx app push
 ```
