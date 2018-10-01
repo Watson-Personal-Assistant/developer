@@ -19,23 +19,15 @@ Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the followin
 
     A message similar to the following message is displayed:
     ```
-    running in openwhisk
-    running in openwhisk
-    request options: {"url":"https://watson-personal-assistant-toolkit.mybluemix.net/knowledge/object","method":"POST","headers":{"Content-type":"application/json","api_key":"2e7dc7bf-9f3e-32f4-6cd3-9c4d6e20287f"},"json":{"attributes":{"name":"TestBen","latitude":12.456,"longitude":67.99},"type":"Person"}}
-    request options: {"url":"https://watson-personal-assistant-toolkit.mybluemix.net/knowledge/object","method":"POST","headers":{"Content-type":"application/json","api_key":"2e7dc7bf-9f3e-32f4-6cd3-9c4d6e20287f"},"json":{"attributes":{"latitude":12.345,"longitude":67.89,"name":"home"},"type":"House"}}
-    request options: {"url":"https://watson-personal-assistant-toolkit.mybluemix.net/knowledge/object","method":"POST","headers":{"Content-type":"application/json","api_key":"2e7dc7bf-9f3e-32f4-6cd3-9c4d6e20287f"},"json":{"attributes":{"isOpen":false,"name":"Front door"},"type":"Door"}}
     Agent REST service is alive!
     Listening on port 8080
-
-    Saved object with id: 4112 and type Person
-    Saved object with id: 4264 and type House
-    Saved object with id: 4192 and type Door
+    Saved object with id: 49384 and type House
+    Saved object with id: 24720 and type Door
+    Saved object with id: 41088 and type Person
     All objects created
-
-    Created relation: 4112(Person) -[ownership]-> 4264(House)
-    Created relation: 4264(House) -[has-as-part]-> 4192(Door)
+    Created relation: 41088(Person) -[ownership]-> 49384(House)
+    Created relation: 49384(House) -[has-as-part]-> 24720(Door)
     All relations created
-
     Created agent with event object-update
     Subscription created
 
