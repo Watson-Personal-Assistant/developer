@@ -41,7 +41,7 @@ Copy the `.env.sample` file to `.env`. Edit the `.env` file to have the followin
 
     ```
     The objects are created in the world model.
-4. Open the chatbot UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`.  In the Type a request or command field enter:
+4. Open the Chat UI and point it to your assistant.  In a web browser, enter the address `https://wa-chat-bot.mybluemix.net`.  In the Type a request or command field enter:
 ```
     /wa paste-your-watson-assistant-solutions-api-key-here
 ```
@@ -51,7 +51,7 @@ Enter:
     http://localhost:8080/openDoor
 ```
 The function calls the `/knowledge/object` endpoint to set the `isOpen` parameter of the door to `TRUE`. You can also make the call using a cURL command or through the Swagger documentation. 
-6. Verify that an alert is displayed in the Chatbot UI.
+6. Verify that an alert is displayed in the Chat UI.
 7. (Optional) Reset the status of the door to closed.  Enter:
 ```   
     http://localhost:8080/closeDoor
