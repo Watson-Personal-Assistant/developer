@@ -19,7 +19,7 @@ Step 2. Create a proactive agent that subscribes to state change events from the
 
 Step 3. Start the agent locally and test the rule.
 
-Step 4. Push the agent to Cloud Functions and test the rule.
+Step 4. Push the agent to IBM Cloud and test the rule.
 
 > **What to do next?**<br/>
 Learn how to [create world model objects]({{site.baseurl}}/knowledge/create-objects).
