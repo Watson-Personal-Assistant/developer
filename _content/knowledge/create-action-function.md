@@ -40,10 +40,12 @@ The action part of the rule finds the front door that is open and sends an alert
 
         return new Promise(function (res, rej) {
           request(options, function (err, response, body) {
-            if (err || response.statusCode !== 200) {
-              console.log('Error (status code ' + response.statusCode + ': ' + err + ' ' + body);
-              rejData = { code: response.statusCode, body: body };
-              rej(rejData);
+            if (err || (response && response.statusCode !== 200)) {
+              console.log(`Error sending notification ${err} ${body}`);
+              if (response.statusCode) {
+                  console.log(`Status code ${response.statusCode}`);
+              }
+              rej(body);
             } else {
               resData = { body: body };
               res(resData);
