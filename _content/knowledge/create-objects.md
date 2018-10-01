@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 
 var KnowledgeObject = require('./sdk/object');
 var KnowledgeRelation = require('./sdk/relation');
-``` 
+```
 3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
     // Create objects in local memory.
