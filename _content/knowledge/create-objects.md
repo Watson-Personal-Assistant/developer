@@ -18,7 +18,8 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 ---
 ### Procedure 
 
-1. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Note that the `homeSecurity.js` app will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial. Add the following code to the start of the file:
+1. In the kr-node-sdk folder, add `.bak` to the files `homeSecurity.js`, `condition.js`, and `action.js`. Note: You create these files during the tutorial. Use these files as a reference if your tutorial fails to run
+2. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Note that the `homeSecurity.js` app will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial. Add the following code to the start of the file:
     ```javascript
     require('dotenv').config();
     const express = require('express');
