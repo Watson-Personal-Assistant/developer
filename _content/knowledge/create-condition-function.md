@@ -11,6 +11,7 @@ Complete these steps:
       require('dotenv').config({path: __dirname + '/.env'});
       var KnowledgeObject = require('./sdk/object');
       var KnowledgeRelation = require('./sdk/relation');
+      
      ```
     Tip: `__dirname` is required for Cloud Functions to find the file in the container. 
 2. Add a function to `condition.js` that finds the owner of a house from a door ID. 
