@@ -3,7 +3,7 @@ title: Release notes
 weight: 20
 ---
 
-The following release notes are for the September 6, 2018 release of Watson Assistant Solutions.
+The following release notes are for the July 12, 2018 release of Watson Assistant Solutions.
 
 ### What's new
 Learn about what's new in each release of Watson Assistant Solutions.  See the [What's new]({{site.baseurl}}/get-started/whats_new) topic for details.
@@ -11,9 +11,11 @@ Learn about what's new in each release of Watson Assistant Solutions.  See the [
 ### Fixed in this release
 
 The following updates were made in the September 6 release:
-- Confidence scores that are returned by skills during the evaluation phase are now logged.
-- The error messages that are provided for NLU engine errors in the NodeJS skill SDK are improved.
-- Fixed the inaccurate conversion of sun to Sunday in the retext value sent by the Watson Assistant Solutions core.
+- In a previous release, it was not possible to register a skill with a hostname/path format, for example, https://myskill.mybluemix.net/<path>.  The URL was truncated down to the URL host and did not resolve to the correct route. The issue is fixed in the July release.
+- In a previous release, when conversing with a single skill, when the skill returned an unauthorized error, it was returned in the response instead of “I’m not trained for this”. The issue is fixed in the July release.
+- In a previous release, intents and entities were missing from the /converse response examples in the Swagger documentation. The issue is fixed in the July release.
+- In a previous release, in the Bot Analytics dashboard, data for the previous tenant you selected was displayed. The issue is fixed in the July release.
+    
 
 ### Announcements
 
@@ -26,7 +28,13 @@ The following updates were made in the September 6 release:
 
 The following known issues apply to Watson Assistant Solutions.
 
-#### 1. Unable to access Bot Analytics
+#### 1. Calendar control does not work in the Edit Tenant dialog.
+
+_Problem_: On the Admin page of the Watson Assistant Solutions console, you can view plan entitlements for the tenants you are assigned to.   In the Edit Tenant dialog, you can specify a contract end date for the tenant.  You cannot pick a date from the calendar.
+
+_Solution_: You can set the contract end date by entering the date manually in the format of “dd/mm/yyyy” (07/11/2018).
+
+#### 2. Unable to access Bot Analytics
 
 _Problem_: When you click the Bot Analytics link from the Watson Assistant Solutions console, the dashboard might not display.
 
@@ -34,7 +42,7 @@ _Cause_: If you log in using your API key, it is not possible for your user ID t
 
 _Solution_: Log in to the console using your IBMid. Click the Bot Analytics link.  The Bot Analytics dashboard is displayed.
 
-#### 2. Wrong landing page displayed for trial users
+#### 3. Wrong landing page displayed for trial users
 
 _Problem_: The following message is displayed but there is no restriction on usage.
 
