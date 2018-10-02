@@ -8,9 +8,9 @@ To isolate and resolve problems, use troubleshooting and support information.
 
 Because smart speakers typically do not have a console, Watson Assistant Solutions provides error and status messages to you by playing audio files.  These files are stored locally on your audio client in FLAC format.
 
-Start-up and connection errors are also logged in the `_audio_client_/target/logs/client.log`  file.
+Start-up and connection errors are also logged in the `audio_client/target/logs/client.log`  file.
 
-If your audio client starts up, connects to the server, and authenticates successfully, no audio message is played when an error occurs. Instead, check the server log files for errors. For more information, see [Accessing your log data](({{site.baseurl}}/audio/Using_audio_client_logs/).
+If your audio client starts up, connects to the server, and authenticates successfully, no audio message is played when an error occurs. Instead, check the server log files for errors. For more information, see [Accessing your log data]({{site.baseurl}}/audio/Using_audio_client_logs/).
 
 The following are some typical error scenarios:
 
@@ -48,14 +48,14 @@ The configuration file `configure.properties` is found in the `audio_client/targ
 Possible causes are:
 - You might not have edited the sample file with your own settings.  
 - One or more of the following mandatory values are missing or are invalid.
-```
+    ```
     host=wa-audio-gateway.mybluemix.net
     userID=any-name-with-alphanumeric-hyphen-or-underscore-characters
     tenantID=paste-tenant-ID-here-if-you-have-multiple-tenants
     skillset=paste-skillset-here-eg-industry
     IAMAPIKey=paste-the-IAM-API-Key-created-earlier
 
-```
+    ```
 
 ##### Solution
 Specify the mandatory values in the `configure.properties` file in accordance with the following rules:
