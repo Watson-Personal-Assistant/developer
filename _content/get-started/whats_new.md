@@ -5,12 +5,6 @@ weight: 30
 
 Learn about what's new in each release of Watson Assistant Solutions.
 
-### 6 September 2018
-
-- **Analytics tool improvements**: The user interface has a new look and feel.  Charts are rendered faster, the layout of charts has improved, and the pages are more interactive.  On the Dashboard page, the delta value from the previous day is displayed with each metric.  See [Getting started with analytics](https://watson-personal-assistant.github.io/developer/analytics/analytics_intro/). 
-- **Conversation API updates**: Tenant ID is sent in the evaluate and converse requests to skills.
-- **Self-management of new users**: From the Watson Assistant Solutions console, you can add users with a valid IBMid to a tenant and remove users from a tenant. See [Managing your tenant](https://watson-personal-assistant.github.io/developer/further-topics/manage_tenant/).
-
 ### 12 July 2018
 
 - **90-day trial**: You can sign up for a 90-day trial fo Watson Assistant for industry. Sign up for a trial from the [console home page](https://watson-personal-assistant-toolkit.mybluemix.net/). To complete some trial tasks, start with [Chat with the built-in skillset](https://watson-personal-assistant.github.io/developer/trial/chat-with-builtin/). 

@@ -18,9 +18,8 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 ---
 ### Procedure 
 
-1. In the `kr-node-sdk` folder, add .bak to the files `homeSecurity.js`, `condition.js`, and `action.js`, if they already exist.  **Note**: You create these files during the tutorial.  Use these files as a reference if your tutorial fails to run.
-2. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Add the following code to the start of the file:
-  
+1. In the kr-node-sdk folder, add `.bak` to the files `homeSecurity.js`, `condition.js`, and `action.js`. Note: You create these files during the tutorial. Use these files as a reference if your tutorial fails to run.
+2. Create a home security app,`homeSecurity.js`, in the `kr-node-sdk` folder.  Note that the `homeSecurity.js` app will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial. Add the following code to the start of the file:
     ```javascript
     require('dotenv').config();
     const express = require('express');
@@ -36,12 +35,12 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 
     var KnowledgeObject = require('./sdk/object');
     var KnowledgeRelation = require('./sdk/relation');
-    ``` 
-    <br> **Remember** The app `homeSecurity.js` will fail to run until you create `condition.js` and `action.js` in later steps of this tutorial.
-3. Write a function to create a person, a house, and a door object in local memory.
-  Use the `KnowledgeObject` object.
+    
+    ```
+3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
-    // Create objects in local memory
+    // Create objects in local memory.
+    
     var person = new KnowledgeObject('Person',
       {
         'name': 'John',
@@ -64,10 +63,12 @@ Create a world model for John and his home.  Create an agent that subscribes to 
         "name": "Front door"
       }
     );
+    
     ```
 4. Save the knowledge objects to the world model in the data store.
     ```javascript
-    // Save the objects to the world model
+    
+    // Save the objects to the world model.
     Promise.all(
       [
         person.create(),
@@ -79,21 +80,16 @@ Create a world model for John and his home.  Create an agent that subscribes to 
         console.log('All objects created\n\n');
 
     ```
-5.  Create relationships between the following objects in local memory:
-
-    - The house and the front door.
-    - The owner and the house.
-  Use the `KnowledgeRelation` object.
-  In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the
-  person has `ownership` of the house.
+5.  Create relationships between (1) the house and the front door and (2) the owner and the house in local memory. Use the `KnowledgeRelation` object. In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the person has `ownership` of the house.
     ```javascript
-        // Create relations in local memory
+        
+        // Create relations in local memory.
         var personToHouse = new KnowledgeRelation('ownership', person, house);
         var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
     ```
 6.  Save the relationship objects to the world model in the data store.
     ```javascript
-        // Save relationships to the world model
+        // Save relationships to the world model.
         Promise.all(
               [
                 personToHouse.create(),
@@ -102,28 +98,30 @@ Create a world model for John and his home.  Create an agent that subscribes to 
               function (results) {
                 console.log('All relations created\n\n');
                 runAgent();
-              }
-            );
-          }
-        );
-    ```
-7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.
-    ```javascript
-        // create the agents to connect to the Message Hub and subscribe to object update events.
-        var doorOpenAgent = new Agent('object-update');
-
-        function runAgent() {
-          Promise.all([
-            doorOpenAgent.connect(),
-          ]).then(function () {
-            doorOpenAgent.subscribe();
-            console.log('Subscription created\n\n');
-          }, cleanup); //cleanup if the sub fails
+             }
+          );
         }
+      );
+    ```
+7. Create a proactive agent (`doorOpenAgent`) to react to the state change event.  The conditions.js and actions.js files are created in later steps.
+    ```javascript
+    // Create the agents to connect to the Message Hub and subscribe to events.
+    var doorOpenAgent = new Agent('object-update',
+      conditions.main,
+      actions.main);
+      
+    function runAgent() {
+      Promise.all([
+        doorOpenAgent.connect(),
+      ]).then(function () {
+        doorOpenAgent.subscribe();
+        console.log('Subscription created\n\n');
+      }, cleanup); //cleanup if the sub fails
+    }
     ```
 8.  Add a function to remove the objects and relations if creation of the world model does not complete successfully.
     ```javascript
-        // Delete objects from the world model
+        // Delete objects from the world model.
         function cleanup() {
           Promise.all(
             [
@@ -135,8 +133,8 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 
     ```
 9.  Add a function to update the status of the door to open when the function is called.  The function checks that the door is closed before sending the update to the world model.
-    ```Javascript
-        // Open the door
+    ```javascript
+        // Open the door.
         app.get('/openDoor', function (req, res) {
           KnowledgeObject.retrieve(door.id).then((doorObj) => {
             if (!doorObj.attributes.isOpen) {
@@ -153,7 +151,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 
     ```
 10. Add a function to update the status of the door to closed when the function is called.  The function checks that the door is open before sending the update to the world model.
-    ```
+    ```javascript
         //Close the door
         app.get('/closeDoor', function (req, res) {
           KnowledgeObject.retrieve(door.id).then((doorObj) => {

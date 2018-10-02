@@ -8,7 +8,7 @@ Knowledge and reasoning provides a shared  knowledge store for storing the world
 
 Create custom agents to subscribe to state changes events from the model and to fire some rules.  As part of your agent, you might create a function to evaluate the condition part of a rule and a function to run the action part of the rule.
 
-The Knowledge and Reasoning component has a WebSphere Message Hub that implements a publish and subscription messaging mechanism.  Subscribe the rules of your agent to the publication topics the agent is interested. Your agent is then notified of changes in the world model of users. 
+The Knowledge and Reasoning component has a IBM Message Hub that implements a publish and subscription messaging mechanism.  Subscribe the rules of your agent to the publication topics the agent is interested. Your agent is then notified of changes in the world model of users. 
 The knowledge component stores object models and information about objects in a database. 
 
 Using the REST API or a NodeJS SDK, create and modify objects in the knowledge database. The knowledge REST API provides the following end points:
