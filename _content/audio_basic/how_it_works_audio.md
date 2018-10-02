@@ -18,7 +18,7 @@ The steps in this flow are as follows:
 7. The audio gateway sends `speech-to-text transcript` messages to the audio client.
 8. The audio client sends an `audio end` message to the gateway. The audio client turns off its microphone.
 9. The audio gateway forwards the text input to the routing core.
-10. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how_it_works/).
+10. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how-it-works/).
 11. If some or all of the response will be delivered to the user as audio, the audio gateway coverts the response from the routing core to audio using a text-to-speech service.  The gateway sends each chunk of binary audio data to the client in real-time.
 12. If some or all of the response will be delivered as text, the audio gateway sends the text reply to the device.
 13. The audio gateway sends an `audio end` message.
