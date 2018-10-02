@@ -81,6 +81,7 @@ Complete these steps:
         } else {
           console.log("update wasn't on a door - return False");
           callback(false);
+          
         }
       }
 
