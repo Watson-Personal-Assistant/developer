@@ -20,4 +20,4 @@ Figure 2 shows an example of how to set up Raspberry PI
 
 
 > **What to do next?**<br/>
-Review the [audio streaming interface messages]({{site.baseurl}}/audio/interface).
+Review the [audio streaming interface messages]({{site.baseurl}}/audio_custom/interface).
