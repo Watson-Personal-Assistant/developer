@@ -8,9 +8,9 @@ To isolate and resolve problems, use troubleshooting and support information.
 
 Because smart speakers typically do not have a console, Watson Assistant Solutions provides error and status messages to you by playing audio files.  These files are stored locally on your audio client in FLAC format.
 
-Start-up and connection errors are also logged in the `audio_client/target/config/log42.xml` log file.
+Start-up and connection errors are also logged in the `_audio_client_/target/logs/client.log`  file.
 
-If your audio client starts up, connects to the server, and authenticates successfully, no audio message is played when an error occurs. Instead, check the server log files for errors. For more information, see [Accessing your log data]().
+If your audio client starts up, connects to the server, and authenticates successfully, no audio message is played when an error occurs. Instead, check the server log files for errors. For more information, see [Accessing your log data](({{site.baseurl}}/audio/Using_audio_client_logs/).
 
 The following are some typical error scenarios:
 
@@ -34,6 +34,7 @@ Complete these steps:
     cp config/configure.properties.example config/configure.properties
 
     ```
+3. Edit the configuration parameters to reflect the values of your audio client.
 
 ---
 #### The configuration file is invalid
@@ -41,7 +42,7 @@ The audio client cannot determine how to connect to Watson Assistant Solutions.
 
 ##### Problem
 The configuration file `configure.properties` is found in the `audio_client/target/config` directory but it has invalid values.  The following audio message is played:<br>
-"There was an error with the configuration of the client. Check the configure.properties file for valid values. There was an error creating or configuring the client."
+"There was an error with the configuration of the client. Check the `configure.properties` file for valid values. There was an error creating or configuring the client."
 
 ##### Cause
 Possible causes are:
@@ -92,7 +93,7 @@ error: app= sagan, method= handleConverse, userId= , message= erro when conversi
 
 ```
 ##### Cause
-The Client ID contains an invalid value. Checking of the format of the parameter value is performed when a converse request is sent to the routing core.
+The userID contains an invalid value. Checking of the format of the parameter value is performed when a converse request is sent to the routing core.
 
 ##### Solution
 Enter a valid userID in the `audio_client/target/config/configure.properties` file.
