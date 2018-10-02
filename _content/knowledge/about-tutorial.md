@@ -3,7 +3,7 @@ title: Tutorial - Adding proactivity
 weight: 10
 ---
 
-The tutorial simulates a home security scenario to demonstrate how to add proactivity to an assistant.
+The tutorial simulates a home security scenario to demonstrate how to add proactivity to an assistant. The Knowledge and Reasoning component is in alpha mode. Make sure that the feature is enabled for your tenant before completing this tutorial. Check that you can access the Knoweldge REST API Swagger documentation from the Watson Assistant Solutions console.
 
 ## Home Security scenario
 
