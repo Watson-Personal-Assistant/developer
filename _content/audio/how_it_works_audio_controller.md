@@ -8,7 +8,7 @@ Watson Assistant Solutions provides you with the option to use your own smart sp
 
 In this scenario, the device controller listens for a wake up command, instructs the audio client to start listening on the audio socket port, and passes the audio input from the end-user to the audio client.
 
-The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio/audio_authentication) topic.
+The audio client passes an IAM token when it first connects to audio gateway to authenticate. For more information about setting up IAM authentication for an audio client, see the [Authenticating audio devices]({{site.baseurl}}/audio_custom/audio_authentication) topic.
 
 The flow for processing audio input in Watson Assistant Solutions when a device controller is used is shown in figure 1.
 
@@ -39,4 +39,4 @@ The steps in this flow are as follows:
 21. The device controller plays the audio response or displays the text response, or both.
 
 > **What to do next?**<br/>
-Learn about [the audio streaming interface]({{site.baseurl}}/audio/interface/).
+Learn about [the audio streaming interface]({{site.baseurl}}/audio_custom/interface/).
