@@ -19,7 +19,7 @@ The steps in this flow are as follows:
 8. The audio gateway sends `speech-to-text transcript` messages to the audio client.
 9. The audio client sends an `audio end` message to the gateway and turns off its microphone.
 10. The audio gateway forwards the text input to the routing core.
-11. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how_it_works/). If the request is processed by a command and control skill, your skill might send a request to the Watson IoT platform to implement an IoT command.
+11. The routing core sends the utterance to the conversation component for evaluation and processing. The skill with the highest confidence processes the request and sends a response. The conversation component forwards the converse response from the skill to the audio gateway. For details of these steps, see [How routing works]({{site.baseurl}}/understand-service/how-it-works/). If the request is processed by a command and control skill, your skill might send a request to the Watson IoT platform to implement an IoT command.
 12. When your skill sends a request to the IoT platform to implement an IoT command:
     - A. Your skill sends an MQTT message with the command to the Watson IoT platform.
     - B. The Watson IoT platform routes the command through a smartthings gateway to an IoT controller that performs the action.
