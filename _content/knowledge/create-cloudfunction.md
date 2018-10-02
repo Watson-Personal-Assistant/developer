@@ -4,7 +4,7 @@ weight: 50
 ---
 You can run the proactive agent on IBM Cloud.  
 
-1. Update the `name` and the `API_KEY`pararameters for the app in the `manifest.yml` file.
+1. Update the `name` and the `API_KEY` pararameters for the app in the `manifest.yml` file.
 2. Log in to IBM Cloud. Enter:`bx login`.
 3. From the tutorial directory, push your app to IBM Cloud.  Enter:
 ```
