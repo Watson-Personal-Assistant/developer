@@ -49,6 +49,8 @@ The action part of the rule finds the front door that is open and sends an alert
             } else {
               resData = { body: body };
               res(resData);
+              
+              
             }
           });
         });
