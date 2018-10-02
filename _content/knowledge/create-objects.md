@@ -39,6 +39,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
 3. Write a function to create a person, a house, and a door object in local memory. Use the `KnowledgeObject` object.
     ```javascript
     // Create objects in local memory.
+    
     var person = new KnowledgeObject('Person',
       {
         'name': 'John',
@@ -65,6 +66,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 4. Save the knowledge objects to the world model in the data store.
     ```javascript
+    
     // Save the objects to the world model.
     Promise.all(
       [
@@ -79,6 +81,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 5.  Create relationships between (1) the house and the front door and (2) the owner and the house in local memory. Use the `KnowledgeRelation` object. In the following code, in the `personToHouse` relationship, house `has-as-part` a front door. In the `houseToDoor` relationship, the person has `ownership` of the house.
     ```javascript
+        
         // Create relations in local memory.
         var personToHouse = new KnowledgeRelation('ownership', person, house);
         var houseToDoor = new KnowledgeRelation('has-as-part', house, door);
@@ -166,7 +169,7 @@ Create a world model for John and his home.  Create an agent that subscribes to 
     ```
 11. Add a function to start the agent.
     ```javascript
-        // Server startup
+        // Server Startup
         const port = process.env.PORT || process.env.RULE_PORT || 8080;
         app.listen(port, () => {
           console.log(`Agent REST service is alive!\nListening on port ${port}\n\n`)
