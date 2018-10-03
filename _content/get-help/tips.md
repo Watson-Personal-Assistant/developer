@@ -85,13 +85,8 @@ Specify an IAM API key that is valid for your IBM ID.  Follow the instructions i
 A converse request from an audio client fails because the userID had an invalid value.
 
 ##### Problem
-A converse request might fail if an invalid userID is passed to the routing core. The audio client does not play a message, but an error message similar to the following message is visible in the server log files.
+A converse request might fail if an invalid userID is passed to the routing core. 
 
-```
-debug: app= sagan, method= sendConversationToCore, userId= , message= converse url:https://watson-personal-assistant-toolkit.mybluemix.net:443/v2/api/skillSets/indiustry/converse
-error: app= sagan, method= handleConverse, userId= , message= erro when conversing , status code:400, reason: Invalid userID, only alphanumeric, hyphen and uderscore are allowed
-
-```
 ##### Cause
 The userID contains an invalid value. Checking of the format of the parameter value is performed when a converse request is sent to the routing core.
 
