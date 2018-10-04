@@ -4,7 +4,7 @@ weight: 10
 ---
 To isolate and resolve problems, use troubleshooting and support information.
 
-### Troubleshooting issues with audio 
+## Troubleshooting issues with audio 
 
 Because smart speakers typically do not have a console, Watson Assistant Solutions provides error and status messages to you by playing audio files.  These files are stored locally on your audio client in FLAC format.
 
