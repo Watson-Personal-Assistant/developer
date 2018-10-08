@@ -24,7 +24,7 @@ The following updates were made in the September 6 release:
 ### Announcements
 
 1.	The skill debug tool has moved location.  The debug tool is available from the following repository: [https://github.com/Watson-Personal-Assistant/skill-debugger-tool](https://github.com/Watson-Personal-Assistant/skill-debugger-tool). Read more about [debugging a skill that uses the tool]({{site.baseurl}}/skill/debugging_a_skill/). 
-1. If you are using the knowledge and reasoning (alpha) feature, you must update your proactive agents to subscribe directly to an IBM Message Hub component for state change events. The rules API is being deprecated in an upcoming release. Before the April release, you subscribe your proactive agents to the Rules API for state change events. The rules component sends event notifications to your proactive agents.  In the April release, a IBM Message Hub component is made available and you must update your proactive agents to subscribe directly to the Message Hub for state change events. 
+1. If you are using the knowledge and reasoning proactivity feature that is available in [alpha mode](#alpha-and-beta-features), you must update your proactive agents to subscribe directly to an IBM Message Hub component for state change events. The rules API is being deprecated in an upcoming release. Before the April release, you subscribe your proactive agents to the Rules API for state change events. The rules component sends event notifications to your proactive agents.  In the April release, a IBM Message Hub component is made available and you must update your proactive agents to subscribe directly to the Message Hub for state change events. 
 2. Your skills must perform NLU evaluations at the skill level.  The evaluation by the core is deprecated in the September release. For more information about how to configure skills to perform NLU evaluation, see [Reconfiguring skills to handle NLU evaluations]({{site.baseurl}}/further-topics/reconfigure_skill/).
 3. The `/logging` API endpoint is being deprecated in an upcoming release.  Instead, use the `/management/logging` endpoint to enable and disable the logging of personal information (PI).  For instructions, see [Logging personal information]({{site.baseurl}}/further-topics/set_pi/).
 
@@ -52,7 +52,7 @@ _Solution_: Log in to the console using your IBMid.
 
 Watson Assistant Solutions has services and features for your evaluation that are classified as alpha or beta. 
 
-Alpha features might not be productized or might be discontinued at short notice.  The services and features might not provide the same performance levels as those that are generally available. With these features, there is a possibility of data loss and a migration of your data to a production environment might not be supported. The API endpoints of alpha  features are for evaluation only. 
+Alpha features might not be productized or might be discontinued at short notice.  The services and features might not provide the same performance and availability levels as those that are generally available. With alpha features, there is a possibility of data loss and a migration of your data to a production environment might not be supported. The API endpoints of alpha  features are for evaluation only. 
 
 Beta features are more stable than alpha features and are likely to be productized.  Support for SLA and service descriptions is on a best effort basis.
 
@@ -60,16 +60,16 @@ Alpha and beta features are not supported.  However, paid and trial  users can a
 
 Access to some of the alpha features is available only on request.  Email your request to TBD.
 
-The following features are labeled as alpha or beta:
+The following features are labeled as alpha.  Access for evaluation is available to paid accounts on request.
 
 Feature | Maturity level | Comments|
 ---------|----------|---------|
- Knowledge and reasoning | Alpha       | Available to paid accounts only. Request access to the Knowledge REST API. Note: The [Knowledge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk) is publicly available. |
- Bot Analytics tool | Alpha        | Enabled by default for paid and trial accounts.| 
- IFTTT integration  | Alpha        | For paid and trial accounts, request access to the [Watson Assistant Solutions IFTTT service](https://watson-personal-assistant.github.io/developer/ifttt/configure_wa_ifttt_service/) code boilerplate. |
+ Knowledge and reasoning | Alpha       |  Request access to the Knowledge REST API. The [Knowledge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk) is publicly available. |
+ Bot Analytics tool | Alpha        | Enabled by default for paid accounts.| 
+ IFTTT integration  | Alpha        | Request access to the [Watson Assistant Solutions IFTTT service](https://watson-personal-assistant.github.io/developer/ifttt/configure_wa_ifttt_service/) code boilerplate. |
  
 
-The maturity level for built-in skills is as follows.  All built-in skills are enabled by default.
+The maturity level for built-in skills is as follows.  All built-in skills are enabled by default.  
 
 Feature | Maturity level | Trial access| Comments|
 ---------|----------|---------|---------|
@@ -80,7 +80,7 @@ Feature | Maturity level | Trial access| Comments|
  Default | Beta  | Yes |
  Navigation  | Beta  |  No |Available in Watson Assistant for Automotive only.
  IoT for Auto  | Beta  |  no | Available in Watson Assistant for Automotive only.
- Vehicle Owners Manual  |   Beta  | no |Available in Watson Assistant for Automotive only. 
+ Vehicle Owners Manual  |   Generally available  | no |Available in Watson Assistant for Automotive only. 
  Points of Interest  |   Generally Available |no  | Available in Watson Assistant for Automotive only. 
  Auto Default  | Beta  |  no | Available in Watson Assistant for Automotive only. 
  Venues and Responses  | Beta |  no  |Available in Watson Assistant for Hospitality only. 
