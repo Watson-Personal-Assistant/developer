@@ -6,7 +6,9 @@ IBM Watson Assistant for Automotive provides a framework for creating an AI assi
 
 To build your AI assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available when you sign up for Watson Assistant for Automotive.  The built-in skills are listed in the following section.
 
-All built-in skills for Watson Assistant for Automotive are assigned to the `automotive` skillset.  You also have access to the `industry` skillset that is provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).  The industry built-in skills are also added to the `automotive` skillset.
+All built-in skills for Watson Assistant for Automotive are assigned to the `automotive` skillset.  The industry built-in skills are also added to the `automotive` skillset.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).  
+
+For information about the maturity level of each skill, see the [Alpha and beta features]({{site.baseurl}}/get-help/release_notes/#alpha-and-beta-features) section of the Release Notes topic.
 
 ### Navigation
 - Registered name: navigation
