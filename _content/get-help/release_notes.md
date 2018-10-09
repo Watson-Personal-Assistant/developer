@@ -58,18 +58,18 @@ Beta features are more stable than alpha features and are likely to be productiz
 
 Alpha and beta features are not supported.  However, paid and trial  users can access help for beta and alpha features from the [Watson Assistant Solutions forum](https://stackoverflow.com/questions/tagged/watson-assistant-solutions) on Stack Overflow. Tag your entry with “watson-assistant-solutions”. Alternatively, use the [forum](https://www.ibm.com/mysupport/s/topic/0TO500000002aQvGAI/watson-assistant-solutions?language=en_US&t=1532958100517) on the Watson Assistant Solutions support page.  
 
-Access to some of the alpha features is available only on request.  Email your request to watsonas@us.ibm.com.
+Access to some of the alpha features is available only on request.  Email your request to [watsonas@us.ibm.com](mailto:watsonas@us.ibm.com).
 
 The following features are labeled as alpha.  Access for evaluation is available to paid accounts on request.
 
 Feature | Maturity level | Comments|
 ---------|----------|---------|
- Knowledge and reasoning | Alpha       |  Request access to the Knowledge REST API. The [Knowledge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk) is publicly available. |
+ Knowledge and reasoning proactivity | Alpha       |  Request access to the Knowledge REST API. The [Knowledge and Reasoning SDK](https://github.com/Watson-Personal-Assistant/kr-node-sdk) is publicly available. |
  Bot Analytics tool | Alpha        | Enabled by default for paid accounts.| 
  IFTTT integration  | Alpha        | Request access to the [Watson Assistant Solutions IFTTT service](https://watson-personal-assistant.github.io/developer/ifttt/configure_wa_ifttt_service/) code boilerplate. |
  
 
-The maturity level for built-in skills is as follows.  All built-in skills are enabled by default.  
+The maturity levels for the built-in skills are as follows.  All built-in skills are enabled by default.  
 
 Feature | Maturity level | Trial access| Comments|
 ---------|----------|---------|---------|
