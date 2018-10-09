@@ -8,7 +8,9 @@ To build a AI assistant, you can create your own custom skills and register them
 
 For some of the skills, you use the cognitive portal to add knowledge to the skill.  For more information about the cognitive portal, see [Hospitality consoles]({{site.baseurl}}/flavours/hospitality_components).
 
-All built-in skills for Watson Assistant for Hospitality are assigned to the `cognitive-spaces` skillset.  You also have access to the `industry` skillset that is provided with Watson Assistant for Industry.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).
+All built-in skills for Watson Assistant for Hospitality are assigned to the `hospitality` skillset.  The industry built-in skills are also added to the `hospitality` skillset.  For details, see [Industry skills]({{site.baseurl}}/flavours/industry).  
+
+For information about the maturity level of each skill, see the [Alpha and beta features]({{site.baseurl}}/get-help/release_notes/#alpha-and-beta-features) section of the Release Notes topic.
 
 ### Venues and Responses
 - Registered name: responses
