@@ -6,7 +6,7 @@ Multiple components are used to build an AI assistant using the Watson Assistant
 
 The components are shown in figure 1:
 
-![]({{site.baseurl}}/images/components_diagram.png)
+![]({{site.baseurl}}/understand-service/images/2018/04/components_diagram.png)
 
 - **IOT devices**:  The edge device, such as a smart speaker, that listens for utterances.
 - **Watson Assistant Solutions service**:  The service includes the following components:
