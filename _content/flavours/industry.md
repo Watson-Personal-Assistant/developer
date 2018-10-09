@@ -6,7 +6,7 @@ IBM Watson Assistant for Industry provides a framework for creating an AI assist
 
 To build your AI assistant, you can create your own custom skills and register them with Watson Assistant Solutions and you can make use of the built-in skills that are available to your when you sign up for Watson Assistant for Industry.  The built-in skills for Watson Assistant for Industry are listed in the following section.
 
-All built-in skills for Watson Assistant for Industry are assigned to the `industry` skillset.  For information about the maturity level of each skill, see the [Alpha and beta features](#alpha-and-beta-features/{{site.baseurl}}/flavours/automotive) section of the Release Notes topic.
+All built-in skills for Watson Assistant for Industry are assigned to the `industry` skillset.  For information about the maturity level of each skill, see the [Alpha and beta features]({{site.baseurl}}/get-help/release_notes/#alpha-and-beta-features) section of the Release Notes topic.
 
 ### Conversational Essentials
 - Registered name: conversational-essentials
