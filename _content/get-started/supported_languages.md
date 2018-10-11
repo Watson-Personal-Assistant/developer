@@ -4,49 +4,36 @@ weight: 10
 ---
 Out-of-the box, the built-in skills that are available with Watson Assistant Solutions are in English only.  However, Watson Assistant Solutions provides the building blocks for you to develop an assistant that supports multiple languages. 
 
-## Identifying language support
+### Conversing by text
 
-The languages that your assistant can support depends on several factors:
+In some assistants, users converse by text only.  To support multiple languages, add language support to your custom skills.  Follow these guidelines:
 
-- **Speech-to-text engine**: For audio input, the languages that the speech-to-text engine supports and whether you plan for the SST engine to automatically recognize the language in the audio input.
-- **Text-to-speech engine**: For audio output, the languages that the text-to-speech engine supports.
-- **Routing core**: The languages that the Watson Assistant Solutions routing core supports.
-- **Custom skill NLU engine**: For both audio and text input, the languages that your NLU engine supports.
+- Verify that the NLU engines support your chosen languages.  For the Watson Assistant NLU engine, see the [Supported languages](https://console.bluemix.net/docs/services/conversation/lang-support.html#changing-a-workspace-language) topic.
+- Create a separate skill for each language.  For example, if your assistant provides an events skill, create a separate German events skill and an English events skill. 
+- Use a single NLU engine for each skill. In each language version, the intent names, entity names, and dialog nodes must be in English.
+- Create a skillset for each language.
 
-### Speech-to-text engines
-Watson Assistant Solutions supports the Watson and Google speech-to-text engines. For information about the supported languages, see 
-- the [Language support](https://console.bluemix.net/docs/services/speech-to-text/index.html#about) section in the Watson SST engine documentation.
-- the [Language support](https://cloud.google.com/speech-to-text/docs/languages) topic in the Google STT engine documentation.
-  
-For both the Watson and Google STT engines, automatic recognition is supported for a limited set of languages. See the documentation of the STT engines for the set of languages that automatic recognition feature supports and for information about how to configure automatic recognition:
+Figure 1 shows two users conversing by text with an assistant.  The utterance in German is routed to the German skill, which is the skill that returns the highest confidence score. 
 
-- For Google SST engine, see the [Multiple language recognition](https://cloud.google.com/speech-to-text/docs/multiple-languages) topic.  
-- For Watson SST engine, see the [Making a recognition request](https://console.bluemix.net/docs/services/speech-to-text/basic-request.html#basic-request) topic.
+Figure 1 - Chat by text with a multi-language assistant
+![Routing by text](languages_text.png)
 
-To predefine the language in the audio start message from the sample audio client, set the `language` parameter in the `config/configure.properties` file.
+**Note**: You can specify the language in the [converse request](https://watson-personal-assistant.github.io/developer/reference/JSON_formats/#1-converse-request-from-a-client-device-to-the-routing-core) from the client device. However, the routing core does not currently use language in its routing algorithm.
 
-### Text-to-speech engine
+### Conversing by voice
 
-Watson Assistant Solutions supports the Watson text-to-speech engine.  For the supported languages, see the [Languages and voice](https://cloud.google.com/speech-to-text/docs/languages) section in the IBM Cloud Docs.
+In many assistants, users converse by voice.  To add multi-langauge support, follow these guidelines:
 
-To define the language for the TTS engine to use, set the `voice` parameter in the `config/configure.properties` file.
+- To accept audio input in multiple languages, verify that your STT engine, either [Google](ttps://cloud.google.com/speech-to-text/docs/languages) or [Watson](https://console.bluemix.net/docs/services/speech-to-text/index.html#about), supports your chosen languages.
+- To provide audio responses, verify that the [Watson TTS engine](https://console.bluemix.net/docs/services/text-to-speech/http.html#voices) supports your chosen languages. 
+- Determine what language each audio client will support. In its [configuration file](https://watson-personal-assistant.github.io/developer/audio/config_properties/), specify the language, the STT engine and the TTS voice to use.
+- Add language support to your custom skills. See the [Conversing by text](#conversing-by-text) section.
 
-### Routing core
+Figure 2 shows two users conversing with an assistant by audio.  The utterance in German is routed from speaker B to the STT engine for conversion to text. Next, it is routed to the German skillset.  The response is routed to the TTS engine.  The speaker plays back the response in German.
 
-The Watson Assistant Solutions routing core supports any unicode language.
 
-A client device can specify a language in a [converse request](https://watson-personal-assistant.github.io/developer/reference/JSON_formats/).  For example, `"language": "de"`.  However, the routing core does not currently use language in its routing algorithm.
-
-### NLU engine
-
-If you are using the Watson Assistant NLU engine, see the [Supported languages](https://console.bluemix.net/docs/services/conversation/lang-support.html#changing-a-workspace-language) topic. For other NLU engines, see the product documentation for the supported languages.
-
-## Design considerations
-
-Take the following into consideration in your design:
- 
-- If your custom skill supports multiple languages, create a separate version of the skill for each language.  Use a single NLU engine for each skill. In each language version, the intent names, entity names, and dialog nodes must be in English.
-- If your assistant supports multiple languages, create a separate skillset for each language.  
+Figure 2 - Chat by voice with a multi-langauge assistant
+![Routing by text](languages2.png)
 
 > **What to do next?**<br/>
 [Access the Watson Assistant Solutions service]({{site.baseurl}}/get-started/get-api-key).
