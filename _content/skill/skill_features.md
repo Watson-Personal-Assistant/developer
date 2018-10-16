@@ -66,7 +66,7 @@ _Figure 4 - routing by skill context_
 
 In figure 4, the end-user asks about traffic diversions.  At step 2, the skill sets `$traffic_interest` variable to diversions.  Later in the conversation, when the user asks to see a map at step 7, the skill checks the `$traffic_interest` variable and responds with a map of roadworks and diversions.
 
-The skill context is saved by Watson Assistant Solutions and can be passed to a Watson Assistant (formerly Watson Conversation) workspace.
+The skill context is saved by Watson Assistant Solutions and can be passed to a Watson Assistant (formerly Watson Conversation) workspace. Information is saved in the skill context for one month.
 
 #### Routing by session context
 Variables that are set in the session context are available to all skills.
@@ -76,6 +76,8 @@ _Figure 5 - routing by session context_
 ![Routing by session context]({{site.baseurl}}/images/skill_session_context_ex.PNG)
 
 In figure 5, at step 2, the traffic skill saves the region of interest, Central Park, to a `$region` variable in the session context. Later in the conversation at step 7, the user asks "Are there any outdoor concerts on there today".  The utterance is routed to a different skill this time.  The events skill returns the highest confidence score. The events skill uses the `$region` variable to determine what response to provide to the utterance.  The events skill returns a response based on the Central Park region.
+
+Information is saved in the session context for one month.
 
 #### Routing by utterance context and rejecting utterances
 A skill can use the utterance context when it evaluates a request and when it determines a response. For example, an utterance might include a `$location` variable that is either set to `car` or `atHome`.
@@ -101,6 +103,7 @@ evaluation: (request, evaluationResponse, context) => {
     },
 },
 ```
+Information in the utterance context is not saved.
 
 #### Handling unmatched utterances with fallback skills
 No matter how broad a knowledge base your assistant has, cicumstances will arise that your skills do not have the knoweldge to handle.  In your responses, you can provide a more elegant response than "I'm not trained for this".
