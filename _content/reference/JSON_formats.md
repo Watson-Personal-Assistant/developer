@@ -268,7 +268,7 @@ Parameter | Description | Type | Required
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `user` | The user ID. | string | yes
- `session` | Information about the session, including session context information.   | object | yes
+ `session` | Information about the session, including session context information.  Information is saved in the session context for one month. | object | yes
  `application` | The application ID and utterance context information.  | object | yes
 
 #### Table 12 -  Evaluate response parameters - user context
@@ -291,7 +291,7 @@ Parameter | Description | Type | Required
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `attributes`  | Includes any skill context information. An empty attributes object is allowed.| object | yes |
+ `attributes`  | Includes any skill context information. An empty attributes object is allowed. Information is saved in the skill context for one month.| object | yes |
 
 #### Table 15 -  Evaluate response parameters - application context
 
@@ -683,7 +683,7 @@ Parameter | Description | Type | Required
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
  `application` | The application ID and utterance context information.| object | yes
- `session` | Information about the session, including session context information and skill context information.  | object | yes
+ `session` | Information about the session, including session context information and skill context information. Information is saved in the session context for one month. | object | yes
 
 #### Table 42 - Converse response parameters - Application context 
 
@@ -692,7 +692,7 @@ Parameter | Description | Type | Required
  `id` | The unique ID of the application. The parameter is for future use. | string | yes
  `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object. | object | yes
 
-#### Table 43 - Converse request parameters - location
+#### Table 43 - Converse response parameters - location
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -700,7 +700,7 @@ Parameter | Description | Type | Required
  `latitude` | Latitude of the center point of the location of the user.| string  | no
  `longitude` | Longitude of the center point of the location of the user.| string   | no
 
-#### Table 44 - Converse response parameters - Session context 
+#### Table 44 - Converse response parameters - Session 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -714,13 +714,13 @@ Parameter | Description | Type | Required
  
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
-`attributes` |   Includes any session context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. | object | yes
+`attributes` |   Includes any session context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. Information is saved in the skill context for one month.| object | yes
 
 #### Table 46 - Converse response parameters - session context
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
-`attributes` | Attributes representing the session context information. An empty attributes object is allowed. | object | no
+`attributes` | Attributes representing the session context information. An empty attributes object is allowed. Information is saved in the session context for one month.| object | no
 
 
 ### 6. Converse response from the routing core to a client device

@@ -6,7 +6,7 @@ Multiple components are used to build AI assistants using Watson Assistant Solut
 
 The components are shown in figure 1:
 
-![Product components](components_diagram.png)
+![Product components]({{site.baseurl}}/understand-service/components_diagram.png)
 
 **Client devices**:  The edge devices, such as smart speakers, that listen for user utterances and play or display responses.  
 
