@@ -32,4 +32,4 @@ Your browser does not support the video tag.
 
 > **Become a pro**<br>
 Enhance your hello/goodbye skill using the [Regexp NLU]({{site.baseurl}}/further-topics/regexp_nlu/) topic as a reference.<br>
-Set up a [slack bot]({{site.baseurl}}/further-topics/slackbot-integration/) and let others chat to your assistant.
+Set up a [slack bot]({{site.baseurl}}/slack/about_slackbot) and let others chat to your assistant.
