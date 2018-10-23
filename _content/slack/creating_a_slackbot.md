@@ -6,19 +6,37 @@ Use the sample Slack UI that is provided with Watson Assistant Solutions to chat
 
 #### Setting up your environment
 
-To create an API token for your slack bot, complete these steps:
+To create an API token for your slack bot and assign a user name, complete these steps:
 
 1. Go to https://YOUR_SLACK.slack.com/
 2. In the Search App Directory field, enter Bots.
-3. Click Bots.
-4. Click Add Configuration.
+3. Click **Bots**.
+4. Click **Add Configuration**.
 5. Assign your bot a unique user name.
 6. Save the API token and the user name for later use.
 
 You will use the user name and API token when you set up your environment.
 
+To create an IAM key, complete these steps:
+
+1. Log in to [IBM Cloud](https://console.ng.bluemix.net/).
+2. In the top navigation bar, click **Manage** > **Security** > **Platform API keys**.
+3. Click **Create +**.
+4. Assign a name and description.  For example, `watson-slackbot-token`.
+5. When your IAM key is created, click Show.
+6. Copy the API key and paste it into your `.env` file.
+
 To set up a python environment, install python version 3.6.2 or later from the [python.org website](http://www.python.org/download/).
 
+To locate your tenant ID, complete these steps:
+
+1. Log in to the [Watson Assistant Solutions console](https://watson-personal-assistant-toolkit.mybluemix.net/). 
+2. In the top navigation bar, click **Admin** > **Usage**.
+3. Locate the tenant that you want to connect your slack bot to.
+4. Copy the tenant ID and paste it into your `.env` file.
+
+
+To set up a python environment, install python version 3.6.2 or later from the [python.org website](http://www.python.org/download/).
 
 #### Building a slack bot
 
@@ -39,9 +57,18 @@ Complete these steps to build a slack bot locally:
     # Waton Assistant Soltuions Credentials - Use `https://watson-personal-assistant-toolkit.eu-de.mybluemix.net/` for the German data center.
     WA_URL="https://watson-personal-assistant-toolkit.mybluemix.net"
     WA_SKILLSET="place_your_assistant_skillset_name_here"
-    WA_API_KEY="place_your_watson_assistant_solutions_api_key_here""
     WA_LANGUAGE="en-US"
     WA_DEVICE_TYPE="slackbot"
+
+    # Authentication type. Either "IAM" or "API_KEY" 
+    AUTH_TYPE="IAM"
+
+    #If using IAM authentication
+    WA_TENANT_ID="place_your_tenant_ID_here"
+    IAM_API_KEY="place_your_IAM_key_here"
+
+    # If using Watson Assistant Solutions API KEY authentication
+    WA_API_KEY="place_your_Watson_Assistant-Solutions_API_key_here"
 
     # Bot Configuration - Number of characters before card data is made into a JSON snippit
     MAX_CARD_CHARACTERS=1500
@@ -87,15 +114,18 @@ After you test that your slack bot is running locally, push the bot to IBM Cloud
 
 1. Install the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#cli).
 2. Log in to IBM Cloud.
-3.  Go to your slack bot directory and push your slack bot application to IBM Cloud.  Assign a name to the application. Enter:
-    ```
-    cf push $YOUR_APP_NAME_HERE --no-route true --health-check-type process -m 256M
-    ```
-Or, depending on your CLI tools, enter:
-    ```
-    bx cf push $YOUR_APP_NAME_HERE --no-route true --health-check-type process -m 256M
+3.  Go to your slack bot directory and push your slack bot application to IBM Cloud.  Assign a name to the application. Enter
+     
+```
+cf push $YOUR_APP_NAME_HERE --no-route true --health-check-type process -m 256M
+```
 
-    ```
+Or, depending on your CLI tools, enter:
+
+```
+bx cf push $YOUR_APP_NAME_HERE --no-route true --health-check-type process -m 256M
+
+```
 4. Verify that you can chat with your bot. Send it a direct message to your bot on slack.
 
 ### Adding context
