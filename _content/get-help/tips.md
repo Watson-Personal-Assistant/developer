@@ -62,9 +62,9 @@ Specify the mandatory values in the `configure.properties` file in accordance wi
 - The `host` parameter must be set to `wa-audio-gateway.mybluemix.net`. Do not include the protocol prefix `https://`.
 - The `userID` parameter is typically a name representing a person, for example, `Jane_Smith`. Valid characters are any alphanumeric, hyphen, or underscore character. Values such a `.` or `@` symbol are not permitted, such as `Jane.Smith` or `JaneSmith@email.com`.
 - The tenant ID parameter is specified if you have multiple tenants.  To find your tenant ID, log in to the console, select a tenant, and click **Admin**. The tenant name and ID are displayed.  For example:
-![check tenant ID](get_tenant_id.PNG)
+![check tenant ID]({{site.baseurl}}/get-help/get_tenant_id.PNG)
 - The skillset parameter is a skillset that is available to your tenant. Log in to the console and view the list of skillsets that you can access.  For example:
-![check skillset](check_skillset.png)
+![check skillset]({{site.baseurl}}/get-help/check_skillset.png)
 
 ---
 #### Authentication fails
