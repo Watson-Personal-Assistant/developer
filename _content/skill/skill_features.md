@@ -64,12 +64,32 @@ _Figure 3 - routing by entities_
 In figure 3, the routing core routes based on a @trafficarea entity.  A different response is provided depending on whether the value is city center or suburbs.
 
 When routing by entities, in the `actions.js` file, actions in the entities section of the file are called.  For example:
-```
+```Javascript
 // pre processing for entity based routing
 entities: (request, response, context) => {
     handler.converse(request, response, context, converseCallback);
 },
 ```
+
+To avoid mishandling by skills, you can disable entity-based routing in the manifest file of your skills.  Set `routeByEntities` to `false`. Then, when it is appropriate to route by entities, enable the capibility under specific conditions in the evaluation response in your skill code. For example:
+
+```javascript
+let evaluationCallback = function(results, evaluationResponse, context, err) {
+    if(err) {
+        console.error(err);
+    else {
+        if(!result) {
+            result =['Nlu engine did not return an output'];
+        }
+        evaluationResponse.SetRoutingbyEntities(true).send(result[0]);
+        }
+    }
+}
+
+```
+Scenario:
+
+You might want your skill to enable routing by entities when the skill is expecting the user to respond with an entity value.  When a restaurant skill asks "How many people is your booking for", the restaurant skill expects only an entity to be returned.  It enables entity-based routing for the evaluation response.  Then, when the user responds with "12 people", the restaurant skills provides an evaluation response with a strong match for the entity `@numberofpeople`.  In this scenario, the routing core routes to the restaurant skill using entity-based routing.
 
 #### Routing by skill context
 You can use context variables when you evaluate a request. For example:
@@ -180,7 +200,7 @@ For example, to retrieve the `name` parameter of the `lastReferencedLocation`, e
 Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
 
 ```
-To set a specific parameter, set the message body to `{ "leafValue" : "new value"}`.
+To set a leaf (that is, non-object) parameter, set the message body to `{ "leafValue" : "new value"}`.
 
 For example, to set the `name` parameter of the `lastReferencedLocation` to `Manhattan island`, enter:
 
