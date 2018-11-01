@@ -17,19 +17,31 @@ When you connect your custom audio client to the audio gateway, pass the IAM tok
 
 ### Establishing a web socket connection  
 
-After you authenticate, establish a web socket connection to the audio gateway and pass the mandatory parameters to the gateway.  The web socket connection format is as follows:
+After you authenticate, establish a web socket connection to the audio gateway and pass the mandatory parameters to the gateway.  
+
+Table 1 displays the mandatory parameters for a web socket connection.
+
+| Parameter  |Description |
+|-----|:-------------------------|
+| `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` 
+| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
+| `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
+| `tenantID`  (mandatory for multiple tenants) | The ID of the tentant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants.
+
+For all parameters, see [Configuration properties]({{site.baseurl}}/audio_custom/interface).
+
+The web socket connection format is as follows:
 
 ```
 
-wss://wa-audio-gateway.mybluemix.net:<Optional AudioGatewayPort>?skillset=<skillset to be used with this client - required parameter>&userID=<userId or clientID value used for audio gateway logs - required>&language=<Client language preference - Optional>;
+wss://wa-audio-gateway.mybluemix.net:<AudioGatewayPort - optional>?skillset=<skillset-name>&userID=<userID>&language=<Client language preference - Optional>&tenantID=<tenantID - mandatory for multiple tenants>;
 
 ```
-
 For example:
 
 ```
 
-wss://wa-audio-gateway.mybluemix.net?skillset=industry&userID=John001&language=en-US
+wss://wa-audio-gateway.mybluemix.net?skillset=industry&userID=John001&language=en-US&tenantID=522e7e1d-7f39-41bb-b94d-fc1c2-f9ac24
 
 ```
 **Important**: Include the IAM token as an HTPP "Authorization" header. Otherwise, your attempt to connect to the gateway will be rejected.

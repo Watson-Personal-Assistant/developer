@@ -61,7 +61,7 @@ _Figure 3 - routing by entities_
 
 ![Routing by entities](../images/routing_by_entities2.png)
 
-In figure 3, the routing core routes based on a @trafficarea entity.  A different response is provided depending on whether the value is city center or suburbs.
+In figure 3, the routing core routes based on a `@trafficarea` entity.  A different response is provided depending on whether the value is city center or suburbs.
 
 When routing by entities, in the `actions.js` file, actions in the entities section of the file are called.  For example:
 ```Javascript
@@ -71,7 +71,7 @@ entities: (request, response, context) => {
 },
 ```
 
-To avoid mishandling by skills, you can disable entity-based routing in the manifest file of your skills.  Set `routeByEntities` to `false`. Then, when it is appropriate to route by entities, enable the capibility under specific conditions in the evaluation response in your skill code. For example:
+To avoid mishandling by skills, you can disable entity-based routing in the manifest file of your skills.  Set `routeByEntities` to `false`. Then, when it is appropriate to route by entities, enable the capability under specific conditions in the evaluation response in your skill code. For example:
 
 ```javascript
 let evaluationCallback = function(results, evaluationResponse, context, err) {
@@ -81,15 +81,21 @@ let evaluationCallback = function(results, evaluationResponse, context, err) {
         if(!result) {
             result =['Nlu engine did not return an output'];
         }
-        evaluationResponse.SetRoutingbyEntities(true).send(result[0]);
+        evaluationResponse.setRoutingbyEntities(true).send(result[0]);
         }
     }
 }
 
 ```
+Alternatively, if your skill uses the Watson Assistant NLU, you can set `routeByEntities` to `true` in the context, the skill SDK overrides the value that you set in the manifest file.
+
+For example:
+![Routing by entities](../images/wa-routingbyentities.PNG)
+
+
 Scenario:
 
-You might want your skill to enable routing by entities when the skill is expecting the user to respond with an entity value.  When a restaurant skill asks "How many people is your booking for", the restaurant skill expects only an entity to be returned.  It enables entity-based routing for the evaluation response.  Then, when the user responds with "12 people", the restaurant skills provides an evaluation response with a strong match for the entity `@numberofpeople`.  In this scenario, the routing core routes to the restaurant skill using entity-based routing.
+You might want your skill to enable routing by entities when the skill is expecting the user to respond with an entity value.  When a restaurant skill asks "How many people is your booking for", the restaurant skill expects only an entity to be returned.  The skill enables entity-based routing for the evaluation response.  Then, when the user responds with "12 people", the restaurant skills provides an evaluation response with a strong match for the entity `@numberofpeople`.  In this scenario, the routing core routes to the restaurant skill using entity-based routing.
 
 #### Routing by skill context
 You can use context variables when you evaluate a request. For example:
