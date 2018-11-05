@@ -64,7 +64,7 @@ _Figure 3 - routing by entities_
 In figure 3, the routing core routes based on a `@trafficarea` entity.  A different response is provided depending on whether the value is city center or suburbs.
 
 When routing by entities, in the `actions.js` file, actions in the entities section of the file are called.  For example:
-```Javascript
+```javascript
 // pre processing for entity based routing
 entities: (request, response, context) => {
     handler.converse(request, response, context, converseCallback);
@@ -170,7 +170,7 @@ To find the values of the `lastReferencedLocation` or `currentLocation`, use the
 The following is an example of finding the value of `currentLocation`.
 
 ```shell
-Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John-001/builtIn?instancePath=currentLocation' -H 'accept: application/json'
+curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John-001/builtIn?instancePath=currentLocation' -H 'accept: application/json'
 
 ```
 A response similar to the following response is returned:
@@ -203,7 +203,7 @@ In your GET, PUT, and DELETE requests, set the  `instancePath` to the path of th
 For example, to retrieve the `name` parameter of the `lastReferencedLocation`, enter:
 
 ```shell
-Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
+curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
 
 ```
 To set a leaf (that is, non-object) parameter, set the message body to `{ "leafValue" : "new value"}`.
