@@ -261,7 +261,7 @@ Parameter | Description | Type | Required
  `responseCode` | The status of the response. For example,  200 (OK) or 400 (bad request) | string | yes
  `requestResult` | The response to the utterance if returned by the nlu engine. The regexp nlu engine does not return a response in an evaluation response. | string | yes
  `handleUtterance` | Set to false if the skill is capable of handling the utterance but decides not to handle it.  For example, a skill is designed to only display a map when the user is at home.  When the skill detects that the user in  a car, it sets `handleUtterance` to false.   | boolean  | yes
-`routeByEntities` | The `routeByEntities` flag you to route by entities only when it is appropriate.  Se to `false` to disable routing by entities.  The default value in the NodeJS skill boilerplate is `true`. For scenarios where routing by entities is applicable, see [Enhancing the conversation]({site.baseurl}}/skill/skill_features/).   | boolean  | yes
+`routeByEntities` | The `routeByEntities` flag allows you to route by entities only when it is appropriate.  Set to `false` to disable routing by entities.  The default value in the NodeJS skill boilerplate is `true`. For scenarios where routing by entities is applicable, see [Enhancing the conversation]({{site.baseurl}}/skill/skill_features/).   | boolean  | yes
 `context` | Information about the context of the conversation with the user. | object | yes
 `intentities` | The intents and entities returned by the skill for each nlu engine. | array | yes
 
