@@ -15,6 +15,7 @@ Managing a tenant involves the following tasks:
 - [Update a tenant configuration](#update-a-tenant-configuration)
 - [Add a new user to your tenant](#add-a-new-user-to-your-tenant)
 - [Removing a user from your tenant](#removing-a-user-from-your-tenant)
+- [Associate an IBM ID with your tenant](#associate-an-ibm-id-with-your-tenant)
 
 
 #### Change your view to a different tenant
@@ -57,6 +58,17 @@ Complete these steps to remove a new user from a tenant:
 1. Click **Admin** > **Remove User** from the console menu bar.
 2. Select the check box for each user you want to delete.
 3. Click **Submit**.
+
+#### Associate an IBM ID with your tenant
+
+If you are still using a Watson Assistant Solutions API key to access your tenant, you can log in to your console using your API key and associate your tenant with your IBM ID.  Thereafter, you can access Watson Assistant Solutions using your IBM ID.
+
+Complete these steps to associate an IBM ID with your tenant.
+
+1. From the console, click **Add your IBMid**. 
+[Add ibmid]({{site.baseurl}}/images/add_ibmid.png)
+2. Enter your IBM ID or create a new one.
+3. Click **Add**.
 
 > **What to do next?**<br/>
 Learn how to [access your log data]({{site.baseurl}}/further-topics/get-logs/).

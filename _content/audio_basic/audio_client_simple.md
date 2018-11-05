@@ -45,16 +45,16 @@ To quickly get started with the voice interface, download a [sample Java-based a
 A JAR file for the audio client is created in the `target/` directory. The file name includes a version number. Each build includes a -SNAPSHOT suffix.<br>
 5. Start the audio client JAR file. From the top-level directory of your client, enter:
     ```
-    java -jar target/wpa-1.4-SNAPSHOT.jar
+    java -jar target/was-audio-client.jar
     ```
 On Raspberry Pi, enter: 
     ```
-    sudo java -jar wpa-1.4-SNAPSHOT.jar
+    sudo java -jar was-audio-client.jar
     ```
 6. (Optional) Deploy the audio client to your audio device or Raspberry Pi and start the JAR file. 
     1. Copy the audio client JAR file and the `/config` directory from the `/target` directory and  save them to a directory, for example, `/watson`, on your device. For example:
     ```
-    $ scp target/wpa-1.4-SNAPSHOT.jar pi@192.168.1.15:~/watson
+    $ scp target/was-audio-client.jar pi@192.168.1.15:~/watson
     ```
     The Jar file and the `/config` directory must be at the same level on your device.
 7. Chat with your assistant.  

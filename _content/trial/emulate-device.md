@@ -37,7 +37,7 @@ clicking the link for the **apache-maven-*-bin.zip**.
 `mvn package`
 
 12. In the Terminal window, in the `AudioClientSampleCodeJava` directory, execute the built jar file using command <br/>
-`java -jar target/wpa-1.4-SNAPSHOT.jar`
+`java -jar target/was-audio-client.jar`
 
 13. To send audio, press the **Return** key on your keyboard and then speak "Hello".  You don't have to hold down the return key or press it again after saying the utterance, just press it once and then pause after saying your utterance and the audio will be sent through the audio gateway to your Watson Assistant Solutions tenant.
 
