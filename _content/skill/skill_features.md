@@ -31,7 +31,7 @@ For example:
 
 _Figure 1 - setting the in conversation flag_
 
-![in conversation](../images/inconversation.png)
+![in conversation]({{site.baseurl}}/images/inconversation.png)
 
 In figure 1, the traffic skill asks the user which region the user wants the traffic news for.  The traffic skill sets an in conversation flag to notify the Watson Assistant Solutions routing core that it is in a conversation and that it is expecting a response. Otherwise, another skill, such the events skill, might return a higher confidence score and process the utterance.
 
@@ -49,7 +49,7 @@ You can route the conversation using intents.  In your skill, you can define res
 
 _Figure 2 - routing by intent_
 
-![in conversation](../images/routing_by_intent2.png)
+![in conversation]({{site.baseurl}}/images/routing_by_intent2.png)
 
 In figure 2, the `#get_roadworks` intent is detected and a list of roadworks is provided in the response.
 
@@ -59,7 +59,7 @@ You can also route the conversation using entities.  For example:
 
 _Figure 3 - routing by entities_
 
-![Routing by entities](../images/routing_by_entities2.png)
+![Routing by entities]({{site.baseurl}}/images/routing_by_entities2.png)
 
 In figure 3, the routing core routes based on a `@trafficarea` entity.  A different response is provided depending on whether the value is city center or suburbs.
 
@@ -90,7 +90,7 @@ let evaluationCallback = function(results, evaluationResponse, context, err) {
 Alternatively, if your skill uses the Watson Assistant NLU, you can set `routeByEntities` to `true` in the context, the skill SDK overrides the value that you set in the manifest file.
 
 For example:
-![Routing by entities](../images/wa-routingbyentities.PNG)
+![Routing by entities]({{site.baseurl}}/images/wa-routingbyentities.PNG)
 
 
 Scenario:
@@ -104,7 +104,7 @@ You can use context variables when you evaluate a request. For example:
 
 _Figure 4 - routing by skill context_
 
-![Routing by skill context](../images/skill_context_ex.PNG)
+![Routing by skill context]({{site.baseurl}}/images/skill_context_ex.PNG)
 
 In figure 4, the end-user asks about traffic diversions.  At step 2, the skill sets `$traffic_interest` variable to diversions.  Later in the conversation, when the user asks to see a map at step 7, the skill checks the `$traffic_interest` variable and responds with a map of roadworks and diversions.
 
@@ -128,13 +128,13 @@ The built-in shared context is similar to the session context but it has a presc
 Currently, two pieces of information are available for skill developers to set in the built-in session context; `currentLocation` and `lastReferencedLocation`. 
 
 Figure 6 - Using the last referenced location in the built-in session context
-![Routing by session context](../images/skill_built-in_utterance_location.PNG)
+![Routing by session context]({{site.baseurl}}/images/skill_built-in_utterance_location.PNG)
 
 In figure 6, an end-user, who is sitting in Boston, mentions the location, Manhattan, in an utterance at step 1. At step 2, the traffic skill provides a traffic update for Manhattan, sets `lastReferencedLocation` to Manhattan, and sets the `currentLocation` to Boston.  The skill also takes note that the user loves Manhattan and sets a `liking` custom parameter to `10`.  Later in same conversation, the user asks about concerts that are on today. In the design of the assistant, the location a user mentions in an utterance take precedence over a users current location. The Events skill uses the last referenced location variable and provides information about events in Manhanttan rather than Boston.
 
 
 Figure 7 -  Using the current location in the built-in shared context
-![Routing by session context](../images/skill_built-in_current_location.png)
+![Routing by session context]({{site.baseurl}}/images/skill_built-in_current_location.png)
 
 In figure 7, an end-user, who is sitting in Boston, does not mention a location in the utterance. At step 2, the traffic skill provides a traffic update for Boston and sets the `currentLocation` to Boston. Later, the same user asks about concerts that are on today. The Events skill finds no information in the `lastReferencedLocation`.  Instead, the Events skill uses the `currentLocation` variable and provides information about events in Boston.
 
@@ -245,7 +245,7 @@ No matter how broad a knowledge base your assistant has, circumstances will aris
 
 _Figure 9 - routing to a fallback skill_
 
-![Routing to a fallback skill](../images/fallback.png)
+![Routing to a fallback skill]({{site.baseurl}}/images/fallback.png)
 
 In figure 9 at step 2, the user is reminded of the type of questions to ask.
 
@@ -288,7 +288,7 @@ Typically, a card is used to return more verbose text, to display a graphic, or 
 For example, the traffic skill returns an image of a live traffic map of the city center to the client device. The client device determines how this image is rendered to the user.  The text "Sure. Here is a live traffic map for the city center." is also returned to the client device.
 
 Figure 10 - sending a card in the converse response
-![Returning information in a card ](../images/card.png)
+![Returning information in a card ]({{site.baseurl}}/images/card.png)
 
 Sample code:
 ```JAVASCRIPT
@@ -299,4 +299,4 @@ response.card('some action', {"some", "json"}),
 **Note** Only one card object can be sent per converse response.
 
 > **What to do next?**<br/>
-Learn about the [skills that are available with Watson Assistant for Industry]({{site.baseurl}}/flavours/industry).
+Learn about the [skills that are available with Watson Assistant for Industry]({{site.baseurl}}.baseurl}}/flavours/industry).

@@ -42,7 +42,7 @@ A JAR file for the audio client is created in the `target/` directory. The file 
 
 #### Step 3: Deploy the audio client JAR file to your device.
 Copy the audio client JAR file from the `/target` directory to your device.  For example:
-`$ scp target/wpa-1.4-SNAPSHOT.jar pi@192.168.1.15:~/watson`
+`$ scp target/was-audio-client.jar pi@192.168.1.15:~/watson`
 
 #### Step 4: Customize your audio client.
 1.  Copy the `configure.properties.example` file from the `SaganWebsocketJavaClient` directory, rename it to `configure.properties`, and save it to the `~/watson` of the audio client on your device.
