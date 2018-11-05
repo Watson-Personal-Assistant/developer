@@ -66,7 +66,7 @@ If you are still using a Watson Assistant Solutions API key to access your tenan
 Complete these steps to associate an IBM ID with your tenant.
 
 1. From the console, click **Add your IBMid**. 
-[Add ibmid]({{site.baseurl}}/images/add_ibmid.png)
+![Add ibmid]({{site.baseurl}}/images/add_ibmid.png)
 2. Enter your IBM ID or create a new one.
 3. Click **Add**.
 
