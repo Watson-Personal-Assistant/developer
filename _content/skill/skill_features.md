@@ -87,7 +87,7 @@ let evaluationCallback = function(results, evaluationResponse, context, err) {
 }
 
 ```
-Alternatively, if your skill uses the Watson Assistant NLU, you can set `routeByEntities` to `true` in the context, the skill SDK overrides the value that you set in the manifest file.
+Alternatively, if your skill uses the Watson Assistant NLU, you can set `routeByEntities` to `true` in the context, and the skill SDK overrides the value that you set in the manifest file.
 
 For example:
 ![Routing by entities]({{site.baseurl}}/images/wa-routingbyentities.PNG)
