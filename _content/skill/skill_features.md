@@ -36,7 +36,7 @@ _Figure 1 - setting the in conversation flag_
 In figure 1, the traffic skill asks the user which region the user wants the traffic news for.  The traffic skill sets an in conversation flag to notify the Watson Assistant Solutions routing core that it is in a conversation and that it is expecting a response. Otherwise, another skill, such the events skill, might return a higher confidence score and process the utterance.
 
 ##### Sample code
-```
+```javascript
 //The 'in conversation' flag is set to True
 'get-traffic': (request, response, context) => {
     response.setInConversation(true);
@@ -151,7 +151,7 @@ The baseURL of the Context REST API is
 
 To add or update the `lastReferencedLocation` and `currentLocation`, use the `PUT /{userID}/builtIn` REST API endpoint.
 
- In the following curl example, details of the `currentLocation` are specified. In this example,a user John-001, is currently in the John Hancock Tower, in Boston. 
+ In the following curl example, details of the `currentLocation` are specified. In this example,a user John-001, is currently in the John Hancock Tower in Boston. 
 
 ```shell
 curl -X PUT 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/context/John-001/builtIn' -H  'accept: application/json' -H  'Content-Type: application/json' -d '{"currentLocation": { "@type" : "http://schema.org/Place", "name" : "John Hancock Tower Boston", "address": { "@type" : "http://schema.org/PostalAddress", "streetAddress" : "120 St James Ave", "addressLocality" : "Boston", "postalCode" : "MA 02116",  "addressCountry" : "USA"  }, "geo" : { "@type" : "http://schema.org/GeoCoordinates", "longitude" : "0.1278 W", "latitude" : "51.5074 N" }}}'
@@ -175,7 +175,7 @@ Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/Joh
 ```
 A response similar to the following response is returned:
 
-```JSON
+```json
 {
  "@type": "http://schema.org/Place",
  "name": "John Hancock Tower Boston",
@@ -227,7 +227,7 @@ In figure 8, when `$location` in utterance context is set to _at home_, the eval
 **Note**: The `$location` variable is set by the app that is running in the car or the house, that is, the app that is sending the request.
 
 ##### Sample code
-```
+```javascript
 //Example of rejecting an utterance evaluation request based on utterance context
 evaluation: (request, evaluationResponse, context) => {
     if (context.utterance.location && context.utterance.location !== 'car') {
@@ -255,7 +255,7 @@ To configure a fallback skill, complete these steps:
 
 1.  Create a fallback skill, add fallback intents to the skill, and associate actions with these intents. <br>**Important**: Create fallback intents that are broad enough to capture most utterances and are likely to return a high confidence score for any utterance.
 2.  Add the skill to a skill set and tag it as a fallback skill.  For example, in skillsData, set:
-```
+```json
 {
   "fallback": true,
   "skillNames": [
@@ -269,7 +269,7 @@ A fallback skill is created.
 In response to an evaluation request from the routing core, your skill might return the skills response to the user utterance in the `evaluationResponse` object.  You might want to use these results and avoid an extra converse request to your skill.
 
 Sample code:
-```
+```javascript
 {
   'yes': (request, response, context) => {
       handler.saveEvaluationContext(context, request.evaluationResponse.context)
@@ -291,7 +291,7 @@ Figure 10 - sending a card in the converse response
 ![Returning information in a card ]({{site.baseurl}}/images/card.png)
 
 Sample code:
-```JAVASCRIPT
+```javascript
 
 response.card('some action', {"some", "json"}),
 ```
