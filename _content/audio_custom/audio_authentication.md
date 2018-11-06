@@ -44,7 +44,7 @@ For example:
 
 ```
 
-wss://wa-audio-gateway.mybluemix.net?skillset=industry&userID=John001&language=en-US&tenantID=522e7e1d-7f39-41bb-b94d-fc1c2-f9ac24
+wss://wa-audio-gateway.mybluemix.net?skillset=industry&userID=John001&language=en-US
 
 ```
 **Important**: Include the IAM token as an HTPP "Authorization" header. Otherwise, your attempt to connect to the gateway will be rejected.
