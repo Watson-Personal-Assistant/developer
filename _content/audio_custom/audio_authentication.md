@@ -12,8 +12,12 @@ The audio client passes an IAM token to authenticate when it first connects to a
 
 For more information about creating an IAM token from an IAM API key, see the _Cloud IAM Authentication and Authorization_ topic in the [IBM Cloud Docs](https://console.bluemix.net/docs/services/IoT/reference/security/cloud_iam.html#cloud_iam).
 
-When you connect your custom audio client to the audio gateway, pass the IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
+### Adding header information
+
+When you connect your custom audio client to the audio gateway, pass the following in the header:
+- Pass IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
 **Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
+- If you have multiple tenants, pass the tentant ID in the tenant ID header.  For example, `"tenantid": "tenantID <tenant ID>"`
 
 ### Establishing a web socket connection  
 
@@ -26,7 +30,6 @@ Table 1 displays the mandatory parameters for a web socket connection.
 | `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` 
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
-| `tenantID`  (mandatory for multiple tenants) | The ID of the tentant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants.
 
 For all parameters, see [Configuration properties]({{site.baseurl}}/audio_custom/interface).
 
