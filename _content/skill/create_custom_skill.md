@@ -47,8 +47,7 @@ Complete these steps to create, deploy, and register a custom skill.
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
    - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  Alternatively, rename the file ```.env.sample```  file as ```.env```.
 
-     If you are using username and password for authentication, add the following variables.  Username, password, and workspace ID are mandatory.
-
+     If you are using username and password for authentication, add the following mandatory variables.  
       - ```WCS_USERNAME```
       - ```WCS_PASSWORD```
       - ```WCS_URL```
@@ -58,12 +57,10 @@ Complete these steps to create, deploy, and register a custom skill.
       - ```WCS_WORKSPACE_NAME```
       - ```WCS_WORKSPACE_LANGUAGE```
 
-      If you are using an IAM API key for authentication, add the following variables. API key, password, and workspace ID are mandatory.
-
+      If you are using an IAM API key for authentication, add the following mandatory variables. 
        - ```WA_API_KEY```
        - ```WCS_URL```
        - ```WCS_VERSION_DATE```
-       - ```WCS_VERSION```
        - ```WCS_WORKSPACE_ID```
        - ```WCS_WORKSPACE_NAME```
        - ```WCS_WORKSPACE_LANGUAGE```
