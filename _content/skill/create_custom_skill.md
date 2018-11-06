@@ -45,19 +45,30 @@ Complete these steps to create, deploy, and register a custom skill.
     The value ```skill``` is required to specify that evaluation requests are handled at the skill.  If you not using the NodeJS boilerplate and SDK, you must support the evaluation method in your skill. The handling of evaluation requests by the routing core component of Watson Assistant Solutions is deprecated. The NLU values, for example, ```regexp```, specify the NLU engines that the skill uses to extract intents and entities from user utterances.
 4. Define the skills natural language understanding ability for each of its intents:
    - If you are using regexp, update the ```../res/nlu/regexp.json``` file to include the grammar for understanding the intents, entities, and synonyms.
-   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  Alternatively, rename the file ```.env.sample```  file as ```.env```. Add the following variables.  All variables are mandatory.
-   
-    - ```WCS_USERNAME```
-    - ```WCS_URL```
-    - ```WCS_PASSWORD```
-    - ```WCS_VERSION_DATE```
-    - ```WCS_VERSION```
-    - ```WCS_WORKSPACE_ID``` 
-    - ```WCS_WORKSPACE_NAME```
-    - ```WCS_WORKSPACE_LANGUAGE```
-        
+   - If you are using Watson Assistant, update the ```../res/nlu/wcs.json``` file. Include the workspace name, ID, and credentials.  Alternatively, rename the file ```.env.sample```  file as ```.env```.
+
+     If you are using username and password for authentication, add the following variables.  Username, password, and workspace ID are mandatory.
+
+      - ```WCS_USERNAME```
+      - ```WCS_PASSWORD```
+      - ```WCS_URL```
+      - ```WCS_VERSION_DATE```
+      - ```WCS_VERSION```
+      - ```WCS_WORKSPACE_ID```
+      - ```WCS_WORKSPACE_NAME```
+      - ```WCS_WORKSPACE_LANGUAGE```
+
+      If you are using an IAM API key for authentication, add the following variables. API key, password, and workspace ID are mandatory.
+
+       - ```WA_API_KEY```
+       - ```WCS_URL```
+       - ```WCS_VERSION_DATE```
+       - ```WCS_VERSION```
+       - ```WCS_WORKSPACE_ID```
+       - ```WCS_WORKSPACE_NAME```
+       - ```WCS_WORKSPACE_LANGUAGE```
     - If you are using a custom nlu, follow the instructions in [adding an nlu engine]({{site.baseurl}}/skill/custom_nlu/).
-5.  Specify any mandatory entities for each intent in the ```../res/nlu/intents.json``` file.  
+5.  Specify any mandatory entities for each intent in the ```../res/nlu/intents.json``` file.
 6.  Specify the port that the skill will listen on.  In the  Node.js boilerplate, the default port is 10011. If you have multiple skills deployed on your local system, you might want to change the port number.  Edit the ```.env.sample``` file and rename it ```.env```.
 7. Add skill code for the evaluation handler and the action handler and the unhandled response for each intent to the ```actions.js```  file.
 For more information about using the skill boilerplate to create your skill, see the ```readme.md``` file in the top-level directory of the boilerplate.
@@ -65,7 +76,7 @@ For more information about using the skill boilerplate to create your skill, see
   1. Start your skill from your skill top-level directory.  Enter: `npm run start`
   2. Start a web browser and open the conversation REST API in the Swagger UI.  Enter: http://localhost:10011.
   3. Converse with your skill. Use the Converse endpoint to ask a question and view a response in JSON format.
-  4. (Optional) Use the [skill debug tool]({{site.baseurl}}/skill/debugging_a_skill/) to simulate a conversation with the Watson Assistant Solutions core.  
+  4. (Optional) Use the [skill debug tool]({{site.baseurl}}/skill/debugging_a_skill/) to simulate a conversation with the Watson Assistant Solutions core.
 
 #### Step 2: Deploy your skill.
 If you want to host your skill on third-party cloud platform, follow the instructions for deploying applications from your cloud provided.
