@@ -31,8 +31,6 @@ Table 1 displays the mandatory parameters for a web socket connection.
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
 
-For all parameters, see [Configuration properties]({{site.baseurl}}/audio/config_properties).
-
 The web socket connection format is as follows:
 
 ```
