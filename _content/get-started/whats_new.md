@@ -5,15 +5,6 @@ weight: 30
 
 Learn about what's new in each release of Watson Assistant Solutions.
 
-### 1 November 2018
-
-- **Support for IAM authentication in Watson Assistant workspaces**: In the NodeJS skill boilerplate, if you are using Watson Assistant as an NLU, you can specify an IAM APK key in the workspace credentials to use IAM authenticaiton.   See [Enhancing the conversation]({{site.baseurl}}/skill/create_custom_skill/).
-- **Built-in shared context**: A new type of shared context is added to the November 1 release. The built-in shared context has a prescribed structure and set of fields. In your assistant, if you choose to use the built-in shared context across skills, your skill developers benefit from having a shared understanding of what this information is, how to access this information, and the structure of this information.  Two pieces of information are currently supported in the built-in shared context; `currentLocation` and `lastReferencedLocation`. See [Enhancing the conversation]({{site.baseurl}}/skill/skill_features/).
-    **Restriction**: Currently, you can access the built-in shared context from the Context REST API.  No support is added to the Skill boilerplate and SDK.  The built-in shared context parameters are not part of the evaluate or converse response from skills.
-- **Enabling and disabling routing by entities**: If you turn off routing by entities by default for your skills, you can instead enable routing by entities in your skill code when it is applicable.  Entity-based routing is enabled by default in the manifest file of the NodeJS skill boilerplate for compatibility with an earlier version. See [Enhancing the conversation]({{site.baseurl}}/skill/skill_features/).
-- **Ability to associate a tenant with an IBM ID.** If you are still using a Watson Assistant Solutions API key to access your tenant, you can log in to your console using your API key and associate your tenant with your IBM ID.  Thereafter, you can access Watson Assistant Solutions using your IBM ID. See [Managing your tenant]({{site.baseurl}}/further-topics/manage_tenant/).
-- **Multiple tenant support on the Admin console and Cognitive Portal**: In new deployments of IBM Watson Assistant for Hospitality, depending on how your deployment is provisioned, you log in to a specific tenant from the Admin Portal or the Cognitive Portal. If multiple tenants are configured for your deployment, you can switch between tenants.
-
 ### 6 September 2018
 
 - **Analytics tool improvements**: The user interface has a new look and feel.  Charts are rendered faster, the layout of charts has improved, and the pages are more interactive.  On the Dashboard page, the delta value from the previous day is displayed with each metric.  See [Getting started with analytics](https://watson-personal-assistant.github.io/developer/analytics/analytics_intro/). 
