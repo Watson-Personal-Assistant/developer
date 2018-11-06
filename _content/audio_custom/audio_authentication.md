@@ -26,7 +26,6 @@ Table 1 displays the mandatory parameters for a web socket connection.
 | `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` 
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
-| `tenantID`  (mandatory for multiple tenants) | The ID of the tentant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants.
 
 For all parameters, see [Configuration properties]({{site.baseurl}}/audio_custom/interface).
 
