@@ -12,6 +12,8 @@ The audio client passes an IAM token to authenticate when it first connects to a
 
 For more information about creating an IAM token from an IAM API key, see the _Cloud IAM Authentication and Authorization_ topic in the [IBM Cloud Docs](https://console.bluemix.net/docs/services/IoT/reference/security/cloud_iam.html#cloud_iam).
 
+### Adding header information
+
 When you connect your custom audio client to the audio gateway, pass the following in the header:
 - Pass IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
 **Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
