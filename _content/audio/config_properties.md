@@ -5,7 +5,7 @@ weight: 55
 
 The sample audio client supports the configuration parameters in Table 1. The configuration parameters are specified in `config/configure.properties`.
 
-**Note** The same properites are used by a custom audio client to establish a web socket connect to the audio Gateway.
+**Note** The same properties are used by a custom audio client to establish a web socket connect to the audio gateway.
 
 Table 1 - Audio client configuration parameters
 
@@ -13,9 +13,9 @@ Table 1 - Audio client configuration parameters
 |-----|:-------------------------|:----------------|
 | `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` |Audio gateway connection parameter |
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. |Audio gateway connection parameter |
-| `IAMAPIKey` (mandatory) | The client IAM API key for the device.  **Note** Applies only to the sample audio client. |Audio gateway connection parameter |
+| `IAMAPIKey` (mandatory) | The client IAM API key for the device.  **Note** Applies only to the sample audio client. For a custom client, the property is applied in the header. |Audio gateway connection parameter |
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. | Audio gateway connection parameter  |
-| `tenantID`  (mandatory for multiple tenants) | The ID of the tenant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants. | Audio gateway connection parameter  |
+| `tenantID`  (mandatory for multiple tenants) | The ID of the tenant you want to communicate with. Optional parameter if you only have one tentant configured; mandatory if you have multiple tenants. **Note** Applies only to the sample audio client. For a custom client, the property is applied in the header. | Audio gateway connection parameter  |
 | `language`  | The language that the client communicates in.  The default value is `en-US`. | Language parameter  |
 | `engine `  | The speech-to-text (STT) engine that the audio gateway must use to convert speech to text.  Valid values are `watson` or `google`.  The default value is `google`.   | Speech-to-text parameter |
 | `urltts`  | If set to `true`, the audio gateway plays back audio from a URL.  If set to `false`, the gateway streams audio using data messages.  The default value is `false`.  | Audio response type parameter |
