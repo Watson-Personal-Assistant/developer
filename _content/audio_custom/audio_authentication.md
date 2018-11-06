@@ -17,7 +17,7 @@ For more information about creating an IAM token from an IAM API key, see the _C
 When you connect your custom audio client to the audio gateway, pass the following in the header:
 - Pass IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
 **Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
-- If you have multiple tenants, pass the tentant ID in the tenant ID header.  For example, `"tenantid": "tenantID <tenant ID>"`
+- If you have multiple tenants, pass the tentant ID in the tenant ID header.  For example, `"tenantid": "<tenant ID>"`
 
 ### Establishing a web socket connection  
 
@@ -31,13 +31,13 @@ Table 1 displays the mandatory parameters for a web socket connection.
 | `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
 
-For all parameters, see [Configuration properties]({{site.baseurl}}/audio_custom/interface).
+For all parameters, see [Configuration properties]({{site.baseurl}}/audio/config_properties).
 
 The web socket connection format is as follows:
 
 ```
 
-wss://wa-audio-gateway.mybluemix.net:<AudioGatewayPort - optional>?skillset=<skillset-name>&userID=<userID>&language=<Client language preference - Optional>&tenantID=<tenantID - mandatory for multiple tenants>;
+wss://wa-audio-gateway.mybluemix.net:<AudioGatewayPort - optional>?skillset=<skillset-name>&userID=<userID>&language=<Client language preference - Optional>;
 
 ```
 For example:
