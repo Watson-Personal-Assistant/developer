@@ -11,4 +11,4 @@ Watson Assistant Solutions provides a collection of SDKs, boilerplates, and samp
 - **Sample Slack Bot**: Use the [sample slack bot code](https://github.com/Watson-Personal-Assistant/simple_WA_slackbot) to chat with your assistant using Slack.  For instructions, see [Creating a Slack bot]({{site.baseurl}}/slack/creating_a_slackbot).
   
 > **What to do next?**<br/>
-Learn about the [JSON structure]({{site.baseurl}}/reference/JSON-formats) for conversing with assistants.
+Learn about the [JSON structure]({{site.baseurl}}/reference/JSON_formats) for conversing with assistants.
