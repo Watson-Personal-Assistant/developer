@@ -35,9 +35,6 @@ Context information that is available to all skills. For example, when a user as
 
 No restriction is placed on what type of information you add to the session context or the structure of this information.
 
-##### Built-in shared context
-Context information that is available to all skills. Unlike session context information, information in the built-in shared context must be in a prescribed format and is restricted to a specific set of fields. For example, when a user asks "What's the weather like in Manhattan", the weather skill stores Manhattan in the last referenced location variable. Later when a user asks "Any concerts on there", the events skill accesses the variable and provides an event listing for Manhattan.
-
 ##### Skill context
 Context information that enhances the flow of conversation within a skill. For example, when a user says "I'm looking for an open-air concert", the entertainment skill captures the event type in the skill context.  Later in the conversation, when the user asks the assistant "Are there any free ones on today", the entertainment skill knows from the skill context that the user is asking for a free open-air concert. "
 
