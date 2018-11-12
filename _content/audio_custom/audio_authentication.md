@@ -21,21 +21,23 @@ When you connect your custom audio client to the audio gateway, pass the followi
 
 ### Establishing a web socket connection  
 
-After you authenticate, establish a web socket connection to the audio gateway and pass the mandatory parameters to the gateway.  
+After you authenticate, establish a web socket connection to the audio gateway and pass at least the mandatory parameters to the audio gateway. The address of the audio gateway is `wss://wa-audio-gateway.mybluemix.net`.
 
-Table 1 displays the mandatory parameters for a web socket connection.
+Table 1 displays the parameters for a web socket connection.
 
 | Parameter  |Description |
 |-----|:-------------------------|
-| `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` 
-| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
+| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
+| `language`| The language that the client communicates in. The default value is `en-US`.
+| `engine` | The speech-to-text (STT) engine that the audio gateway must use to convert speech to text. Valid values are `watson` or `google`. The default value is `google`.
+
 
 The web socket connection format is as follows:
 
 ```
 
-wss://wa-audio-gateway.mybluemix.net:<AudioGatewayPort - optional>?skillset=<skillset-name>&userID=<userID>&language=<Client language preference - Optional>;
+wss://wa-audio-gateway.mybluemix.net?skillset=<skillset-name>&userID=<userID>&language=<language - Optional>&engine=<stt-engine - Optional>
 
 ```
 For example:
