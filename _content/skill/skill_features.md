@@ -193,6 +193,24 @@ A response similar to the following response is returned:
 }
 
 ```
+#####  Accessing specific parameters
+To access individual parameters in the  `lastReferencedLocation` or `currentLocation` JSON objects, use the `instancePath` parameter.
+
+In your GET, PUT, and DELETE requests, set the  `instancePath` to the path of the parameter of interest in the built-in shared context JSON object.
+
+For example, to retrieve the `name` parameter of the `lastReferencedLocation`, enter:
+
+```shell
+Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
+
+```
+To set a leaf (that is, non-object) parameter, set the message body to `{ "leafValue" : "new value"}`.
+
+For example, to set the `name` parameter of the `lastReferencedLocation` to `Manhattan island`, enter:
+
+```shell
+curl -X PUT 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name -H 'accept: application/json' -H 'Content-Type: application/json' -d '{ "leafValue" : "Manhattan island"}'
+```
 
 #### Routing by utterance context and rejecting utterances
 A skill can use the utterance context when it evaluates a request and when it determines a response. For example, an utterance might include a `$location` variable that is either set to `car` or `atHome`.
