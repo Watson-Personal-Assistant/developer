@@ -201,7 +201,7 @@ In your GET, PUT, and DELETE requests, set the  `instancePath` to the path of th
 For example, to retrieve the `name` parameter of the `lastReferencedLocation`, enter:
 
 ```shell
-Curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
+curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John- 001/builtIn? instancePath=currentConversation.lastReferencedLocation.referenceThing.name' -H 'accept: application/json'
 
 ```
 To set a leaf (that is, non-object) parameter, set the message body to `{ "leafValue" : "new value"}`.
