@@ -20,19 +20,17 @@ Learn about what's new in each release of Watson Assistant Solutions.  See the [
 
 ### Fixed in this release
 
-The following updates were made in the September 6 release:
-- Confidence scores that are returned by skills during the evaluation phase are now logged.
-- The error messages that are provided for NLU engine errors in the NodeJS skill SDK are improved.
-- Fixed the inaccurate conversion of sun to Sunday in the retext value sent by the Watson Assistant Solutions core.
+The following updates were made in the November 1 release:
+
+- The Bot Analytics tool is available for evaluation in alpha mode to paid accounts.  In a previous release, the Analytics link was also made available to trial accounts to launch the tool.  The link is removed for trial accounts in this release. 
 
 ### Announcements
 
-1. From November 1st, any new workspaces you create using the Watson Assistant NLU must use an IAM API key to authenticate.  Adding WCS user name and passwords as user credentials no longer works for new workspaces.  If you use the NodeJS skill boilerplate and SDK, you can specify an IAM API key for Watson Assistant workspaces.
-2.	The skill debug tool has moved location.  The debug tool is available from the following repository: [https://github.com/Watson-Personal-Assistant/skill-debugger-tool](https://github.com/Watson-Personal-Assistant/skill-debugger-tool). Read more about [debugging a skill using the tool]({{site.baseurl}}/skill/debugging_a_skill/). 
-3.  If you are using the knowledge and reasoning proactivity feature that is available in [alpha mode](#alpha-and-beta-features), you must update your proactive agents to subscribe directly to an IBM Message Hub component for state change events. The rules API is being deprecated in an upcoming release. Before the April release, you subscribe your proactive agents to the Rules API for state change events. The rules component sends event notifications to your proactive agents.  In the April release, a IBM Message Hub component is made available and you must update your proactive agents to subscribe directly to the Message Hub for state change events. 
-4. Your skills must perform NLU evaluations at the skill level.  The evaluation by the core is deprecated in the September release. For more information about how to configure skills to perform NLU evaluation, see [Reconfiguring skills to handle NLU evaluations]({{site.baseurl}}/further-topics/reconfigure_skill/).
-5. The `/logging` API endpoint is being deprecated in an upcoming release.  Instead, use the `/management/logging` endpoint to enable and disable the logging of personal information (PI).  For instructions, see [Logging personal information]({{site.baseurl}}/further-topics/set_pi/)./set_pi/).
-
+1.	Watson Assistant Solutions API key is deprecated, and support will be removed at the end of January 2019. After support for the API key is removed, you must log in to the Watson Assistant Solutions console using your IBM ID or by appending an IAM access token to your API calls. For instructions, see [Accessing your tenant]({{site.baseurl}}/get-started/get-api-key/).
+1. The skill debug tool has moved location.  The debug tool is available from the following repository: [https://github.com/Watson-Personal-Assistant/skill-debugger-tool](https://github.com/Watson-Personal-Assistant/skill-debugger-tool). Read more about [debugging a skill using the tool]({{site.baseurl}}/skill/debugging_a_skill/). 
+2.  If you are using the knowledge and reasoning proactivity feature that is available in [alpha mode](#alpha-and-beta-features), you must update your proactive agents to subscribe directly to an IBM Message Hub component for state change events. The rules API is being deprecated in an upcoming release. Before the April release, you subscribe your proactive agents to the Rules API for state change events. The rules component sends event notifications to your proactive agents.  In the April release, a IBM Message Hub component is made available and you must update your proactive agents to subscribe directly to the Message Hub for state change events. 
+3. Your skills must perform NLU evaluations at the skill level.  The evaluation by the core is deprecated in the September release. For more information about how to configure skills to perform NLU evaluation, see [Reconfiguring skills to handle NLU evaluations]({{site.baseurl}}/further-topics/reconfigure_skill/).
+4. The `/logging` API endpoint is being deprecated in an upcoming release.  Instead, use the `/management/logging` endpoint to enable and disable the logging of personal information (PI).  For instructions, see [Logging personal information]({{site.baseurl}}/further-topics/set_pi/).
 
 ### Known issues
 
@@ -53,6 +51,18 @@ _Problem_: The following message is displayed but there is no restriction on usa
 `The interaction usage for this month has been exceeded.`
 
 _Solution_: Log in to the console using your IBMid.
+
+#### 3.	The Bot Analytics tool is not available on the German data center.
+
+_Problem_: The Bot Analytics tool is not available for paid accounts that are deployed on the German data center.  The Analytics menu is not currently available from the console.
+
+_Solution_: None.
+
+#### 4.	Unable to log in to the Watson Assistant Solutions console using an IBM ID.
+
+_Problem_: Log in to the console fails if you modify the value of your IBM ID.
+
+_Solution_: Contact [watsonas@us.ibm.com](mailto:watsonas@us.ibm.com) if you have modified your IBM ID.
 
 ### Alpha and beta features
 
