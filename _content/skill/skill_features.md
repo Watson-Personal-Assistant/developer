@@ -10,6 +10,7 @@ These include:
 - [Routing by intents or entities](#routing-by-intents-or-entities)
 - [Routing by skill context](#routing-by-skill-context)
 - [Routing by session context](#routing-by-session-context)
+- [Using the built-in shared context](#using-the-built-in-shared-context)
 - [Updating the built-in context using the Context REST API](#updating-the-built-in-context-using-the-context-rest-api)
     - [Accessing specific parameters](#accessing-specific-parameters)
 - [Routing by utterance context and rejecting utterances](#routing-by-utterance-context-and-rejecting-utterances)
@@ -17,7 +18,6 @@ These include:
 - [Handling unmatched utterances with fallback skills](#handling-unmatched-utterances-with-fallback-skills)
 - [Reusing evaluation results](#reusing-evaluation-results)
 - [Sending extra information in cards](#sending-extra-information-in-cards)
-
 
 The examples in this topic are based on an assistant with three custom skills:
 - a traffic skill
@@ -119,6 +119,80 @@ _Figure 5 - routing by session context_
 In figure 5, at step 2, the traffic skill saves the region of interest, Central Park, to a `$region` variable in the session context. Later in the conversation at step 7, the user asks "Are there any outdoor concerts on there today".  The utterance is routed to a different skill this time.  The events skill returns the highest confidence score. The events skill uses the `$region` variable to determine what response to provide to the utterance.  The events skill returns a response based on the Central Park region.
 
 Information is saved in the session context for one month.
+
+#### Using the built-in shared context
+
+The built-in shared context is similar to the session context but it has a prescribed structure and set of fields. In your assistant, if you choose to use the built-in shared context across skills, your skill developers benefit from having a shared understanding of what context information is available across skills, how to access this information, and the structure of this information.
+
+Currently, two pieces of information are available for skill developers to set in the built-in session context; `currentLocation` and `lastReferencedLocation`. 
+
+Figure 6 - Using the last referenced location in the built-in session context
+![Routing by session context]({{site.baseurl}}/images/skill_built-in_utterance_location.PNG)
+
+In figure 6, an end-user, who is sitting in Boston, mentions the location, Manhattan, in an utterance at step 1. At step 2, the traffic skill provides a traffic update for Manhattan, sets `lastReferencedLocation` to Manhattan, and sets the `currentLocation` to Boston.  The skill also takes note that the user loves Manhattan and sets a `liking` custom parameter to `10`.  Later in same conversation, the user asks about concerts that are on today. In the design of the assistant, the location a user mentions in an utterance take precedence over a users current location. The Events skill uses the last referenced location variable and provides information about events in Manhanttan rather than Boston.
+
+
+Figure 7 -  Using the current location in the built-in shared context
+![Routing by session context]({{site.baseurl}}/images/skill_built-in_current_location.png)
+
+In figure 7, an end-user, who is sitting in Boston, does not mention a location in the utterance. At step 2, the traffic skill provides a traffic update for Boston and sets the `currentLocation` to Boston. Later, the same user asks about concerts that are on today. The Events skill finds no information in the `lastReferencedLocation`.  Instead, the Events skill uses the `currentLocation` variable and provides information about events in Boston.
+
+**Note**:
+
+- Currently, you can access the built-in shared context from the Context REST API.  No support is added to the Skill boilerplate and SDK.  
+- The built-in shared context parameters are not part of the evaluate or converse response from skills. 
+- Information is saved in the session context for one month.
+
+#### Updating the built-in context using the Context REST API
+
+The baseURL of the Context REST API is
+`https://watson-personal-assistant-toolkit.mybluemix.net/v2/api/context`
+
+To add or update the `lastReferencedLocation` and `currentLocation`, use the `PUT /{userID}/builtIn` REST API endpoint.
+
+ In the following curl example, details of the `currentLocation` are specified. In this example,a user John-001, is currently in the John Hancock Tower, in Boston. 
+
+```shell
+curl -X PUT 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/context/John-001/builtIn' -H  'accept: application/json' -H  'Content-Type: application/json' -d '{"currentLocation": { "@type" : "http://schema.org/Place", "name" : "John Hancock Tower Boston", "address": { "@type" : "http://schema.org/PostalAddress", "streetAddress" : "120 St James Ave", "addressLocality" : "Boston", "postalCode" : "MA 02116",  "addressCountry" : "USA"  }, "geo" : { "@type" : "http://schema.org/GeoCoordinates", "longitude" : "0.1278 W", "latitude" : "51.5074 N" }}}'
+
+```
+
+In the following curl example, details of the  `lastReferencedLocation` location are specified. In this example, because John said that he loves Manhattan, a `liking` custom parameter is set to 10.  
+
+```shell
+curl -X PUT 'https://watson-personal-assistant-toolkit.mybluemix.net/v2/context/John-001/builtIn?instancePath=currentConversation' -H  'accept: application/json' -H  'Content-Type: application/json' -d '{  "@type" : "http://www.ibm.com/watson-assistant-solutions/ontology/Conversation", "lastReferencedLocation": { "@type" : "http://www.ibm.com/watson-assistant-solutions/ontology/PlaceReference", "object" : { "@type" : "http://schema.org/Place", "name" : "Manhattan", "customProperties": { "liking" : 10 }}}}'
+
+```
+
+To find the values of the `lastReferencedLocation` or `currentLocation`, use the `GET/{userID}/builtIn` REST API endpoint.
+
+The following is an example of finding the value of `currentLocation`.
+
+```shell
+curl -X GET 'https://watson-personal-assistant-toolkit.mybluemix.net/context/John-001/builtIn?instancePath=currentLocation' -H 'accept: application/json'
+
+```
+A response similar to the following response is returned:
+
+```JSON
+{
+ "@type": "http://schema.org/Place",
+ "name": "John Hancock Tower Boston",
+ "address": {
+   "@type": "http://schema.org/PostalAddress",
+   "streetAddress": "120 St James Ave",
+   "addressLocality": "Boston",
+   "postalCode": "MA 02116",
+   "addressCountry": "USA"
+ },
+ "geo": {
+   "@type": "http://schema.org/GeoCoordinates",
+   "longitude": "0.1278 W",
+   "latitude": "51.5074 N"
+ }
+}
+
+```
 
 #### Routing by utterance context and rejecting utterances
 A skill can use the utterance context when it evaluates a request and when it determines a response. For example, an utterance might include a `$location` variable that is either set to `car` or `atHome`.
