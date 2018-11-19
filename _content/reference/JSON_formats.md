@@ -189,11 +189,9 @@ The JSON structure of the evaluate response from a skill to the routing core is 
       "id": "app-001",
       "attributes": {
         "location": {
-          "location": {
-            "name": "home",
-            "latitude": 36.169941,
-            "longitude": -115.139829
-          }
+          "name": "home",
+          "latitude": 36.169941,
+          "longitude": -115.139829
         }
       }
     }
@@ -562,7 +560,7 @@ The JSON structure of the converse response from a skill to the routing core is 
   "card": {
     "type": "show-temp-map",
     "content": {
-        "id": "134325"
+        "id": "134325",
         "image_url": "https://www.bbc.co.uk/weather/2643743"
      }
   },
@@ -593,33 +591,34 @@ The JSON structure of the converse response from a skill to the routing core is 
     ],
     "confidence": 0.85514235496521
   },
-  "additionalInformation": {
-    "context": {
-      "application": {
-        "id": "app-001",
+  "context": {
+    "user": {
+      "id": "john-001"
+    },
+    "session": {
+      "id": "session-001",
+      "new": true,
+      "skill": {
         "attributes": {
-          "location": {
-           "name": "home",
-            "latitude": 36.169941,
-            "longitude": -115.139829
-            }
+          "weather-interest": "temperature",
+          "inConversation": false
           }
+        },
+      "attributes": {
+        "zone": "city-center"
       },
-      "session": {
-        "id": "session-001",
-        "new": true,
-        "skill": {
-            "attributes": {
-              "weather-interest": "temperature",
-              "inConversation": false
-              }
-            },
-        "attributes": {
-          "zone": "city-center"
-      },
-        "version": "1.0"
+      "version": "1.0"
+    },
+    "application": {
+      "id": "app-001",
+      "attributes": {
+        "location": {
+          "name": "home",
+          "latitude": 36.169941,
+          "longitude": -115.139829
       }
     }
+  }
   }
 }
 ```
@@ -635,7 +634,7 @@ Parameter | Description | Type | Required
  `speech` | The response from the skill. | object |  yes
  `card` | If present, a card provides supplementary information that enhances the text or audio response.  You might use a card to display an image, play music, or provide a more detailed text response. In the card object, you can provide the URL to the image or music.  The client device determines how to present this information to the user. | object |  no
  `skill` | Information about the skill that processed the response. | object | yes |
- `additionalInformation` | Additional information about the conversation, including context information and whether the skill is in conversation. | object | yes
+ `context` |Information about the context of the conversation with the user. | object | yes
 
 #### Table 35 - Converse response parameters - speech
 
@@ -674,35 +673,22 @@ Parameter | Description | Type | Required
  `intent` | The name of the intent that processed the utterance. | string | yes
  `confidence` | The confidence score of the intent that processed the utterance | string | yes
 
-#### Table 40 - Converse response parameters - additional information
+#### Table 40 - Converse response parameters - context
 
  Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `context` | Information about the context of the conversation with the user.  | object | yes
-
-#### Table 41 - Converse response parameters - context
-
- Parameter | Description | Type | Required
----------|----------|---------|---------
- `application` | The application ID and utterance context information.| object | yes
+ `user` | The User ID | string| yes
  `session` | Information about the session, including session context information and skill context information. Information is saved in the session context for one month. | object | yes
+ `application` | The application ID and utterance context information.| object | yes
 
-#### Table 42 - Converse response parameters - Application context 
+ #### Table 41 - Converse response parameters - user context
 
-Parameter | Description | Type | Required
+ Parameter | Description | Type | Required
 ---------|----------|---------|---------
- `id` | The unique ID of the application. The parameter is for future use. | string | yes
- `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object. | object | yes
+ `id` | The unique ID of the user. | string| yes
 
-#### Table 43 - Converse response parameters - location
 
-Parameter | Description | Type | Required
----------|----------|---------|---------
- `name` | A value that represents the location of the user, for example, at home, at work, in the car.  | string | no
- `latitude` | Latitude of the center point of the location of the user.| string  | no
- `longitude` | Longitude of the center point of the location of the user.| string   | no
-
-#### Table 44 - Converse response parameters - Session 
+#### Table 42 - Converse response parameters - Session 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
@@ -712,17 +698,32 @@ Parameter | Description | Type | Required
  `attributes` |  Includes any session context information. An empty attributes object is allowed.| object | yes
  `version`  | The version of the session.  Version information is set by the routing core. The version is always `1.0`. | string | yes
 
-#### Table 45 - Converse response parameters - skill context
+#### Table 43 - Converse response parameters - skill context
  
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
-`attributes` |   Includes any session context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. Information is saved in the skill context for one month.| object | yes
+`attributes` |   Includes any skill context attributes.  Include `"inConversation": true` to specify that the skill is expecting a response from the end-user.  Allows the response from the user to be routed to the same skill for processing. An empty attributes object is allowed. Information is saved in the skill context for one month.| object | yes
 
-#### Table 46 - Converse response parameters - session context
+#### Table 44 - Converse response parameters - Application context 
 
 Parameter | Description | Type | Required
 ---------|----------|---------|---------
-`attributes` | Attributes representing the session context information. An empty attributes object is allowed. Information is saved in the session context for one month.| object | no
+ `id` | The unique ID of the application. The parameter is for future use. | string | yes
+ `attributes` | Includes any utterance context information. An empty attributes object is allowed.  | object | yes
+
+#### Table 45 - Converse response parameters - application attributes
+
+Parameter | Description | Type | Required
+---------|----------|---------|---------
+ `attributes` | Includes any utterance context information. An empty attributes object is allowed. Add location information to a `location` object. | object | yes
+
+#### Table 46 - Converse response parameters - location
+
+Parameter | Description | Type | Required
+---------|----------|---------|---------
+ `name` | A value that represents the location of the user, for example, at home, at work, in the car.  | string | no
+ `latitude` | Latitude of the center point of the location of the user.| string  | no
+ `longitude` | Longitude of the center point of the location of the user.| string   | no
 
 
 ### 6. Converse response from the routing core to a client device
