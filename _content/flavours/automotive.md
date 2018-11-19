@@ -39,7 +39,7 @@ For information about the maturity level of each skill, see the [Alpha and beta 
 
 ### Points of Interest
 - Registered name: points-of-interest
-- Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating. **Imporant**: To use the skill, you must acquire a Yelp API key from the [Yelp Fusion](https://www.yelp.com/fusion) website. Create an environment varable `YELP_API` key in the `./env` file of the Points of Interest skill and set it to the value of your Yelp API key.
+- Description: Finds points of interest, for example, coffee shops, bars, clubs, breweries, and grocery stores based on the current location of a user or a location the user has mentioned.  Provides a short description of the place, provide its opening hours, or give its rating. **Imporant**: To use the skill, you must acquire a Yelp API key from the [Yelp Fusion](https://www.yelp.com/fusion) website. Create an environment variable `YELP_API` key in the `./env` file of the Points of Interest skill and set it to the value of your Yelp API key.
 - Sample utterances: 
     - Any restaurants in London
     - Are there any gas stations near me
