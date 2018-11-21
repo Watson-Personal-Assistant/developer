@@ -15,9 +15,9 @@ For more information about creating an IAM token from an IAM API key, see the _C
 ### Adding header information
 
 When you connect your custom audio client to the audio gateway, pass the following in the header:
-- Pass IAM token in the authorization header.  For example, `"Authorization": "Bearer <IAM Access token>"`
+- Pass IAM token in the authorization header.  For example, `Authorization: Bearer <IAM Access token>`
 **Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
-- If you have multiple tenants, pass the tenant ID in the tenant ID header.  For example, `"tenantid": "<tenant ID>"`
+- If you have multiple tenants, pass the tenant ID in the tenant ID header.  For example, `tenantID: <tenant ID>`
 
 ### Establishing a web socket connection  
 
@@ -28,7 +28,7 @@ Table 1 displays the parameters for a web socket connection.
 | Parameter  |Description |
 |-----|:-------------------------|
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. 
-| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
+| `userID` (mandatory)  | The user ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. 
 | `language`| The language that the client communicates in. The default value is `en-US`.
 | `engine` | The speech-to-text (STT) engine that the audio gateway must use to convert speech to text. Valid values are `watson` or `google`. The default value is `google`.
 
