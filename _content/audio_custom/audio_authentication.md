@@ -47,9 +47,13 @@ For example:
 wss://wa-audio-gateway.mybluemix.net?skillset=industry&userID=John001&language=en-US
 
 ```
-**Important**: Include the IAM token as an HTPP "Authorization" header. Otherwise, your attempt to connect to the gateway will be rejected.
-
 Use the web socket connection to send audio streaming interfaces messages.
+
+**Important**: 
+- Include the IAM token as an HTPP "Authorization" header. Otherwise, your attempt to connect to the gateway will be rejected.
+- The audio gateway closes the web socket connection after a period of inactivity. Reestablish the connection to send more data
+
+
 
 
 > **What to do next?**<br/>
