@@ -10,7 +10,7 @@ Table 1 - Audio client configuration parameters
 | Parameter  |Description | Type |
 |-----|:-------------------------|:----------------|
 | `host` (mandatory)  | The URL of the audio gateway.  The URL is `wa-audio-gateway.mybluemix.net`. Note: Do not include the protocol prefix, for example, `https://` |Audio gateway connection parameter |
-| `userID` (mandatory)  | The user ID or client ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. |Audio gateway connection parameter |
+| `userID` (mandatory)  | The user ID of the sender.  The ID is restricted to alphanumeric, hyphen and underscore characters. | Audio gateway connection parameter |
 | `IAMAPIKey` (mandatory) | The client IAM API key for the device.  |Audio gateway connection parameter |
 | `skillset`  (mandatory) | The skillset to be used by the audio client, for example, industry. | Audio gateway connection parameter  |
 | `tenantID`  (mandatory for multiple tenants) | The ID of the tenant you want to communicate with. Optional parameter if only one tenant is associated with your IBM ID; mandatory if multiple tenants are associated with your IBM ID. | Audio gateway connection parameter  |
@@ -26,6 +26,8 @@ Table 1 - Audio client configuration parameters
 | `nossl`  |If set to `true`, connect to the gateway without using an SSL protocol.  The value is set to `false` by default.    | SSL parameter |
 | `debug`  |  If set to true, creates more log information.  The value is set to `false` by default. | Logging parameter |
 | `logAdditionalAudioInfo`  | If set to `true`, log information about the size of the audio packets and the time that is taken to receive them. The value is set to `true` by default.  | Logging parameter |
+
+**Restriction**: Currently, there is no support for sending a client ID from an audio client to the audio gateway. The device type value defaults to `WSS-Rest` and cannot be modified.
 
 > **What to do next?**<br/>
 Learn more about [Raspberry PI]({{site.baseurl}}/audio/Using_raspberry_PI).
