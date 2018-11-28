@@ -17,7 +17,7 @@ For more information about creating an IAM token from an IAM API key, see the _C
 When you connect your custom audio client to the audio gateway, pass the following in the header:
 - Pass IAM token in the authorization header.  For example, `Authorization: Bearer <IAM Access token>`
 **Note**:  The IAM token is time sensitive.  In your code, take into account that it expires every hour to avoid token expired error messages.
-- If you have multiple tenants, pass the tenant ID in the tenant ID header.  For example, `tenantID: <tenant ID>`
+- If multiple tenants are associated with your IBM ID, pass the tenant ID in the tenant ID header.  For example, `tenantID: <tenant ID>`
 
 ### Establishing a web socket connection  
 
