@@ -16,7 +16,7 @@ Complete these steps:
     - A `constructor` for the nlu engine.
     - An `init` function that initializes the nlu engine.
     - An `evaluate` function which you customize to extract entities and intents. The function returns entities and intents with confidence scores in an `intentities` object. Follow the instructions in the file.
-4. Create a `your_custom_nlu_engine.json` file in `../res/nlu/`.  Add any external information to the file that your nlu engine requires, for example, credentials.  **Tip**: The file is mandatory but can contain an empty object only.
+4. Create a `your_custom_nlu_engine.json` file in `../res/nlu/`.  Add any configuration information to the file that your nlu engine requires, for example, credentials.  **Tip**: The file is mandatory but can contain an empty JSON, for example,{}.
 5. Add the custom nlu engine to the list of nlu engines in the manifest file. For example:
 
     ```
