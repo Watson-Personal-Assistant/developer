@@ -1,11 +1,5 @@
 ---
 title: Getting help
-weight: 10
+redirect_to:
+  - https://www.ibm.com/support/knowledgecenter/SS7P7S_ind/watson-assistant-solutions/get-help/learn.html
 ---
-If you have problems or questions when you are using Watson Assistant Solutions, you can get help by:
-
-- [Read the troubleshooting topic]({{site.baseurl}}/get-help/tips):
-- [Accessing the support portal](https://www.ibm.com/mysupport/s/topic/0TO500000002aQvGAI/watson-assistant-solutions?language=en_US&t=1532958100517)
-- [Posting a question on the forum](https://stackoverflow.com/questions/tagged/watson-assistant-solutions): tag your question with `watson-assistant-solutions`.
-
-> **What next?** Read our [legal notices]({{site.baseurl}}/legal/terms-of-use)
